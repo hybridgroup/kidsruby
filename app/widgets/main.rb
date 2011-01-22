@@ -2,13 +2,21 @@
 class MainWidget < Qt::Widget
   def initialize(parent = nil)
     super
-    setFixedSize(200, 120)
+    self.window_title = 'Hello KidsRuby v1.0'
+    resize(200, 100)
 
-    quit = Qt::PushButton.new(tr('Quit'), self)
-    quit.setGeometry(62, 40, 75, 30)
-    quit.setFont(Qt::Font.new('Times', 18, Qt::Font::Bold))
+    button = Qt::PushButton.new('Quit') do
+        connect(SIGNAL :clicked) { Qt::Application.instance.quit }
+    end
 
-    connect(quit, SIGNAL('clicked()'), $qApp, SLOT('quit()'))
+    label = Qt::Label.new('<big>Hello Kids Welcome to Ruby!</big>')
+
+    self.layout = Qt::VBoxLayout.new do
+        add_widget(label, 0, Qt::AlignCenter)
+        add_widget(button, 0, Qt::AlignRight)
+    end
+
+    show
   end
 end
 
