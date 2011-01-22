@@ -1,0 +1,1 @@
+# this is the widget with the console output

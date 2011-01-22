@@ -1,0 +1,12 @@
+KidsRuby Editor is an experimental Ruby code environment for kids. It is heavily influenced by Hackety Hack.
+
+Here are a few design goals for it:
+- Simple single file editor
+- You can run the current contents of the editor
+- The output appears next to the editor
+- It runs a normal Ruby 1.9.2 on the code
+
+Implementation choices:
+- QtRuby app - lets us communicate with the OS to create a full Ruby interactive environment
+- Minitest/Minispec for testing. Yes, code must be tested
+- Tutorial content is easy to create just drop HTML files on disk locally to the KidsRuby editor.
