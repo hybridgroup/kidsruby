@@ -6,7 +6,7 @@ require 'Qt4'
   require "#{File.dirname(__FILE__)}/lib/#{f}.rb"
 end
 
-%w{ ruby_highlighter }.each do |f|
+%w{ version ruby_highlighter }.each do |f|
   require "#{File.dirname(__FILE__)}/app/models/#{f}.rb"
 end
 

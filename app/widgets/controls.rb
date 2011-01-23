@@ -19,7 +19,7 @@ class ControlsWidget < Qt::Widget
       connect(SIGNAL :clicked) { Qt::Application.instance.quit }
     end
 
-    resize(100, 200)
+    resize(100, 50)
 
     self.layout = Qt::HBoxLayout.new do
       add_widget(run_button, 0, Qt::AlignCenter)

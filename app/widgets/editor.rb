@@ -15,11 +15,10 @@ class EditorWidget < Qt::Widget
     highlighter.addToDocument(editor.document())
     
     self.layout = Qt::VBoxLayout.new do
-      add_widget(editor, 0, Qt::AlignBottom)
+      add_widget(editor)
     end
     
-    #setSizePolicy(Qt::SizePolicy.new(Qt::SizePolicy::Expanding, Qt::SizePolicy::Expanding))
+    setSizePolicy(Qt::SizePolicy.new(Qt::SizePolicy::MinimumExpanding, Qt::SizePolicy::MinimumExpanding))
     
-    show
   end
 end

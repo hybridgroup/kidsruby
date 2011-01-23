@@ -17,5 +17,6 @@ class OutputWidget < Qt::Widget
       add_widget(output)
     end
 
+    setSizePolicy(Qt::SizePolicy.new(Qt::SizePolicy::MinimumExpanding, Qt::SizePolicy::MinimumExpanding))
   end
 end
