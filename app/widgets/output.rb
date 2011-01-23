@@ -8,15 +8,19 @@ class OutputWidget < Qt::Widget
     font.fixedPitch = true
     font.pointSize = 12
     
-    output = Qt::TextEdit.new
-    output.font = font
-    output.read_only = true
-    output.append "KidsRuby 0.1 output goes here."
+    @o = Qt::TextEdit.new
+    @o.font = font
+    @o.read_only = true
+    @o.setPlainText "KidsRuby 0.1 output goes here."
     
-    self.layout = Qt::VBoxLayout.new do
-      add_widget(output)
-    end
+    l = Qt::VBoxLayout.new
+    l.add_widget(@o)
+    self.layout = l
 
     setSizePolicy(Qt::SizePolicy.new(Qt::SizePolicy::MinimumExpanding, Qt::SizePolicy::MinimumExpanding))
+  end
+  
+  def append(text)
+    @o.plainText = @o.plainText + "\n" + text.to_s
   end
 end

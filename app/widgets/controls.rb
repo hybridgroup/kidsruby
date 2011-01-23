@@ -1,11 +1,13 @@
 # this is the widget with the main controls "Run" etc.
 class ControlsWidget < Qt::Widget
+  slots :run
+  
   def initialize(parent = nil)
     super(parent)
+    @p = parent
     
-    run_button = Qt::PushButton.new('Run') do
-      #connect(SIGNAL :clicked) { Qt::Application.instance.quit }
-    end
+    run_button = Qt::PushButton.new('Run')
+    connect(run_button, SIGNAL(:clicked), self, SLOT(:run))
 
     save_button = Qt::PushButton.new('Save') do
       connect(SIGNAL :clicked) { Qt::Application.instance.quit }
@@ -29,5 +31,9 @@ class ControlsWidget < Qt::Widget
     end
 
     show
+  end
+  
+  def run
+    Runner.new(@p).run
   end
 end

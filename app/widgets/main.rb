@@ -6,19 +6,17 @@ class MainWidget < Qt::Widget
     self.window_title = 'KidsRuby v' + KidsRuby::VERSION
     resize(700, 500)
     
-    controls = ControlsWidget.new
-    editor = EditorWidget.new(self)
+    @controls = ControlsWidget.new(self)
+    @editor = EditorWidget.new(self)
     
-    left_side = Qt::VBoxLayout.new do
-      add_widget(editor, 4)
-      add_widget(controls, 1)
-    end
+    left_side = Qt::VBoxLayout.new
+    left_side.add_widget(@editor, 4)
+    left_side.add_widget(@controls, 1)
 
-    output = OutputWidget.new
+    @out = OutputWidget.new
 
-    right_side = Qt::VBoxLayout.new do
-      add_widget(output)
-    end
+    right_side = Qt::VBoxLayout.new
+    right_side.add_widget(@out)
     
     self.layout = Qt::HBoxLayout.new do
       add_layout left_side
@@ -26,6 +24,10 @@ class MainWidget < Qt::Widget
     end
         
     show
+  end
+  
+  def append(text)
+    @out.append(text)
   end
 end
 
