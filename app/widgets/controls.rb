@@ -4,7 +4,7 @@ class ControlsWidget < Qt::Widget
   
   def initialize(parent = nil)
     super(parent)
-    @p = parent
+    @main = parent
     
     run_button = Qt::PushButton.new('Run')
     connect(run_button, SIGNAL(:clicked), self, SLOT(:run))
@@ -34,6 +34,6 @@ class ControlsWidget < Qt::Widget
   end
   
   def run
-    Runner.new(@p).run
+    Runner.new(@main).run(@main.current_code)
   end
 end

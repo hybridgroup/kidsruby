@@ -27,7 +27,15 @@ class MainWidget < Qt::Widget
   end
   
   def append(text)
-    @out.append(text)
+    current_output.append(text)
+  end
+  
+  def current_code
+    @editor.current_code
+  end
+  
+  def current_output
+    @out
   end
 end
 

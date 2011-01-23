@@ -11,7 +11,7 @@ class OutputWidget < Qt::Widget
     @o = Qt::TextEdit.new
     @o.font = font
     @o.read_only = true
-    @o.setPlainText "KidsRuby 0.1 output goes here."
+    @o.plainText = "KidsRuby v#{KidsRuby::VERSION} ready.\n"
     
     l = Qt::VBoxLayout.new
     l.add_widget(@o)
@@ -21,6 +21,6 @@ class OutputWidget < Qt::Widget
   end
   
   def append(text)
-    @o.plainText = @o.plainText + "\n" + text.to_s
+    @o.plainText = @o.plainText + text.to_s
   end
 end
