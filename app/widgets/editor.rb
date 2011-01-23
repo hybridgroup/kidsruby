@@ -6,7 +6,7 @@ class EditorWidget < Qt::Widget
     font = Qt::Font.new
     font.family = "Courier"
     font.fixedPitch = true
-    font.pointSize = 10
+    font.pointSize = 12
 
     editor = Qt::TextEdit.new
     editor.font = font

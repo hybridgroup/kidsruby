@@ -1,7 +1,11 @@
 # this is the main view widget
 class MainWidget < Qt::Widget
   def initialize(parent = nil)
-    super
+    super(parent)
+    
+    self.window_title = 'KidsRuby v0.1'
+    resize(300, 200)
+    
     controls = ControlsWidget.new
     editor = EditorWidget.new
 
