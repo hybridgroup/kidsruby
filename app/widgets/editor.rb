@@ -18,6 +18,8 @@ class EditorWidget < Qt::Widget
       add_widget(editor, 0, Qt::AlignBottom)
     end
     
+    #setSizePolicy(Qt::SizePolicy.new(Qt::SizePolicy::Expanding, Qt::SizePolicy::Expanding))
+    
     show
   end
 end

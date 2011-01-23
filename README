@@ -25,3 +25,7 @@ To summarize:
 brew install qt4mac
 for DIR in /usr/local/Cellar/qt/4.7.1/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
 gem install qtbindings
+
+
+TODOS:
+- get syntax highlighting correct for Ruby
