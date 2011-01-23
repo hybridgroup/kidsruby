@@ -7,10 +7,10 @@ class MainWidget < Qt::Widget
     resize(300, 200)
     
     controls = ControlsWidget.new
-    editor = EditorWidget.new
+    editor = EditorWidget.new(self)
 
     self.layout = Qt::VBoxLayout.new do
-      add_widget(editor, 0, Qt::AlignBottom)
+      add_widget(editor, 0, Qt::AlignTop)
       add_widget(controls, 0, Qt::AlignBottom)
     end
     
