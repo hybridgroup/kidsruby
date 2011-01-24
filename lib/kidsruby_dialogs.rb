@@ -1,8 +1,9 @@
 # this is designed to trigger dialogs for kidsruby for ask and alert compatible with hackety hack
-def ask(thing)
-  puts "ask me"
+def ask(text)
+  puts text
+  return 1
 end
 
-def alert(thing)
-  puts "alert me"
+def alert(text)
+  puts text
 end
