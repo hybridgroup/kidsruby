@@ -16,6 +16,8 @@ class Runner < Qt::Process
   end
   
   def save_kid_code(code, code_file_name)
+    ensure_tmp_dir
+    
     codeFile = Qt::File.new(code_file_name)
     if !codeFile.open(Qt::File::WriteOnly | Qt::File::Text)
         Qt::MessageBox.warning(self, tr("KidsRuby Problem"),
@@ -41,5 +43,9 @@ class Runner < Qt::Process
   
   def default_kid_code_location
     "#{File.dirname(__FILE__)}/../../tmp/kidcode.rb"
+  end
+  
+  def ensure_tmp_dir
+    Qt::Dir.mkdir("#{File.dirname(__FILE__)}/../../tmp") unless Qt::Dir.new("#{File.dirname(__FILE__)}/../../tmp").exists
   end
 end
