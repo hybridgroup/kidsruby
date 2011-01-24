@@ -30,7 +30,9 @@ class Runner < Qt::Process
   
   def build_code_from_fragment(code)
     # todo: add any default requires for kid stuff here
-    code
+    new_code = "require './lib/kidsruby_dialogs'\n"
+    new_code << code
+    new_code
   end
   
   def default_code

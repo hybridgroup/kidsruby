@@ -30,6 +30,7 @@ gem install qtbindings
 TODOS:
 - get syntax highlighting correct for Ruby code
 - tabbed pane with stacked widgets for output/turtle/help widgets
+- clear button for output
 - create hackety-hack compatible class for Turtle graphics
 - create hackety-hack compatible class with UI dialogs for ask/alert
 - local html pages with tutorials
