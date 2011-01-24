@@ -1,7 +1,13 @@
 # this is the main view widget
 class MainWidget < Qt::Widget
+  #q_classinfo("D-Bus Interface", "com.kidsruby.MainWidget")
+  
+  slots 'alert(QString)'
+  
   def initialize(parent = nil)
     super(parent)
+    
+    #Qt::DBus.sessionBus().registerObject("/", self, Qt::DBusConnection::ExportSlots)
     
     self.window_title = 'KidsRuby v' + KidsRuby::VERSION
     resize(700, 500)
@@ -36,6 +42,10 @@ class MainWidget < Qt::Widget
   
   def current_output
     @out
+  end
+  
+  def alert(text)
+    Qt::MessageBox::information(self, tr('KidsRuby v' + KidsRuby::VERSION), text)
   end
 end
 
