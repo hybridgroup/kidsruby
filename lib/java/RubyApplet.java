@@ -2,8 +2,10 @@
 package kidsruby;
 
 import java.applet.Applet;
+import java.io.*;
 
 import org.jruby.Ruby;
+import org.jruby.RubyObject;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineFactory;
@@ -11,19 +13,9 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import javax.script.ScriptContext;
 
-
 public class RubyApplet extends Applet {
-  private ScriptEngineManager factory;
-	private ScriptEngine engine;
+	Ruby instance = null;
 	
-  public void setRubyFactory(ScriptEngineManager theRuby) {
-    this.factory = theRuby;
-  }
-
-	public void setEngine(ScriptEngine engine) {
-		this.engine = engine;
-	}
-  
   private boolean started = false;
   public boolean hasStarted() {
     return this.started;
@@ -34,26 +26,36 @@ public class RubyApplet extends Applet {
 
   public void start() {
     super.start();
-    
     this.started();
   }
   
   public void init() {
     super.init();
-  
-    // this.setRuby(Ruby.getDefaultInstance());
-    setRubyFactory(new ScriptEngineManager());
-		setEngine(factory.getEngineByName("jruby"));
+		System.out.println("the init method has been called");
 	}
-            
-  public String evalRuby(String code) {
-    try {
-			
-      Object o = this.engine.eval(code);
-//      return o.getInstanceVariables().toString();
-      return o.toString();    
-    } catch (Exception e) {
-      return e.toString();
-    }
+	
+	public void resetRuby() {
+    instance = Ruby.newInstance();
   }
+
+  private Ruby instance() {
+    if (instance == null) {
+      resetRuby();
+    }
+    return instance;
+  }
+  
+  public Object evalRubyToObject(String input) {
+    return instance().evalScriptlet(input);
+  }
+
+	public String evalRuby(String input) {
+		  try {
+        RubyObject result = (RubyObject) evalRubyToObject(input);
+				return result.toString();
+      } catch (Exception e) {
+				System.out.println("uh oh");
+				return e.toString();
+      }
+	}
 }

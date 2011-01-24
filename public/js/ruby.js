@@ -30,6 +30,10 @@ var Ruby = {
   eval: function(code) {
     return document.RubyApplet.evalRuby(code);
   },
+	
+	log: function(what) {
+		document.getElementById('ruby_terminal_output').innerHTML += "<span>"+what+"</span><br>";
+	},
 
   applet: function() {
   	var applet = document.createElement('applet');
@@ -37,14 +41,10 @@ var Ruby = {
   	applet.setAttribute("code", "kidsruby.RubyApplet");
 		applet.setAttribute("codebase", "jruby/classes");
   	applet.setAttribute("name", "RubyApplet");
-  	applet.setAttribute("width", "1000");
-  	applet.setAttribute("height", "100");
-		
-		var param = document.createElement("param");
-		param.setAttribute("name", "jruby.eval");
-		param.setAttribute("value", "ARGV[0..-1] = %w(-f) ; require 'irb' ; require 'irb/completion' ; Thread.new { IRB.start }")
-		applet.appendChild(param);
-		
+  	applet.setAttribute("width", "1");
+  	applet.setAttribute("height", "1");		
     document.body.appendChild(applet);
+
+		this.log("ready: " + applet);
   }
 };
