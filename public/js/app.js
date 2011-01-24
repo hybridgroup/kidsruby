@@ -1,8 +1,4 @@
-$(document).ready(function() {	
-	function echoRuby(ruby) {
-	  document.getElementById("output").innerHTML = Ruby.eval(ruby);
-	};
-	
+$(document).ready(function() {		
 	var editor = CodeMirror.fromTextArea('rubycode', {
       parserfile: ["../../js/tokenizeruby.js", "../../js/parseruby.js"],
       stylesheet: "css/rubycolors.css",
@@ -17,13 +13,9 @@ $(document).ready(function() {
   });
 
 	$("#run").click(function(e) {
-		var ruby = document.getElementById('rubycode').value
-		
-		alert(Ruby.eval(ruby));
+		var ruby = document.getElementById('rubycode').value;
+		var output = QTApi.evaluateRuby(ruby);
+		document.getElementById("output").innerHTML = output;
 	});
-  // Handler for .ready() called.
-  Ruby.init(function(result) {
-    document.getElementById("output").innerHTML = result;
-  });
-
+	
 });
