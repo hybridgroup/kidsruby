@@ -1,3 +1,7 @@
+function updateOutputView(newHtml) {
+	$("#output").html(newHtml);
+}
+
 $(document).ready(function() {		
 	var editor = CodeMirror.fromTextArea('rubycode', {
       parserfile: ["../../js/tokenizeruby.js", "../../js/parseruby.js"],
@@ -12,10 +16,9 @@ $(document).ready(function() {
 	    autoMatchParens: true
   });
 
-	$("#run").click(function(e) {
-		var ruby = document.getElementById('rubycode').value;
-		var output = QTApi.evaluateRuby(ruby);
-		document.getElementById("output").innerHTML = output;
+	$("#input button").click(function(e) {
+		var ruby = $('#input textarea').val();
+		QTApi.evaluateRuby(ruby);
 	});
 	
 });

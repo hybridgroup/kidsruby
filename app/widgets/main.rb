@@ -1,15 +1,20 @@
 require "qtwebkit"
 # this is the main view widget
 class Runner < Qt::Process
-  attr_reader :stdout
   def read_data
-    @stdout = self.readAllStandardOutput()
-    emit :outputReady
+    out = self.readAllStandardOutput
+    string = []
+    (out.length-1).times do |i|
+      string[i] = out[i].chr
+    end
+    string = string.join("")
+    @main_widget.evaluateJavaScript('updateOutputView("' + string + '");')
   end
 end
 
 class MainWidget < Qt::WebView
-  slots 'QString evaluateRuby(const QString&)'
+  slots 'evaluateRuby(QString)', 'updateWindow()'
+    
   def initialize(parent = nil)
     super(parent)
     
@@ -17,11 +22,10 @@ class MainWidget < Qt::WebView
     
     self.load Qt::Url.new("#{File.dirname(__FILE__)}/../../public/index.html")
     
-    frame = self.page.mainFrame
-    @main = frame
-    frame.addToJavaScriptWindowObject("QTApi", self);
+    @frame = self.page.mainFrame
+    @frame.addToJavaScriptWindowObject("QTApi", self);
     
-    Qt::Object.connect(frame, SIGNAL("javaScriptWindowObjectCleared()"), self, SLOT('evaluateRuby()') )
+    Qt::Object.connect(@frame, SIGNAL("javaScriptWindowObjectCleared()"), self, SLOT('evaluateRuby()') )
     
     show
   end
@@ -29,9 +33,8 @@ class MainWidget < Qt::WebView
   private
   
   def evaluateRuby(code)
-    runner = Runner.new(@main)
+    runner = Runner.new(@frame)
     runner.run(code)
-    runner.stdout
   end
   
   def append(text)

@@ -13,3 +13,8 @@ body {
   line-height: 1.1em;
   font-family: consolas, monospace;
 }
+
+#output {
+	background: #eee;
+	margin: 10px;
+}
