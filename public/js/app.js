@@ -1,6 +1,6 @@
 function updateOutputView(newHtml) {
 	$("#output").html(newHtml);
-}
+};
 
 $(document).ready(function() {		
 	var editor = CodeMirror.fromTextArea('rubycode', {
@@ -17,8 +17,8 @@ $(document).ready(function() {
   });
 
 	$("#input button").click(function(e) {
-		var ruby = $('#input textarea').val();
+		var ruby = $('#rubycode').val();
+		alert(ruby);
 		QTApi.evaluateRuby(ruby);
 	});
-	
 });

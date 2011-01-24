@@ -13,26 +13,26 @@ class Runner < Qt::Process
 end
 
 class MainWidget < Qt::WebView
-  slots 'evaluateRuby(QString)', 'updateWindow()'
+  slots 'evaluateRuby(QString)'
     
   def initialize(parent = nil)
     super(parent)
     
     self.window_title = "KidsRuby v" + KidsRuby::VERSION    
     
-    self.load Qt::Url.new("#{File.dirname(__FILE__)}/../../public/index.html")
-    
     @frame = self.page.mainFrame
     @frame.addToJavaScriptWindowObject("QTApi", self);
     
     Qt::Object.connect(@frame, SIGNAL("javaScriptWindowObjectCleared()"), self, SLOT('evaluateRuby()') )
     
+    self.load Qt::Url.new("#{File.dirname(__FILE__)}/../../public/index.html")
     show
   end
   
   private
   
   def evaluateRuby(code)
+    puts code
     runner = Runner.new(@frame)
     runner.run(code)
   end
