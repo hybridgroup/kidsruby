@@ -42,10 +42,14 @@ class Runner < Qt::Process
   end
   
   def default_kid_code_location
-    "#{File.dirname(__FILE__)}/../../tmp/kidcode.rb"
+    "#{tmp_dir}/kidcode.rb"
   end
   
   def ensure_tmp_dir
-    Qt::Dir.mkdir("#{File.dirname(__FILE__)}/../../tmp") unless Qt::Dir.new("#{File.dirname(__FILE__)}/../../tmp").exists
+    Qt::Dir.mkdir(tmp_dir) unless Qt::Dir.new(tmp_dir).exists
+  end
+  
+  def tmp_dir
+    "#{File.dirname(__FILE__)}/../../tmp"
   end
 end
