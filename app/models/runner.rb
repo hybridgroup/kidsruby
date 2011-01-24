@@ -46,7 +46,7 @@ class Runner < Qt::Process
   end
   
   def ensure_tmp_dir
-    Qt::Dir.mkdir(tmp_dir) unless Qt::Dir.new(tmp_dir).exists
+    Dir.mkdir(tmp_dir) unless Dir.exists?(tmp_dir)
   end
   
   def tmp_dir
