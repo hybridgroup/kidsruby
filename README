@@ -17,12 +17,13 @@ ruby main.rb
 Getting setup on Ubuntu:
 Coming soon...
 
-Getting setup on a Mac:
+Getting setup on a Mac using Homebrew:
 I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
 
 To summarize:
-brew install qt4mac
+brew install dbus
+brew install qt --with-qtdbus
 for DIR in /usr/local/Cellar/qt/4.7.1/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
 gem install qtbindings
 
