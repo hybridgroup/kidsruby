@@ -25,7 +25,7 @@ end
 
 def alert(text)
   if @iface.valid?
-    @iface.call("alert", text)
+    message = @iface.call("alert", text)
     reply = Qt::DBusReply.new(message)
     if reply.valid?
       return true

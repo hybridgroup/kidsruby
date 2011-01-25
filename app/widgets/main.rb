@@ -1,24 +1,6 @@
 require "qtwebkit"
-# this is the main view widget
-  
-class Runner < Qt::Process
-  def read_data
-    out = self.readAllStandardOutput.data
-    out.split("\n").each do |line|
-      code = "updateStdOut('#{@coder.encode(line)}<br/>')"
-      @main_widget.evaluateJavaScript(code)
-    end
-  end
-  
-  def read_error
-    err = self.readAllStandardError.data
-    err.split("\n").each do |line|
-      code = "updateStdErr('#{@coder.encode(line)}<br/>')"
-      @main_widget.evaluateJavaScript(code)
-    end
-  end
-end
 
+# this is the main view widget
 class MainWidget < Qt::WebView
   q_classinfo("D-Bus Interface", "com.kidsruby.Main")
 

@@ -17,13 +17,21 @@ class Runner < Qt::Process
   end
 
   def read_data
-    @main_widget.append(self.readAllStandardOutput())
+    out = self.readAllStandardOutput.data
+    out.split("\n").each do |line|
+      code = "updateStdOut('#{@coder.encode(line)}<br/>')"
+      @main_widget.evaluateJavaScript(code)
+    end
   end
   
   def read_error
-    @main_widget.append(self.readAllStandardError())
+    err = self.readAllStandardError.data
+    err.split("\n").each do |line|
+      code = "updateStdErr('#{@coder.encode(line)}<br/>')"
+      @main_widget.evaluateJavaScript(code)
+    end
   end
-  
+
   def save_kid_code(code, code_file_name)
     ensure_tmp_dir
     
