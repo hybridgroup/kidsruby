@@ -16,11 +16,13 @@ body {
 
 #output {
 	margin: 10px;
+	padding: 20px;
+	background: #aaaaaa;
+	height: 50%;
 }
 #stdout {
-	background: #eee;
 }
 
 #stderr {
-	color: red;
+	color: #990000;
 }

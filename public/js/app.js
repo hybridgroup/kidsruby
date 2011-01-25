@@ -18,6 +18,8 @@ function submitRubyCode(editor) {
 }
 
 $(document).ready(function() {		
+	var docWidth = $("body").width();
+	
 	var editor = CodeMirror.fromTextArea('rubycode', {
 	      parserfile: ["../../js/tokenizeruby.js", "../../js/parseruby.js"],
 	      stylesheet: "css/rubycolors.css",
@@ -25,14 +27,17 @@ $(document).ready(function() {
 	      lineNumbers: true,
 	      textWrapping: false,
 	      indentUnit: 2,
-				indentUnit: 4,
+				tabMode: "indent",
 				content: $('#rubycode').val(),
 	      parserConfig: {},
-	      width: '500px',
-	      height: '30%',
+	      width: docWidth,
+	      height: '50%',
 				iframeClass: 'editor-window',
 	    	autoMatchParens: true
 	  });
+	
+	// Set the output width
+	$("#output").width = docWidth;
   
 	$("#input button").click(function(e) {
 		clearOutputs();
