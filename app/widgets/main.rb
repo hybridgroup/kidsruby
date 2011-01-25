@@ -1,15 +1,15 @@
 # this is the main view widget
 class MainWidget < Qt::Widget
-  #q_classinfo("D-Bus Interface", "com.kidsruby.MainWidget")
+  q_classinfo("D-Bus Interface", "com.kidsruby.Main")
   
-  slots 'alert(QString)'
+  slots 'alert(const QString&)', 'QString ask(const QString&)'
   
   def initialize(parent = nil)
     super(parent)
     
-    #Qt::DBus.sessionBus().registerObject("/", self, Qt::DBusConnection::ExportSlots)
-    
-    self.window_title = 'KidsRuby v' + KidsRuby::VERSION
+    Qt::DBusConnection.sessionBus.registerObject("/", self, Qt::DBusConnection::ExportAllSlots)
+        
+    self.window_title = version_description
     resize(700, 500)
     
     @controls = ControlsWidget.new(self)
@@ -45,7 +45,19 @@ class MainWidget < Qt::Widget
   end
   
   def alert(text)
-    Qt::MessageBox::information(self, tr('KidsRuby v' + KidsRuby::VERSION), text)
+    Qt::MessageBox::information(self, tr(version_description), text)
+  end
+  
+  def ask(text)
+    ok = Qt::Boolean.new
+    val = Qt::InputDialog.getText(self, tr(version_description),
+                                  tr(text), Qt::LineEdit::Normal,
+                                  "", ok)
+    return val
+  end
+  
+  def version_description
+    'KidsRuby v' + KidsRuby::VERSION
   end
 end
 
