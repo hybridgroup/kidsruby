@@ -1,10 +1,12 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    htmlentities (4.2.3)
     qtbindings (4.6.3.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  htmlentities
   qtbindings

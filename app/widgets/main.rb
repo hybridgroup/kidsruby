@@ -1,9 +1,29 @@
+require "qtwebkit"
 # this is the main view widget
-class MainWidget < Qt::Widget
+  
+class Runner < Qt::Process
+  def read_data
+    out = self.readAllStandardOutput.data
+    out.split("\n").each do |line|
+      code = "updateStdOut('#{@coder.encode(line)}<br/>')"
+      @main_widget.evaluateJavaScript(code)
+    end
+  end
+  
+  def read_error
+    err = self.readAllStandardError.data
+    err.split("\n").each do |line|
+      code = "updateStdErr('#{@coder.encode(line)}<br/>')"
+      @main_widget.evaluateJavaScript(code)
+    end
+  end
+end
+
+class MainWidget < Qt::WebView
   q_classinfo("D-Bus Interface", "com.kidsruby.Main")
-  
-  slots 'alert(const QString&)', 'QString ask(const QString&)'
-  
+
+  slots 'evaluateRuby(QString)', 'setupQtBridge()', 'alert(const QString&)', 'QString ask(const QString&)'
+    
   def initialize(parent = nil)
     super(parent)
     
@@ -12,24 +32,23 @@ class MainWidget < Qt::Widget
     self.window_title = version_description
     resize(700, 500)
     
-    @controls = ControlsWidget.new(self)
-    @editor = EditorWidget.new(self)
+    @frame = self.page.mainFrame
     
-    left_side = Qt::VBoxLayout.new
-    left_side.add_widget(@editor, 4)
-    left_side.add_widget(@controls, 1)
-
-    @out = OutputWidget.new
-
-    right_side = Qt::VBoxLayout.new
-    right_side.add_widget(@out)
+    Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), self, SLOT('setupQtBridge()') )
     
-    self.layout = Qt::HBoxLayout.new do
-      add_layout left_side
-      add_layout right_side
-    end
-        
+    self.load Qt::Url.new("#{File.dirname(__FILE__)}/../../public/index.html")
     show
+  end
+  
+  private
+  
+  def setupQtBridge
+    @frame.addToJavaScriptWindowObject("QTApi", self);
+  end
+  
+  def evaluateRuby(code)
+    runner = Runner.new(@frame)
+    runner.run(code)
   end
   
   def append(text)
