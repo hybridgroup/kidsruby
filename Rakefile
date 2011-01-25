@@ -2,5 +2,6 @@
 task :default => :spec
 
 task :spec do
-  ruby "spec/main_spec.rb"
+  ruby "spec/models/turtle_spec.rb"
+#  ruby "spec/models/turtle_spec.rb"
 end
