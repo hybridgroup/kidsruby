@@ -1,9 +1,14 @@
+require 'htmlentities'
+
 class Runner < Qt::Process
   def initialize(main)
     super
     
     @main_widget = main
+    @coder = HTMLEntities.new
+    
     connect(SIGNAL(:readyReadStandardOutput), &method(:read_data))
+    connect(SIGNAL(:readyReadStandardError),  &method(:read_error))
   end
 
   def run(code = default_code, code_file_name = default_kid_code_location)
@@ -13,6 +18,10 @@ class Runner < Qt::Process
 
   def read_data
     @main_widget.append(self.readAllStandardOutput())
+  end
+  
+  def read_error
+    @main_widget.append(self.readAllStandardError())
   end
   
   def save_kid_code(code, code_file_name)

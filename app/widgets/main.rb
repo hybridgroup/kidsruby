@@ -2,18 +2,24 @@ require "qtwebkit"
 # this is the main view widget
 class Runner < Qt::Process
   def read_data
-    out = self.readAllStandardOutput
-    string = []
-    (out.length-1).times do |i|
-      string[i] = out[i].chr
+    out = self.readAllStandardOutput.data
+    out.split("\n").each do |line|
+      code = "updateStdOut('#{@coder.encode(line)}<br/>')"
+      @main_widget.evaluateJavaScript(code)
     end
-    string = string.join("")
-    @main_widget.evaluateJavaScript('updateOutputView("' + string + '");')
+  end
+  
+  def read_error
+    err = self.readAllStandardError.data
+    err.split("\n").each do |line|
+      code = "updateStdErr('#{@coder.encode(line)}<br/>')"
+      @main_widget.evaluateJavaScript(code)
+    end
   end
 end
 
 class MainWidget < Qt::WebView
-  slots 'evaluateRuby(QString)'
+  slots 'evaluateRuby(QString)', 'setupQtBridge()'
     
   def initialize(parent = nil)
     super(parent)
@@ -21,9 +27,8 @@ class MainWidget < Qt::WebView
     self.window_title = "KidsRuby v" + KidsRuby::VERSION    
     
     @frame = self.page.mainFrame
-    @frame.addToJavaScriptWindowObject("QTApi", self);
     
-    Qt::Object.connect(@frame, SIGNAL("javaScriptWindowObjectCleared()"), self, SLOT('evaluateRuby()') )
+    Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), self, SLOT('setupQtBridge()') )
     
     self.load Qt::Url.new("#{File.dirname(__FILE__)}/../../public/index.html")
     show
@@ -31,8 +36,11 @@ class MainWidget < Qt::WebView
   
   private
   
+  def setupQtBridge
+    @frame.addToJavaScriptWindowObject("QTApi", self);
+  end
+  
   def evaluateRuby(code)
-    puts code
     runner = Runner.new(@frame)
     runner.run(code)
   end

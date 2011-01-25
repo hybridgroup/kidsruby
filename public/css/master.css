@@ -15,6 +15,12 @@ body {
 }
 
 #output {
-	background: #eee;
 	margin: 10px;
+}
+#stdout {
+	background: #eee;
+}
+
+#stderr {
+	color: red;
 }
