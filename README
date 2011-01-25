@@ -1,4 +1,4 @@
-KidsRuby Editor is an experimental Ruby code environment for kids. It is heavily influenced by Hackety Hack.
+KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. It is heavily influenced by Hackety Hack.
 
 In fact you can run many of the same code samples from Hackety Hack in KidsRuby. For example:
 
@@ -36,11 +36,12 @@ gem install qtbindings
 
 DONE:
 - create hackety-hack compatible class with UI dialogs for ask/alert
+- get syntax highlighting correct for Ruby code
 
 TODOS:
-- get syntax highlighting correct for Ruby code
-- tabbed pane with stacked widgets for output/turtle/help widgets
-- clear button for output
+- editor copy and paste
+- tabbed divs for output/turtle/help
+- clear button for output, not sure it should clear everything each time it is read
 - create hackety-hack compatible class for Turtle graphics
 - local html pages with tutorials
 - make it easy to run pie (see what I did there?)
