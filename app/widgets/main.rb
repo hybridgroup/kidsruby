@@ -14,7 +14,7 @@ class MainWidget < Qt::WebView
     @turtle = TurtleInterface.new(self)
     
     self.window_title = version_description
-    resize(700, 500)
+    resize(1000, 700)
     
     @frame = self.page.mainFrame
     
