@@ -38,11 +38,13 @@ DONE:
 - create hackety-hack compatible class with UI dialogs for ask/alert
 - get syntax highlighting correct for Ruby code
 - create hackety-hack compatible class for Turtle graphics
+- tabbed divs for output/turtle/help
 
 TODOS:
+- editor save/open/clear
 - editor copy and paste
-- tabbed divs for output/turtle/help
 - clear button for output, or should it clear everything each time it is read?
-- local html pages with tutorials, relevent parts from Hackety Hack for sure
+- layout for local html pages with tutorials
+- copy relevent parts from Hackety Hack
 - make it easy to run pie (see what I did there?)
 - create Shoes compatible classes (slippers?) to run Shoes example code too
