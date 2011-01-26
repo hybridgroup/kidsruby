@@ -37,11 +37,12 @@ gem install qtbindings
 DONE:
 - create hackety-hack compatible class with UI dialogs for ask/alert
 - get syntax highlighting correct for Ruby code
+- create hackety-hack compatible class for Turtle graphics
 
 TODOS:
 - editor copy and paste
 - tabbed divs for output/turtle/help
-- clear button for output, not sure it should clear everything each time it is read
-- create hackety-hack compatible class for Turtle graphics
-- local html pages with tutorials
+- clear button for output, or should it clear everything each time it is read?
+- local html pages with tutorials, relevent parts from Hackety Hack for sure
 - make it easy to run pie (see what I did there?)
+- create Shoes compatible classes (slippers?) to run Shoes example code too
