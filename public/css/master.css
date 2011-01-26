@@ -2,6 +2,12 @@ body {
 	background: #eee;
 }
 
+button#run {
+  bottom: 5px;
+  position: absolute;
+  right: 5px;
+}
+
 .CodeMirror-line-numbers {
   width: 2.2em;
   color: #999;
@@ -16,9 +22,10 @@ body {
 
 #input {
   float: left;
-  height: 825px;
+  position: relative;
   width: 70%;
 }
+
 
 #output {
 }
