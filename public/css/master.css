@@ -37,6 +37,13 @@ button#run {
 }
 
 #tabs {
-  float: right;
+  height: 94%;
+  position: absolute;
+  right: 0px;
+  top: 1%;
   width: 29%;
+}
+.ui-tabs-panel {
+  height: auto;
+  position: relative;
 }
