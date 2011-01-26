@@ -38,7 +38,7 @@ $(document).ready(function() {
 				content: $('#rubycode').val(),
 	      parserConfig: {},
 	      width: docWidth,
-	      height: '50%',
+	      height: '95%',
 				iframeClass: 'editor-window',
 	    	autoMatchParens: true
 	  });
