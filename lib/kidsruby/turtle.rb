@@ -13,15 +13,38 @@ class Turtle
     @iface = Qt::DBusInterface.new("com.kidsruby.app", "/Turtle", "", Qt::DBusConnection.sessionBus)
   end
   
-  def self.start
+  class << self
+    def start(&script)
+      self.new.instance_eval(&script)
+    end
   end
   
   # ex: blue
   def background(color)
+    if @iface.valid?
+      message = @iface.call("background", color)
+      reply = Qt::DBusReply.new(message)
+      if reply.valid?
+        return true
+      end
+
+      $stderr.puts("Background call failed: %s\n" % reply.error.message)
+    end  
+    return nil
   end
   
   # ex: 2
   def pensize(size)
+    if @iface.valid?
+      message = @iface.call("pensize", color)
+      reply = Qt::DBusReply.new(message)
+      if reply.valid?
+        return true
+      end
+
+      $stderr.puts("Pensize call failed: %s\n" % reply.error.message)
+    end  
+    return nil
   end
   
   # ex: yellow
@@ -39,9 +62,29 @@ class Turtle
   end
   
   def goto(x, y)
+    if @iface.valid?
+      message = @iface.call("goto", x, y)
+      reply = Qt::DBusReply.new(message)
+      if reply.valid?
+        return true
+      end
+
+      $stderr.puts("goto call failed: %s\n" % reply.error.message)
+    end  
+    return nil    
   end
   
   def setheading(heading)
+    if @iface.valid?
+      message = @iface.call("setheading", heading)
+      reply = Qt::DBusReply.new(message)
+      if reply.valid?
+        return true
+      end
+
+      $stderr.puts("setheading call failed: %s\n" % reply.error.message)
+    end  
+    return nil    
   end
 
   def forward(distance)
@@ -52,15 +95,35 @@ class Turtle
         return true
       end
 
-      $stderr.puts("Draw call failed: %s\n" % reply.error.message)
+      $stderr.puts("forward call failed: %s\n" % reply.error.message)
     end  
     return nil
   end
   
   def turnleft(degrees)
+    if @iface.valid?
+      message = @iface.call("turnleft", degrees)
+      reply = Qt::DBusReply.new(message)
+      if reply.valid?
+        return true
+      end
+
+      $stderr.puts("turnleft call failed: %s\n" % reply.error.message)
+    end  
+    return nil    
   end
 
   def turnright(degrees)
+    if @iface.valid?
+      message = @iface.call("turnright", degrees)
+      reply = Qt::DBusReply.new(message)
+      if reply.valid?
+        return true
+      end
+
+      $stderr.puts("Pencolor call failed: %s\n" % reply.error.message)
+    end  
+    return nil        
   end
   
   def draw

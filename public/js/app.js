@@ -52,9 +52,7 @@ $(document).ready(function() {
 	});
 	
 	var turtle = new Pen("turtle-canvas");
-
-  // set the starting place for turtle
-  turtle.jump(100, 300);
+  turtle.jump(200, 200);
   
 	$("#turtle").data('turtle', turtle);
 });
