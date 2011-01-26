@@ -8,5 +8,5 @@ describe Turtle do
   
   it "must instanciate a Turtle" do
     @turtle.wont_be_nil
-  end    
+  end
 end

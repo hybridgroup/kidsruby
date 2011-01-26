@@ -1,10 +1,25 @@
-KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. It is heavily influenced by Hackety Hack.
+KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. It is heavily influenced by Hackety Hack (http://hackety-hack.com).
 
 In fact you can run many of the same code samples from Hackety Hack in KidsRuby. For example:
 
 color = ask("what is your favorite color")
 if color == "blue"
   alert("you picked blue")
+end
+
+OR
+
+Turtle.start do
+  background yellow
+  pencolor brown
+  pensize 2
+  goto 30, 200
+  setheading 180
+  1000.times do
+    forward 20
+    turnleft rand(10)
+    backward 10
+  end
 end
 
 Here are a few design goals for KidsRuby:
@@ -17,6 +32,7 @@ Implementation choices:
 - QtRuby app - lets us communicate with the OS to create a full Ruby interactive environment
 - Minitest/Minispec for testing. Yes, code must be tested
 - Tutorial content is easy to create just drop HTML files on disk locally to the KidsRuby editor.
+- Using JS library Turtlewax for the Turtle implementation https://github.com/davebalmer/turtlewax
 
 Running it:
 ruby main.rb
@@ -45,6 +61,6 @@ TODOS:
 - editor copy and paste
 - clear button for output, or should it clear everything each time it is read?
 - layout for local html pages with tutorials
-- copy relevent parts from Hackety Hack
+- copy relevant parts from Hackety Hack
 - make it easy to run pie (see what I did there?)
 - create Shoes compatible classes (slippers?) to run Shoes example code too
