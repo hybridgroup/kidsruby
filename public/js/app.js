@@ -17,6 +17,13 @@ function submitRubyCode(editor) {
 	QTApi['evaluateRuby(QString)'](ruby);
 }
 
+function callTurtle(arguments) {
+  var turtle = $("#turtle").data('turtle');
+  var command = Array.prototype.shift.call(arguments);
+  turtle[command].apply(turtle, arguments);
+}
+
+
 $(document).ready(function() {		
 	var docWidth = $("body").width();
 	
@@ -43,4 +50,11 @@ $(document).ready(function() {
 		clearOutputs();
 		submitRubyCode(editor);
 	});
+	
+	var turtle = new Pen("turtle-canvas");
+
+  // set the starting place for turtle
+  turtle.jump(100, 300);
+  
+	$("#turtle").data('turtle', turtle);
 });

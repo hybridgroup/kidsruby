@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Turtle Wax -- Logo-ish Turtle Graphics for HTML5 Canvas</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+	<meta name="format-detection" content="false">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+</head>
+<body>
+
+<p>A demo of an open source project <a href="http://github.com/davebalmer/turtlewax">hosted on GitHub</a> by Dave Balmer</p>
+<canvas id="mycanvas" height="600" width="800">
+
+<style>
+	body { margin: 0; padding: 0; background: #fff; color: #000; font: 15px Helvetica; }
+	p { margin-left: 10px; }
+	a { color: #006; }
+</style>
+
+<!-- including the lib and an rgb to hsv color util function -->
+<script src="js/pen_min.js"></script>
+<script src="js/hsv.js"></script>
+
+<script>
+	var p = new Pen("mycanvas");
+	
+	// make a foot (or a head)
+	p.foot = function(angle, body, length, width) {
+		return this.polar(length, angle).arc(angle, angle + width, length, 1).polar(body, angle + width);
+	};
+	
+	// quickie arc drawing function
+	p.arc = function(from, to, distance, res) {
+		var res = res || 1;
+		for (var i = from; i < to; i += res)
+			this.polar(distance, i);
+		
+		return this;
+	};
+	
+	// draw a turtle
+	p.turtle = function(s) {
+
+		var b = s * .6;
+		var f = s * .8;
+
+		this.origin().penup().polar(b, -20).begin().pendown().foot(-20, b, s, 40);
+		this.arc(20, 50, b).foot(50, b, f, 40).arc(90, 120, b).foot(120, b, f, 40);
+		this.arc(160, 170, b).polar(s, 180).polar(b, 190).arc(190, 200, b);
+		this.foot(200, b, f, 40).arc(240, 270, b).foot(270, b, f, 40).arc(310, 340, b).close().penup();
+		this.polar(s * .4, 0).pendown().arc(0, 360, s * .4).close().draw();
+		
+		return this;
+	};
+	
+	// start our drawing
+	p.goto(200, 200).fillstyle("#fff");
+	
+	// it's turtles all the way down (or up, in this case)
+	for (var i = 1; i < 120; i ++) {
+		var c = i * 6 - 90;
+		p.pensize(1 + (i / 10)).penstyle(hsvtorgb(c, 1, 1));
+		p.turtle(i * 6).turn(50).penup().go((i + 2) * 8);
+	}
+	
+</script>
+
+</body>
+</html>

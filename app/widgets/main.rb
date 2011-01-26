@@ -10,7 +10,9 @@ class MainWidget < Qt::WebView
     super(parent)
     
     Qt::DBusConnection.sessionBus.registerObject("/", self, Qt::DBusConnection::ExportAllSlots)
-        
+    
+    @turtle = TurtleInterface.new(self)
+    
     self.window_title = version_description
     resize(700, 500)
     

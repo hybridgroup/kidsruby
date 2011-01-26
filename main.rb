@@ -6,7 +6,7 @@ require 'Qt'
   require "#{File.dirname(__FILE__)}/lib/#{f}.rb"
 end
 
-%w{ version ruby_highlighter runner }.each do |f|
+%w{ version ruby_highlighter runner turtle }.each do |f|
   require "#{File.dirname(__FILE__)}/app/models/#{f}.rb"
 end
 
