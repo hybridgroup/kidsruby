@@ -4,12 +4,14 @@
   <title>Ruby</title>
   
   <!-- Load styles -->
+  <link rel="stylesheet" href="css/blitzer/jquery-ui-1.8.9.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
   <link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
   
   <!-- Load js -->
   <script src="codemirror/js/codemirror.js" type="text/javascript"></script>
   
-  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.9.custom.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/pen_min.js"></script>
   <script type="text/javascript" src="js/hsv.js"></script>
@@ -17,28 +19,36 @@
 <body id="index">
 
   <div id="input">
-<textarea id="rubycode" rows="8" cols="40">
+    <textarea id="rubycode" rows="8" cols="40">
 # This is a comment
-</textarea>
-  <button id="run">Run</button>
+    </textarea>
+    <button id="run">Run</button>
   </div>
-  
-  <div id="output">
-    <div id="stdout">
-      &nbsp;
+
+  <aside id="primary">
+    <div id="tabs">
+      <ul>
+        <li><a href="#output">Output</a></li>
+        <li><a href="#turtle">Turtle</a></li>
+        <li><a href="#help">Help</a></li>
+      </ul>
+      <div id="output">
+        <div id="stdout">
+          &nbsp;
+        </div>
+        <div id="stderr">
+          &nbsp;
+        </div>
+      </div>
+
+      <div id="turtle">
+        <canvas id="turtle-canvas">
+      </div>
+
+      <div id="help">
+        HTML Pages with help system go here...
+      </div>
     </div>
-    <div id="stderr">
-      &nbsp;
-    </div>
-  </div>
-
-  <div id="turtle">
-    <canvas id="turtle-canvas" height="600" width="800">
-  </div>
-
-  <div id="help">
-    HTML Pages with help system go here...
-  </div>
-
+  </aside>
 </body>
 </html>

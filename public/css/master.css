@@ -14,15 +14,22 @@ body {
   font-family: consolas, monospace;
 }
 
+#input {
+  float: left;
+  height: 825px;
+  width: 70%;
+}
+
 #output {
-	margin: 10px;
-	padding: 20px;
-	background: #aaaaaa;
-	height: 50%;
 }
 #stdout {
 }
 
 #stderr {
 	color: #990000;
+}
+
+#tabs {
+  float: right;
+  width: 29%;
 }

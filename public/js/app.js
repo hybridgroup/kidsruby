@@ -55,4 +55,6 @@ $(document).ready(function() {
   turtle.jump(200, 200);
   
 	$("#turtle").data('turtle', turtle);
+
+  $("#tabs").tabs();
 });
