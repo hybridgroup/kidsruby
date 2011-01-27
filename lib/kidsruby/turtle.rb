@@ -11,6 +11,11 @@ class Turtle
     end
 
     @iface = Qt::DBusInterface.new("com.kidsruby.app", "/Turtle", "", Qt::DBusConnection.sessionBus)
+    if @iface.valid?
+      message = @iface.call("init_turtle")
+      reply = Qt::DBusReply.new(message)
+      $stderr.puts("Background call failed: %s\n" % reply.error.message) unless reply.valid?
+    end  
   end
   
   class << self
@@ -36,7 +41,7 @@ class Turtle
   # ex: 2
   def pensize(size)
     if @iface.valid?
-      message = @iface.call("pensize", color)
+      message = @iface.call("pensize", size)
       reply = Qt::DBusReply.new(message)
       if reply.valid?
         return true
