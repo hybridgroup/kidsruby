@@ -2,7 +2,8 @@
 class TurtleInterface < Qt::Object
   q_classinfo("D-Bus Interface", "com.kidsruby.Turtle")
   
-  slots 'init_turtle()', 'background(const QString&)', 'pensize(int)', 'pencolor(const QString&)', 'goto(int, int)', 'setheading(int)', 'forward(int)', 'turnleft(int)', 'turnright(int)', 'draw()'
+  slots 'init_turtle()', 'background(const QString&)', 'pensize(int)', 'pencolor(const QString&)', 'goto(int, int)', 'setheading(int)', 
+        'forward(int)', 'backward(int)', 'turnleft(int)', 'turnright(int)', 'draw()'
   
   def initialize(main)
     super
@@ -47,6 +48,11 @@ class TurtleInterface < Qt::Object
 
   def forward(distance)
     code = "callTurtle(['go', #{distance}]);"
+    @main_frame.evaluateJavaScript(code)
+  end
+
+  def backward(distance)
+    code = "callTurtle(['back', #{distance}]);"
     @main_frame.evaluateJavaScript(code)
   end
 

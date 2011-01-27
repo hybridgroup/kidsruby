@@ -104,6 +104,19 @@ class Turtle
     end  
     return nil
   end
+
+  def backward(distance)
+    if @iface.valid?
+      message = @iface.call("backward", distance)
+      reply = Qt::DBusReply.new(message)
+      if reply.valid?
+        return true
+      end
+
+      $stderr.puts("backward call failed: %s\n" % reply.error.message)
+    end
+    return nil
+  end
   
   def turnleft(degrees)
     if @iface.valid?
