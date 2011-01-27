@@ -2,6 +2,36 @@ body {
 	background: #eee;
 }
 
+body:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;  
+}
+
+body.lesson-set {
+  background: #fff; 
+  font-family: 'Helvetica Neue', Helvetica, sans-serif; 
+  margin: 0px 10px 0px 0px;
+}
+body.lesson-set > h1 {
+  border-bottom: 1px solid #dfdfdf;
+}
+body.lesson-set article > h1 {
+  border-bottom: 1px dotted #dfdfdf;
+  border-left: 4px solid #ff0000;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+body.lesson-set section h1 {
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
 button#run {
   bottom: 5px;
   position: absolute;
@@ -26,6 +56,16 @@ button#run {
   width: 70%;
 }
 
+iframe {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+iframe h1 {
+  font-size: 14px;
+}
+
 #output {
 }
 
@@ -44,6 +84,6 @@ button#run {
   width: 29%;
 }
 .ui-tabs-panel {
-  height: auto;
+  height: 85%;
   position: relative;
 }

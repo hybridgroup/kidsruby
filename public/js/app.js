@@ -32,6 +32,7 @@ function callTurtle(arguments) {
 
 $(document).ready(function() {		
 	var docWidth = $("body").width();
+  var docHeight = $(document).height();
 	
 	var editor = CodeMirror.fromTextArea('rubycode', {
 	      parserfile: ["../../js/tokenizeruby.js", "../../js/parseruby.js"],
@@ -60,4 +61,6 @@ $(document).ready(function() {
 	initTurtle();
 
   $("#tabs").tabs();
+  //$("#help iframe").css("height", docHeight-200);
+  console.info(docHeight);
 });
