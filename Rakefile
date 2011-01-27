@@ -2,6 +2,9 @@
 task :default => :spec
 
 task :spec do
-  ruby "spec/models/turtle_spec.rb"
-#  ruby "spec/models/turtle_spec.rb"
+  Dir[File.dirname(__FILE__) + "/spec/**/*_spec.rb"].each do |path|
+    require_relative path
+  end
+
+  MiniTest::Unit.autorun
 end

@@ -1,5 +1,5 @@
-require "./#{File.dirname(__FILE__)}/../spec_helper.rb"
-require "./#{File.dirname(__FILE__)}/../../app/models/turtle.rb"
+require_relative "../spec_helper"
+require_relative "../../app/models/turtle.rb"
 
 describe Turtle do
   before do
