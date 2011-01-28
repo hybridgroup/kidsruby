@@ -323,5 +323,13 @@ Pen.prototype = {
 		this.canvas.font = str;
 
 		return this;
+	},
+
+	background: function(color) {
+	  var oldStyle = this.canvas.fillStyle;
+	  this.canvas.fillStyle = color ;
+	  this.canvas.fillRect(0, 0, this.tag.width, this.tag.height);
+	  this.canvas.fillStyle = oldStyle ;
 	}
+
 };

@@ -20,7 +20,7 @@ class TurtleInterface < Qt::Object
 
   # ex: blue
   def background(color)
-    code = "callTurtle(['fillstyle', '#{color}']);"
+    code = "callTurtle(['background', '#{color}']);"
     @main_frame.evaluateJavaScript(code)
   end
 
