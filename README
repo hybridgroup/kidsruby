@@ -57,10 +57,11 @@ DONE:
 - tabbed divs for output/turtle/help
 
 TODOS:
+- home/back buttons for help
 - editor save/open/clear
 - editor copy and paste
 - clear button for output, or should it clear everything each time it is read?
 - layout for local html pages with tutorials
-- copy relevant parts from Hackety Hack
+- copy relevant parts from Hackety Hack (underway)
 - make it easy to run pie (see what I did there?)
 - create Shoes compatible classes (slippers?) to run Shoes example code too
