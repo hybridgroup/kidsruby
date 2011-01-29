@@ -34,6 +34,7 @@ body.lesson-set section h1 {
 
 button#run {
   bottom: 5px;
+  font-size: 30px;
   position: absolute;
   right: 5px;
 }
@@ -53,7 +54,7 @@ button#run {
 #input {
   float: left;
   position: relative;
-  width: 70%;
+  width: 60%;
 }
 
 iframe {
@@ -81,7 +82,7 @@ iframe h1 {
   position: absolute;
   right: 0px;
   top: 1%;
-  width: 29%;
+  width: 39%;
 }
 .ui-tabs-panel {
   height: 85%;
