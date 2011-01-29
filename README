@@ -75,6 +75,9 @@ EDITOR
 - editor save/open/clear
 - paste into editor (copy already works)
 
+TURTLE
+- reverse top/bottom orientation
+
 HELP/TUTORIAL
 - copy relevant basic ruby part from Hackety Hack tutorial
 
