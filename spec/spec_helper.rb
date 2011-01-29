@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'minitest/autorun'
 #require 'minitest/pride'
+require 'mocha'
 
 require 'Qt4'
-#require File.dirname(__FILE__) + '/../main'

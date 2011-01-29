@@ -1,12 +1,22 @@
-require_relative "../spec_helper"
-require_relative "../../app/models/turtle.rb"
+# TurtleInterface class is a pure interface to turtle. Tests should be delegated to caller
 
-describe Turtle do
-  before do
-    @turtle = Turtle.new
-  end
-  
-  it "must instanciate a Turtle" do
-    @turtle.wont_be_nil
-  end
-end
+# require_relative "../spec_helper"
+# require_relative "../../app/models/turtle.rb"
+# 
+# describe TurtleInterface do
+#   before do
+#     @bus = mock('bus')
+#     @bus.stubs('registerObject')
+#     Qt::DBusConnection.stubs('sessionBus').returns(@bus)
+#     
+#     @page = mock('page')
+#     @page.stubs('mainFrame')
+#     @main_widget = mock('main')
+#     @main_widget.stubs(:page).returns(@page)
+#   end
+#   
+#   it "must instantiate a TurtleInterface" do
+#     @turtle = TurtleInterface.new(@main_widget)
+#     @turtle.wont_be_nil
+#   end
+# end

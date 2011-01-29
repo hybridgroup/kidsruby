@@ -3,10 +3,27 @@ require_relative "../../lib/kidsruby/turtle"
 
 describe Turtle do
   before do
+    @interface = mock('interface')
+    @interface.stubs(:valid?).returns(true)
+    
+    @reply = mock("reply")
+    @reply.stubs(:valid?).returns(true)
+    
+    Turtle.any_instance.stubs(:get_interface).returns(@interface)
+    Turtle.any_instance.stubs(:get_reply).returns(@reply)      
+  end
+  
+  it "must initialize the remote Turtle" do     
+    @interface.expects(:call).with('init_turtle').returns(true) #('init_turtle')
     @turtle = Turtle.new
   end
   
-  describe "must be able to interpret colors" do
+  describe "when interpreting colors" do
+    before do
+      @interface.stubs(:call)
+      @turtle = Turtle.new
+    end
+
     it "must know about green" do
       @turtle.green.must_equal("#008000")
     end

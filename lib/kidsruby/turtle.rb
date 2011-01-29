@@ -3,6 +3,11 @@ require 'Qt'
 
 class Turtle
   def initialize
+    @interface = get_interface
+    init_turtle
+  end
+  
+  def get_interface
     if !Qt::DBusConnection.sessionBus.connected?
     	$stderr.puts("Cannot connect to the D-BUS session bus.\n" \
     	                "To start it, run:\n" \
@@ -10,12 +15,11 @@ class Turtle
     	exit(1)
     end
 
-    @iface = Qt::DBusInterface.new("com.kidsruby.app", "/Turtle", "", Qt::DBusConnection.sessionBus)
-    if @iface.valid?
-      message = @iface.call("init_turtle")
-      reply = Qt::DBusReply.new(message)
-      $stderr.puts("Background call failed: %s\n" % reply.error.message) unless reply.valid?
-    end  
+    interface = Qt::DBusInterface.new("com.kidsruby.app", "/Turtle", "", Qt::DBusConnection.sessionBus)
+  end
+  
+  def get_reply(message)
+    Qt::DBusReply.new(message)
   end
   
   class << self
@@ -24,11 +28,19 @@ class Turtle
     end
   end
   
+  def init_turtle
+    if @interface.valid?
+      message = @interface.call("init_turtle")
+      reply = get_reply(message)
+      $stderr.puts("init_turtle call failed: %s\n" % reply.error.message) unless reply.valid?
+    end
+  end
+  
   # ex: blue
   def background(color)
-    if @iface.valid?
-      message = @iface.call("background", color)
-      reply = Qt::DBusReply.new(message)
+    if @interface.valid?
+      message = @interface.call("background", color)
+      reply = get_reply(message)
       if reply.valid?
         return true
       end
@@ -40,9 +52,9 @@ class Turtle
   
   # ex: 2
   def pensize(size)
-    if @iface.valid?
-      message = @iface.call("pensize", size)
-      reply = Qt::DBusReply.new(message)
+    if @interface.valid?
+      message = @interface.call("pensize", size)
+      reply = get_reply(message)
       if reply.valid?
         return true
       end
@@ -54,9 +66,9 @@ class Turtle
   
   # ex: yellow
   def pencolor(color)
-    if @iface.valid?
-      message = @iface.call("pencolor", color)
-      reply = Qt::DBusReply.new(message)
+    if @interface.valid?
+      message = @interface.call("pencolor", color)
+      reply = get_reply(message)
       if reply.valid?
         return true
       end
@@ -67,9 +79,9 @@ class Turtle
   end
   
   def goto(x, y)
-    if @iface.valid?
-      message = @iface.call("goto", x, y)
-      reply = Qt::DBusReply.new(message)
+    if @interface.valid?
+      message = @interface.call("goto", x, y)
+      reply = get_reply(message)
       if reply.valid?
         return true
       end
@@ -80,9 +92,11 @@ class Turtle
   end
   
   def setheading(heading)
-    if @iface.valid?
-      message = @iface.call("setheading", heading)
-      reply = Qt::DBusReply.new(message)
+    heading = (heading + 180) % 360
+    
+    if @interface.valid?
+      message = @interface.call("setheading", heading)
+      reply = get_reply(message)
       if reply.valid?
         return true
       end
@@ -93,9 +107,9 @@ class Turtle
   end
 
   def forward(distance)
-    if @iface.valid?
-      message = @iface.call("forward", distance)
-      reply = Qt::DBusReply.new(message)
+    if @interface.valid?
+      message = @interface.call("forward", distance)
+      reply = get_reply(message)
       if reply.valid?
         return true
       end
@@ -106,9 +120,9 @@ class Turtle
   end
 
   def backward(distance)
-    if @iface.valid?
-      message = @iface.call("backward", distance)
-      reply = Qt::DBusReply.new(message)
+    if @interface.valid?
+      message = @interface.call("backward", distance)
+      reply = get_reply(message)
       if reply.valid?
         return true
       end
@@ -119,9 +133,9 @@ class Turtle
   end
   
   def turnleft(degrees)
-    if @iface.valid?
-      message = @iface.call("turnleft", degrees)
-      reply = Qt::DBusReply.new(message)
+    if @interface.valid?
+      message = @interface.call("turnleft", degrees)
+      reply = get_reply(message)
       if reply.valid?
         return true
       end
@@ -132,22 +146,22 @@ class Turtle
   end
 
   def turnright(degrees)
-    if @iface.valid?
-      message = @iface.call("turnright", degrees)
-      reply = Qt::DBusReply.new(message)
+    if @interface.valid?
+      message = @interface.call("turnright", degrees)
+      reply = get_reply(message)
       if reply.valid?
         return true
       end
 
-      $stderr.puts("Pencolor call failed: %s\n" % reply.error.message)
+      $stderr.puts("turnright call failed: %s\n" % reply.error.message)
     end  
     return nil        
   end
   
   def draw
-    if @iface.valid?
-      message = @iface.call("draw")
-      reply = Qt::DBusReply.new(message)
+    if @interface.valid?
+      message = @interface.call("draw")
+      reply = get_reply(message)
       if reply.valid?
         return true
       end

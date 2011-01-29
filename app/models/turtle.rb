@@ -6,7 +6,7 @@ class TurtleInterface < Qt::Object
         'forward(int)', 'backward(int)', 'turnleft(int)', 'turnright(int)', 'draw()'
   
   def initialize(main)
-    super
+    super(main)
     
     @main_widget = main
     @main_frame = @main_widget.page.mainFrame
@@ -42,7 +42,6 @@ class TurtleInterface < Qt::Object
   end
 
   def setheading(heading)
-    heading = (heading + 180) % 360
     code = "callTurtle(['angle', #{heading}]);"
     @main_frame.evaluateJavaScript(code)
   end
