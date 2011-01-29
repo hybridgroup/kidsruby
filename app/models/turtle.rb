@@ -3,7 +3,7 @@ class TurtleInterface < Qt::Object
   q_classinfo("D-Bus Interface", "com.kidsruby.Turtle")
   
   slots 'init_turtle()', 'background(const QString&)', 'pensize(int)', 'pencolor(const QString&)', 'goto(int, int)', 'setheading(int)', 
-        'forward(int)', 'backward(int)', 'turnleft(int)', 'turnright(int)', 'draw()'
+        'forward(int)', 'backward(int)', 'turnleft(int)', 'turnright(int)', 'draw()', 'int width()', 'int height()'
   
   def initialize(main)
     super(main)
@@ -69,5 +69,15 @@ class TurtleInterface < Qt::Object
   def draw
     code = "callTurtle(['draw']);"
     @main_frame.evaluateJavaScript(code)
+  end
+
+  def width
+    code = "callTurtle(['width']);"
+    return @main_frame.evaluateJavaScript(code)
+  end
+
+  def height
+    code = "callTurtle(['height']);"
+    return @main_frame.evaluateJavaScript(code)
   end
 end

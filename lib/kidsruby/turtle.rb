@@ -3,23 +3,13 @@ require 'Qt'
 
 class Turtle
   def initialize
-    @interface = get_interface
+    @interface_helper = InterfaceHelper.new
+    @interface = @interface_helper.get_interface("/Turtle")
     init_turtle
   end
-  
-  def get_interface
-    if !Qt::DBusConnection.sessionBus.connected?
-    	$stderr.puts("Cannot connect to the D-BUS session bus.\n" \
-    	                "To start it, run:\n" \
-    	                "\teval `dbus-launch --auto-syntax`\n")
-    	exit(1)
-    end
 
-    interface = Qt::DBusInterface.new("com.kidsruby.app", "/Turtle", "", Qt::DBusConnection.sessionBus)
-  end
-  
   def get_reply(message)
-    Qt::DBusReply.new(message)
+    @interface_helper.get_reply(message)
   end
   
   class << self
@@ -174,9 +164,29 @@ class Turtle
   end
   
   def width
+    if @interface.valid?
+      message = @interface.call("width")
+      reply = get_reply(message)
+      if reply.valid?
+        return reply.value
+      end
+
+      $stderr.puts("Width call failed: %s\n" % reply.error.message)
+    end
+    return nil
   end
   
-  def heigth
+  def height
+    if @interface.valid?
+      message = @interface.call("height")
+      reply = get_reply(message)
+      if reply.valid?
+        return reply.value
+      end
+
+      $stderr.puts("Height call failed: %s\n" % reply.error.message)
+    end
+    return nil
   end
   
   # colors

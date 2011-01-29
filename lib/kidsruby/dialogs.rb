@@ -1,19 +1,18 @@
 # this is designed to trigger dialogs for kidsruby for ask and alert compatible with hackety hack
 require 'Qt'
 
-if !Qt::DBusConnection.sessionBus.connected?
-	$stderr.puts("Cannot connect to the D-BUS session bus.\n" \
-	                "To start it, run:\n" \
-	                "\teval `dbus-launch --auto-syntax`\n")
-	exit(1)
+def init_interface
+  @interface_helper = InterfaceHelper.new
+  @interface_helper.connect!
+  @iface = @interface_helper.get_interface
 end
-	
-@iface = Qt::DBusInterface.new("com.kidsruby.app", "/", "", Qt::DBusConnection.sessionBus)
 
 def ask(text)
+  init_interface
+
   if @iface.valid?
     message = @iface.call("ask", text)
-    reply = Qt::DBusReply.new(message)
+    reply = @interface_helper.get_reply(message)
     if reply.valid?
       return reply.value
     end
@@ -24,9 +23,11 @@ def ask(text)
 end
 
 def alert(text)
+  init_interface
+
   if @iface.valid?
     message = @iface.call("alert", text)
-    reply = Qt::DBusReply.new(message)
+    reply = @interface_helper.get_reply(message)
     if reply.valid?
       return true
     end
@@ -35,3 +36,4 @@ def alert(text)
   end
   return nil
 end
+

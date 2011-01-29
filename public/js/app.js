@@ -27,7 +27,7 @@ function initTurtle() {
 function callTurtle(arguments) {
   var turtle = $("#turtle").data('turtle');
   var command = Array.prototype.shift.call(arguments);
-  turtle[command].apply(turtle, arguments);
+  return turtle[command].apply(turtle, arguments);
 }
 
 

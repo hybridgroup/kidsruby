@@ -1,4 +1,5 @@
 require_relative "../spec_helper"
+require_relative "../../lib/kidsruby/interface"
 require_relative "../../lib/kidsruby/turtle"
 
 describe Turtle do
@@ -6,11 +7,13 @@ describe Turtle do
     @interface = mock('interface')
     @interface.stubs(:valid?).returns(true)
     
+    @value = 100
     @reply = mock("reply")
     @reply.stubs(:valid?).returns(true)
+    @reply.stubs(:value).returns(@value)
     
-    Turtle.any_instance.stubs(:get_interface).returns(@interface)
-    Turtle.any_instance.stubs(:get_reply).returns(@reply)      
+    InterfaceHelper.any_instance.stubs('get_interface').returns(@interface)
+    InterfaceHelper.any_instance.stubs('get_reply').returns(@reply)
   end
   
   it "must initialize the remote Turtle" do     
@@ -81,6 +84,16 @@ describe Turtle do
     it "must be able to draw" do
       @interface.expects(:call).with("draw")
       @turtle.draw
+    end
+
+    it "must have a width" do
+      @interface.expects(:call).with("width")
+      @turtle.width.must_equal(@value)
+    end
+
+    it "must have a height" do
+      @interface.expects(:call).with("height")
+      @turtle.height.must_equal(@value)
     end
 
   end
