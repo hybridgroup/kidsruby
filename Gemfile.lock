@@ -2,11 +2,15 @@ GEM
   remote: http://rubygems.org/
   specs:
     htmlentities (4.2.3)
+    mocha (0.9.10)
+      rake
     qtbindings (4.6.3.2)
+    rake (0.8.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   htmlentities
+  mocha
   qtbindings

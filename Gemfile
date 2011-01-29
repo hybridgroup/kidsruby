@@ -3,3 +3,4 @@ source "http://rubygems.org"
 
 gem "qtbindings"
 gem 'htmlentities'
+gem 'mocha'
