@@ -164,9 +164,29 @@ class Turtle
   end
   
   def width
+    if @interface.valid?
+      message = @interface.call("width")
+      reply = get_reply(message)
+      if reply.valid?
+        return reply.value
+      end
+
+      $stderr.puts("Width call failed: %s\n" % reply.error.message)
+    end
+    return nil
   end
   
-  def heigth
+  def height
+    if @interface.valid?
+      message = @interface.call("height")
+      reply = get_reply(message)
+      if reply.valid?
+        return reply.value
+      end
+
+      $stderr.puts("Height call failed: %s\n" % reply.error.message)
+    end
+    return nil
   end
   
   # colors

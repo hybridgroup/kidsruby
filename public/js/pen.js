@@ -330,6 +330,14 @@ Pen.prototype = {
 	  this.canvas.fillStyle = color ;
 	  this.canvas.fillRect(0, 0, this.tag.width, this.tag.height);
 	  this.canvas.fillStyle = oldStyle ;
+	},
+
+	width: function() {
+	  return this.tag.width;
+	},
+
+	height: function() {
+	  return this.tag.height;
 	}
 
 };
