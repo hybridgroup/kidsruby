@@ -2,12 +2,14 @@
 KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. It is heavily influenced by Hackety Hack (http://hackety-hack.com).
 
 In fact you can run many of the same code samples from Hackety Hack in KidsRuby. For example:
+
   color = ask("what is your favorite color")
   if color == "blue"
     alert("you picked blue")
   end
 
 You can also use the Turtle, just like Hackety-Hack does
+
   Turtle.start do
     background yellow
     pencolor brown
@@ -35,6 +37,7 @@ Here are a few design goals for KidsRuby:
 * Using a modified version of the JS library Turtlewax for the Turtle implementation https://github.com/davebalmer/turtlewax
 
 Running it:
+
   ruby main.rb
 
 Getting setup on Ubuntu:
@@ -45,6 +48,7 @@ I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
 
 To summarize:
+
   brew install dbus
   brew install qt --with-qtdbus
   for DIR in /usr/local/Cellar/qt/4.7.1/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
