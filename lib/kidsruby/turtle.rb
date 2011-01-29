@@ -79,6 +79,8 @@ class Turtle
   end
   
   def goto(x, y)
+    # todo: handle flipping y in reverse
+    
     if @interface.valid?
       message = @interface.call("goto", x, y)
       reply = get_reply(message)
