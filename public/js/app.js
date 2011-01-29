@@ -19,6 +19,7 @@ function submitRubyCode(editor) {
 
 function initTurtle() {
   var turtle = new Pen("turtle-canvas");
+  turtle.turn(180);
   turtle.jump(100, 100);
 	$("#turtle").data('turtle', turtle);
 }
