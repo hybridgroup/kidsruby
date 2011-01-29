@@ -1,4 +1,5 @@
 require_relative "../spec_helper"
+require_relative "../../lib/kidsruby/interface"
 require_relative "../../lib/kidsruby/turtle"
 
 describe Turtle do
@@ -9,8 +10,8 @@ describe Turtle do
     @reply = mock("reply")
     @reply.stubs(:valid?).returns(true)
     
-    Turtle.any_instance.stubs(:get_interface).returns(@interface)
-    Turtle.any_instance.stubs(:get_reply).returns(@reply)      
+    InterfaceHelper.any_instance.stubs('get_interface').returns(@interface)
+    InterfaceHelper.any_instance.stubs('get_reply').returns(@reply)
   end
   
   it "must initialize the remote Turtle" do     
