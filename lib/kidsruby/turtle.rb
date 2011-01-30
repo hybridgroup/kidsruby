@@ -2,7 +2,10 @@
 require 'Qt'
 
 class Turtle
+  attr_reader :commands
+
   def initialize
+    @commands = []
     @interface_helper = InterfaceHelper.new
     @interface = @interface_helper.get_interface("/Turtle")
     init_turtle
@@ -28,144 +31,79 @@ class Turtle
     end
   end
   
+  def send_commands
+    cmds = @commands.join(".")
+    if @interface.valid?
+      message = @interface.call("command_turtle", cmds)
+      reply = get_reply(message)
+      if reply.valid?
+        @commands = []
+        return true
+      end
+
+      $stderr.puts("command_turtle call failed: %s\n" % reply.error.message)
+    end  
+    return nil
+  end
+  
+  def add_command(command)
+    @commands << command
+  end
+
   # ex: blue
   def background(color)
     if @interface.valid?
       message = @interface.call("background", color)
       reply = get_reply(message)
       if reply.valid?
+        @commands = []
         return true
       end
 
-      $stderr.puts("Background call failed: %s\n" % reply.error.message)
+      $stderr.puts("background call failed: %s\n" % reply.error.message)
     end  
     return nil
   end
-  
+
   # ex: 2
   def pensize(size)
-    if @interface.valid?
-      message = @interface.call("pensize", size)
-      reply = get_reply(message)
-      if reply.valid?
-        return true
-      end
-
-      $stderr.puts("Pensize call failed: %s\n" % reply.error.message)
-    end  
-    return nil
+    add_command "pensize(#{size})"
   end
-  
+
   # ex: yellow
   def pencolor(color)
-    if @interface.valid?
-      message = @interface.call("pencolor", color)
-      reply = get_reply(message)
-      if reply.valid?
-        return true
-      end
-
-      $stderr.puts("Pencolor call failed: %s\n" % reply.error.message)
-    end  
-    return nil
+    add_command "penstyle('#{color}')"
   end
-  
+
   def goto(x, y)
-    # handle flipping y in reverse
-    y = height - y
-    
-    if @interface.valid?
-      message = @interface.call("goto", x, y)
-      reply = get_reply(message)
-      if reply.valid?
-        return true
-      end
-
-      $stderr.puts("goto call failed: %s\n" % reply.error.message)
-    end  
-    return nil    
+    add_command "jump(#{x}, #{y})"
   end
-  
-  def setheading(heading)
-    heading = (heading + 180) % 360
-    
-    if @interface.valid?
-      message = @interface.call("setheading", heading)
-      reply = get_reply(message)
-      if reply.valid?
-        return true
-      end
 
-      $stderr.puts("setheading call failed: %s\n" % reply.error.message)
-    end  
-    return nil    
+  def setheading(heading)
+    add_command "angle(#{heading})"
   end
 
   def forward(distance)
-    if @interface.valid?
-      message = @interface.call("forward", distance)
-      reply = get_reply(message)
-      if reply.valid?
-        return true
-      end
-
-      $stderr.puts("forward call failed: %s\n" % reply.error.message)
-    end  
-    return nil
+    add_command "go(#{distance})"
   end
 
   def backward(distance)
-    if @interface.valid?
-      message = @interface.call("backward", distance)
-      reply = get_reply(message)
-      if reply.valid?
-        return true
-      end
-
-      $stderr.puts("backward call failed: %s\n" % reply.error.message)
-    end
-    return nil
+    add_command "back(#{distance})"
   end
-  
-  def turnleft(degrees)
-    if @interface.valid?
-      message = @interface.call("turnleft", degrees)
-      reply = get_reply(message)
-      if reply.valid?
-        return true
-      end
 
-      $stderr.puts("turnleft call failed: %s\n" % reply.error.message)
-    end  
-    return nil    
+  def turnleft(degrees)
+    add_command "turn(#{-degrees.abs})"
   end
 
   def turnright(degrees)
-    if @interface.valid?
-      message = @interface.call("turnright", degrees)
-      reply = get_reply(message)
-      if reply.valid?
-        return true
-      end
-
-      $stderr.puts("turnright call failed: %s\n" % reply.error.message)
-    end  
-    return nil        
+    add_command "turn(#{degrees.abs})"
   end
   
   def draw
-    if @interface.valid?
-      message = @interface.call("draw")
-      reply = get_reply(message)
-      if reply.valid?
-        return true
-      end
-
-      $stderr.puts("Draw call failed: %s\n" % reply.error.message)
-    end  
-    return nil
+    add_command "draw();"
+    send_commands
   end
-  
+
   def width
     if @interface.valid?
       message = @interface.call("width")

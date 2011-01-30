@@ -2,8 +2,7 @@
 class TurtleInterface < Qt::Object
   q_classinfo("D-Bus Interface", "com.kidsruby.Turtle")
   
-  slots 'init_turtle()', 'background(const QString&)', 'pensize(int)', 'pencolor(const QString&)', 'goto(int, int)', 'setheading(int)', 
-        'forward(int)', 'backward(int)', 'turnleft(int)', 'turnright(int)', 'draw()', 'int width()', 'int height()'
+  slots 'init_turtle()', 'command_turtle(const QString&)', 'background(const QString&)', 'int width()', 'int height()'
   
   def initialize(main)
     super(main)
@@ -18,57 +17,14 @@ class TurtleInterface < Qt::Object
     @main_frame.evaluateJavaScript(code)
   end
 
-  # ex: blue
+  def command_turtle(commands)
+    code = "getTurtle()." + commands ;
+    @main_frame.evaluateJavaScript(code)
+  end
+
   def background(color)
-    code = "callTurtle(['background', '#{color}']);"
-    @main_frame.evaluateJavaScript(code)
-  end
-
-  # ex: 2
-  def pensize(size)
-    code = "callTurtle(['pensize', #{size}]);"
-    @main_frame.evaluateJavaScript(code)
-  end
-
-  # ex: yellow
-  def pencolor(color)
-    code = "callTurtle(['penstyle', '#{color}']);"
-    @main_frame.evaluateJavaScript(code)
-  end
-
-  def goto(x, y)
-    code = "callTurtle(['jump', #{x}, #{y}]);"
-    @main_frame.evaluateJavaScript(code)
-  end
-
-  def setheading(heading)
-    code = "callTurtle(['angle', #{heading}]);"
-    @main_frame.evaluateJavaScript(code)
-  end
-
-  def forward(distance)
-    code = "callTurtle(['go', #{distance}]);"
-    @main_frame.evaluateJavaScript(code)
-  end
-
-  def backward(distance)
-    code = "callTurtle(['back', #{distance}]);"
-    @main_frame.evaluateJavaScript(code)
-  end
-
-  def turnleft(degrees)
-    code = "callTurtle(['turn', #{-degrees.abs}]);"
-    @main_frame.evaluateJavaScript(code)
-  end
-
-  def turnright(degrees)
-    code = "callTurtle(['turn', #{degrees.abs}]);"
-    @main_frame.evaluateJavaScript(code)
-  end
-  
-  def draw
-    code = "callTurtle(['draw']);"
-    @main_frame.evaluateJavaScript(code)
+    code = "setTurtleBackground('#{color}');"
+    return @main_frame.evaluateJavaScript(code)
   end
 
   def width

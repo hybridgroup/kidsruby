@@ -29,6 +29,13 @@ function callTurtle(arguments) {
   return turtle[command].apply(turtle, arguments);
 }
 
+function getTurtle() {
+  return $("#turtle").data('turtle');
+}
+
+function setTurtleBackground(color) {
+  $("#turtle").css('backgroundColor', color);
+}
 
 $(document).ready(function() {
 	var docWidth = $("body").width();

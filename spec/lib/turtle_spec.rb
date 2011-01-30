@@ -35,13 +35,13 @@ describe Turtle do
 
     it "must have a pensize" do
       size = 3
-      @interface.expects(:call).with("pensize", size)
+      @turtle.expects(:add_command)
       @turtle.pensize(size)
     end
 
     it "must have a pencolor" do
       color = "#fff"
-      @interface.expects(:call).with("pencolor", color)
+      @turtle.expects(:add_command)
       @turtle.pencolor(color)
     end
 
@@ -49,42 +49,43 @@ describe Turtle do
       height = 5
       x, y = 3, 4
       @turtle.stubs("height").returns(height)
-      @interface.expects(:call).with("goto", x, height - y)
+      @turtle.expects(:add_command)
       @turtle.goto(x, y)
     end
 
     it "must be able to setheading" do
       heading = 90
-      @interface.expects(:call).with("setheading", heading + 180)
+      @turtle.expects(:add_command)
       @turtle.setheading(heading)
     end
 
     it "must be able to move forward" do
       distance = 3
-      @interface.expects(:call).with("forward", distance)
+      @turtle.expects(:add_command)
       @turtle.forward(distance)
     end
 
     it "must be able to move backward" do
       distance = 3
-      @interface.expects(:call).with("backward", distance)
+      @turtle.expects(:add_command)
       @turtle.backward(distance)
     end
 
     it "must be able to turnleft" do
       degrees = 45
-      @interface.expects(:call).with("turnleft", degrees)
+      @turtle.expects(:add_command)
       @turtle.turnleft(degrees)
     end
 
     it "must be able to turnright" do
       degrees = 45
-      @interface.expects(:call).with("turnright", degrees)
+      @turtle.expects(:add_command)
       @turtle.turnright(degrees)
     end
 
     it "must be able to draw" do
-      @interface.expects(:call).with("draw")
+      @turtle.expects(:add_command)
+      @turtle.expects(:send_commands)
       @turtle.draw
     end
 
