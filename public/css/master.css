@@ -38,6 +38,13 @@ body.lesson-set nav a {
 }
 
 
+body.lesson-set section code {
+  background-color: #000;
+  color: #fff;
+  font-family: consolas, monospace;
+  padding: 0px 5px;
+}
+
 body.lesson-set section h1 {
   color: #555;
   font-size: 13px;
@@ -67,7 +74,7 @@ button#run {
 #input {
   float: left;
   position: relative;
-  width: 60%;
+  width: 50%;
 }
 
 iframe {
@@ -95,7 +102,7 @@ iframe h1 {
   position: absolute;
   right: 0px;
   top: 1%;
-  width: 39%;
+  width: 49%;
 }
 .ui-tabs-panel {
   height: 85%;
