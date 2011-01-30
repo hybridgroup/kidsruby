@@ -25,6 +25,19 @@ body.lesson-set article > h1 {
   padding-left: 5px;
 }
 
+body.lesson-set nav {
+  background-color: #ff0000;
+  padding: 3px 5px;
+}
+
+body.lesson-set nav a {
+  color: #fff;
+  font-weight: bold;
+  margin-right: 7px;
+  text-decoration: none;
+}
+
+
 body.lesson-set section h1 {
   color: #555;
   font-size: 13px;
