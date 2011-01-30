@@ -24,11 +24,10 @@ You can also use the Turtle, just like Hackety-Hack does
     end
 
 ## Design Goals
-Here are a few design goals for KidsRuby:
 * Simple single file editor
 * You can run the current contents of the editor
 * The output appears next to the editor
-* It runs a normal Ruby 1.9.2 on the code
+* It runs a normal Ruby 1.9.2 on the code. With normal gems etc.
 
 ## Implementation choices
 * QtRuby app - lets us communicate with the OS to create a full Ruby interactive environment

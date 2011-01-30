@@ -338,6 +338,9 @@ Pen.prototype = {
 
 	height: function() {
 	  return this.tag.height;
-	}
+	},
 
+  center: function() {
+    return this.goto(this.width() / 2, this.height() / 2);
+  }
 };

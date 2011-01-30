@@ -19,8 +19,7 @@ function submitRubyCode(editor) {
 
 function initTurtle() {
   var turtle = new Pen("turtle-canvas");
-  turtle.turn(180);
-  turtle.jump(100, 100);
+  turtle.center();
 	$("#turtle").data('turtle', turtle);
 }
 
@@ -31,7 +30,7 @@ function callTurtle(arguments) {
 }
 
 
-$(document).ready(function() {		
+$(document).ready(function() {
 	var docWidth = $("body").width();
   var docHeight = $(document).height();
 	

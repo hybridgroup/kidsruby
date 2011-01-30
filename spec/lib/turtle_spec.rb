@@ -46,8 +46,10 @@ describe Turtle do
     end
 
     it "must be able to goto a location" do
+      height = 5
       x, y = 3, 4
-      @interface.expects(:call).with("goto", x, y)
+      @turtle.stubs("height").returns(height)
+      @interface.expects(:call).with("goto", x, height - y)
       @turtle.goto(x, y)
     end
 

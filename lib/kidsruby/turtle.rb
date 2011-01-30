@@ -69,7 +69,8 @@ class Turtle
   end
   
   def goto(x, y)
-    # todo: handle flipping y in reverse
+    # handle flipping y in reverse
+    y = height - y
     
     if @interface.valid?
       message = @interface.call("goto", x, y)
