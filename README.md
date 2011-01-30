@@ -62,6 +62,10 @@ To summarize:
 * layout for local html pages with tutorials
 * implement Turtle width and height methods
 * correct top/bottom orientation for Turtle relative to user
+* adjust proportions of editor to sidebar for more visible space for tutorial section
+* home to main index for help & browser forward/back buttons for help section
+* split up HH help "pages" to go forward/back like the original tutorial
+* make the canvas bigger for the Turtle
 
 ## TODO
 
@@ -69,11 +73,7 @@ To summarize:
 * capture keystrokes within main Qt app and pipe to stdin when executing ruby process so we can support gets
 
 ### UI
-* adjust proportions of editor to sidebar to 50/50 or max 60/40? need more visible space for tutorial section
-* home to main index for help & browser forward/back buttons for help section
-* split up HH help "pages" to go forward/back like the original tutorial
 * make the Run button WAY WAY bigger
-* make the canvas bigger (to see size, try script "Turtle.start do background green end")
 
 ### EDITOR
 * editor save/open/clear
