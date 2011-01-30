@@ -61,7 +61,7 @@ To summarize:
 * tabbed divs for output/turtle/help
 * layout for local html pages with tutorials
 * implement Turtle width and height methods
-
+* correct top/bottom orientation for Turtle relative to user
 
 ## TODO
 
@@ -78,9 +78,6 @@ To summarize:
 ### EDITOR
 * editor save/open/clear
 * paste into editor (copy already works)
-
-### TURTLE
-* reverse top/bottom orientation
 
 ### HELP/TUTORIAL
 * copy relevant basic ruby part from Hackety Hack tutorial
