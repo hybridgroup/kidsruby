@@ -14,7 +14,9 @@ class Turtle
   
   class << self
     def start(&script)
-      self.new.instance_eval(&script)
+      t = self.new
+      t.instance_eval(&script)
+      t.draw
     end
   end
   
