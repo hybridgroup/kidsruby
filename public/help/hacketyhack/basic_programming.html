@@ -25,13 +25,6 @@
     <section class="page"><h1>Round One</h1>
       <p>So, you'd like to learn how to hack code with the best of 'em, eh? Well, you've come to the right place. This is the very first lesson I have to share with you. It all starts here.</p>
       <p>I want to get you started off on the best possible foot with making programs, so we'll start off by talking a little bit about what programming is, and then we'll write some basic programs to draw fun things on the screen. Sound good? Off we go!</p>
-      <!-- flow do
-        <p> "(click the little "
-        icon_button :arrow_right, nil do
-          alert "Not this one! The one below!"
-        end
-        <p> " on the bottom of the screen to get started)"
-      end -->
     </section>
   </article>
 
@@ -92,16 +85,6 @@
       <p>We have to tell Ruby that we want to tell the Turtle what to do. To do that, we have a <code>Turtle</code> command. We can tell the <code>Turtle</code> two things:</p>
       <p><code>draw</code>: the turtle will follow our instructions at lightning speed, drawing our entire image in the blink of an eye.
       <p><code>start</code>: an interactive window will appear, which lets you see the turtle move at each step in the program. You can move at your own pace. This is useful if the turtle isn't doing what you expect!
-      <!-- <p> ""
-      flow do
-        <p> "Click on the editor tab ("
-        image "#{HH::STATIC}/tab-new.png", :margin => 6 do
-          alert("Not this one, silly! the one on the left!")
-        end
-        <p> ") to get started."
-      end
-
-      next_when :tab_opened, :Editor -->
     </section>
     
     <section class="page"><h1>Type it in!</h1>
@@ -120,13 +103,16 @@
     <section class="page"><h1>Changing the background</h1>
       <p>Let's try this: we can tell the <code>Turtle</code> that we want to use a different background color by using the <code>background</code> command. Check it out:</p>
       <p>
-        <code>Turtle.draw do background maroon end</code>
+<pre>
+<code>Turtle.draw do
+  background maroon
+end</code></pre>
       </p>      
       <p>Type this in and click 'Run'!</p>
     </section>
 
     <section class="page"><h1>The Turtle gets its orders</h1>
-      <p>Cool stuff! The background is now maroon. You can find a full list of colors that are supported on the Shoes website at 'http://shoesrb.com/manual/Colors.html'.
+      <p>Cool stuff! The background is now maroon. <a href="colors.html">Click here to see a full list of colors that are supported</a>.
       <p>This is also how you make lists of instructions for the <code>Turtle</code> to follow. To make it a little easier to see, programmers will often put two spaces before sublists. Get in the habit now, you'll thank me later!</p>
     </section>
 
@@ -139,23 +125,23 @@
   <article class="lesson"><h1>Drawing lines</h1>
     <section class="page"><h1>Sally forth!</h1>
       <p>Okay, enough dilly-dallying. Let's tell the turtle to draw a line! Here's my line. Give this one a shot, then try your own colors and numbers!</p>
-<p><code>Turtle.draw do
+<p><pre><code>Turtle.draw do
   background lightslategray
   pencolor honeydew
   forward 50
-end</code></p>
+end</code></pre></p>
       <p>50 is the number of pixels to move forward, by the way.</p>
     </section>
 
     <section class="page"><h1>You spin me right round, baby</h1>
       <p>Great! So you've got a line. But what if you don't want the <code>Turtle</code> to move forward? Well, you can tell it to turn by using a <code>turnleft</code> or <code>turnright</code> command, like this:</p>
-<p><code>Turtle.draw do
+<p><pre><code>Turtle.draw do
   background lightslategray
   pencolor honeydew
   forward 50
   turnright 90
   forward 50
-end</code></p>
+end</code></pre></p>
      <p>Give that a shot, then play with it a bit!</p>
      <p>If you're wondering what 90 means, it's the number of degrees that it'll turn.</p>
     </section>
@@ -176,7 +162,7 @@ end</code></p>
 
     <section class="page"><h1>Here's my version</h1>
       <p>Here's how I did it:</p>
-<p><code>Turtle.draw do
+<p><pre><code>Turtle.draw do
   background lightslategray
   pencolor honeydew
   forward 50
@@ -186,7 +172,7 @@ end</code></p>
   forward 50
   turnright 90
   forward 50
-end</code></p>
+end</code></pre></p>
     </section>
   </article>
 
@@ -199,14 +185,14 @@ end</code></p>
 
     <section class="page"><h1>Repeating repeating ourselves ourselves</h1>
       <p>Check it out: our <code>Turtle</code> actually knows numbers. For example:</p>
-<p><code>Turtle.draw do
+<p><pre><code>Turtle.draw do
   background lightslategray
   pencolor honeydew
   4.times do
     forward 50
     turnright 90
   end
-end</code></p>
+end</code></pre></p>
       <p>Try running this example. It also draws a square! Wow!</p>
     </section>
 
