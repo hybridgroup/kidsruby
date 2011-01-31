@@ -80,10 +80,10 @@ To summarize:
 * paste into editor (copy already works)
 
 ### HELP/TUTORIAL
+* How to use KidsRuby
 * copy relevant basic ruby part from Hackety Hack tutorial
 
-### TOYS/GOODIES
-* make it easy to run pie (see what I did there?)
-
 ### POSSIBLE IDEAS:
+* add Gosu libs/classes to make it easy to write games right away
+* make it easy to run pie (see what I did there?)
 * create Shoes compatible classes (slippers?) to run Shoes example code too
