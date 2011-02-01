@@ -66,6 +66,8 @@ To summarize:
 * home to main index for help & browser forward/back buttons for help section
 * split up HH help "pages" to go forward/back like the original tutorial
 * make the canvas bigger for the Turtle
+* add Gosu libs/classes to KidsRuby OS to make it easy to write games right away
+* How to use KidsRuby
 
 ## TODO
 
@@ -80,10 +82,8 @@ To summarize:
 * paste into editor (copy already works)
 
 ### HELP/TUTORIAL
-* How to use KidsRuby
 * copy relevant basic ruby part from Hackety Hack tutorial
 
 ### POSSIBLE IDEAS:
-* add Gosu libs/classes to make it easy to write games right away
 * make it easy to run pie (see what I did there?)
 * create Shoes compatible classes (slippers?) to run Shoes example code too
