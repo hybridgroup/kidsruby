@@ -17,6 +17,27 @@ function submitRubyCode(editor) {
 	QTApi['evaluateRuby(QString)'](ruby);
 }
 
+function openRubyCode() {
+	QTApi['openRubyFile(QString)']("");
+}
+
+function saveRubyCode(editor) {
+	var ruby = editor.getCode();
+	QTApi['saveRubyFile(QString)'](ruby);
+}
+
+function getEditor() {
+  return $("#rubycode").data("editor");
+}
+
+function clearCode() {
+  getEditor().setCode("");
+}
+
+function addCode(code) {
+  getEditor().setCode(getEditor().getCode() + "\n" + code);
+}
+
 function initTurtle() {
   var turtle = new Pen("turtle-canvas");
   turtle.center();
@@ -56,13 +77,23 @@ $(document).ready(function() {
 				iframeClass: 'editor-window',
 	    	autoMatchParens: true
 	  });
-	
+
+	$("#rubycode").data("editor", editor);
+
 	// Set the output width
 	$("#output").width = docWidth;
   
-	$("#input button").click(function(e) {
+	$("#run").click(function(e) {
 		clearOutputs();
 		submitRubyCode(editor);
+	});
+
+	$("#open").click(function(e) {
+		openRubyCode(editor);
+	});
+
+	$("#save").click(function(e) {
+		saveRubyCode(editor);
 	});
 	
 	initTurtle();

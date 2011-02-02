@@ -4,7 +4,7 @@ require "qtwebkit"
 class MainWidget < Qt::WebView
   q_classinfo("D-Bus Interface", "com.kidsruby.Main")
 
-  slots 'evaluateRuby(QString)', 'setupQtBridge()', 'alert(const QString&)', 'QString ask(const QString&)'
+  slots 'evaluateRuby(QString)', 'setupQtBridge()', 'alert(const QString&)', 'QString ask(const QString&)', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)'
     
   def initialize(parent = nil)
     super(parent)
@@ -35,6 +35,46 @@ class MainWidget < Qt::WebView
     runner.run(code)
   end
   
+  def openRubyFile(nada)
+    fileName = Qt::FileDialog.getOpenFileName(self,
+                                tr("Open a Ruby File"),
+                                "",
+                                tr("Ruby Files (*.rb)"))
+    unless fileName.nil?
+      codeFile = Qt::File.new(fileName)
+      unless codeFile.open(Qt::File::ReadOnly | Qt::File::Text)
+          Qt::MessageBox.warning(self, tr("KidsRuby Problem"),
+                                 tr("Oh, uh! Cannot open file %s:\n%s" %
+                                 [ codeFile.fileName(), codeFile.errorString() ] ) )
+          return
+      end
+      @frame.evaluateJavaScript("clearCode();")
+
+      inf = Qt::TextStream.new(codeFile)
+
+      while !inf.atEnd()
+        line = inf.readLine()
+        @frame.evaluateJavaScript("addCode('#{line}');")
+      end
+    end
+  end
+
+  def saveRubyFile(code)
+    fileName = Qt::FileDialog.getSaveFileName(self, tr("Save Ruby Code"), tr(".rb"))
+	  unless fileName.nil?
+	    file = Qt::File.new(fileName)
+	    unless file.open(Qt::File::WriteOnly | Qt::File::Text)
+	        Qt::MessageBox.warning(self, tr("KidsRuby Problem"),
+	                             tr("Cannot write file %s:\n%s." % [fileName, file.errorString]))
+	        return
+	    end
+
+	    outf = Qt::TextStream.new(file)
+	    outf << code
+	    outf.flush
+	  end
+  end
+
   def append(text)
     current_output.append(text)
   end
