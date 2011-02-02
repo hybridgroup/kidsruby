@@ -68,6 +68,7 @@ To summarize:
 * make the canvas bigger for the Turtle
 * add Gosu libs/classes to KidsRuby OS to make it easy to write games right away
 * How to use KidsRuby
+* editor save/open
 
 ## TODO
 
@@ -78,7 +79,6 @@ To summarize:
 * make the Run button WAY WAY bigger
 
 ### EDITOR
-* editor save/open/clear
 * paste into editor (copy already works)
 
 ### HELP/TUTORIAL

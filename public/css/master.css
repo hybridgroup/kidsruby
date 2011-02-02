@@ -56,6 +56,20 @@ button#run {
   bottom: 5px;
   font-size: 30px;
   position: absolute;
+  right: 150px;
+}
+
+button#open {
+  bottom: 5px;
+  font-size: 30px;
+  position: absolute;
+  right: 50px;
+}
+
+button#save {
+  bottom: 5px;
+  font-size: 30px;
+  position: absolute;
   right: 5px;
 }
 
