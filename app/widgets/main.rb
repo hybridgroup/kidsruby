@@ -19,8 +19,8 @@ class MainWidget < Qt::WebView
     @frame = self.page.mainFrame
     
     Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), self, SLOT('setupQtBridge()') )
-    
-    self.load Qt::Url.new("#{File.dirname(__FILE__)}/../../public/index.html")
+
+    self.load Qt::Url.new(File.expand_path(File.dirname(__FILE__) + "/../../public/index.html"))
     show
   end
   
