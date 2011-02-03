@@ -51,28 +51,14 @@ body.lesson-set section h1 {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
-
-button#run {
+#buttons {
   bottom: 5px;
-  font-size: 30px;
-  position: absolute;
-  right: 150px;
-}
-
-button#open {
-  bottom: 5px;
-  font-size: 30px;
-  position: absolute;
-  right: 50px;
-}
-
-button#save {
-  bottom: 5px;
-  font-size: 30px;
   position: absolute;
   right: 5px;
 }
-
+#buttons button {
+  font-size: 30px;
+}
 .CodeMirror-line-numbers {
   width: 2.2em;
   color: #999;
