@@ -3,11 +3,11 @@ require 'rubygems'
 require 'Qt'
 
 %w{ version runner turtle }.each do |f|
-  require "#{File.dirname(__FILE__)}/app/models/#{f}.rb"
+  require File.expand_path(File.dirname(__FILE__) + "/app/models/#{f}.rb")
 end
 
 %w{ main }.each do |f|
-  require "#{File.dirname(__FILE__)}/app/widgets/#{f}.rb"
+  require File.expand_path(File.dirname(__FILE__) + "/app/widgets/#{f}.rb")
 end
 
 app = Qt::Application.new(ARGV)

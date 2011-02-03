@@ -48,8 +48,8 @@ class Runner < Qt::Process
   end
   
   def build_code_from_fragment(code)
-    # todo: add any default requires for kid stuff here
-    new_code = "require './lib/kidsruby'\n"
+    # add any default requires for kid code
+    new_code = "require '" + File.expand_path(File.dirname(__FILE__) + "/../../lib/kidsruby") + "'\n"
     new_code << code
     new_code
   end
@@ -67,6 +67,6 @@ class Runner < Qt::Process
   end
   
   def tmp_dir
-    "#{File.dirname(__FILE__)}/../../tmp"
+    File.expand_path(File.dirname(__FILE__) + "/../../tmp")
   end
 end
