@@ -23,16 +23,15 @@
     
   <article class="lesson"><h1>Lesson 2</h1>
     <section class="page"><h1>This is Ruby4Kids</h1>
-      <p>OK the first lesson we learned to open a window in gosu
-we learned to draw a player inside the game window
-we learned to move this player around the game window
-and we limited its movement to just the bounds of the game window.</p>
+      <p>OK, the first lesson we learned, was to open a window in Gosu.
+We learned to draw a player inside the game window.
+We learned to move this player around the game window.
+We also limited its movement to just the bounds of the game window.</p>
       <p>Now we are ready to add more excitement to the game.</p>
-      <p>How about if we play dodge ball with our player. We can have a ball that appears as if thrown into the
-game window and our player dodges the ball by moving with the arrow keys.</p>
-      <p>So let's try that. First let's find a picture of a ball we can use.</p>
+      <p>How about if we play dodge ball with our player? We can have a ball that appears as if thrown into the game window, and our player dodges the ball by moving with the arrow keys.</p>
+      <p>So let's try that. First let's find a picture of a ball we can use. Save it somewhere on disk you can find it.</p>
 
-      <p>So we create a new file for our dodge ball. We will call this file <strong>ball.rb</strong> and inside of it, we will have our familiar: </p>
+      <p>So we create a new class for our dodge ball: </p>
       <pre>
 <code>class Ball
   def initialize(game_window)
@@ -46,19 +45,16 @@ game window and our player dodges the ball by moving with the arrow keys.</p>
   end
 end</code>
 </pre>
-      <p>then we will make this ball come from the top of the screen and from random places it should go down</p>
-      <p>we accomplish this by setting the initial position @x to a random number between 0 and the width of the game window in pixels.</p>
+      <p>Now we will make this ball come from the top of the screen, and drop down from random places.</p>
+      <p>We accomplish this by setting the initial position <code>@x</code> to a random number between 0 and the width of the game window, in pixels.</p>
       <code>@x = rand(@game_window.width)</code>
-      <p>this means that when the game starts the random method will give us a postion
-somewhere between 0 and the width of the game window</p>
-      <p>the @y position for this ball will be 0 since it is at the top during initialize.</p>
-      <p>now with each update, we need to make the ball move down, so let's say the ball moves 1 pixel with every udpate. we will see how fast that is.</p>
-      <p>we do this in the update, we change the @y position by 1 pixel like this</p>
-      <code>@y = @y -1</code>
-      <p>as we have learned, we need to trap for when the ball goes out of the screen.
-if the ball goes beyond the screen, we want to start again, find a random position
-from the top of the screen and drop the ball again.</p>
-      <p>so we can do this by adding our familiar if statement like this</p>
+      <p>This means that when the game starts, that the random method will give us a position somewhere between 0 and the width of the game window</p>
+      <p>The <code>@y</code> position for this ball will be 0 since it is at the top during initialize.</p>
+      <p>Now with each update, we need to make the ball move down, so let's say the ball moves 1 pixel with every update. We will see how fast that is.</p>
+      <p>We do this in the update, where we change the <code>@y</code> position by 1 pixel like this:</p>
+      <pre><code>@y = @y -1</code></pre>
+      <p>As we have learned, we need to trap for when the ball goes off of the screen. If the ball goes beyond the screen, we want to start again, find a random position from the top of the screen and drop the ball again.</p>
+      <p>So we can do this by adding our familiar if statement like this:</p>
 <pre>
 <code>if @y > @game_window.height
   @y = 0
@@ -66,19 +62,14 @@ else
   @y = @y - 1
 end</code>
 </pre>
-      <p>now we will do something else, we want the ball to start dropping from another position
-not the same x position as before. So in the line where we reset @y to 0, we also 
-change the @x position to be another random position like this</p>
+      <p>Now we will do something else, we want the ball to start dropping from another position. Not the same x position as before. So in the line where we reset @y to 0, we also change the @x position to be another random position like this:</p>
 
-      <code>@x = rand(@game_window.width)</code>
-
+    <pre><code>@x = rand(@game_window.width)</code></pre>
     </section>
     <section class="page"><h1>OK, let's see if this works.</h1>
       <p>The ball goes down as expected, we now need to make sure that if the ball hits the player, the game stops. How do we do this?</p>
-      <p>back to our update method. In the update method, we can write a method
-to check for this and stop the game if hit.</p>
-
-      <p>distance between ball and the player</p>
+      <p>Let's go back to our update method. In the update method, we can write a method to check for this and stop the game if hit.</p>
+      <p>Distance between ball and the player:</p>
 <pre>
 <code>if @player1.hit_by? @ball
   stop_the_game
