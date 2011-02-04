@@ -32,8 +32,7 @@ We also limited its movement to just the bounds of the game window.</p>
       <p>So let's try that. First let's find a picture of a ball we can use. Save it somewhere on disk you can find it.</p>
 
       <p>So we create a new class for our dodge ball: </p>
-      <pre>
-<code>class Ball
+<pre><code>class Ball
   def initialize(game_window)
     @game_window = game_window
   end
@@ -43,8 +42,7 @@ We also limited its movement to just the bounds of the game window.</p>
 	
   def draw
   end
-end</code>
-</pre>
+end</code></pre>
       <p>Now we will make this ball come from the top of the screen, and drop down from random places.</p>
       <p>We accomplish this by setting the initial position <code>@x</code> to a random number between 0 and the width of the game window, in pixels.</p>
       <code>@x = rand(@game_window.width)</code>
@@ -70,14 +68,11 @@ end</code>
       <p>The ball goes down as expected, we now need to make sure that if the ball hits the player, the game stops. How do we do this?</p>
       <p>Let's go back to our update method. In the update method, we can write a method to check for this and stop the game if hit.</p>
       <p>Distance between ball and the player:</p>
-<pre>
-<code>if @player1.hit_by? @ball
+<pre><code>if @player1.hit_by? @ball
   stop_the_game
 end
 if Gosu::distance(@x, @y, star.x, star.y) &lt; 35
-end
-</code>
-</pre>
+end</code></pre>
     </section>
   </article>
 
