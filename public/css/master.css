@@ -26,15 +26,27 @@ body.lesson-set article > h1 {
 }
 
 body.lesson-set nav {
-  background-color: #ff0000;
+  background-color: #e8e8e8;
+  border: 1px dotted #ccc;
+  margin-bottom: 30px;
   padding: 3px 5px;
+  width: 245px;
 }
 
 body.lesson-set nav a {
-  color: #fff;
+  color: #333;
   font-weight: bold;
   margin-right: 7px;
   text-decoration: none;
+}
+
+body.lesson-set nav a:last-child {
+  margin-right: 0px;
+}
+
+body.lesson-set nav a:hover {
+  color: #000;
+  text-decoration: underline;
 }
 
 
