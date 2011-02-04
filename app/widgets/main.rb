@@ -53,7 +53,7 @@ class MainWidget < Qt::WebView
       inf = Qt::TextStream.new(codeFile)
 
       while !inf.atEnd()
-        line = inf.readLine()
+        line = escape_for_open(inf.readLine())
         @frame.evaluateJavaScript("addCode('#{line}');")
       end
     end
@@ -74,6 +74,24 @@ class MainWidget < Qt::WebView
 	    outf.flush
 	  end
   end
+
+  JS_ESCAPE_MAP = {
+        '\\'    => '\\\\',
+        '</'    => '<\/',
+        "\r\n"  => '\n',
+        "\n"    => '\n',
+        "\r"    => '\n',
+        '"'     => '\\"',
+        "'"     => "\\'" }
+      
+  def escape_for_open(text)
+    if text
+      text.gsub(/(\\|<\/|\r\n|[\n\r"'])/) { JS_ESCAPE_MAP[$1] }
+    else
+      ''
+    end
+  end
+
 
   def append(text)
     current_output.append(text)
