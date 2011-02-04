@@ -34,10 +34,7 @@ body.lesson-set nav {
 }
 
 body.lesson-set nav a {
-  color: #333;
-  font-weight: bold;
   margin-right: 7px;
-  text-decoration: none;
 }
 
 body.lesson-set nav a:last-child {
