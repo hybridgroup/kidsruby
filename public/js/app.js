@@ -88,7 +88,10 @@ $(document).ready(function() {
   $("#tabs").data("mytabs", tabs);
 
   $("#run").click(function(e) {
-    tabs.tabs('select', 1); // switch to output tab
+    if (tabs.tabs('option', 'selected') == 0) {
+      tabs.tabs('select', 1); // switch to output tab
+    }
+
     clearOutputs();
     submitRubyCode(editor);
   });
