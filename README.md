@@ -69,20 +69,18 @@ To summarize:
 * add Gosu libs/classes to KidsRuby OS to make it easy to write games right away
 * How to use KidsRuby
 * editor save/open
+* make the Run button WAY WAY bigger
 
 ## TODO
 
 ### CORE
 * capture keystrokes within main Qt app and pipe to stdin when executing ruby process so we can support gets
 
-### UI
-* make the Run button WAY WAY bigger
-
 ### EDITOR
 * paste into editor (copy already works)
 
 ### HELP/TUTORIAL
-* copy relevant basic ruby part from Hackety Hack tutorial
+* add more good stuff!
 
 ### POSSIBLE IDEAS:
 * make it easy to run pie (see what I did there?)
