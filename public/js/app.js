@@ -45,6 +45,7 @@ function initTurtle() {
 }
 
 function callTurtle(arguments) {
+  //$("#tabs").data("mytabs").tabs('select', 2); // todo: switch to turtle tab
   var turtle = $("#turtle").data('turtle');
   var command = Array.prototype.shift.call(arguments);
   return turtle[command].apply(turtle, arguments);
@@ -82,11 +83,15 @@ $(document).ready(function() {
 
 	// Set the output width
 	$("#output").width = docWidth;
-  
-	$("#run").click(function(e) {
-		clearOutputs();
-		submitRubyCode(editor);
-	});
+
+  var tabs = $("#tabs").tabs();
+  $("#tabs").data("mytabs", tabs);
+
+  $("#run").click(function(e) {
+    tabs.tabs('select', 1); // switch to output tab
+    clearOutputs();
+    submitRubyCode(editor);
+  });
 
 	$("#open").click(function(e) {
 		openRubyCode(editor);
@@ -98,7 +103,5 @@ $(document).ready(function() {
 	
 	initTurtle();
 
-  $("#tabs").tabs();
-  //$("#help iframe").css("height", docHeight-200);
   console.info(docHeight);
 });
