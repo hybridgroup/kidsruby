@@ -39,9 +39,10 @@ Running it:
 
     ruby main.rb
 
-Getting setup on Ubuntu:
-Coming soon...
-
+## Getting setup on Ubuntu
+    sudo apt-get install libqt4-dev
+    bundle install
+    
 ## Getting setup on a Mac using Homebrew
 I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
