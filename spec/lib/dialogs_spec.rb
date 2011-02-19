@@ -27,5 +27,14 @@ describe 'dialogs' do
     @interface.expects(:call).with('ask', text).returns(@answer)
     ask(text)
   end
-  
+
+  describe "gets" do
+    it "must be able to get input" do
+      $stdin = StringIO.new
+      $stdin.string = @answer
+
+      @interface.expects('call').with('gets')
+      gets.must_equal(@answer)
+    end
+  end
 end

@@ -1,6 +1,7 @@
 require 'htmlentities'
 
 class Runner < Qt::Process
+  
   def initialize(main)
     super
     

@@ -1,6 +1,34 @@
 function updateStdOut(newHtml) {
 	$("#stdout").append(newHtml);
-};
+}
+
+function copyStdIntoStdOut() {
+  $("#stdout").append($("#stdin").html());
+}
+
+function removeStdIn() {
+  $("#stdin").remove();
+}
+
+function initStdInLine() {
+  updateStdOut("<div id='stdin'></div>");
+}
+
+function cutStdInToStdOut() {
+  updateStdIn('<br/>');
+  copyStdIntoStdOut();
+  removeStdIn();
+}
+
+function updateStdIn(newHtml) {
+	$("#stdin").append(newHtml);
+}
+
+function replaceStdIn(oldText, newText) {
+  var old = $("#stdin").html();
+  var newHtml = old.replace(oldText, newText);
+  $('#stdin').html(newHtml);
+}
 
 function updateStdErr(newHtml) {
 	$("#stderr").append(newHtml);

@@ -37,3 +37,23 @@ def alert(text)
   return nil
 end
 
+module Dialogue
+  module Gets
+    alias_method :__gets__, :gets
+
+    def gets
+      init_interface
+      
+      if @iface.valid?
+        message = @iface.call("gets")
+        reply   = @interface_helper.get_reply(message)
+
+        if reply.valid?
+          __gets__
+        end
+      end
+    end
+  end
+end
+
+include Dialogue::Gets
