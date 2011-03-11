@@ -37,3 +37,17 @@ def alert(text)
   return nil
 end
 
+alias :__gets__ :gets
+def gets
+   init_interface
+
+  if @iface.valid?
+    message = @iface.call("gets")
+    reply = @interface_helper.get_reply(message)
+    if reply.valid?
+      return __gets__
+    end
+
+    $stderr.puts("gets call failed: %s\n" % reply.error.message)
+  end
+end

@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'Qt'
 
-%w{ version runner turtle }.each do |f|
+%w{ frame_writer runner_writer stdin_rejecter version runner turtle }.each do |f|
   require File.expand_path(File.dirname(__FILE__) + "/app/models/#{f}.rb")
 end
 

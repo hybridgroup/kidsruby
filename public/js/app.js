@@ -1,3 +1,29 @@
+function deleteLastStdIn() {
+  var str = $('#stdin').html();
+  var newStr = str.substring(0, str.length-1);
+  $('#stdin').html(newStr);
+}
+
+function updateStdIn(newHtml) {
+  if ( !$('#stdin').length ) { 
+    updateStdOut("<div id='stdin'></div>");
+  } 
+  $('#stdin').append(newHtml);
+}
+
+function cutStdInToStdOut() {
+  copyStdIntoStdOut();
+  removeStdIn();
+}
+
+function removeStdIn() {
+  $("#stdin").remove();
+}
+
+function copyStdIntoStdOut() {
+  $("#stdout").append($("#stdin").html());
+}
+
 function updateStdOut(newHtml) {
 	$("#stdout").append(newHtml);
 };
