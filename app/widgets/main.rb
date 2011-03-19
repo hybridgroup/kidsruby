@@ -2,16 +2,14 @@ require "qtwebkit"
 
 # this is the main view widget
 class MainWidget < Qt::WebView
-  q_classinfo("D-Bus Interface", "com.kidsruby.Main")
-
   signals 'stdInRequested()'
-  slots 'rejectStdin()', 'acceptStdin()', 'gets()', 'evaluateRuby(QString)', 'setupQtBridge()', 'alert(const QString&)', 'QString ask(const QString&)', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)'
-    
+  slots 'rejectStdin()', 'acceptStdin()', 'evaluateRuby(QString)', 'setupQtBridge()', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)',
+        'QString gets()', 'alert(const QString&)', 'QString ask(const QString&)'
+
   def initialize(parent = nil)
     super(parent)
     
-    Qt::DBusConnection.sessionBus.registerObject("/", self, Qt::DBusConnection::ExportAllSlots)
-    
+    @server = KidsRubyServer.new(self)
     @turtle = TurtleInterface.new(self)
     
     self.window_title = version_description
@@ -20,14 +18,20 @@ class MainWidget < Qt::WebView
     @frame = self.page.mainFrame
     @runner = Runner.new(@frame)
 
-    Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), self, SLOT('setupQtBridge()') )
-    Qt::Object.connect(self, SIGNAL("stdInRequested()"), self, SLOT('acceptStdin()'))
+    Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), 
+                          self, SLOT('setupQtBridge()'))
+    Qt::Object.connect(self, SIGNAL("stdInRequested()"), 
+                          self, SLOT('acceptStdin()'))
 
     self.load Qt::Url.new(File.expand_path(File.dirname(__FILE__) + "/../../public/index.html"))
     show
   end
 
   protected
+
+  def version_description
+    'KidsRuby v' + KidsRuby::VERSION
+  end
 
   def keyPressEvent(event)
     notify_stdin_event_listeners(event) if @acceptStdin
@@ -115,7 +119,6 @@ class MainWidget < Qt::WebView
     end
   end
 
-
   def append(text)
     current_output.append(text)
   end
@@ -127,7 +130,7 @@ class MainWidget < Qt::WebView
   def current_output
     @out
   end
-  
+    
   def alert(text)
     Qt::MessageBox::information(self, tr(version_description), text)
   end
@@ -140,10 +143,6 @@ class MainWidget < Qt::WebView
     return val
   end
   
-  def version_description
-    'KidsRuby v' + KidsRuby::VERSION
-  end
-
   def gets
     @stdInRejecter = StdinRejecter.new(self, Qt::Key_Return) 
     emit stdInRequested()

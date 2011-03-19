@@ -6,16 +6,11 @@ require 'Qt'
   require File.expand_path(File.dirname(__FILE__) + "/app/models/#{f}.rb")
 end
 
-%w{ main }.each do |f|
+%w{ main server }.each do |f|
   require File.expand_path(File.dirname(__FILE__) + "/app/widgets/#{f}.rb")
 end
 
 app = Qt::Application.new(ARGV)
-
-if !Qt::DBusConnection.sessionBus().connected? || !Qt::DBusConnection.sessionBus.registerService("com.kidsruby.app")
-  $stderr.puts("%s\n" %  Qt::DBusConnection.sessionBus.lastError.message)
-  exit(1)
-end
 
 main = MainWidget.new()
 main.show()

@@ -7,7 +7,7 @@ class Turtle
   def initialize
     @commands = []
     @interface_helper = InterfaceHelper.new
-    @interface = @interface_helper.get_interface("/Turtle")
+    @interface = @interface_helper.get_interface("/turtle")
     init_turtle
   end
 
@@ -109,7 +109,7 @@ class Turtle
       message = @interface.call("width")
       reply = get_reply(message)
       if reply.valid?
-        return reply.value
+        return reply.value.to_i
       end
 
       $stderr.puts("Width call failed: %s\n" % reply.error.message)
@@ -122,7 +122,7 @@ class Turtle
       message = @interface.call("height")
       reply = get_reply(message)
       if reply.valid?
-        return reply.value
+        return reply.value.to_i
       end
 
       $stderr.puts("Height call failed: %s\n" % reply.error.message)

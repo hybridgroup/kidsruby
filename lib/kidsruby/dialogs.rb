@@ -17,7 +17,7 @@ def ask(text)
       return reply.value
     end
 
-    $stderr.puts("Ask call failed: %s\n" % reply.error.message)
+    $stderr.puts("Ask call failed: %s\n" % reply.error_message)
   end  
   return nil
 end
@@ -32,7 +32,7 @@ def alert(text)
       return true
     end
 
-    $stderr.puts("Alert call failed: %s\n" % reply.error.message)
+    $stderr.puts("Alert call failed: %s\n" % reply.error_message)
   end
   return nil
 end
@@ -48,6 +48,6 @@ def gets
       return __gets__
     end
 
-    $stderr.puts("gets call failed: %s\n" % reply.error.message)
+    $stderr.puts("gets call failed: %s\n" % reply.error_message)
   end
 end
