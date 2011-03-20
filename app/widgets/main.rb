@@ -4,7 +4,7 @@ require "qtwebkit"
 class MainWidget < Qt::WebView
   signals 'stdInRequested()'
   slots 'rejectStdin()', 'acceptStdin()', 'evaluateRuby(QString)', 'setupQtBridge()', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)',
-        'QString gets()', 'alert(const QString&)', 'QString ask(const QString&)', 'append(const QString&)'
+        'QString gets()', 'alert(const QString&)', 'QString ask(const QString&)', 'append(const QString&)', 'appendError(const QString&)'
 
   def initialize(parent = nil)
     super(parent)
@@ -120,9 +120,13 @@ class MainWidget < Qt::WebView
   end
 
   def append(text)
-    #current_output.append(text)
     t = text.gsub(/\n/,"<br/>")
     @frame.evaluateJavaScript("updateStdOut('#{t}')")
+  end
+
+  def appendError(text)
+    t = text.gsub(/\n/,"<br/>")
+    @frame.evaluateJavaScript("updateStdErr('#{t}')")
   end
   
   def current_code

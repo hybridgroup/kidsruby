@@ -40,12 +40,7 @@ class Interface
 
   def valid?
     true
-  end
-  
-  def write(data)
-    t = data.gsub(/\n/,"<br/>")
-    call("append", t)
-  end
+  end  
 end
 
 class Reply

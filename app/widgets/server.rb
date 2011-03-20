@@ -45,6 +45,9 @@ class KidsRubyServer < Qt::TcpServer
         elsif command == "append"
           @parent.append(param)
           connection.write validResponse("OK")
+        elsif command == "appendError"
+          @parent.appendError(param)
+          connection.write validResponse("OK")
         elsif command == "gets"
           connection.write validResponse(@parent.gets)          
         else
