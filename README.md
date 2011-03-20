@@ -35,7 +35,7 @@ You can also use the Turtle, just like Hackety-Hack does
 * Tutorial content is easy to create just drop HTML files on disk locally to the KidsRuby editor.
 * Using a modified version of the JS library Turtlewax for the Turtle implementation https://github.com/davebalmer/turtlewax
 
-Running it:
+## How to Run KidsRuby:
 
     ruby main.rb
 
@@ -52,6 +52,9 @@ To summarize:
     brew install qt
     for DIR in /usr/local/Cellar/qt/4.7.1/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
     bundle install
+
+## Getting setup on a Mac using Ports
+Someone please describe this procedure here.
 
 ## Getting setup on Windows
     Install git standalone
@@ -76,10 +79,15 @@ To summarize:
 * editor save/open
 * make the Run button WAY WAY bigger
 * capture keystrokes within main Qt app and pipe to stdin when executing ruby process so we can support gets
+* replace DBus communications with http based protocol which allows better multi-platform support and fewer installation dependancies
 
 ## TODO
 
 ### CORE
+
+### TURTLE
+* make the turtle canvas keep a correct aspect ratio when resized
+* fix background color
 
 ### EDITOR
 * paste into editor (copy already works)
