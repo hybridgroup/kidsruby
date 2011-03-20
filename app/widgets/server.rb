@@ -5,9 +5,10 @@ class KidsRubyServer < Qt::TcpServer
   slots 'connection()'
 
   # Initialize the server and put into listen mode (port is 8080)
-  def initialize(parent = nil)
-    super
+  def initialize(parent = nil, turtle = nil)
+    super(parent)
     @parent = parent
+    @turtle = turtle
     
     listen(Qt::HostAddress.new(Qt::HostAddress::LocalHost), 8080)
     connect(self, SIGNAL('newConnection()'), SLOT('connection()'));
@@ -32,8 +33,24 @@ class KidsRubyServer < Qt::TcpServer
       end
 
       if url && url.path =~ /\/turtle\/(.*)/
-        # todo: hook up the tutule with new protocol
-        connection.write("Calling turtle with command #{$1} with params #{url.encodedQuery}")
+        command = $1
+        param = URI.decode(url.encodedQuery.to_s)
+        if command == "init_turtle"
+          @turtle.init_turtle
+          connection.write validResponse("OK")
+        elsif command == "command_turtle"
+          @turtle.command_turtle(param)
+          connection.write validResponse("OK")
+        elsif command == "background"
+          @turtle.background(param)
+          connection.write validResponse("OK")
+        elsif command == "width"
+          connection.write validResponse(@turtle.width)
+        elsif command == "height"
+          connection.write validResponse(@turtle.height)
+        else
+          connection.write errorResponse
+        end
       elsif url && url.path =~ /\/(.*)/
         command = $1
         param = URI.decode(url.encodedQuery.to_s)

@@ -9,8 +9,8 @@ class MainWidget < Qt::WebView
   def initialize(parent = nil)
     super(parent)
     
-    @server = KidsRubyServer.new(self)
     @turtle = TurtleInterface.new(self)
+    @server = KidsRubyServer.new(self, @turtle)
     
     self.window_title = version_description
     resize(1000, 700)

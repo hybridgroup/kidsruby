@@ -27,7 +27,7 @@ class Turtle
     if @interface.valid?
       message = @interface.call("init_turtle")
       reply = get_reply(message)
-      $stderr.puts("init_turtle call failed: %s\n" % reply.error.message) unless reply.valid?
+      $stderr.puts("init_turtle call failed: %s\n" % reply.error_message) unless reply.valid?
     end
   end
   
@@ -41,7 +41,7 @@ class Turtle
         return true
       end
 
-      $stderr.puts("command_turtle call failed: %s\n" % reply.error.message)
+      $stderr.puts("command_turtle call failed: %s\n" % reply.error_message)
     end  
     return nil
   end
@@ -60,7 +60,7 @@ class Turtle
         return true
       end
 
-      $stderr.puts("background call failed: %s\n" % reply.error.message)
+      $stderr.puts("background call failed: %s\n" % reply.error_message)
     end  
     return nil
   end
@@ -112,7 +112,7 @@ class Turtle
         return reply.value.to_i
       end
 
-      $stderr.puts("Width call failed: %s\n" % reply.error.message)
+      $stderr.puts("Width call failed: %s\n" % reply.error_message)
     end
     return nil
   end
@@ -125,7 +125,7 @@ class Turtle
         return reply.value.to_i
       end
 
-      $stderr.puts("Height call failed: %s\n" % reply.error.message)
+      $stderr.puts("Height call failed: %s\n" % reply.error_message)
     end
     return nil
   end
