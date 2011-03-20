@@ -32,6 +32,7 @@ class KidsRubyServer < Qt::TcpServer
       end
 
       if url && url.path =~ /\/turtle\/(.*)/
+        # todo: hook up the tutule with new protocol
         connection.write("Calling turtle with command #{$1} with params #{url.encodedQuery}")
       elsif url && url.path =~ /\/(.*)/
         command = $1
@@ -41,6 +42,9 @@ class KidsRubyServer < Qt::TcpServer
           connection.write validResponse("OK")
         elsif command == "ask"
           connection.write validResponse(@parent.ask(param))          
+        elsif command == "append"
+          @parent.append(param)
+          connection.write validResponse("OK")
         elsif command == "gets"
           connection.write validResponse(@parent.gets)          
         else

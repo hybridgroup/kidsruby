@@ -25,7 +25,7 @@ function copyStdIntoStdOut() {
 }
 
 function updateStdOut(newHtml) {
-	$("#stdout").append(newHtml);
+	$("#stdout").append(unescape(newHtml));
 };
 
 function updateStdErr(newHtml) {
