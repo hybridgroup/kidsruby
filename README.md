@@ -49,10 +49,14 @@ Since I also run homebrew, I discovered that the homebrew install for Qt4 needed
 
 To summarize:
 
-    brew install dbus
-    brew install qt --with-qtdbus
+    brew install qt
     for DIR in /usr/local/Cellar/qt/4.7.1/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
-    gem install qtbindings
+    bundle install
+
+## Getting setup on Windows
+    Install git standalone
+    Install Ruby 1.8.7 standalone
+    bundle install
 
 
 ## DONE
@@ -71,11 +75,11 @@ To summarize:
 * How to use KidsRuby
 * editor save/open
 * make the Run button WAY WAY bigger
+* capture keystrokes within main Qt app and pipe to stdin when executing ruby process so we can support gets
 
 ## TODO
 
 ### CORE
-* capture keystrokes within main Qt app and pipe to stdin when executing ruby process so we can support gets
 
 ### EDITOR
 * paste into editor (copy already works)
