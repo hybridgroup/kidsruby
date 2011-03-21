@@ -80,6 +80,7 @@ Someone please describe this procedure here.
 * make the Run button WAY WAY bigger
 * capture keystrokes within main Qt app and pipe to stdin when executing ruby process so we can support gets
 * replace DBus communications with http based protocol which allows better multi-platform support and fewer installation dependancies
+* fix background color
 
 ## TODO
 
@@ -87,7 +88,6 @@ Someone please describe this procedure here.
 
 ### TURTLE
 * make the turtle canvas keep a correct aspect ratio when resized
-* fix background color
 
 ### EDITOR
 * paste into editor (copy already works)
