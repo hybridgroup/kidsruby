@@ -1,3 +1,9 @@
+function selectTab(n) {
+  if ($("#tabs").data("mytabs").tabs('option', 'selected') != n) {
+    $("#tabs").data("mytabs").tabs('select', n);
+  }
+}
+
 function deleteLastStdIn() {
   var str = $('#stdin').html();
   var newStr = str.substring(0, str.length-1);
@@ -68,10 +74,10 @@ function initTurtle() {
   var turtle = new Pen("turtle-canvas");
   turtle.center();
 	$("#turtle").data('turtle', turtle);
+  selectTab(2);
 }
 
 function callTurtle(arguments) {
-  //$("#tabs").data("mytabs").tabs('select', 2); // todo: switch to turtle tab
   var turtle = $("#turtle").data('turtle');
   var command = Array.prototype.shift.call(arguments);
   return turtle[command].apply(turtle, arguments);
@@ -82,7 +88,7 @@ function getTurtle() {
 }
 
 function setTurtleBackground(color) {
-  $("#turtle").css('backgroundColor', color);
+  $("#turtle").css('backgroundColor', unescape(color));
 }
 
 $(document).ready(function() {
@@ -114,10 +120,7 @@ $(document).ready(function() {
   $("#tabs").data("mytabs", tabs);
 
   $("#run").click(function(e) {
-    if (tabs.tabs('option', 'selected') == 0) {
-      tabs.tabs('select', 1); // switch to output tab
-    }
-
+    selectTab(1);
     clearOutputs();
     submitRubyCode(editor);
   });
@@ -131,6 +134,8 @@ $(document).ready(function() {
 	});
 	
 	initTurtle();
+
+  selectTab(0); // default to help tab
 
   console.info(docHeight);
 });
