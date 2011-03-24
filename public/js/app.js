@@ -94,10 +94,10 @@ function setTurtleBackground(color) {
 $(document).ready(function() {
 	var docWidth = $("body").width();
   var docHeight = $(document).height();
-	
-	var editor = CodeMirror.fromTextArea('rubycode', {
+
+  CodeMirrorConfig.stylesheet = "css/rubycolors.css"; // this will allow us to dynamically change style at runtime
+  var editor = CodeMirror.fromTextArea('rubycode', {
 	      parserfile: ["../../js/tokenizeruby.js", "../../js/parseruby.js"],
-	      stylesheet: "css/rubycolors.css",
 	      path: "codemirror/js/",
 	      lineNumbers: true,
 	      textWrapping: false,
