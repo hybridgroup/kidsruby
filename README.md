@@ -82,17 +82,17 @@ Someone please describe this procedure here.
 * capture keystrokes within main Qt app and pipe to stdin when executing ruby process so we can support gets
 * replace DBus communications with http based protocol which allows better multi-platform support and fewer installation dependancies
 * fix background color
+* A couple of funny things with the formatting of gets
 
 ## TODO
 
 ### CORE
-* A couple of funny things with the formatting of gets
 
 ### TURTLE
 * make the turtle canvas keep a correct aspect ratio when resized
 
 ### EDITOR
-* switch editor colors to white background for better presentation display
+* switch editor colors to white background for better presentation display. we already have inverse css file, just need a way to switch to it, and back
 * paste into editor (copy already works)
 
 ### HELP/TUTORIAL
