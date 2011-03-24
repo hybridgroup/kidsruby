@@ -30,7 +30,8 @@ You can also use the Turtle, just like Hackety-Hack does
 * It runs a normal Ruby 1.9.2 on the code. With normal gems etc.
 
 ## Implementation choices
-* QtRuby app - lets us communicate with the OS to create a full Ruby interactive environment
+* Webkit-based editor - currently using CodeMirror
+* QtRuby app - hosts webkit and provide http server to communicate with running Ruby environment
 * Minitest/Minispec for testing. Yes, code must be tested
 * Tutorial content is easy to create just drop HTML files on disk locally to the KidsRuby editor.
 * Using a modified version of the JS library Turtlewax for the Turtle implementation https://github.com/davebalmer/turtlewax
@@ -85,14 +86,17 @@ Someone please describe this procedure here.
 ## TODO
 
 ### CORE
+* A couple of funny things with the formatting of gets
 
 ### TURTLE
 * make the turtle canvas keep a correct aspect ratio when resized
 
 ### EDITOR
+* switch editor colors to white background for better presentation display
 * paste into editor (copy already works)
 
 ### HELP/TUTORIAL
+* update ruby4kids to include their latest lessons
 * add more good stuff!
 
 ### POSSIBLE IDEAS:

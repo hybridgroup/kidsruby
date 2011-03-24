@@ -1,0 +1,81 @@
+.editbox {
+  padding: .4em;
+  margin: 0;
+  font-family: consolas, monospace;
+  font-size: 12pt;
+  line-height: 1.1em;
+  color: black;
+  background-color:#ffffff;
+}
+
+.editbox .rb-linenum {
+  background-color:#EEEEEE;
+  color:#888888;
+  padding:0.1em 1em 0.2em 0;
+  width:75px;
+}
+.editbox .rb-pan {
+  padding-bottom:0.1em;
+  padding-top:0.2em;
+}
+
+.editbox .rb-comment, .editbox .rb-long-comment {
+  color:#AEAEAE;
+  font-style:italic;
+}
+
+.editbox .rb-method-parameter {
+  color:#8AA6C1;
+}
+
+.editbox .rb-variable, .editbox .rb-method-call {
+  color:#0f0f0f;
+}
+
+.editbox .rb-long-comment-whitespace {}
+
+.editbox .rb-symbol, .editbox .rb-fixnum, .editbox .rb-ascii {
+  color:#6FB1FF;
+}
+.editbox .rb-hexnum, .editbox .rb-binary {
+  color:#DFC745;
+}
+.editbox .rb-float {
+  color:#7FDF61;
+}
+.editbox .rb-entity {
+  color:#89BDFF;
+}
+.editbox .rb-keyword, .editbox .rb-operator {
+  color:#CE864B;
+}
+.editbox .rb-storage {
+  color:#99CF50;
+}
+.editbox .rb-string, .editbox .rb-heredoc, .editbox .rb-exec {
+  color:#65B042;
+}
+.editbox .rb-class, .editbox .rb-constant {
+  color:#9B859D;
+}
+.editbox .rb-instance-var {
+  color:#61B2DF;
+}
+.editbox .rb-global-variable {
+  color:#61B2DF;
+  font-style:italic;
+}
+.editbox .rb-class-var {
+  color:green;
+}
+
+.editbox .rb-string .constant {
+  color:#green;
+}
+
+.editbox .rb-regexp {
+  color:#DF5045;
+}
+.editbox .rb-method {
+  color:#blue;
+}
