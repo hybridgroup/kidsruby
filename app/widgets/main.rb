@@ -121,7 +121,7 @@ class MainWidget < Qt::WebView
 
   def append(text)
     t = text.gsub(/\n/,"<br/>")
-    @frame.evaluateJavaScript("updateStdOut('#{t}')")
+    @frame.evaluateJavaScript("updateStdOut('#{t}<br/>')")
   end
 
   def appendError(text)

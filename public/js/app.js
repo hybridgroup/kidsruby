@@ -35,7 +35,7 @@ function updateStdOut(newHtml) {
 };
 
 function updateStdErr(newHtml) {
-	$("#stderr").append(newHtml);
+	$("#stderr").append(unescape(newHtml));
 }
 
 function clearOutputs() {
