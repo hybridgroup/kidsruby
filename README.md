@@ -87,9 +87,13 @@ Someone please describe this procedure here.
 ## TODO
 
 ### CORE
+* need to display complete debug info on errors again
+
 
 ### TURTLE
 * make the turtle canvas keep a correct aspect ratio when resized
+* correct pencolor so it works
+
 
 ### EDITOR
 * switch editor colors to white background for better presentation display. we already have inverse css file, just need a way to switch to it, and back

@@ -20,8 +20,8 @@ class StdErr < KidsRubyStdIo
   alias_method :puts, :write
 end
 
-$stdout.sync = true
+#$stdout.sync = true
 $stdout = StdOut.new
 
-$stderr.sync = true
+#$stderr.sync = true
 $stderr = StdErr.new
