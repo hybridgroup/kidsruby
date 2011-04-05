@@ -1,4 +1,5 @@
 require 'uri'
+require 'json/pure'
 
 # http server listening on port 8080 to do the inter-process communication
 class KidsRubyServer < Qt::TcpServer
@@ -19,19 +20,39 @@ class KidsRubyServer < Qt::TcpServer
     begin
       connection = nextPendingConnection
       url = nil
+      body = ""
+      headers = ""
       while connection.isOpen
         if connection.canReadLine
           line = connection.readLine.to_s
-          if line.chomp == "" 
+          if line =~ /(GET|POST)\s+(.*)\s+HTTP/
+            url = Qt::Url.new($2)
             break
-          elsif line =~ /GET\s+(.*)\s+HTTP/
-            url = Qt::Url.new($1)
+          else
+            break # some kind of error?
           end
         else
           connection.waitForReadyRead(100)
         end
       end
-
+      
+      while connection.isOpen
+        if connection.canReadLine
+          line = connection.readLine.to_s
+          if line.chomp == ""
+            break
+          else
+            headers << line
+          end
+        else
+          connection.waitForReadyRead(100)
+        end
+      end
+            
+      if connection.isOpen
+        body = connection.readAll.to_s
+      end
+      
       if url && url.path =~ /\/turtle\/(.*)/
         command = $1
         param = URI.decode(url.encodedQuery.to_s)
@@ -53,17 +74,20 @@ class KidsRubyServer < Qt::TcpServer
         end
       elsif url && url.path =~ /\/(.*)/
         command = $1
-        param = URI.decode(url.encodedQuery.to_s)
         if command == "alert"
+          param = URI.decode(url.encodedQuery.to_s)
           @parent.alert(param)
           connection.write validResponse("OK")
         elsif command == "ask"
+          param = URI.decode(url.encodedQuery.to_s)
           connection.write validResponse(@parent.ask(param))          
         elsif command == "append"
+          param = URI.decode(url.encodedQuery.to_s)          
           @parent.append(param)
           connection.write validResponse("OK")
         elsif command == "appendError"
-          @parent.appendError(param)
+          body.each_line {|l| @parent.appendError( JSON.parse(l)['error'] )}
+          #@parent.appendError(body)
           connection.write validResponse("OK")
         elsif command == "gets"
           connection.write validResponse(@parent.gets)          

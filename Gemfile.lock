@@ -2,15 +2,21 @@ GEM
   remote: http://rubygems.org/
   specs:
     htmlentities (4.2.3)
+    json_pure (1.5.1)
+    mime-types (1.16)
     mocha (0.9.10)
       rake
     qtbindings (4.6.3.2)
     rake (0.8.7)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   htmlentities
+  json_pure
   mocha
   qtbindings
+  rest-client

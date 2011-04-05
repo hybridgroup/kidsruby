@@ -1,5 +1,6 @@
-require "net/http"
 require "uri"
+require "rest_client"
+require 'json/pure'
 
 class InterfaceHelper
   def connect!
@@ -29,9 +30,14 @@ class Interface
 
   def call(method, param = nil)
     loc = "http://localhost:8080#{path}#{method}"
-    loc = loc + "?#{URI.escape(param)}" if param
-    uri = URI.parse(loc)
-    Reply.new(Net::HTTP.get_response(uri))
+    if param && param.is_a?(String)
+      loc = loc + "?#{URI.escape(param)}"
+      return Reply.new(RestClient.get(loc))
+    elsif param && param.is_a?(Hash)
+      return Reply.new(RestClient.post(loc, JSON.generate(param), :content_type => :json, :accept => :json))
+    else
+      return Reply.new(RestClient.get(loc))
+    end
   end
 
   def valid?
@@ -43,7 +49,7 @@ class Reply
   attr_accessor :value, :error_message, :error
   
   def initialize(r)
-    unless r.code == "200"
+    unless r.code == 200
       @error = true
       @error_message = r.body
     else
