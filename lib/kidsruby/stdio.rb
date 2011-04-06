@@ -14,9 +14,7 @@ end
 
 class StdErr < KidsRubyStdIo
   def write(data)
-    #t = data.gsub(/\n/,"<br/>")
-    @payload = {'error' => data}
-    @iface.call("appendError", @payload)
+    @iface.call("appendError", {'data' => data})
   end
   alias_method :puts, :write
 end

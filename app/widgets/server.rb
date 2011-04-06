@@ -1,5 +1,4 @@
 require 'uri'
-require 'json/pure'
 
 # http server listening on port 8080 to do the inter-process communication
 class KidsRubyServer < Qt::TcpServer
@@ -86,8 +85,7 @@ class KidsRubyServer < Qt::TcpServer
           @parent.append(param)
           connection.write validResponse("OK")
         elsif command == "appendError"
-          body.each_line {|l| @parent.appendError( JSON.parse(l)['error'] )}
-          #@parent.appendError(body)
+          @parent.appendError(body)
           connection.write validResponse("OK")
         elsif command == "gets"
           connection.write validResponse(@parent.gets)          

@@ -1,6 +1,5 @@
 require "uri"
 require "rest_client"
-require 'json/pure'
 
 class InterfaceHelper
   def connect!
@@ -34,7 +33,7 @@ class Interface
       loc = loc + "?#{URI.escape(param)}"
       return Reply.new(RestClient.get(loc))
     elsif param && param.is_a?(Hash)
-      return Reply.new(RestClient.post(loc, JSON.generate(param), :content_type => :json, :accept => :json))
+      return Reply.new(RestClient.post(loc, param['data'], :content_type => 'text/plain'))
     else
       return Reply.new(RestClient.get(loc))
     end
