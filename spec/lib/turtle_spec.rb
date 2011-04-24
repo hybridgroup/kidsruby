@@ -21,6 +21,18 @@ describe Turtle do
     @turtle = Turtle.new
   end
   
+  describe "when working with the class methods" do
+    it "must be able to draw" do
+      color = "#fff"
+      @interface.stubs(:call).with('init_turtle')
+      @interface.expects(:call).with("background", color)
+      @interface.expects(:call).with("command_turtle", 'draw();')
+      Turtle.draw do
+        background(color)
+      end
+    end
+  end
+
   describe "when properly initialized" do
     before do
       @interface.stubs(:call).with('init_turtle')

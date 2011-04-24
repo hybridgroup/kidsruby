@@ -21,6 +21,8 @@ class Turtle
       t.instance_eval(&script)
       t.draw
     end
+
+    alias_method :draw, :start
   end
   
   def init_turtle
