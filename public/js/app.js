@@ -95,7 +95,7 @@ $(document).ready(function() {
 	var docWidth = $("body").width();
   var docHeight = $(document).height();
 
-  CodeMirrorConfig.stylesheet = "css/rubycolors.css"; // this will allow us to dynamically change style at runtime
+  CodeMirrorConfig.stylesheet = "css/inverse.css"; // this will allow us to dynamically change style at runtime
   var editor = CodeMirror.fromTextArea('rubycode', {
 	      parserfile: ["../../js/tokenizeruby.js", "../../js/parseruby.js"],
 	      path: "codemirror/js/",
