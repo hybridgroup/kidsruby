@@ -14,7 +14,8 @@ end
 
 class StdErr < KidsRubyStdIo
   def write(data)
-    @iface.call("appendError", {'data' => data})
+    t = data.gsub(/\n/,"<br/>")
+    @iface.call("appendError", t)
   end
   alias_method :puts, :write
 end
@@ -22,5 +23,5 @@ end
 $stdout.sync = true
 $stdout = StdOut.new
 
-#$stderr.sync = true
+$stderr.sync = true
 $stderr = StdErr.new
