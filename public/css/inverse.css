@@ -35,28 +35,28 @@
 .editbox .rb-long-comment-whitespace {}
 
 .editbox .rb-symbol, .editbox .rb-fixnum, .editbox .rb-ascii {
-  color:#6FB1FF;
+  color:#blue;
 }
 .editbox .rb-hexnum, .editbox .rb-binary {
-  color:#DFC745;
+  color:#green;
 }
 .editbox .rb-float {
-  color:#7FDF61;
+  color:#green;
 }
 .editbox .rb-entity {
-  color:#89BDFF;
+  color:#blue;
 }
 .editbox .rb-keyword, .editbox .rb-operator {
-  color:#CE864B;
+  color:#blue;
 }
 .editbox .rb-storage {
   color:#99CF50;
 }
 .editbox .rb-string, .editbox .rb-heredoc, .editbox .rb-exec {
-  color:#65B042;
+  color:#green;
 }
 .editbox .rb-class, .editbox .rb-constant {
-  color:#9B859D;
+  color:#blue;
 }
 .editbox .rb-instance-var {
   color:#61B2DF;
