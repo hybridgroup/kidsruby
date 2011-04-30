@@ -1,6 +1,4 @@
 # Hackety Hack compatible turtle class
-require 'Qt'
-
 class Turtle
   attr_reader :commands
 

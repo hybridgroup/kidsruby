@@ -1,6 +1,4 @@
 # this is designed to trigger dialogs for kidsruby for ask and alert compatible with hackety hack
-require 'Qt'
-
 def init_interface
   @interface_helper = InterfaceHelper.new
   @interface_helper.connect!
