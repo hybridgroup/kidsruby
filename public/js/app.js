@@ -38,6 +38,13 @@ function updateStdErr(newHtml) {
 	$("#stderr").append(unescape(newHtml));
 }
 
+function startRun(editor) {
+  selectTab(1);
+  clearOutputs();
+  setTurtleBackground('#white');
+  submitRubyCode(editor);
+}
+
 function clearOutputs() {
 	$.each(["stdout", "stderr"], function(i, item) {
 		$("#" + item).html("");
@@ -120,9 +127,7 @@ $(document).ready(function() {
   $("#tabs").data("mytabs", tabs);
 
   $("#run").click(function(e) {
-    selectTab(1);
-    clearOutputs();
-    submitRubyCode(editor);
+    startRun(editor);
   });
 
 	$("#open").click(function(e) {
