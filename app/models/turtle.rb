@@ -15,7 +15,7 @@ class TurtleInterface < Qt::Object
   end
 
   def command_turtle(commands)
-    code = "getTurtle()." + commands ;
+    code = "getTurtle()." + URI.decode(commands) ;
     @main_frame.evaluateJavaScript(code)
   end
 

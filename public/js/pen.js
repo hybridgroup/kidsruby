@@ -308,9 +308,9 @@ Pen.prototype = {
 	},
 	
 	penstyle: function(str) {
-		this.canvas.strokeStyle = this.strokeStyle = str;
-		
-		return this;
+	  this.strokeStyle = this.canvas.strokeStyle = str;
+
+	  return this;
 	},
 	
 	text: function(str) {
