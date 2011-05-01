@@ -9,8 +9,9 @@ class Runner < Qt::Process
   end
 
   def run(code = default_code, code_file_name = default_kid_code_location)
+    kill unless state == NotRunning
     save_kid_code(code, code_file_name)
-    self.start("ruby #{code_file_name}")
+    start("ruby #{code_file_name}")
   end
 
   def save_kid_code(code, code_file_name)
