@@ -85,7 +85,8 @@ class KidsRubyServer < Qt::TcpServer
           @parent.append(param)
           connection.write validResponse("OK")
         elsif command == "appendError"
-          @parent.appendError(body)
+          param = URI.decode(url.encodedQuery.to_s)
+          @parent.appendError(param)
           connection.write validResponse("OK")
         elsif command == "gets"
           connection.write validResponse(@parent.gets)          

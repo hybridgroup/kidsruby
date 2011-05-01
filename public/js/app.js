@@ -141,6 +141,4 @@ $(document).ready(function() {
 	initTurtle();
 
   selectTab(0); // default to help tab
-
-  console.info(docHeight);
 });
