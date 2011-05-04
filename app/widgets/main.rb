@@ -1,4 +1,5 @@
 require "qtwebkit"
+require 'htmlentities'
 
 # this is the main view widget
 class MainWidget < Qt::WebView
@@ -17,6 +18,8 @@ class MainWidget < Qt::WebView
     
     @frame = self.page.mainFrame
     @runner = Runner.new(@frame)
+
+    @coder = HTMLEntities.new
 
     Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), 
                           self, SLOT('setupQtBridge()'))
@@ -121,12 +124,12 @@ class MainWidget < Qt::WebView
 
   def append(text)
     t = text.gsub(/\n/,"<br/>")
-    @frame.evaluateJavaScript("updateStdOut('#{t}<br/>')")
+    @frame.evaluateJavaScript("updateStdOut('#{@coder.encode(t)}')")
   end
 
   def appendError(text)
     t = text.gsub(/\n/,"<br/>")
-    @frame.evaluateJavaScript("updateStdErr('#{t}')")
+    @frame.evaluateJavaScript("updateStdErr('#{@coder.encode(t)}')")
   end
   
   def current_code
