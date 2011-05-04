@@ -1,11 +1,8 @@
-require 'htmlentities'
-
 class Runner < Qt::Process
   def initialize(main)
     super
     
     @main_widget = main
-    @coder = HTMLEntities.new    
   end
 
   def run(code = default_code, code_file_name = default_kid_code_location)
