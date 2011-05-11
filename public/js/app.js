@@ -138,7 +138,15 @@ $(document).ready(function() {
 		saveRubyCode(editor);
 	});
 	
-	$("#turtle").resizable();
+  $("#turtle").resizable({ stop: function(event, ui) {
+    $("canvas", this).each(function() {
+      $(this).attr({ width: ui.size.width, height: ui.size.height });
+        // Adjusting the width or height attribute clears the canvas of
+        // its contents, so you are forced to redraw.
+        reDraw(this);
+      });
+    }
+  });
 	
 	initTurtle();
 
