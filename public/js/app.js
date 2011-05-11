@@ -138,6 +138,8 @@ $(document).ready(function() {
 		saveRubyCode(editor);
 	});
 	
+	$("#turtle").resizable();
+	
 	initTurtle();
 
   selectTab(0); // default to help tab
