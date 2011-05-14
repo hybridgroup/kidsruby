@@ -9,7 +9,10 @@ class StdOut < KidsRubyStdIo
     t = data.gsub(/\n/,"<br/>")
     @iface.call("append", t)
   end
-  alias_method :puts, :write
+  
+  def puts(data)
+    write(data + "\n")
+  end
 end
 
 class StdErr < KidsRubyStdIo
