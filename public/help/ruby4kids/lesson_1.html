@@ -54,7 +54,8 @@ end
 
         <p>OK, so we are almost ready to run this code. The next step that we need to do now is tell <code>Gosu</code> how big a window we want for the game.</p>
         <p>We do this in the <code>initialize</code> method, by passing it three parameters like this</p>
-        <pre><code>def initialize(300, 300, false)
+        <pre><code>def initialize
+  super(300, 300, false)
 end
 </code></pre>
         <p>What this does, is make the window 300 pixels wide by 300 pixels high. A pixel is a single dot in your screen. If you put your face right next to the display, you can almost see the dots. Those are called pixels.</p>
