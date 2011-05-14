@@ -20,7 +20,10 @@ class StdErr < KidsRubyStdIo
     t = data.gsub(/\n/,"<br/>")
     @iface.call("appendError", t)
   end
-  alias_method :puts, :write
+
+  def puts(data)
+    write(data + "\n")
+  end
 end
 
 $stdout.sync = true
