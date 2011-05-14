@@ -41,7 +41,7 @@ function updateStdErr(newHtml) {
 function startRun(editor) {
   selectTab(1);
   clearOutputs();
-  setTurtleBackground('#white');
+  resetTurtle();
   submitRubyCode(editor);
 }
 
@@ -84,8 +84,14 @@ function initTurtle() {
   selectTab(2);
 }
 
+function resetTurtle() {
+  var turtle = getTurtle();
+  turtle.center();
+  setTurtleBackground('#white');
+}
+
 function callTurtle(arguments) {
-  var turtle = $("#turtle").data('turtle');
+  var turtle = getTurtle();
   var command = Array.prototype.shift.call(arguments);
   return turtle[command].apply(turtle, arguments);
 }

@@ -65,7 +65,7 @@ var tokenizeJavaScript = (function() {
     };
   }
 
-  // The token reader, inteded to be used by the tokenizer from
+  // The token reader, intended to be used by the tokenizer from
   // tokenize.js (through jsTokenState). Advances the source stream
   // over a token, and returns an object containing the type and style
   // of that token.
@@ -101,7 +101,7 @@ var tokenizeJavaScript = (function() {
     }
     function readRegexp() {
       nextUntilUnescaped(source, "/");
-      source.nextWhileMatches(/[gi]/);
+      source.nextWhileMatches(/[gimy]/); // 'y' is "sticky" option in Mozilla
       return {type: "regexp", style: "js-string"};
     }
     // Mutli-line comments are tricky. We want to return the newlines

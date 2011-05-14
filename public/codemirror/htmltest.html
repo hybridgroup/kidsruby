@@ -13,6 +13,7 @@
         font-size: 10pt;
         font-family: monospace;
         padding-top: .4em;
+        line-height: normal;
       }
     </style>
   </head>
@@ -23,8 +24,9 @@ for <a href="index.html">CodeMirror</a>. The <a
 href="js/parsexml.js">javascript</a> file contains some comments with
 more information.</p>
 
-<div style="border: 1px solid black; padding: 0px;">
-<textarea id="code" cols="120" rows="30">
+<form>
+<div style="border-top: 1px solid black; border-bottom: 1px solid black;">
+<textarea id="code" cols="120" rows="30" name="foo">
 &lt;html style="color: green"&gt;
   &lt;!-- this is a comment --&gt;
   &lt;head&gt;
@@ -37,6 +39,7 @@ more information.</p>
 &lt;/html&gt;
 </textarea>
 </div>
+</form>
 
 <script type="text/javascript">
   var editor = CodeMirror.fromTextArea('code', {
