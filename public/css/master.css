@@ -61,7 +61,7 @@ body.lesson-set section h1 {
   text-transform: uppercase;
 }
 #buttons {
-  bottom: 5px;
+  bottom: 15px;
   position: absolute;
   right: 5px;
 }
