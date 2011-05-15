@@ -1,7 +1,5 @@
 function selectTab(n) {
-  if ($("#tabs").data("mytabs").tabs('option', 'selected') != n) {
-    $("#tabs").data("mytabs").tabs('select', n);
-  }
+  $("#tabs").data("mytabs").tabs('select', n);
 }
 
 function deleteLastStdIn() {
@@ -104,6 +102,13 @@ function setTurtleBackground(color) {
   $("#turtle").css('backgroundColor', unescape(color));
 }
 
+function resizeCanvas() {
+  var pnl = $("#tabs").find(".ui-tabs-panel:visible");
+  canvas = document.getElementById( 'turtle-canvas' );
+  canvas.width = pnl.width();
+  canvas.height = pnl.height();
+}
+
 $(document).ready(function() {
 	var docWidth = $("body").width();
   var docHeight = $(document).height();
@@ -133,25 +138,23 @@ $(document).ready(function() {
   $("#tabs").data("mytabs", tabs);
 
   $("#run").click(function(e) {
+    resizeCanvas();
     startRun(editor);
+    return false;
   });
 
 	$("#open").click(function(e) {
 		openRubyCode(editor);
+		return false;
 	});
 
 	$("#save").click(function(e) {
 		saveRubyCode(editor);
+		return false;
 	});
 	
-  $("#turtle").resizable({ stop: function(event, ui) {
-    $("canvas", this).each(function() {
-      $(this).attr({ width: ui.size.width, height: ui.size.height });
-        // Adjusting the width or height attribute clears the canvas of
-        // its contents, so you are forced to redraw.
-        reDraw(this);
-      });
-    }
+  $("#turtle").resize(function() {
+    resizeCanvas();
   });
 	
 	initTurtle();
