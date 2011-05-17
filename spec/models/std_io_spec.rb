@@ -9,6 +9,14 @@ describe KidsRubyStdIo do
     InterfaceHelper.any_instance.stubs(:get_interface => "TEST INTERFACE")
     KidsRubyStdIo.new().interface.must_equal "TEST INTERFACE"
   end
+
+  describe '.simple_textilize' do
+    it "should convert newlines to html line break" do
+      input    = "a\n2\nc\n"
+      expected = "a<br/>2<br/>c<br/>"
+      KidsRubyStdIo.new.simple_textilize(input).must_equal expected
+    end
+  end
 end
 
 describe StdOut do
