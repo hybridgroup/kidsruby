@@ -1,22 +1,50 @@
 require_relative "../spec_helper"
 require_relative "../../lib/kidsruby"
 
+describe KidsRubyStdIo do
+  it "should default the interface to a new one from InterfaceHelper" do
+    # We can not test that interface == InterfaceHelper.new.get_interface
+    #   since it will be a different instance of get_interface.
+    # Therefore, we stub get_interface
+    InterfaceHelper.any_instance.stubs(:get_interface => "TEST INTERFACE")
+    KidsRubyStdIo.new().interface.must_equal "TEST INTERFACE"
+  end
+end
+
 describe StdOut do
   describe ".puts" do
-    it "should delegate the coerced, new-lined data to .write" do
-      stdout_ut = StdOut.new
-      stdout_ut.expects(:write).with("123\n")
-      stdout_ut.puts(123)
+    it "should forward the coerced, new-lined data to .write" do
+      subject = StdOut.new
+      subject.expects(:write).with("123\n")
+      subject.puts(123)
+    end
+  end
+
+  describe ".write" do
+    it "should convert the text to html and append it to the interface" do
+      test_interface = mock()
+      test_interface.expects(:call).with("append", "123<br/>")
+
+      StdOut.new(test_interface).write("123\n")
     end
   end
 end
 
 describe StdErr do
   describe ".puts" do
-    it "should delegate the coerced, newlined data to .write" do
-      stderr_ut = StdErr.new
-      stderr_ut.expects(:write).with("234\n")
-      stderr_ut.puts(234)
+    it "should forward the coerced, newlined data to .write" do
+      subject = StdErr.new
+      subject.expects(:write).with("234\n")
+      subject.puts(234)
+    end
+  end
+
+  describe ".write" do
+    it "should convert the text to html and append it (as error) to the interface" do
+      test_interface = mock()
+      test_interface.expects(:call).with("appendError", "234<br/>")
+
+      StdErr.new(test_interface).write("234\n")
     end
   end
 end

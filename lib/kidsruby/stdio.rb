@@ -1,6 +1,8 @@
 class KidsRubyStdIo
-  def initialize
-    @iface = InterfaceHelper.new.get_interface
+  attr_reader :interface
+
+  def initialize(interface = InterfaceHelper.new.get_interface)
+    @interface = interface
   end
 
   def puts(data)
@@ -11,14 +13,14 @@ end
 class StdOut < KidsRubyStdIo
   def write(data)
     t = data.gsub(/\n/,"<br/>")
-    @iface.call("append", t)
+    interface.call("append", t)
   end
 end
 
 class StdErr < KidsRubyStdIo
   def write(data)
     t = data.gsub(/\n/,"<br/>")
-    @iface.call("appendError", t)
+    interface.call("appendError", t)
   end
 end
 
