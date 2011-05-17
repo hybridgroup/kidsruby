@@ -22,7 +22,7 @@ class StdErr < KidsRubyStdIo
   end
 
   def puts(data)
-    write(data + "\n")
+    write(data.to_s + "\n")
   end
 end
 

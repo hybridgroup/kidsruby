@@ -11,3 +11,12 @@ describe StdOut do
   end
 end
 
+describe StdErr do
+  describe ".puts" do
+    it "should delegate the coerced, newlined data to .write" do
+      stderr_ut = StdErr.new
+      stderr_ut.expects(:write).with("234\n")
+      stderr_ut.puts(234)
+    end
+  end
+end
