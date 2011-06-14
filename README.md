@@ -31,17 +31,17 @@ You can also use the Turtle, just like Hackety-Hack does
 
 ## Implementation choices
 * Webkit-based editor - currently using CodeMirror
-* QtRuby app - hosts webkit and provide http server to communicate with running Ruby environment
+* Titanium Desktop app - hosts webkit and provide http server to communicate with running Ruby environment
 * Minitest/Minispec for testing. Yes, code must be tested
 * Tutorial content is easy to create just drop HTML files on disk locally to the KidsRuby editor.
 * Using a modified version of the JS library Turtlewax for the Turtle implementation https://github.com/davebalmer/turtlewax
 
 ## How to Run KidsRuby:
 
-    ruby main.rb
+    need Titanium instructions here
 
 ## Getting setup on Ubuntu
-    sudo apt-get install libqt4-dev
+    need Titanium instructions here...
     bundle install
     
 ## Getting setup on a Mac using Homebrew
@@ -50,8 +50,7 @@ Since I also run homebrew, I discovered that the homebrew install for Qt4 needed
 
 To summarize:
 
-    brew install qt
-    for DIR in /usr/local/Cellar/qt/4.7.1/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
+    need Titanium instructions here...
     bundle install
 
 ## Getting setup on a Mac using Ports
@@ -59,7 +58,8 @@ Someone please describe this procedure here.
 
 ## Getting setup on Windows
     Install git standalone
-    Install Ruby 1.8.7 standalone
+    Install Ruby 1.9.2 standalone
+    need Titanium instructions here...
     bundle install
 
 
@@ -83,6 +83,8 @@ Someone please describe this procedure here.
 * replace DBus communications with http based protocol which allows better multi-platform support and fewer installation dependancies
 * fix background color
 * A couple of funny things with the formatting of gets
+* make the turtle canvas keep a correct aspect ratio when resized
+* switch editor colors to white background for better presentation display. we already have inverse css file, just need a way to switch to it, and back
 
 ## TODO
 
@@ -91,12 +93,10 @@ Someone please describe this procedure here.
 
 
 ### TURTLE
-* make the turtle canvas keep a correct aspect ratio when resized
 * correct pencolor so it works
 
 
 ### EDITOR
-* switch editor colors to white background for better presentation display. we already have inverse css file, just need a way to switch to it, and back
 * paste into editor (copy already works)
 
 ### HELP/TUTORIAL

@@ -1,3 +1,6 @@
+var server = new KidsRubyServer();
+server.start();  
+
 function selectTab(n) {
   $("#tabs").data("mytabs").tabs('select', n);
 }
@@ -51,16 +54,19 @@ function clearOutputs() {
 
 function submitRubyCode(editor) {
 	var ruby = editor.getCode();
-	QTApi['evaluateRuby(QString)'](ruby);
+  var runner = new Runner(ruby);
+  runner.run();
 }
 
 function openRubyCode() {
-	QTApi['openRubyFile(QString)']("");
+  // todo: implement this using Titanium
+	//QTApi['openRubyFile(QString)']("");
 }
 
 function saveRubyCode(editor) {
-	var ruby = editor.getCode();
-	QTApi['saveRubyFile(QString)'](ruby);
+  // todo: implement this using Titanium
+	//var ruby = editor.getCode();
+	//QTApi['saveRubyFile(QString)'](ruby);
 }
 
 function getEditor() {
@@ -158,6 +164,8 @@ $(document).ready(function() {
   });
 	
 	initTurtle();
+	
+	//initServer();
 
   selectTab(0); // default to help tab
 });
