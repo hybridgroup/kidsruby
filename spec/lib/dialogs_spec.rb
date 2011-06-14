@@ -1,6 +1,6 @@
 require_relative "../spec_helper"
-require_relative "../../lib/kidsruby/interface"
-require_relative "../../lib/kidsruby/dialogs"
+require_relative "../../Resources/lib/kidsruby/interface"
+require_relative "../../Resources/lib/kidsruby/dialogs"
 
 describe 'dialogs' do
   before do
