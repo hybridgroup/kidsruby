@@ -45,6 +45,13 @@ You can also use the Turtle, just like Hackety-Hack does
     You will need to obtain Titanium Studio, which is a free download from appcelerator.com. Register for the free community edition and you can then download Titanium Studio for your OS.
     You will need to be using Titanium Desktop SDK version 1.2 RC2 or above. As of 6/15/2011 this is immanently going to be available to public.
     If you are using a development build of the Titanium SDK you will need to install it as described here: http://wiki.appcelerator.org/display/guides/Continuous+Builds
+    Clone this repo into a working directory
+    Launch Titanium Developer
+    Click on "Import Project"
+    Choose the working directory that you cloned the repo into
+    You should now be able to choose the KidsRuby project from the list of projects in Titanium Developer
+    Click on the "Tast & Package" tab
+    Click on the "Launch App" button, and it should build & run KidsRuby
 
 ## Getting setup on Ubuntu
     ...
