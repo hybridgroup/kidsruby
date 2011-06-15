@@ -42,7 +42,7 @@ You can also use the Turtle, just like Hackety-Hack does
 
 ## Getting setup for development with KidsRuby:
     If you want to help development of KidsRuby, then read on...
-    You will need to obtain Titanium Studio, which is a free download from appcelerator.com. Register for the free community edition and you can then download Titanium Studio for your OS.
+    You will need to obtain Titanium Developer, which is a free download from appcelerator.com. Register for the free community edition and you can then download Titanium Developer for your OS.
     You will need to be using Titanium Desktop SDK version 1.2 RC2 or above. As of 6/15/2011 this is immanently going to be available to public.
     If you are using a development build of the Titanium SDK you will need to install it as described here: http://wiki.appcelerator.org/display/guides/Continuous+Builds
     Clone this repo into a working directory
