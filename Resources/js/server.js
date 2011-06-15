@@ -15,7 +15,30 @@ KidsRubyServer.prototype = {
         
         if (turtleCommand) {
           // do turtle command
-        } else if (generalCommand){
+          var cmd = turtleCommand[1]
+          if (cmd == "init_turtle") {
+            initTurtle();
+            response.setContentType('text/plain');
+            response.write("OK");
+          } else if (cmd == "command_turtle") {
+            eval("getTurtle()." + query)
+            response.setContentType('text/plain');
+            response.write("OK");
+          } else if (cmd == "background") {
+            setTurtleBackground(query);
+            response.setContentType('text/plain');
+            response.write("OK");
+          } else if (cmd == "width") {
+            response.setContentType('text/plain');
+            response.write(callTurtle(['width']));
+          } else if (cmd == "height") {
+            response.setContentType('text/plain');
+            response.write(callTurtle(['height']));
+          } else {
+            response.setContentType('text/plain');
+            response.setStatusAndReason('400','Bad Request');
+          }
+        } else if (generalCommand) {
           // do general command
           var cmd = generalCommand[1]
           if (cmd == "alert") {
