@@ -85,16 +85,15 @@ Someone please describe this procedure here.
 * A couple of funny things with the formatting of gets
 * make the turtle canvas keep a correct aspect ratio when resized
 * switch editor colors to white background for better presentation display. we already have inverse css file, just need a way to switch to it, and back
+* need to display complete debug info on errors again
 
 ## TODO
 
 ### CORE
-* need to display complete debug info on errors again
 
 
 ### TURTLE
 * correct pencolor so it works
-
 
 ### EDITOR
 * paste into editor (copy already works)

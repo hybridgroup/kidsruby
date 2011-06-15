@@ -20,49 +20,39 @@ KidsRubyServer.prototype = {
           var cmd = generalCommand[1]
           if (cmd == "alert") {
             alert(unescape(query));
-            this.validResponse(response)
+            response.setContentType('text/plain');
+            response.write("OK");
           } else if (cmd == "ask") {
-            this.validResponse(response, prompt(unescape(query)));      
+            response.setContentType('text/plain');
+            response.write(prompt(unescape(query)));
           } else if (cmd == "append") {
-            //param = URI.decode(url.encodedQuery.to_s)          
-            //@parent.append(param)
-            //connection.write validResponse("OK")
-            this.validResponse(response)
+            updateStdOut(query);
+            response.setContentType('text/plain');
+            response.write("OK");
           } else if (cmd == "appendError") {
-            //@parent.appendError(body)
-            //connection.write validResponse("OK")
-            this.validResponse(response)
+            updateStdErr(query);
+            response.setContentType('text/plain');
+            response.write("OK");
           } else if (cmd == "gets") {
             //connection.write validResponse(@parent.gets)
             this.validResponse(response)
           } else {
-            this.errorResponse(response);
+            response.setContentType('text/plain');
+            response.setStatusAndReason('400','Bad Request');
           }      
         } else {
-          this.errorResponse(response);
+          response.setContentType('text/plain');
+          response.setStatusAndReason('400','Bad Request');
         }
 
   		}
   		catch(e)
   		{
   		  // todo: handle error
-  		  this.errorResponse(response);
-  		  server.close();
-  			//callback.failed(e);
+        response.setContentType('text/plain');
+        response.setStatusAndReason('400','Bad Request');
+        server.close();
   		}
     });
-  },
-
-  validResponse: function(response, val) {
-    if (val == null) {val = '';}
-    response.setContentType('text/plain');
-		response.setContentLength(val.length);
-		response.setStatusAndReason('200','OK');
-		response.write(val);
-  },
-
-  errorResponse: function(response) {
-    response.setContentType('text/plain');
-		response.setStatusAndReason('400','Bad Request');
   }
 };
