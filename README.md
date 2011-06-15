@@ -10,7 +10,7 @@ In fact you can run many of the same code samples from Hackety Hack in KidsRuby.
 
 You can also use the Turtle, just like Hackety-Hack does
 
-    Turtle.start do
+    Turtle.draw do
       background yellow
       pencolor brown
       pensize 2
@@ -27,41 +27,35 @@ You can also use the Turtle, just like Hackety-Hack does
 * Simple single file editor
 * You can run the current contents of the editor
 * The output appears next to the editor
-* It runs a normal Ruby 1.9.2 on the code. With normal gems etc.
+* It runs a normal Ruby on the code (both 1.8.7 & 1.9.2 supported). With normal gems etc.
 
 ## Implementation choices
-* Webkit-based editor - currently using CodeMirror
 * Titanium Desktop app - hosts webkit and provide http server to communicate with running Ruby environment
+* Webkit-based editor - currently using CodeMirror
 * Minitest/Minispec for testing. Yes, code must be tested
 * Tutorial content is easy to create just drop HTML files on disk locally to the KidsRuby editor.
 * Using a modified version of the JS library Turtlewax for the Turtle implementation https://github.com/davebalmer/turtlewax
 
 ## How to Run KidsRuby:
 
-    need Titanium instructions here
+    To simply run KidsRuby, you should go to the web site (http://kidsruby.com/downloads) and download the latest installer for your operating system. 
+
+## Getting setup for development with KidsRuby:
+    If you want to help development of KidsRuby, then read on...
+    You will need to obtain Titanium Studio, which is a free download from appcelerator.com. Register for the free community edition and you can then download Titanium Studio for your OS.
+    You will need to be using Titanium Desktop SDK version 1.2 RC2 or above. As of 6/15/2011 this is immanently going to be available to public.
+    If you are using a development build of the Titanium SDK you will need to install it as described here: http://wiki.appcelerator.org/display/guides/Continuous+Builds
 
 ## Getting setup on Ubuntu
-    need Titanium instructions here...
-    bundle install
-    
+    ...
 ## Getting setup on a Mac using Homebrew
-I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
-Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
-
-To summarize:
-
-    need Titanium instructions here...
-    bundle install
-
+    ...
+    
 ## Getting setup on a Mac using Ports
-Someone please describe this procedure here.
-
+    ...
+    
 ## Getting setup on Windows
-    Install git standalone
-    Install Ruby 1.9.2 standalone
-    need Titanium instructions here...
-    bundle install
-
+    ...
 
 ## DONE
 * create hackety-hack compatible class with UI dialogs for ask/alert
@@ -90,7 +84,7 @@ Someone please describe this procedure here.
 ## TODO
 
 ### CORE
-
+* the gets implementation needs to be recreated using JS within Titanium environment
 
 ### TURTLE
 * correct pencolor so it works
