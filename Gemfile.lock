@@ -5,7 +5,7 @@ GEM
     mime-types (1.16)
     mocha (0.9.10)
       rake
-    qtbindings (4.6.3.2)
+    qtbindings (4.6.3.4)
     rake (0.8.7)
     rest-client (1.6.1)
       mime-types (>= 1.16)
