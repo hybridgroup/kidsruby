@@ -1,5 +1,6 @@
 # KidsRuby
-KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. It is heavily influenced by Hackety Hack (http://hackety-hack.com).
+
+KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. It is heavily influenced by Hackety Hack (http://hackety-hack.com). 
 
 In fact you can run many of the same code samples from Hackety Hack in KidsRuby. For example:
 
@@ -40,11 +41,11 @@ You can also use the Turtle, just like Hackety-Hack does
 
     ruby main.rb
 
-## Getting setup on Ubuntu
+## Getting setup for development on Ubuntu
     sudo apt-get install libqt4-dev
     bundle install
     
-## Getting setup on a Mac using Homebrew
+## Getting setup for development on a Mac using Homebrew
 I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
 
@@ -59,7 +60,7 @@ Someone please describe this procedure here.
 
 ## Getting setup on Windows
     Install git standalone
-    Install Ruby 1.8.7 standalone
+    Install Ruby 1.9.2 standalone
     bundle install
 
 
@@ -83,17 +84,18 @@ Someone please describe this procedure here.
 * replace DBus communications with http based protocol which allows better multi-platform support and fewer installation dependancies
 * fix background color
 * A couple of funny things with the formatting of gets
+* need to display complete debug info on errors again
+* make the turtle canvas keep a correct aspect ratio when resized
 
 ## TODO
 
-### CORE
-* need to display complete debug info on errors again
-
+### ROADMAP
+* 0.8 - Switch to Ace from CodeMirror
+* 0.9 - Internationalization
+* 1.0 - Release!
 
 ### TURTLE
-* make the turtle canvas keep a correct aspect ratio when resized
 * correct pencolor so it works
-
 
 ### EDITOR
 * switch editor colors to white background for better presentation display. we already have inverse css file, just need a way to switch to it, and back
