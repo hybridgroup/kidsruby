@@ -4,83 +4,92 @@ require_relative "../../lib/kidsruby/turtle"
 
 describe Turtle do
   before do
-    @interface = mock('interface')
-    @interface.stubs(:valid?).returns(true)
+    @iface = mock('interface')
+    @iface.stubs(:valid?).returns(true)
     
-    @value = 100
     @reply = mock("reply")
     @reply.stubs(:valid?).returns(true)
-    @reply.stubs(:value).returns(@value)
     
-    InterfaceHelper.any_instance.stubs('get_interface').returns(@interface)
-    InterfaceHelper.any_instance.stubs('get_reply').returns(@reply)
+    InterfaceHelper.any_instance.stubs('get_interface').returns(@iface)
   end
   
   it "must initialize the remote Turtle" do     
-    @interface.expects(:call).with('init_turtle').returns(true)
+    @value = true
+    @reply.stubs(:value).returns(@value)
+
+    @iface.expects(:call).with('init_turtle').returns(@reply)
     @turtle = Turtle.new
   end
   
   describe "when working with the class methods" do
     it "must be able to draw" do
-      color = "#fff"
-      @interface.stubs(:call).with('init_turtle')
-      @interface.expects(:call).with("background", color)
-      @interface.expects(:call).with("command_turtle", 'draw();')
+      @val = "#fff"
+      @reply.stubs(:value).returns(@val)
+
+      @iface.expects(:call).with('init_turtle').returns(@reply)
+      @iface.expects(:call).with("background", @value).returns(@reply)
+      @iface.expects(:call).with("command_turtle", 'draw();').returns(@reply)
       Turtle.draw do
-        background(color)
+        background(@val)
       end
     end
   end
 
   describe "when properly initialized" do
     before do
-      @interface.stubs(:call).with('init_turtle')
+      @iface.stubs(:call).with('init_turtle').returns(@reply)
       @turtle = Turtle.new
     end
     
     it "must have a background color" do
-      color = "#fff"
-      @interface.expects(:call).with("background", color)
-      @turtle.background(color)
+      @value = "#fff"
+      @reply.stubs(:value).returns(@value)
+      @iface.expects(:call).with("background", @value).returns(@reply)
+      @turtle.background(@value)
     end
 
     it "must have a pensize" do
-      size = 3
+      @value = 3
+      @reply.stubs(:value).returns(@value)
       @turtle.expects(:add_command)
-      @turtle.pensize(size)
+      @turtle.pensize(@value)
     end
 
     it "must have a pencolor" do
-      color = "#fff"
+      @value = "#fff"
+      @reply.stubs(:value).returns(@value)
       @turtle.expects(:add_command)
-      @turtle.pencolor(color)
+      @turtle.pencolor(@value)
     end
 
     it "must be able to goto a location" do
-      height = 5
       x, y = 3, 4
-      @turtle.stubs("height").returns(height)
+      @value = 5
+      @reply.stubs(:value).returns(@value)
+      @turtle.stubs("height").returns(@value)
       @turtle.expects(:add_command)
       @turtle.goto(x, y)
     end
 
     it "must be able to setheading" do
-      heading = 90
+      @value = 90
+      @reply.stubs(:value).returns(@value)
       @turtle.expects(:add_command)
-      @turtle.setheading(heading)
+      @turtle.setheading(@value)
     end
 
     it "must be able to move forward" do
-      distance = 3
+      @value = 3
+      @reply.stubs(:value).returns(@value)
       @turtle.expects(:add_command)
-      @turtle.forward(distance)
+      @turtle.forward(@value)
     end
 
     it "must be able to move backward" do
-      distance = 3
+      @value = 3
+      @reply.stubs(:value).returns(@value)
       @turtle.expects(:add_command)
-      @turtle.backward(distance)
+      @turtle.backward(@value)
     end
 
     it "must be able to turnleft" do
@@ -102,12 +111,16 @@ describe Turtle do
     end
 
     it "must have a width" do
-      @interface.expects(:call).with("width")
+      @value = 3
+      @reply.stubs(:value).returns(@value)
+      @iface.expects(:call).with("width").returns(@reply)
       @turtle.width.must_equal(@value)
     end
 
     it "must have a height" do
-      @interface.expects(:call).with("height")
+      @value = 4
+      @reply.stubs(:value).returns(@value)
+      @iface.expects(:call).with("height").returns(@reply)
       @turtle.height.must_equal(@value)
     end
 
@@ -115,7 +128,7 @@ describe Turtle do
   
   describe "when interpreting colors" do
     before do
-      @interface.stubs(:call)
+      @iface.stubs(:call).returns(@reply)
       @turtle = Turtle.new
     end
 

@@ -7,25 +7,24 @@ describe 'dialogs' do
     @interface = mock('interface')
     @interface.stubs(:valid?).returns(true)
 
-    @answer = "yes"
     @reply = mock("reply")
     @reply.stubs(:valid?).returns(true)
-    @reply.stubs(:value).returns(@answer)
 
     InterfaceHelper.any_instance.stubs('get_interface').returns(@interface)
-    InterfaceHelper.any_instance.stubs('get_reply').returns(@reply)      
   end
 
   it "must be able to show alert" do
-    text = "hello"
-    @interface.expects(:call).with('alert', text).returns(true)
-    alert(text)
+    @answer = "hello"
+    @reply.stubs(:value).returns(@answer)
+    @interface.expects(:call).with('alert', @answer).returns(@reply)
+    alert(@answer)
   end
 
   it "must be able to show ask" do
-    text = "you there?"
-    @interface.expects(:call).with('ask', text).returns(@answer)
-    ask(text)
+    @answer = "you there?"
+    @reply.stubs(:value).returns(@answer)
+    @interface.expects(:call).with('ask', @answer).returns(@reply)
+    ask(@answer)
   end
 
   describe "gets" do
@@ -35,10 +34,12 @@ describe 'dialogs' do
       ARGV.clear
       # END HACK
      
+      @answer = "hola"
+      @reply.stubs(:value).returns(@answer)
       stdin = mock("standard input")
       stdin.expects(:gets).returns(@answer)
       $stdin = stdin
-      @interface.expects('call').with('gets').returns(@answer)
+      @interface.expects('call').with('gets').returns(@reply)
       gets.must_equal(@answer)
     end
   end

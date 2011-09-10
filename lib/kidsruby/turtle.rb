@@ -4,15 +4,10 @@ class Turtle
 
   def initialize
     @commands = []
-    @interface_helper = InterfaceHelper.new
-    @interface = @interface_helper.get_interface("/turtle")
+    @interface = InterfaceHelper.new.get_interface("/turtle")
     init_turtle
   end
 
-  def get_reply(message)
-    @interface_helper.get_reply(message)
-  end
-  
   class << self
     def start(&script)
       t = self.new
@@ -25,8 +20,7 @@ class Turtle
   
   def init_turtle
     if @interface.valid?
-      message = @interface.call("init_turtle")
-      reply = get_reply(message)
+      reply = @interface.call("init_turtle")
       $stderr.puts("init_turtle call failed: %s\n" % reply.error_message) unless reply.valid?
     end
   end
@@ -34,8 +28,7 @@ class Turtle
   def send_commands
     cmds = @commands.join(".")
     if @interface.valid?
-      message = @interface.call("command_turtle", cmds)
-      reply = get_reply(message)
+      reply = @interface.call("command_turtle", cmds)
       if reply.valid?
         @commands = []
         return true
@@ -53,8 +46,7 @@ class Turtle
   # ex: blue
   def background(color)
     if @interface.valid?
-      message = @interface.call("background", color)
-      reply = get_reply(message)
+      reply = @interface.call("background", color)
       if reply.valid?
         @commands = []
         return true
@@ -106,8 +98,7 @@ class Turtle
 
   def width
     if @interface.valid?
-      message = @interface.call("width")
-      reply = get_reply(message)
+      reply = @interface.call("width")
       if reply.valid?
         return reply.value.to_i
       end
@@ -119,8 +110,7 @@ class Turtle
   
   def height
     if @interface.valid?
-      message = @interface.call("height")
-      reply = get_reply(message)
+      reply = @interface.call("height")
       if reply.valid?
         return reply.value.to_i
       end

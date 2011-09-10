@@ -2,17 +2,8 @@ require "net/http"
 require "uri"
 
 class InterfaceHelper
-  def connect!
-    # now stateless, no need to connect in advance
-  end
-  
   def get_interface(location = "/")
     Interface.new(location)
-  end
-
-  def get_reply(message)
-    # get rid of this, reply will be returned directly from Interface call
-    message
   end
 end
 

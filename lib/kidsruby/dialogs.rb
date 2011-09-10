@@ -1,16 +1,13 @@
 # this is designed to trigger dialogs for kidsruby for ask and alert compatible with hackety hack
 def init_interface
-  @interface_helper = InterfaceHelper.new
-  @interface_helper.connect!
-  @iface = @interface_helper.get_interface
+  @iface = InterfaceHelper.new.get_interface
 end
 
 def ask(text)
   init_interface
 
   if @iface.valid?
-    message = @iface.call("ask", text)
-    reply = @interface_helper.get_reply(message)
+    reply = @iface.call("ask", text)
     if reply.valid?
       return reply.value
     end
@@ -24,8 +21,7 @@ def alert(text)
   init_interface
 
   if @iface.valid?
-    message = @iface.call("alert", text)
-    reply = @interface_helper.get_reply(message)
+    reply = @iface.call("alert", text)
     if reply.valid?
       return true
     end
@@ -40,8 +36,7 @@ def gets
    init_interface
 
   if @iface.valid?
-    message = @iface.call("gets")
-    reply = @interface_helper.get_reply(message)
+    reply = @iface.call("gets")
     if reply.valid?
       return __gets__
     end
