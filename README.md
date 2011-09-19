@@ -49,11 +49,17 @@ You can also use the Turtle, just like Hackety-Hack does
 I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
 
-To summarize:
+However, since Qt is now at version 4.7.3 you need to use the following instead:
 
     brew install qt
-    for DIR in /usr/local/Cellar/qt/4.7.1/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
+    for DIR in /usr/local/Cellar/qt/*/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
     bundle install
+
+If you have already installed KidsRuby using the OSX installer, you will need to uninstall that Qt package before trying to install the qtbindings gem, or it will not build/install as described here https://github.com/ryanmelt/qtbindings/blob/master/README.txt.
+
+The solution is to run this before attempting to install the qtbindings gem:
+
+    sudo /Developer/Tools/uninstall-qt.py
 
 ## Getting setup on a Mac using Ports
 Someone please describe this procedure here.
@@ -95,7 +101,7 @@ Someone please describe this procedure here.
 * 1.0 - Release!
 
 ### TURTLE
-* correct pencolor so it works
+* correct pencolor so it works when switching color while drawing
 
 ### EDITOR
 * switch editor colors to white background for better presentation display. we already have inverse css file, just need a way to switch to it, and back
