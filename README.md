@@ -49,10 +49,11 @@ You can also use the Turtle, just like Hackety-Hack does
 I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
 
-However, since Qt is now at version 4.7.3 you need to use the following instead:
+However, since Qt is now at a higher version, you need to use the following:
 
     brew install qt
     for DIR in /usr/local/Cellar/qt/*/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
+    brew install cmake
     bundle install
 
 If you have already installed KidsRuby using the OSX installer, you will need to uninstall that Qt package before trying to install the qtbindings gem, or it will not build/install as described here https://github.com/ryanmelt/qtbindings/blob/master/README.txt.
