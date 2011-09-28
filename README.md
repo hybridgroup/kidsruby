@@ -43,6 +43,14 @@ You can also use the Turtle, just like Hackety-Hack does
 
 ## Getting setup for development on Ubuntu
     sudo apt-get install libqt4-dev
+    sudo apt-get install cmake
+    bundle install
+
+## If you also want Gosu
+    echo "" >> Gemfile
+    echo "# needed for gosu" >> Gemfile
+    echo "gem 'gosu'" >> Gemfile
+    sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev
     bundle install
     
 ## Getting setup for development on a Mac using Homebrew
