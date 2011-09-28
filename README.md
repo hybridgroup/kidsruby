@@ -43,6 +43,7 @@ You can also use the Turtle, just like Hackety-Hack does
 
 ## Getting setup for development on Ubuntu
     sudo apt-get install libqt4-dev
+    sudo apt-get install cmake
     bundle install
     
 ## Getting setup for development on a Mac using Homebrew
