@@ -20,13 +20,36 @@ describe 'dialogs' do
     alert(@answer)
   end
 
-  it "must be able to show ask" do
-    @answer = "you there?"
-    @reply.stubs(:value).returns(@answer)
-    @interface.expects(:call).with('ask', @answer).returns(@reply)
-    ask(@answer)
-  end
+  describe "ask" do
+    it "must be able to be shown" do
+      @answer = "you there?"
+      @reply.stubs(:value).returns(@answer)
+      @interface.expects(:call).with('ask', @answer).returns(@reply)
+      ask(@answer)
+    end
 
+    it "must be able to return an integer value" do
+      @answer = "123"
+      @reply.stubs(:value).returns(@answer)
+      @interface.expects(:call).with('ask', "anything").returns(@reply)
+      ask("anything").must_equal(123)
+    end
+
+    it "must be able to return a floating point value" do
+      @answer = "123.4"
+      @reply.stubs(:value).returns(@answer)
+      @interface.expects(:call).with('ask', "anything").returns(@reply)
+      ask("anything").must_equal(123.4)
+    end
+
+    it "must be able to return a string value" do
+      @answer = "abc123"
+      @reply.stubs(:value).returns(@answer)
+      @interface.expects(:call).with('ask', "anything").returns(@reply)
+      ask("anything").must_equal(@answer)
+    end
+  end
+  
   describe "gets" do
     it "must be able to get input" do
       # HACK TO MAKE THIS SPEC WORK

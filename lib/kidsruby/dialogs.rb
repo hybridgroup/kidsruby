@@ -3,13 +3,26 @@ def init_interface
   @iface = InterfaceHelper.new.get_interface
 end
 
+def is_numeric?(value)
+  Float(value) != nil rescue false
+end
+
+def convert_to_number(value)
+  value = Float(value)
+  value.to_i == value ? value.to_i : value
+end
+  
 def ask(text)
   init_interface
 
   if @iface.valid?
     reply = @iface.call("ask", text)
     if reply.valid?
-      return reply.value
+      if is_numeric?(reply.value)
+        return convert_to_number(reply.value)
+      else
+        return reply.value
+      end
     end
 
     $stderr.puts("Ask call failed: %s\n" % reply.error_message)
