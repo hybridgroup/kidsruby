@@ -2,27 +2,31 @@
 
 KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. It is heavily influenced by Hackety Hack (http://hackety-hack.com). 
 
-In fact you can run many of the same code samples from Hackety Hack in KidsRuby. For example:
+In fact, you can run many of the same code samples from Hackety Hack in KidsRuby. For example:
 
-    color = ask("what is your favorite color")
-    if color == "blue"
-      alert("you picked blue")
-    end
+``` ruby
+color = ask("what is your favorite color")
+if color == "blue"
+  alert("you picked blue")
+end
+```
 
 You can also use the Turtle, just like Hackety-Hack does
 
-    Turtle.start do
-      background yellow
-      pencolor brown
-      pensize 2
-      goto 30, 200
-      setheading 180
-      1000.times do
-        forward 20
-        turnleft rand(10)
-        backward 10
-      end
-    end
+``` ruby
+Turtle.start do
+  background yellow
+  pencolor brown
+  pensize 2
+  goto 30, 200
+  setheading 180
+  1000.times do
+    forward 20
+    turnleft rand(10)
+    backward 10
+  end
+end
+```
 
 ## Design Goals
 * Simple single file editor
