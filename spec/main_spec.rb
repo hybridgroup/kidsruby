@@ -7,7 +7,7 @@ describe "main" do
       @app = Qt::Application.new(ARGV)
     end
     
-    it "must instanciate an app" do
+    it "must instantiate an app" do
       @app.wont_be_nil
     end
     
