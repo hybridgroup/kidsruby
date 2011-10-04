@@ -5,5 +5,7 @@ gem 'qtbindings'
 gem 'htmlentities'
 gem 'rest-client'
 
-# only needed for testing
-gem 'mocha'
+group :test do
+  # only needed for testing
+  gem 'mocha'
+end
