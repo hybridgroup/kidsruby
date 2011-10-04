@@ -1,18 +1,18 @@
-function selectTab(n) {
-  $("#tabs").data("mytabs").tabs('select', n);
+function selectTab(id) {
+  $("#tabs").data("mytabs").tabs("select", id);
 }
 
 function deleteLastStdIn() {
-  var str = $('#stdin').html();
+  var str = $("#stdin").html();
   var newStr = str.substring(0, str.length-1);
-  $('#stdin').html(newStr);
+  $("#stdin").html(newStr);
 }
 
 function updateStdIn(newHtml) {
-  if ( !$('#stdin').length ) { 
+  if ( !$("#stdin").length ) {
     updateStdOut("<div id='stdin'></div>");
-  } 
-  $('#stdin').append(newHtml);
+  }
+  $("#stdin").append(newHtml);
 }
 
 function cutStdInToStdOut() {
@@ -29,11 +29,11 @@ function copyStdIntoStdOut() {
 }
 
 function updateStdOut(newHtml) {
-	$("#stdout").append(unescape(newHtml));
+  $("#stdout").append(unescape(newHtml));
 };
 
 function updateStdErr(newHtml) {
-	$("#stderr").append(unescape(newHtml));
+  $("#stderr").append(unescape(newHtml));
 }
 
 function startRun(editor) {
@@ -44,23 +44,23 @@ function startRun(editor) {
 }
 
 function clearOutputs() {
-	$.each(["stdout", "stderr"], function(i, item) {
-		$("#" + item).html("");
-	});
+  $.each(["stdout", "stderr"], function(i, item) {
+    $("#" + item).html("");
+  });
 }
 
 function submitRubyCode(editor) {
-	var ruby = editor.getCode();
-	QTApi['evaluateRuby(QString)'](ruby);
+  var ruby = editor.getSession();
+  QTApi["evaluateRuby(QString)"](ruby);
 }
 
 function openRubyCode() {
-	QTApi['openRubyFile(QString)']("");
+  QTApi["openRubyFile(QString)"]("");
 }
 
 function saveRubyCode(editor) {
-	var ruby = editor.getCode();
-	QTApi['saveRubyFile(QString)'](ruby);
+  var ruby = editor.getSession();
+  QTApi["saveRubyFile(QString)"](ruby);
 }
 
 function getEditor() {
@@ -72,20 +72,20 @@ function clearCode() {
 }
 
 function addCode(code) {
-  getEditor().setCode(getEditor().getCode() + "\n" + code);
+  getEditor().setCode(getEditor().getSession() + "\n" + code);
 }
 
 function initTurtle() {
   var turtle = new Pen("turtle-canvas");
   turtle.center();
-	$("#turtle").data('turtle', turtle);
+  $("#turtle").data("turtle", turtle);
   selectTab(2);
 }
 
 function resetTurtle() {
   var turtle = getTurtle();
   turtle.center();
-  setTurtleBackground('#white');
+  setTurtleBackground("#white");
 }
 
 function callTurtle(arguments) {
@@ -95,44 +95,26 @@ function callTurtle(arguments) {
 }
 
 function getTurtle() {
-  return $("#turtle").data('turtle');
+  return $("#turtle").data("turtle");
 }
 
 function setTurtleBackground(color) {
-  $("#turtle").css('backgroundColor', unescape(color));
+  $("#turtle").css("backgroundColor", unescape(color));
 }
 
 function resizeCanvas() {
   var pnl = $("#tabs").find(".ui-tabs-panel:visible");
-  canvas = document.getElementById( 'turtle-canvas' );
+  canvas = document.getElementById("turtle-canvas");
   canvas.width = pnl.width();
   canvas.height = pnl.height();
 }
 
 $(document).ready(function() {
-	var docWidth = $("body").width();
+  var docWidth = $("body").width();
   var docHeight = $(document).height();
 
-  CodeMirrorConfig.stylesheet = "css/inverse.css"; // this will allow us to dynamically change style at runtime
-  var editor = CodeMirror.fromTextArea('rubycode', {
-	      parserfile: ["../../js/tokenizeruby.js", "../../js/parseruby.js"],
-	      path: "codemirror/js/",
-	      lineNumbers: true,
-	      textWrapping: false,
-	      indentUnit: 2,
-				tabMode: "indent",
-				content: $('#rubycode').val(),
-	      parserConfig: {},
-	      width: docWidth,
-	      height: '95%',
-				iframeClass: 'editor-window',
-	    	autoMatchParens: true
-	  });
-
-	$("#rubycode").data("editor", editor);
-
-	// Set the output width
-	$("#output").width = docWidth;
+  // Set the output width
+  $("#output").width = docWidth;
 
   var tabs = $("#tabs").tabs();
   $("#tabs").data("mytabs", tabs);
@@ -143,21 +125,21 @@ $(document).ready(function() {
     return false;
   });
 
-	$("#open").click(function(e) {
-		openRubyCode(editor);
-		return false;
-	});
+  $("#open").click(function(e) {
+    openRubyCode(editor);
+    return false;
+  });
 
-	$("#save").click(function(e) {
-		saveRubyCode(editor);
-		return false;
-	});
-	
+  $("#save").click(function(e) {
+    saveRubyCode(editor);
+    return false;
+  });
+
   $("#turtle").resize(function() {
     resizeCanvas();
   });
-	
-	initTurtle();
+
+  initTurtle();
 
   selectTab(0); // default to help tab
 });

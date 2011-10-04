@@ -2,15 +2,16 @@
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <title>Ruby</title>
-  
+
   <!-- Load styles -->
   <link rel="stylesheet" href="css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
-  <!--<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">-->
   <link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
-  
+
   <!-- Load js -->
-  <script src="codemirror/js/codemirror.js" type="text/javascript"></script>
-  
+  <script src="js/ace/ace.js" type="text/javascript"></script>
+  <script src="js/ace/mode-ruby.js" type="text/javascript"></script>
+  <script src="js/ace/theme-twilight.js" type="text/javascript"></script>
+
   <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
@@ -19,37 +20,50 @@
 </head>
 <body id="index">
 
-  <div id="input">
-<textarea id="rubycode" cols="40">
+
+<div id="container">
+<pre id="rubycode">
 # Type in your code just below here:
-</textarea>
-    <div id="buttons">
-      <button id="run">Run</button>
-      <button id="open">Open</button>
-      <button id="save">Save</button>
-    </div>
+
+</pre>
+</div>
+
+<aside id="tabs">
+  <ul>
+    <li><a href="#help">Help</a></li>
+    <li><a href="#output">Output</a></li>
+    <li><a href="#turtle">Turtle</a></li>
+  </ul>
+
+  <div id="help">
+    <iframe src="help/index.html"></iframe>
   </div>
 
-  <aside id="tabs">
-    <ul>
-      <li><a href="#help">Help</a></li>
-      <li><a href="#output">Output</a></li>
-      <li><a href="#turtle">Turtle</a></li>
-    </ul>
-    <div id="help">
-      <iframe src="help/index.html"></iframe>
-    </div>
-    <div id="output">
-      <div id="stdout">
-        &nbsp;
-      </div>
-      <div id="stderr">
-        &nbsp;
-      </div>
-    </div>
-    <div id="turtle">
-      <canvas id="turtle-canvas">
-    </div>
-  </aside>
+  <div id="output">
+    <div id="stdout">&nbsp;</div>
+    <div id="stderr">&nbsp;</div>
+  </div>
+
+  <div id="turtle">
+    <canvas id="turtle-canvas"></canvas>
+  </div>
+
+  <div id="buttons">
+    <button id="run">Run</button>
+    <button id="open">Open</button>
+    <button id="save">Save</button>
+  </div>
+</aside>
+
+<script type="text/javascript" charset="utf-8">
+window.onload = function() {
+  editor = ace.edit("rubycode");
+  // editor.setTheme("ace/theme/twilight");
+
+  var RubyMode = require("ace/mode/ruby").Mode;
+  editor.getSession().setMode(new RubyMode());
+};
+</script>
+
 </body>
 </html>
