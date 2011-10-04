@@ -34,7 +34,7 @@ def alert(text)
   init_interface
 
   if @iface.valid?
-    reply = @iface.call("alert", text)
+    reply = @iface.call("alert", text.to_s)
     if reply.valid?
       return true
     end
