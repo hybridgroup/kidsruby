@@ -9,7 +9,7 @@ class KidsRubyServer < Qt::TcpServer
     super(parent)
     @parent = parent
     @turtle = turtle
-    
+
     listen(Qt::HostAddress.new(Qt::HostAddress::LocalHost), 8080)
     connect(self, SIGNAL('newConnection()'), SLOT('connection()'));
   end
@@ -34,7 +34,7 @@ class KidsRubyServer < Qt::TcpServer
           connection.waitForReadyRead(100)
         end
       end
-      
+
       while connection.isOpen
         if connection.canReadLine
           line = connection.readLine.to_s
@@ -47,11 +47,11 @@ class KidsRubyServer < Qt::TcpServer
           connection.waitForReadyRead(100)
         end
       end
-            
+
       if connection.isOpen
         body = connection.readAll.to_s
       end
-      
+
       if url && url.path =~ /\/turtle\/(.*)/
         command = $1
         param = URI.decode(url.encodedQuery.to_s)
@@ -102,19 +102,19 @@ class KidsRubyServer < Qt::TcpServer
       puts "ERROR #{$!}"
     end
   end
-  
+
   def errorResponse
     "HTTP/1.0 400 Bad Request\r\n"
   end
-  
+
   def validResponse(data)
-	  "HTTP/1.0 200 Ok\r\n" +
+    "HTTP/1.0 200 Ok\r\n" +
       "Content-Type: text/plain; charset=\"utf-8\"\r\n" +
       "\r\n" +
       "#{data}"
-	end
-	
-	def handleError(err)
-	  #todo: display something here
-	end
+  end
+
+  def handleError(err)
+    #todo: display something here
+  end
 end

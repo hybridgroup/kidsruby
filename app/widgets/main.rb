@@ -23,9 +23,7 @@ class MainWidget < Qt::WebView
 
     Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), 
                           self, SLOT('setupQtBridge()'))
-    Qt::Object.connect(self, SIGNAL("stdInRequested()"), 
-                          self, SLOT('acceptStdin()'))
-
+    initialize_stdin_connection
     self.load Qt::Url.new(File.expand_path(File.dirname(__FILE__) + "/../../public/index.html"))
     show
   end
@@ -43,6 +41,12 @@ class MainWidget < Qt::WebView
 
   private
   
+  def initialize_stdin_connection
+    Qt::Object.connect(self, SIGNAL("stdInRequested()"), 
+                          self, SLOT('acceptStdin()'))
+    rejectStdin
+  end
+
   def notify_stdin_event_listeners(event)
     (@fr ||= FrameWriter.new(@frame)).keyPressEvent(event)
     (@wr ||= RunnerWriter.new(@runner)).keyPressEvent(event)
