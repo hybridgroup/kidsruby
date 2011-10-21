@@ -37,7 +37,7 @@ function updateStdErr(newHtml) {
 }
 
 function startRun() {
-  selectTab(1);
+  detectTurtleCode() ? selectTab(2) : selectTab(1);
   clearOutputs();
   resetTurtle();
   submitRubyCode();
@@ -73,6 +73,11 @@ function clearCode() {
 
 function addCode(code) {
   getEditor().setCode(getEditor().getSession() + "\n" + code);
+}
+
+function detectTurtleCode() {
+  var ruby = getEditor().getSession().getValue();
+  return ruby.match(/^\s+?Turtle\.start/) ? true : false;
 }
 
 function initTurtle() {
