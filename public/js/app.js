@@ -109,6 +109,36 @@ function resizeCanvas() {
   canvas.height = pnl.height();
 }
 
+function setDefaultEditorContent() {
+  // set initial value and position
+  getEditor().getSession().setValue("# Type in your code just below here:\n");
+  getEditor().gotoLine(2);
+}
+
+function initEditor() {
+  window.editor = ace.edit("rubycode");
+
+  // themes
+  window.themes = [
+    "clouds", "clouds_midnight", "cobalt", "crimson_editor", "dawn", "eclipse",
+    "idle_fingers", "kr_theme", "merbivore", "merbivore_soft",
+    "mono_industrial", "solarized_dark", "solarized_light", "textmate",
+    "twilight", "vibrant_ink"
+  ]
+  window.editor.setTheme("ace/theme/clouds");
+
+  // ruby mode
+  var RubyMode = require("ace/mode/ruby").Mode;
+  window.editor.getSession().setMode(new RubyMode());
+
+  // use soft tabs
+  window.editor.getSession().setTabSize(2);
+  window.editor.getSession().setUseSoftTabs(true);
+
+  // initialize content
+  setDefaultEditorContent();
+}
+
 $(document).ready(function() {
   var docWidth = $("body").width();
   var docHeight = $(document).height();
@@ -139,7 +169,7 @@ $(document).ready(function() {
     resizeCanvas();
   });
 
-  $('#clear').click(function(e) { 
+  $('#clear').click(function(e) {
     clearCode();
     return false;
   });
@@ -147,4 +177,6 @@ $(document).ready(function() {
   initTurtle();
 
   selectTab(0); // default to help tab
+
+  initEditor();
 });

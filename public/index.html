@@ -40,12 +40,8 @@
 </head>
 <body id="index">
 
-
 <div id="container">
-<pre id="rubycode">
-# Type in your code just below here:
-
-</pre>
+  <pre id="rubycode"></pre>
 
   <div id="buttons">
     <button id="run">Run</button>
@@ -74,27 +70,7 @@
   <div id="turtle">
     <canvas id="turtle-canvas"></canvas>
   </div>
-
 </aside>
-
-<script type="text/javascript" charset="utf-8">
-window.onload = function() {
-  window.editor = ace.edit("rubycode");
-
-  var themes = [
-    "clouds", "clouds_midnight", "cobalt", "crimson_editor", "dawn", "eclipse",
-    "idle_fingers", "kr_theme", "merbivore", "merbivore_soft",
-    "mono_industrial", "solarized_dark", "solarized_light", "textmate",
-    "twilight", "vibrant_ink"
-  ]
-
-  editor.setTheme("ace/theme/clouds");
-
-  var RubyMode = require("ace/mode/ruby").Mode;
-  editor.getSession().setMode(new RubyMode());
-  editor.gotoLine(2);
-};
-</script>
 
 </body>
 </html>
