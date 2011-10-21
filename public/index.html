@@ -10,6 +10,7 @@
   <!-- ACE Editor -->
   <script src="js/ace/ace.js" type="text/javascript"></script>
   <script src="js/ace/mode-ruby.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/sugar-0.9.5.min.js"></script>
 
   <script src="js/ace/theme-clouds.js" type="text/javascript"></script>
   <script src="js/ace/theme-clouds_midnight.js" type="text/javascript"></script>
@@ -31,7 +32,6 @@
   <!-- jQuery-ish -->
   <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
-  <script type="text/javascript" src="js/sugar-0.9.5.min.js"></script>
 
   <!-- KidsRuby -->
   <script type="text/javascript" src="js/app.js"></script>
@@ -46,6 +46,13 @@
 # Type in your code just below here:
 
 </pre>
+
+  <div id="buttons">
+    <button id="run">Run</button>
+    <button id="clear">Clear</button>
+    <button id="open">Open</button>
+    <button id="save">Save</button>
+  </div>
 </div>
 
 <aside id="tabs">
@@ -68,17 +75,11 @@
     <canvas id="turtle-canvas"></canvas>
   </div>
 
-  <div id="buttons">
-    <button id="run">Run</button>
-    <button id="clear">Clear</button>
-    <button id="open">Open</button>
-    <button id="save">Save</button>
-  </div>
 </aside>
 
 <script type="text/javascript" charset="utf-8">
 window.onload = function() {
-  var editor = ace.edit("rubycode");
+  window.editor = ace.edit("rubycode");
 
   var themes = [
     "clouds", "clouds_midnight", "cobalt", "crimson_editor", "dawn", "eclipse",
@@ -87,10 +88,11 @@ window.onload = function() {
     "twilight", "vibrant_ink"
   ]
 
-  editor.setTheme("ace/theme/" + themes.first());
+  editor.setTheme("ace/theme/clouds");
 
   var RubyMode = require("ace/mode/ruby").Mode;
   editor.getSession().setMode(new RubyMode());
+  editor.gotoLine(2);
 };
 </script>
 

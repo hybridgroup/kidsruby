@@ -1,7 +1,6 @@
 class Runner < Qt::Process
   def initialize(main)
     super
-    
     @main_widget = main
   end
 

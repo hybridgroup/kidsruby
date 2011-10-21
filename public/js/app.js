@@ -36,11 +36,11 @@ function updateStdErr(newHtml) {
   $("#stderr").append(unescape(newHtml));
 }
 
-function startRun(editor) {
+function startRun() {
   selectTab(1);
   clearOutputs();
   resetTurtle();
-  submitRubyCode(editor);
+  submitRubyCode();
 }
 
 function clearOutputs() {
@@ -49,8 +49,8 @@ function clearOutputs() {
   });
 }
 
-function submitRubyCode(editor) {
-  var ruby = editor.getSession();
+function submitRubyCode() {
+  var ruby = getEditor().getSession().getValue();
   QTApi["evaluateRuby(QString)"](ruby);
 }
 
@@ -58,17 +58,17 @@ function openRubyCode() {
   QTApi["openRubyFile(QString)"]("");
 }
 
-function saveRubyCode(editor) {
-  var ruby = editor.getSession();
+function saveRubyCode() {
+  var ruby = getEditor().getSession();
   QTApi["saveRubyFile(QString)"](ruby);
 }
 
 function getEditor() {
-  return $("#rubycode").data("editor");
+  return window.editor;
 }
 
 function clearCode() {
-  getEditor().setCode("");
+  getEditor().getSession().setValue("");
 }
 
 function addCode(code) {
@@ -121,22 +121,27 @@ $(document).ready(function() {
 
   $("#run").click(function(e) {
     resizeCanvas();
-    startRun(editor);
+    startRun(getEditor());
     return false;
   });
 
   $("#open").click(function(e) {
-    openRubyCode(editor);
+    openRubyCode(getEditor());
     return false;
   });
 
   $("#save").click(function(e) {
-    saveRubyCode(editor);
+    saveRubyCode(getEditor());
     return false;
   });
 
   $("#turtle").resize(function() {
     resizeCanvas();
+  });
+
+  $('#clear').click(function(e) { 
+    clearCode();
+    return false;
   });
 
   initTurtle();

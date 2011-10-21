@@ -61,10 +61,12 @@ body.lesson-set section h1 {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
+
 #buttons {
-  bottom: 15px;
-  position: absolute;
-  right: 5px;
+  position:relative;
+  float:right;
+  top: 93%;
+  width: 350px;
 }
 #buttons button {
   font-size: 30px;
@@ -108,11 +110,11 @@ iframe h1 {
 }
 
 #tabs {
-  height: 94%;
+  height: 100%;
   position: absolute;
   right: 0px;
   top: 1%;
-  width: 49%;
+  width: 50%;
 }
 .ui-tabs-panel {
   height: 85%;
@@ -130,12 +132,20 @@ width: 100%;
 }
 */
 
+#container {
+  width: 49%;
+  float:left;
+}
+
 #rubycode {
-  width: 50%;
+  width: 49%;
+  height:94%;
   margin: 0;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  clear: both;
+  float: left;
 }
