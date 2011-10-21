@@ -15,6 +15,7 @@ body.lesson-set {
   background: #fff;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   margin: 0px 10px 0px 0px;
+  overflow-y: scroll;
 }
 body.lesson-set > h1 {
   border-bottom: 1px solid #dfdfdf;
@@ -63,8 +64,8 @@ body.lesson-set section h1 {
 }
 
 #buttons {
-  position:relative;
-  float:right;
+  position: relative;
+  float: right;
   top: 93%;
   width: 350px;
 }
@@ -89,6 +90,7 @@ iframe h1 {
 }
 
 #output {
+  overflow-y: scroll;
 }
 
 #stdout {
@@ -115,20 +117,14 @@ iframe h1 {
   width: 90%;
 }
 
-/*canvas {
-height: 100%;
-width: 100%;
-}
-*/
-
 #container {
   width: 49%;
-  float:left;
+  float: left;
 }
 
 #rubycode {
   width: 49%;
-  height:94%;
+  height: 94%;
   margin: 0;
   position: absolute;
   top: 0;
