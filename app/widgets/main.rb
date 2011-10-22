@@ -55,6 +55,7 @@ class MainWidget < Qt::WebView
 
   def acceptStdin
     @acceptStdin = true
+    @frame.evaluateJavaScript('acceptStdIn();')
   end
 
   def rejectStdin

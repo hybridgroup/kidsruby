@@ -12,24 +12,16 @@ guard 'shell' do
 
   def restart_kidsruby
     stop_kidsruby 
-    start_kidsruby
+    store_pid(kidsruby_process)
   end
 
   def stop_kidsruby
-    kill_kidsruby
+    Process.kill("HUP", pid.to_i) if pid
     cleanup_pid_file
-  end
-
-  def kill_kidsruby
-    Process.kill("HUP", pid.to_i)
   end
 
   def cleanup_pid_file
     File.delete(pid_file) if File.exists?(pid_file)
-  end
-
-  def start_kidsruby
-    store_pid(kidsruby_process)
   end
 
   def store_pid(process)

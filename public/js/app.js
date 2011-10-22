@@ -3,27 +3,54 @@ function selectTab(id) {
 }
 
 function deleteLastStdIn() {
-  var str = $("#stdin").html();
+  removeCursor();
+  var str = $("#stdin").text();
   var newStr = str.substring(0, str.length-1);
-  $("#stdin").html(newStr);
+  $("#stdin").html('');
+  updateStdIn(newStr);
 }
 
 function updateStdIn(newHtml) {
-  if ( !$("#stdin").length ) {
-    updateStdOut("<div id='stdin'></div>");
-  }
   $("#stdin").append(newHtml);
+  appendCursor($('#stdin'));
 }
 
-function cutStdInToStdOut() {
-  copyStdIntoStdOut();
-  removeStdIn();
+function removeCursor() {
+  $('.cursor').remove();
+}
+
+function appendCursor() {
+  removeCursor();
+  $('#stdin').append("<span class='cursor'>|</span>");
+  setCursorBlinkInterval();
+}
+
+function setCursorBlinkInterval() {
+  if (blinkInterval!='undefined') {
+    clearInterval(blinkInterval);
+  }
+
+  var blinkInterval = setInterval(function() {
+    $('.cursor').fadeOut('slow');
+    $('.cursor').fadeIn('slow');
+  }, 1000);
 }
 
 function removeStdIn() {
   $("#stdin").remove();
 }
 
+function acceptStdIn() {
+  if ( !$("#stdin").length ) {
+    updateStdOut("<div id='stdin'></div>");
+  }
+  appendCursor();
+}
+
+function cutStdInToStdOut() {
+  copyStdIntoStdOut();
+  removeStdIn();
+}
 function copyStdIntoStdOut() {
   $("#stdout").append($("#stdin").html());
 }
@@ -69,6 +96,7 @@ function getEditor() {
 
 function clearCode() {
   getEditor().getSession().setValue("");
+  clearOutputs();
 }
 
 function addCode(code) {
@@ -129,8 +157,8 @@ function initEditor() {
     "idle_fingers", "kr_theme", "merbivore", "merbivore_soft",
     "mono_industrial", "solarized_dark", "solarized_light", "textmate",
     "twilight", "vibrant_ink"
-  ]
-  window.editor.setTheme("ace/theme/clouds");
+      ]
+      window.editor.setTheme("ace/theme/clouds");
 
   // ruby mode
   var RubyMode = require("ace/mode/ruby").Mode;
