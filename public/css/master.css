@@ -1,13 +1,13 @@
 body {
-	background: #eee;
+  background: #eee;
 }
 
 body:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;  
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;  
 }
 
 body.lesson-set {
@@ -103,7 +103,7 @@ iframe h1 {
 }
 
 #stderr {
-	color: #990000;
+  color: #990000;
 }
 
 #tabs {
@@ -124,7 +124,16 @@ iframe h1 {
 }
 
 /*canvas {
-  height: 100%;
-  width: 100%;
+height: 100%;
+width: 100%;
+} */
+
+pre#stdout, pre#stderr {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  white-space: pre-wrap;
 }
-*/
+
