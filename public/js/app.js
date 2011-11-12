@@ -31,9 +31,9 @@ function setCursorBlinkInterval() {
   }
 
   var blinkInterval = setInterval(function() {
-    $('.cursor').fadeOut('slow');
-    $('.cursor').fadeIn('slow');
-  }, 1000);
+    $('.cursor').fadeTo(500, 0.5);
+    $('.cursor').fadeTo(500, 0);
+  }, 0);
 }
 
 function removeStdIn() {
@@ -42,9 +42,10 @@ function removeStdIn() {
 
 function acceptStdIn() {
   if ( !$("#stdin").length ) {
-    updateStdOut("<div id='stdin'></div>");
+    $('#output').append("<div id='stdin'></div>");
   }
   appendCursor();
+  scrollToOutputEnd()
 }
 
 function cutStdInToStdOut() {
@@ -57,10 +58,12 @@ function copyStdIntoStdOut() {
 
 function updateStdOut(newHtml) {
   $("#stdout").append(unescape(newHtml));
+  scrollToOutputEnd()
 };
 
 function updateStdErr(newHtml) {
   $("#stderr").append(unescape(newHtml));
+  scrollToOutputEnd()
 }
 
 function startRun() {
@@ -170,6 +173,14 @@ function initEditor() {
 
   // initialize content
   setDefaultEditorContent();
+}
+
+function scrollToOutputEnd() {
+  var height = 0
+  $('#output').children().each(function() {
+    height += $(this).height();
+  });
+  $('#output').scrollTop(height);
 }
 
 $(document).ready(function() {

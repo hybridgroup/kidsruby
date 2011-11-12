@@ -97,8 +97,15 @@ iframe h1 {
   
 }
 
+#stdin {
+  padding: 0;
+  margin: 0;
+}
 #stderr {
   color: #990000;
+}
+.cursor {
+  display:inline-block;
 }
 
 #tabs {
