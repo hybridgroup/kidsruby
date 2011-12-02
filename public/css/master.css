@@ -1,5 +1,4 @@
 body {
-  background: #eee;
   overflow: hidden;
 }
 
@@ -12,14 +11,15 @@ body:after {
 }
 
 body.lesson-set {
-  background: #fff;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   margin: 0px 10px 0px 0px;
   overflow-y: scroll;
 }
+
 body.lesson-set > h1 {
   border-bottom: 1px solid #dfdfdf;
 }
+
 body.lesson-set article > h1 {
   border-bottom: 1px dotted #dfdfdf;
   border-left: 4px solid #ff0000;
@@ -109,10 +109,9 @@ iframe h1 {
 }
 
 #tabs {
-  height: 100%;
   position: absolute;
+  height: 92%;
   right: 0px;
-  top: 1%;
   width: 50%;
 }
 .ui-tabs-panel {
@@ -120,9 +119,7 @@ iframe h1 {
   position: relative;
 }
 
-#turtle {
-  height: 90%;
-  width: 90%;
+#turtle, #turtle-canvas {
 }
 
 #container {

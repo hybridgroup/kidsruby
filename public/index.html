@@ -4,8 +4,8 @@
   <title>KidsRuby</title>
 
   <!-- Load styles -->
-  <link rel="stylesheet" href="css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
-  <link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style">
+  <link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="style">
 
   <!-- jQuery-ish -->
   <script type="text/javascript" src="js/jquery/jquery-1.6.2.min.js"></script>
@@ -39,38 +39,36 @@
   <script type="text/javascript" src="js/hsv.js"></script>
 </head>
 <body id="index">
+  <div id="container">
+    <pre id="rubycode"></pre>
 
-<div id="container">
-  <pre id="rubycode"></pre>
+    <div id="buttons">
+      <button id="run">Run</button>
+      <button id="clear">Clear</button>
+      <button id="open">Open</button>
+      <button id="save">Save</button>
+    </div>
 
-  <div id="buttons">
-    <button id="run">Run</button>
-    <button id="clear">Clear</button>
-    <button id="open">Open</button>
-    <button id="save">Save</button>
+    <aside id="tabs">
+      <ul>
+        <li><a href="#help">Help</a></li>
+        <li><a href="#output">Output</a></li>
+        <li><a href="#turtle">Turtle</a></li>
+      </ul>
+
+      <div id="help">
+        <iframe src="help/index.html"></iframe>
+      </div>
+
+      <div id="output">
+        <div id="stdout">&nbsp;</div>
+        <div id="stderr">&nbsp;</div>
+      </div>
+
+      <div id="turtle">
+        <canvas id="turtle-canvas"></canvas>
+      </div>
+    </aside>
   </div>
-</div>
-
-<aside id="tabs">
-  <ul>
-    <li><a href="#help">Help</a></li>
-    <li><a href="#output">Output</a></li>
-    <li><a href="#turtle">Turtle</a></li>
-  </ul>
-
-  <div id="help">
-    <iframe src="help/index.html"></iframe>
-  </div>
-
-  <div id="output">
-    <div id="stdout">&nbsp;</div>
-    <div id="stderr">&nbsp;</div>
-  </div>
-
-  <div id="turtle">
-    <canvas id="turtle-canvas"></canvas>
-  </div>
-</aside>
-
 </body>
 </html>
