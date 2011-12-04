@@ -35,22 +35,22 @@ class KidsRubyServer < Qt::TcpServer
         end
       end
 
-      while connection.isOpen
-        if connection.canReadLine
-          line = connection.readLine.to_s
-          if line.chomp == ""
-            break
-          else
-            headers << line
-          end
-        else
-          connection.waitForReadyRead(100)
-        end
-      end
+      # while connection.isOpen
+      #   if connection.canReadLine
+      #     line = connection.readLine.to_s
+      #     if line.chomp == ""
+      #       break
+      #     else
+      #       headers << line
+      #     end
+      #   else
+      #     connection.waitForReadyRead(100)
+      #   end
+      # end
 
-      if connection.isOpen
-        body = connection.readAll.to_s
-      end
+      # if connection.isOpen
+      #   body = connection.readAll.to_s
+      # end
 
       if url && url.path =~ /\/turtle\/(.*)/
         command = $1
