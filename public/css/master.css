@@ -138,4 +138,6 @@ iframe h1 {
   right: 0;
   clear: both;
   float: left;
+	font-family: monospace;
+	font-size: 18px;
 }
