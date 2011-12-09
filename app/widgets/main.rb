@@ -14,7 +14,8 @@ class MainWidget < Qt::WebView
     @server = KidsRubyServer.new(self, @turtle)
 
     self.window_title = version_description
-    resize(@@app.desktop.width, @@app.desktop.height)
+    resize(@@app.desktop.width, @@app.desktop.height * 0.9)
+    move(0,0)
 
     @frame = self.page.mainFrame
     @runner = Runner.new(@frame)
