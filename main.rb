@@ -10,9 +10,9 @@ end
   require File.expand_path(File.dirname(__FILE__) + "/app/widgets/#{f}.rb")
 end
 
-app = Qt::Application.new(ARGV)
+@@app = Qt::Application.new(ARGV)
 
-main = MainWidget.new()
-main.show()
+@@main = MainWidget.new()
+@@main.show()
 
-app.exec()
+@@app.exec()

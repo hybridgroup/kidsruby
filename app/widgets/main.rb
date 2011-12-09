@@ -7,15 +7,15 @@ class MainWidget < Qt::WebView
   slots 'rejectStdin()', 'acceptStdin()', 'evaluateRuby(QString)', 'setupQtBridge()', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)',
         'QString gets()', 'alert(const QString&)', 'QString ask(const QString&)', 'append(const QString&)', 'appendError(const QString&)'
 
-  def initialize(parent = nil)
-    super(parent)
-    
+  def initialize
+    super
+
     @turtle = TurtleInterface.new(self)
     @server = KidsRubyServer.new(self, @turtle)
-    
+
     self.window_title = version_description
-    resize(1000, 700)
-    
+    resize(@@app.desktop.width, @@app.desktop.height)
+
     @frame = self.page.mainFrame
     @runner = Runner.new(@frame)
 
@@ -40,7 +40,7 @@ class MainWidget < Qt::WebView
   end
 
   private
-  
+
   def initialize_stdin_connection
     Qt::Object.connect(self, SIGNAL("stdInRequested()"), 
                           self, SLOT('acceptStdin()'))
@@ -61,15 +61,15 @@ class MainWidget < Qt::WebView
   def rejectStdin
     @acceptStdin = false
   end
-  
+
   def setupQtBridge
     @frame.addToJavaScriptWindowObject("QTApi", self);
   end
-  
+
   def evaluateRuby(code)
     @runner.run(code)
   end
-  
+
   def openRubyFile(nada)
     fileName = Qt::FileDialog.getOpenFileName(self,
                                 tr("Open a Ruby File"),
@@ -118,7 +118,7 @@ class MainWidget < Qt::WebView
         "\r"    => '\n',
         '"'     => '\\"',
         "'"     => "\\'" }
-      
+
   def escape_for_open(text)
     if text
       text.gsub(/(\\|<\/|\r\n|[\n\r"'])/) { JS_ESCAPE_MAP[$1] }
@@ -136,19 +136,19 @@ class MainWidget < Qt::WebView
     t = text.gsub(/\n/,"<br/>")
     @frame.evaluateJavaScript("updateStdErr('#{@coder.encode(t)}')")
   end
-  
+
   def current_code
     @editor.current_code
   end
-  
+
   def current_output
     @out
   end
-    
+
   def alert(text)
     Qt::MessageBox::information(self, tr(version_description), text)
   end
-  
+
   def ask(text)
     ok = Qt::Boolean.new
     val = Qt::InputDialog.getText(self, tr(version_description),
@@ -156,7 +156,7 @@ class MainWidget < Qt::WebView
                                   "", ok)
     return val
   end
-  
+
   def gets
     @stdInRejecter = StdinRejecter.new(self, Qt::Key_Return) 
     emit stdInRequested()
