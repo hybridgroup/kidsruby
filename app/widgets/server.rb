@@ -19,37 +19,17 @@ class KidsRubyServer < Qt::TcpServer
     begin
       connection = nextPendingConnection
       url = nil
-      body = ""
-      headers = ""
-      while connection.isOpen
-        if connection.canReadLine
-          line = connection.readLine.to_s
-          if line =~ /(GET|POST)\s+(.*)\s+HTTP/
-            url = Qt::Url.new($2)
-            break
-          else
-            break # some kind of error?
-          end
-        else
-          connection.waitForReadyRead(100)
-        end
-      end
-
       while connection.isOpen
         if connection.canReadLine
           line = connection.readLine.to_s
           if line.chomp == ""
             break
-          else
-            headers << line
+          elsif line =~ /GET\s+(.*)\s+HTTP/
+            url = Qt::Url.new($1)
           end
         else
           connection.waitForReadyRead(100)
         end
-      end
-
-      if connection.isOpen
-        body = connection.readAll.to_s
       end
 
       if url && url.path =~ /\/turtle\/(.*)/
@@ -79,9 +59,9 @@ class KidsRubyServer < Qt::TcpServer
           connection.write validResponse("OK")
         elsif command == "ask"
           param = URI.decode(url.encodedQuery.to_s)
-          connection.write validResponse(@parent.ask(param))          
+          connection.write validResponse(@parent.ask(param))
         elsif command == "append"
-          param = URI.decode(url.encodedQuery.to_s)          
+          param = URI.decode(url.encodedQuery.to_s)
           @parent.append(param)
           connection.write validResponse("OK")
         elsif command == "appendError"
@@ -89,7 +69,7 @@ class KidsRubyServer < Qt::TcpServer
           @parent.appendError(param)
           connection.write validResponse("OK")
         elsif command == "gets"
-          connection.write validResponse(@parent.gets)          
+          connection.write validResponse(@parent.gets)
         else
           connection.write errorResponse
         end

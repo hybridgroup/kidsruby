@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  background: #eee;
 }
 
 body:after {
@@ -11,7 +12,8 @@ body:after {
 }
 
 body.lesson-set {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  background: #fff; 
+  font-family: 'Helvetica Neue', Helvetica, sans-serif; 
   margin: 0px 10px 0px 0px;
   overflow-y: scroll;
 }
