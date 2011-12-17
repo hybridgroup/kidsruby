@@ -35,7 +35,7 @@ end
 * It runs a normal Ruby 1.9.2 on the code. With normal gems etc.
 
 ## Implementation choices
-* Webkit-based editor - currently using CodeMirror
+* Webkit-based editor - currently using Ace
 * QtRuby app - hosts webkit and provide http server to communicate with running Ruby environment
 * Minitest/Minispec for testing. Yes, code must be tested
 * Tutorial content is easy to create just drop HTML files on disk locally to the KidsRuby editor.
@@ -110,7 +110,7 @@ Someone please describe this procedure here.
 
 ### ROADMAP
 * 0.8 - Switch to Ace from CodeMirror
-* 0.9 - Internationalization
+* 0.9 - Fun
 * 1.0 - Release!
 
 ### TURTLE
