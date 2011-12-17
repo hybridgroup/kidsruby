@@ -80,7 +80,7 @@ function clearOutputs() {
 }
 
 function submitRubyCode() {
-  var ruby = getEditor().getSession().getValue();
+  var ruby = getEditor().getValue();
   QTApi["evaluateRuby(QString)"](ruby);
 }
 
@@ -89,25 +89,33 @@ function openRubyCode() {
 }
 
 function saveRubyCode() {
-  var ruby = getEditor().getSession();
+  var ruby = getEditor().getValue();
   QTApi["saveRubyFile(QString)"](ruby);
 }
 
-function getEditor() {
+function getAce() {
   return window.editor;
 }
 
+function getEditor() {
+  return getAce().getSession();
+}
+
 function clearCode() {
-  getEditor().getSession().setValue("");
+  getEditor().setValue("");
   clearOutputs();
 }
 
-function addCode(code) {
-  getEditor().setCode(getEditor().getSession() + "\n" + code);
+function addCode(newCode) {
+  currentCode = getEditor().getValue();
+  if (currentCode != "") {
+    currentCode = currentCode + "\n"
+  }
+  getEditor().setValue( currentCode + newCode);
 }
 
 function detectTurtleCode() {
-  var ruby = getEditor().getSession().getValue();
+  var ruby = getEditor().getValue();
   return ruby.match(/^\s+?Turtle\.start/) ? true : false;
 }
 
@@ -147,8 +155,8 @@ function resizeCanvas() {
 
 function setDefaultEditorContent() {
   // set initial value and position
-  getEditor().getSession().setValue("# Type in your code just below here:\n");
-  getEditor().gotoLine(2);
+  getEditor().setValue("# Type in your code just below here:\n");
+  getAce().gotoLine(2);
 }
 
 function initEditor() {
@@ -165,11 +173,11 @@ function initEditor() {
 
   // ruby mode
   var RubyMode = require("ace/mode/ruby").Mode;
-  window.editor.getSession().setMode(new RubyMode());
+  getEditor().setMode(new RubyMode());
 
   // use soft tabs
-  window.editor.getSession().setTabSize(2);
-  window.editor.getSession().setUseSoftTabs(true);
+  getEditor().setTabSize(2);
+  getEditor().setUseSoftTabs(true);
 
   // initialize content
   setDefaultEditorContent();
