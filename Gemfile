@@ -3,7 +3,6 @@ source "http://rubygems.org"
 
 gem 'qtbindings'
 gem 'htmlentities'
-gem 'rest-client'
 
 group :development do
   gem 'guard'
