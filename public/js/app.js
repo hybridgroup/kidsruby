@@ -192,12 +192,6 @@ function scrollToOutputEnd() {
 }
 
 $(document).ready(function() {
-  var docWidth = $("body").width();
-  var docHeight = $(document).height();
-
-  // Set the output width
-  $("#output").width = docWidth;
-
   var tabs = $("#tabs").tabs();
   $("#tabs").data("mytabs", tabs);
 
