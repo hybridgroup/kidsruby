@@ -35,7 +35,7 @@ end
 * It runs a normal Ruby 1.9.2 on the code. With normal gems etc.
 
 ## Implementation choices
-* Webkit-based editor - currently using Ace
+* Webkit-based editor - currently using Ace (http://ace.ajax.org/)
 * QtRuby app - hosts webkit and provide http server to communicate with running Ruby environment
 * Minitest/Minispec for testing. Yes, code must be tested
 * Tutorial content is easy to create just drop HTML files on disk locally to the KidsRuby editor.
