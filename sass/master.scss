@@ -1,10 +1,10 @@
-/* line 3, ../../sass/master.scss */
+@import 'compass';
+
 body {
   overflow: hidden;
   background: #eee;
 }
 
-/* line 8, ../../sass/master.scss */
 body:after {
   content: ".";
   display: block;
@@ -13,20 +13,17 @@ body:after {
   visibility: hidden;
 }
 
-/* line 16, ../../sass/master.scss */
 body.lesson-set {
-  background: #fff;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  background: #fff; 
+  font-family: 'Helvetica Neue', Helvetica, sans-serif; 
   margin: 0px 10px 0px 0px;
   overflow-y: scroll;
 }
 
-/* line 23, ../../sass/master.scss */
 body.lesson-set > h1 {
   border-bottom: 1px solid #dfdfdf;
 }
 
-/* line 27, ../../sass/master.scss */
 body.lesson-set article > h1 {
   border-bottom: 1px dotted #dfdfdf;
   border-left: 4px solid #ff0000;
@@ -34,7 +31,6 @@ body.lesson-set article > h1 {
   padding-left: 5px;
 }
 
-/* line 34, ../../sass/master.scss */
 body.lesson-set nav {
   background-color: #e8e8e8;
   border: 1px dotted #ccc;
@@ -43,23 +39,20 @@ body.lesson-set nav {
   width: 245px;
 }
 
-/* line 42, ../../sass/master.scss */
 body.lesson-set nav a {
   margin-right: 7px;
 }
 
-/* line 46, ../../sass/master.scss */
 body.lesson-set nav a:last-child {
   margin-right: 0px;
 }
 
-/* line 50, ../../sass/master.scss */
 body.lesson-set nav a:hover {
   color: #000;
   text-decoration: underline;
 }
 
-/* line 56, ../../sass/master.scss */
+
 body.lesson-set section code {
   background-color: #000;
   color: #fff;
@@ -67,7 +60,6 @@ body.lesson-set section code {
   padding: 0px 5px;
 }
 
-/* line 63, ../../sass/master.scss */
 body.lesson-set section h1 {
   color: #555;
   font-size: 13px;
@@ -75,29 +67,17 @@ body.lesson-set section h1 {
   text-transform: uppercase;
 }
 
-/* line 70, ../../sass/master.scss */
 #buttons {
   position: relative;
   float: right;
   top: 93%;
   width: 350px;
 }
-
-/* line 76, ../../sass/master.scss */
 #buttons button {
   background-color: red;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff3333), color-stop(100%, #ff0000));
-  background: -webkit-linear-gradient(#ff3333, #ff0000);
-  background: -moz-linear-gradient(#ff3333, #ff0000);
-  background: -o-linear-gradient(#ff3333, #ff0000);
-  background: -ms-linear-gradient(#ff3333, #ff0000);
-  background: linear-gradient(#ff3333, #ff0000);
+  @include border-radius(4px);
+  @include background(linear-gradient(lighten(red, 10), lighten(red, 00)));
+
   border: white;
   color: #fff;
   cursor: pointer;
@@ -107,67 +87,60 @@ body.lesson-set section h1 {
   margin-right: 5px;
 }
 
-/* line 90, ../../sass/master.scss */
 #input {
   float: left;
   position: relative;
   width: 50%;
 }
 
-/* line 96, ../../sass/master.scss */
 iframe {
   border: none;
   height: 100%;
   width: 100%;
 }
 
-/* line 102, ../../sass/master.scss */
 iframe h1 {
   font-size: 14px;
 }
 
-/* line 106, ../../sass/master.scss */
 #output {
   overflow-y: scroll;
 }
 
-/* line 114, ../../sass/master.scss */
+#stdout {
+  
+}
+
 #stdin {
   padding: 0;
   margin: 0;
 }
-
-/* line 118, ../../sass/master.scss */
 #stderr {
   color: #990000;
 }
-
-/* line 121, ../../sass/master.scss */
 .cursor {
-  display: inline-block;
+  display:inline-block;
 }
 
-/* line 125, ../../sass/master.scss */
 #tabs {
   position: absolute;
   height: 92%;
   right: 0px;
   width: 50%;
 }
-
-/* line 131, ../../sass/master.scss */
 .ui-tabs-panel {
   height: 85%;
   position: relative;
 }
 
-/* line 139, ../../sass/master.scss */
+#turtle, #turtle-canvas {
+}
+
 #container {
   width: 49%;
   float: left;
 }
 
-/* line 144, ../../sass/master.scss */
 #rubycode {
   width: 49%;
   height: 94%;
@@ -179,6 +152,6 @@ iframe h1 {
   right: 0;
   clear: both;
   float: left;
-  font-family: monospace;
-  font-size: 18px;
+	font-family: monospace;
+	font-size: 18px;
 }
