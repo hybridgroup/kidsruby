@@ -18,6 +18,13 @@ describe RunnerWriter do
     end
   end
 
+  describe "sending only modifier key press event" do
+    it "must not send characters into the line when only shift is pressed" do
+      @runner_writer.keyPressEvent(shift_key_press_event)
+      @runner_writer.line.must_equal ""
+    end
+  end
+
   describe "sending any other key press event" do
     it "must buffer regular characters into the line" do
       @runner_writer.keyPressEvent(z_key_press_event)

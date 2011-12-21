@@ -9,6 +9,10 @@ module KeyPressEventsTestHelper
     key_press_event(Qt::Key_Z, "z")
   end
 
+  def shift_key_press_event
+    key_press_event(Qt::Key_Shift)
+  end
+
   def backspace_key_press_event
     key_press_event(Qt::Key_Backspace)
   end

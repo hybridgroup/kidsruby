@@ -15,7 +15,7 @@ class RunnerWriter
     when Qt::Key_Backspace
       @line = @line[0..-2]
     else
-      @line << event.text
+      @line << event.text if event.text
     end
   end
 end
