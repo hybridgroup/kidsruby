@@ -168,8 +168,8 @@ function initEditor() {
     "idle_fingers", "kr_theme", "merbivore", "merbivore_soft",
     "mono_industrial", "solarized_dark", "solarized_light", "textmate",
     "twilight", "vibrant_ink"
-      ]
-      window.editor.setTheme("ace/theme/clouds");
+    ]
+  window.editor.setTheme("ace/theme/merbivore");
 
   // ruby mode
   var RubyMode = require("ace/mode/ruby").Mode;
