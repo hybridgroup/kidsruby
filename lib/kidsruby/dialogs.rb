@@ -1,8 +1,4 @@
 # this is designed to trigger dialogs for kidsruby for ask and alert compatible with hackety hack
-def init_interface
-  @iface = InterfaceHelper.new.get_interface
-end
-
 def is_numeric?(value)
   Float(value) != nil rescue false
 end
@@ -44,16 +40,3 @@ def alert(text)
   return nil
 end
 
-alias :__gets__ :gets
-def gets
-   init_interface
-
-  if @iface.valid?
-    reply = @iface.call("gets")
-    if reply.valid?
-      return __gets__
-    end
-
-    $stderr.puts("gets call failed: %s\n" % reply.error_message)
-  end
-end

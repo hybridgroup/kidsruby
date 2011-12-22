@@ -7,6 +7,10 @@ class InterfaceHelper
   end
 end
 
+def init_interface
+  @iface = InterfaceHelper.new.get_interface
+end
+
 class Interface
   attr_reader :location
 
@@ -27,12 +31,12 @@ class Interface
 
   def valid?
     true
-  end  
+  end
 end
 
 class Reply
   attr_accessor :value, :error_message, :error
-  
+
   def initialize(r)
     unless r.code == "200"
       @error = true

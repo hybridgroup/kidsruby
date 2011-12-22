@@ -9,6 +9,10 @@ class KidsRubyStdIo
     write(data.to_s + "\n")
   end
 
+  def print(*objs)
+    objs.each {|o| write(o.to_s)}
+  end
+
   # (very) Simple textilize-like converter
   # Converts newlines to html line breaks
   def simple_textilize(text)
@@ -30,8 +34,28 @@ class StdErr < KidsRubyStdIo
   end
 end
 
+class StdIn
+  def gets
+    super
+  end
+end
+
 $stdout.sync = true
 $stdout = StdOut.new
 
 $stderr.sync = true
 $stderr = StdErr.new
+
+alias :__gets__ :gets
+def gets
+  init_interface
+
+  if @iface.valid?
+    reply = @iface.call("gets")
+    if reply.valid?
+      return __gets__
+    end
+
+    $stderr.puts("gets call failed: %s\n" % reply.error_message)
+  end
+end

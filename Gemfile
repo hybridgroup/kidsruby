@@ -3,6 +3,7 @@ source "http://rubygems.org"
 
 gem 'qtbindings'
 gem 'htmlentities'
+gem 'rubywarrior'
 
 group :development do
   gem 'guard'
