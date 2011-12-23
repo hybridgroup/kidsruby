@@ -17,12 +17,29 @@ module RubyWarrior
     def verify_setup
       make_game_directory unless File.exist?(Config.path_prefix + '/rubywarrior')
     end
-  end
 
-  # do not load player class from rubywarrior directory, cause it should be in kid editor
-  class Level
-    def load_player
+    alias_method :prepare_next_level_original, :prepare_next_level
+    def prepare_next_level
+      prepare_next_level_original
+      next_level.display_description
     end
   end
+
+  # do not load player class from rubywarrior directory, because it should be in kid's editor
+  class Level
+    def load_player; end
+
+    def display_description
+      load_level
+      UI.puts PlayerGenerator.new(self).level_description
+    end
+  end
+
+  class PlayerGenerator
+    def level_description
+      read_template(templates_path + '/README.erb')
+    end
+  end
+
 end
 
