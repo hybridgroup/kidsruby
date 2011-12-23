@@ -107,10 +107,10 @@ iframe h1 {
   overflow-y: scroll;
   font-family: monospace;
   font-size: 18px;
-  white-space: pre;
 }
 
 #stdout {
+  white-space: pre;
 }
 
 #stdin {
@@ -119,6 +119,7 @@ iframe h1 {
   white-space: normal;
 }
 #stderr {
+  white-space: pre;
   color: #990000;
 }
 .cursor {
