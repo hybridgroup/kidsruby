@@ -105,10 +105,11 @@ iframe h1 {
 
 #output {
   overflow-y: scroll;
+  font-family: monospace;
+  font-size: 18px;
 }
 
 #stdout {
-  
 }
 
 #stdin {

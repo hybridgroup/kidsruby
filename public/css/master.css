@@ -129,25 +129,27 @@ iframe h1 {
 /* line 106, ../../sass/master.scss */
 #output {
   overflow-y: scroll;
+  font-family: monospace;
+  font-size: 18px;
 }
 
-/* line 114, ../../sass/master.scss */
+/* line 115, ../../sass/master.scss */
 #stdin {
   padding: 0;
   margin: 0;
 }
 
-/* line 118, ../../sass/master.scss */
+/* line 119, ../../sass/master.scss */
 #stderr {
   color: #990000;
 }
 
-/* line 121, ../../sass/master.scss */
+/* line 122, ../../sass/master.scss */
 .cursor {
   display: inline-block;
 }
 
-/* line 125, ../../sass/master.scss */
+/* line 126, ../../sass/master.scss */
 #tabs {
   position: absolute;
   height: 92%;
@@ -155,19 +157,19 @@ iframe h1 {
   width: 50%;
 }
 
-/* line 131, ../../sass/master.scss */
+/* line 132, ../../sass/master.scss */
 .ui-tabs-panel {
   height: 85%;
   position: relative;
 }
 
-/* line 139, ../../sass/master.scss */
+/* line 140, ../../sass/master.scss */
 #container {
   width: 49%;
   float: left;
 }
 
-/* line 144, ../../sass/master.scss */
+/* line 145, ../../sass/master.scss */
 #rubycode {
   width: 49%;
   height: 94%;

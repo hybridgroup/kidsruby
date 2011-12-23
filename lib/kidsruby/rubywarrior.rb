@@ -12,9 +12,16 @@ module RubyWarrior
     game.start
   end
 
+  # just generate the .profile file as needed
   class Game
     def verify_setup
       make_game_directory unless File.exist?(Config.path_prefix + '/rubywarrior')
+    end
+  end
+
+  # do not load player class from rubywarrior directory, cause it should be in kid editor
+  class Level
+    def load_player
     end
   end
 end
