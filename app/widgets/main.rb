@@ -1,11 +1,20 @@
 require "qtwebkit"
 require 'htmlentities'
+require_relative '../models/inverts_theme.rb'
 
 # this is the main view widget
 class MainWidget < Qt::WebView
+  include InvertsTheme
+  default_theme "ace/theme/merbivore"
+  alternate_theme "ace/theme/clouds"
+
   signals 'stdInRequested()'
-  slots 'rejectStdin()', 'acceptStdin()', 'evaluateRuby(QString)', 'setupQtBridge()', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)',
-        'QString gets()', 'alert(const QString&)', 'QString ask(const QString&)', 'append(const QString&)', 'appendError(const QString&)'
+
+  slots 'rejectStdin()', 'acceptStdin()', 'evaluateRuby(QString)', 
+        'setupQtBridge()', 'openRubyFile(const QString&)', 
+        'saveRubyFile(const QString&)', 'QString gets()', 
+        'alert(const QString&)', 'QString ask(const QString&)', 
+        'append(const QString&)', 'appendError(const QString&)'
 
   def initialize
     super
@@ -25,6 +34,7 @@ class MainWidget < Qt::WebView
 
     Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), 
                           self, SLOT('setupQtBridge()'))
+
     initialize_stdin_connection
     self.load Qt::Url.new(File.expand_path(File.dirname(__FILE__) + "/../../public/index.html"))
     show
@@ -32,11 +42,16 @@ class MainWidget < Qt::WebView
 
   protected
 
+  def set_theme(theme)
+    @frame.evaluateJavaScript("window.editor.setTheme('#{theme}')")
+  end
+
   def version_description
     'KidsRuby v' + KidsRuby::VERSION
   end
 
   def keyPressEvent(event)
+    return false if event.key == Qt::Key_Escape
     notify_stdin_event_listeners(event) if @acceptStdin
     super
   end
@@ -50,8 +65,8 @@ class MainWidget < Qt::WebView
   end
 
   def notify_stdin_event_listeners(event)
-    (@fr ||= FrameWriter.new(@frame)).keyPressEvent(event)
-    (@wr ||= RunnerWriter.new(@runner)).keyPressEvent(event)
+    (@frame_writer  ||= FrameWriter.new(@frame)).keyPressEvent(event)
+    (@runner_writer ||= RunnerWriter.new(@runner)).keyPressEvent(event)
     @stdInRejecter.keyPressEvent(event) if @stdInRejecter
   end
 
