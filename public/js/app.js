@@ -74,7 +74,7 @@ function startRun() {
 }
 
 function stopRun() {
-  QTApi["stopRuby()"];
+  QTApi["stopRuby()"]();
 }
 
 function setRunButtonToStop() {
