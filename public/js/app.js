@@ -73,6 +73,18 @@ function startRun() {
   submitRubyCode();
 }
 
+function stopRun() {
+  QTApi["stopRuby()"];
+}
+
+function setRunButtonToStop() {
+  $("#run").html('Stop');
+}
+
+function setStopButtonToRun() {
+  $("#run").html('Run');
+}
+
 function clearOutputs() {
   $.each(["stdout", "stderr"], function(i, item) {
     $("#" + item).html("");
@@ -196,8 +208,12 @@ $(document).ready(function() {
   $("#tabs").data("mytabs", tabs);
 
   $("#run").click(function(e) {
-    resizeCanvas();
-    startRun(getEditor());
+    if ($("#run").html() == 'Run') {
+      resizeCanvas();
+      startRun(getEditor());
+    } else {
+      stopRun();
+    }
     return false;
   });
 

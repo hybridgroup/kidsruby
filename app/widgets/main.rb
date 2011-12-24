@@ -9,11 +9,10 @@ class MainWidget < Qt::WebView
   alternate_theme "ace/theme/clouds"
 
   signals 'stdInRequested()'
-
-  slots 'rejectStdin()', 'acceptStdin()', 'evaluateRuby(QString)', 
-        'setupQtBridge()', 'openRubyFile(const QString&)', 
-        'saveRubyFile(const QString&)', 'QString gets()', 
-        'alert(const QString&)', 'QString ask(const QString&)', 
+  slots 'rejectStdin()', 'acceptStdin()',
+        'evaluateRuby(QString)', 'stopRuby()', 'runnerFinished(int, QProcess::ExitStatus)',
+        'setupQtBridge()', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)',
+        'QString gets()', 'alert(const QString&)', 'QString ask(const QString&)',
         'append(const QString&)', 'appendError(const QString&)'
 
   def initialize
@@ -28,13 +27,12 @@ class MainWidget < Qt::WebView
     showMaximized()
 
     @frame = self.page.mainFrame
-    @runner = Runner.new(@frame)
+    @runner = Runner.new(self)
 
     @coder = HTMLEntities.new
 
     Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), 
                           self, SLOT('setupQtBridge()'))
-
     initialize_stdin_connection
     self.load Qt::Url.new(File.expand_path(File.dirname(__FILE__) + "/../../public/index.html"))
     show
@@ -84,7 +82,17 @@ class MainWidget < Qt::WebView
   end
 
   def evaluateRuby(code)
+    @frame.evaluateJavaScript("setRunButtonToStop();")
     @runner.run(code)
+  end
+
+  def stopRuby
+    @runner.stop
+    @frame.evaluateJavaScript("updateStdOut('STOPPED.<br/>');")
+  end
+
+  def runnerFinished(code, status)
+    @frame.evaluateJavaScript("setStopButtonToRun();")
   end
 
   def openRubyFile(nada)
