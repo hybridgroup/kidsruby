@@ -110,7 +110,7 @@ iframe h1 {
 }
 
 #stdout {
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 #stdin {
@@ -119,7 +119,7 @@ iframe h1 {
   white-space: normal;
 }
 #stderr {
-  white-space: pre;
+  white-space: pre-wrap;
   color: #990000;
 }
 .cursor {
