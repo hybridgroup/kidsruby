@@ -188,13 +188,19 @@ iframe h1 {
   position: relative;
 }
 
-/* line 164, ../../sass/master.scss */
+/* line 161, ../../sass/master.scss */
+#turtle {
+  height: 90%;
+  width: 90%;
+}
+
+/* line 169, ../../sass/master.scss */
 #container {
   width: 49%;
   float: left;
 }
 
-/* line 169, ../../sass/master.scss */
+/* line 174, ../../sass/master.scss */
 #rubycode {
   width: 49%;
   height: 94%;
@@ -208,10 +214,4 @@ iframe h1 {
   float: left;
   font-family: monospace;
   font-size: 18px;
-}
-
-/* line 184, ../../sass/master.scss */
-#turtle {
-  height: 90%;
-  width: 90%;
 }

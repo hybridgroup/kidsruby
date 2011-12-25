@@ -158,7 +158,12 @@ iframe h1 {
   position: relative;
 }
 
-#turtle, #turtle-canvas {
+#turtle {
+  height: 90%;
+  width: 90%;
+}
+
+#turtle-canvas {
 }
 
 #container {
@@ -179,9 +184,4 @@ iframe h1 {
   float: left;
 	font-family: monospace;
 	font-size: 18px;
-}
-
-#turtle {
-  height: 90%;
-  width: 90%;
 }
