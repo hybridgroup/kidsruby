@@ -1,7 +1,7 @@
 /* line 3, ../../sass/master.scss */
 body {
   overflow: hidden;
-  background: #eee;
+  background: transparent;
 }
 
 /* line 8, ../../sass/master.scss */
@@ -15,18 +15,36 @@ body:after {
 
 /* line 16, ../../sass/master.scss */
 body.lesson-set {
-  background: #fff;
+  background: transparent;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   margin: 0px 10px 0px 0px;
-  overflow-y: scroll;
+  overflow: auto;
+}
+/* line 21, ../../sass/master.scss */
+body.lesson-set.intro {
+  background: url("background.png") no-repeat top center;
+  margin-top: 215px;
+}
+/* line 25, ../../sass/master.scss */
+body.lesson-set.intro li {
+  list-style-image: url("listicon.png");
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+/* line 30, ../../sass/master.scss */
+body.lesson-set.intro li a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-/* line 23, ../../sass/master.scss */
+/* line 40, ../../sass/master.scss */
 body.lesson-set > h1 {
   border-bottom: 1px solid #dfdfdf;
 }
 
-/* line 27, ../../sass/master.scss */
+/* line 44, ../../sass/master.scss */
 body.lesson-set article > h1 {
   border-bottom: 1px dotted #dfdfdf;
   border-left: 4px solid #ff0000;
@@ -34,7 +52,7 @@ body.lesson-set article > h1 {
   padding-left: 5px;
 }
 
-/* line 34, ../../sass/master.scss */
+/* line 51, ../../sass/master.scss */
 body.lesson-set nav {
   background-color: #e8e8e8;
   border: 1px dotted #ccc;
@@ -43,23 +61,23 @@ body.lesson-set nav {
   width: 245px;
 }
 
-/* line 42, ../../sass/master.scss */
+/* line 59, ../../sass/master.scss */
 body.lesson-set nav a {
   margin-right: 7px;
 }
 
-/* line 46, ../../sass/master.scss */
+/* line 63, ../../sass/master.scss */
 body.lesson-set nav a:last-child {
   margin-right: 0px;
 }
 
-/* line 50, ../../sass/master.scss */
+/* line 67, ../../sass/master.scss */
 body.lesson-set nav a:hover {
   color: #000;
   text-decoration: underline;
 }
 
-/* line 56, ../../sass/master.scss */
+/* line 73, ../../sass/master.scss */
 body.lesson-set section code {
   background-color: #000;
   color: #fff;
@@ -67,7 +85,7 @@ body.lesson-set section code {
   padding: 0px 5px;
 }
 
-/* line 63, ../../sass/master.scss */
+/* line 80, ../../sass/master.scss */
 body.lesson-set section h1 {
   color: #555;
   font-size: 13px;
@@ -75,7 +93,7 @@ body.lesson-set section h1 {
   text-transform: uppercase;
 }
 
-/* line 70, ../../sass/master.scss */
+/* line 87, ../../sass/master.scss */
 #buttons {
   position: relative;
   float: right;
@@ -83,7 +101,7 @@ body.lesson-set section h1 {
   width: 100%;
 }
 
-/* line 76, ../../sass/master.scss */
+/* line 93, ../../sass/master.scss */
 #buttons button {
   background-color: red;
   -moz-border-radius: 4px;
@@ -107,56 +125,56 @@ body.lesson-set section h1 {
   margin-right: 5px;
 }
 
-/* line 90, ../../sass/master.scss */
+/* line 107, ../../sass/master.scss */
 #input {
   float: left;
   position: relative;
   width: 50%;
 }
 
-/* line 96, ../../sass/master.scss */
+/* line 113, ../../sass/master.scss */
 iframe {
   border: none;
   height: 100%;
   width: 100%;
 }
 
-/* line 102, ../../sass/master.scss */
+/* line 119, ../../sass/master.scss */
 iframe h1 {
   font-size: 14px;
 }
 
-/* line 106, ../../sass/master.scss */
+/* line 123, ../../sass/master.scss */
 #output {
   overflow-y: scroll;
   font-family: monospace;
   font-size: 18px;
 }
 
-/* line 112, ../../sass/master.scss */
+/* line 129, ../../sass/master.scss */
 #stdout {
   white-space: pre-wrap;
 }
 
-/* line 116, ../../sass/master.scss */
+/* line 133, ../../sass/master.scss */
 #stdin {
   padding: 0;
   margin: 0;
   white-space: normal;
 }
 
-/* line 121, ../../sass/master.scss */
+/* line 138, ../../sass/master.scss */
 #stderr {
   white-space: pre-wrap;
   color: #990000;
 }
 
-/* line 125, ../../sass/master.scss */
+/* line 142, ../../sass/master.scss */
 .cursor {
   display: inline-block;
 }
 
-/* line 129, ../../sass/master.scss */
+/* line 150, ../../sass/master.scss */
 #tabs {
   position: absolute;
   height: 92%;
@@ -164,19 +182,19 @@ iframe h1 {
   width: 50%;
 }
 
-/* line 135, ../../sass/master.scss */
+/* line 156, ../../sass/master.scss */
 .ui-tabs-panel {
   height: 85%;
   position: relative;
 }
 
-/* line 143, ../../sass/master.scss */
+/* line 164, ../../sass/master.scss */
 #container {
   width: 49%;
   float: left;
 }
 
-/* line 148, ../../sass/master.scss */
+/* line 169, ../../sass/master.scss */
 #rubycode {
   width: 49%;
   height: 94%;

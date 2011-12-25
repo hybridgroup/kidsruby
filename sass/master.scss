@@ -2,7 +2,7 @@
 
 body {
   overflow: hidden;
-  background: #eee;
+  background: transparent;
 }
 
 body:after {
@@ -14,10 +14,27 @@ body:after {
 }
 
 body.lesson-set {
-  background: #fff; 
+  background: transparent;
   font-family: 'Helvetica Neue', Helvetica, sans-serif; 
   margin: 0px 10px 0px 0px;
-  overflow-y: scroll;
+  overflow: auto;
+  &.intro {
+    background: url("background.png") no-repeat top center;
+    margin-top: 215px;
+
+    li {
+      list-style-image: url("listicon.png");
+      margin-bottom: 20px;
+      margin-left: 50px;
+      
+      a {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 body.lesson-set > h1 {
@@ -124,6 +141,10 @@ iframe h1 {
 }
 .cursor {
   display:inline-block;
+}
+
+
+#help {
 }
 
 #tabs {
