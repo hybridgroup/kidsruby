@@ -209,3 +209,9 @@ iframe h1 {
   font-family: monospace;
   font-size: 18px;
 }
+
+/* line 184, ../../sass/master.scss */
+#turtle {
+  height: 90%;
+  width: 90%;
+}
