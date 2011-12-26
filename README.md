@@ -49,6 +49,7 @@ end
     sudo apt-get install libqt4-dev
     sudo apt-get install cmake
     bundle install
+Take note that the native compilation of qt (the line `Installing qtbindings (4.6.3.4) with native extensions`) can take several minutes without apparent progress ... You could run `top` to see `cmake` and `cc1plus` effectively in action.
 
 ## If you also want Gosu
     echo "" >> Gemfile
