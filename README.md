@@ -55,7 +55,7 @@ Take note that the native compilation of qt (the line `Installing qtbindings (4.
     echo "" >> Gemfile
     echo "# needed for gosu" >> Gemfile
     echo "gem 'gosu'" >> Gemfile
-    sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev
+    sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev libxinerama-dev
     bundle install
     
 ## Getting setup for development on a Mac using Homebrew
