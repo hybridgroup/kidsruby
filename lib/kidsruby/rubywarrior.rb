@@ -1,11 +1,12 @@
 require 'ruby_warrior'
+require 'tmpdir'
 
 # various monkey patches needed to get rubywarrior working within kidsruby environment
 module RubyWarrior
   Config.in_stream = StdIn.new
   Config.out_stream = $stdout
   Config.delay = 0.6
-  Config.path_prefix = File.expand_path(File.dirname(__FILE__) + "../../..") 
+  Config.path_prefix = Dir.tmpdir
 
   def self.play
     game = Game.new
