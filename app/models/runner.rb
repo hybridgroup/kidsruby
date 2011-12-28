@@ -18,11 +18,9 @@ class Runner < Qt::Process
   end
 
   def save_kid_code(code, code_file_name)
-    ensure_tmp_dir
-
     codeFile = Qt::File.new(code_file_name)
     if !codeFile.open(Qt::File::WriteOnly | Qt::File::Text)
-        Qt::MessageBox.warning(self, tr("KidsRuby Problem"),
+        Qt::MessageBox::warning(self, tr("KidsRuby Problem"),
                                tr("Oh, uh! Cannot write file %s:\n%s" %
                                [ codeFile.fileName(), codeFile.errorString() ] ) )
         return
@@ -47,11 +45,7 @@ class Runner < Qt::Process
     "#{tmp_dir}/kidcode.rb"
   end
 
-  def ensure_tmp_dir
-    Dir.mkdir(tmp_dir) unless File.exists?(tmp_dir)
-  end
-
   def tmp_dir
-    File.expand_path(File.dirname(__FILE__) + "/../../tmp")
+    Qt::Dir::tempPath
   end
 end
