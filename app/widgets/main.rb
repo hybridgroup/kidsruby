@@ -103,7 +103,7 @@ class MainWidget < Qt::WebView
     unless fileName.nil?
       codeFile = Qt::File.new(fileName)
       unless codeFile.open(Qt::File::ReadOnly | Qt::File::Text)
-          Qt::MessageBox.warning(self, tr("KidsRuby Problem"),
+          Qt::MessageBox::warning(self, tr("KidsRuby Problem"),
                                  tr("Oh, uh! Cannot open file %s:\n%s" %
                                  [ codeFile.fileName(), codeFile.errorString() ] ) )
           return
@@ -124,7 +124,7 @@ class MainWidget < Qt::WebView
 	  unless fileName.nil?
 	    file = Qt::File.new(fileName)
 	    unless file.open(Qt::File::WriteOnly | Qt::File::Text)
-	        Qt::MessageBox.warning(self, tr("KidsRuby Problem"),
+	        Qt::MessageBox::warning(self, tr("KidsRuby Problem"),
 	                             tr("Cannot write file %s:\n%s." % [fileName, file.errorString]))
 	        return
 	    end
