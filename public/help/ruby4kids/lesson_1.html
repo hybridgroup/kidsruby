@@ -115,10 +115,10 @@ end</code></pre>
 
       <p>Now, we're almost ready to try this again. I need to go to the <code>MyGame</code> class first, and I need to instantiate this player.</p>
 
-      <p>I do this by typing in the initialize method:</p>
-<pre><code>@player1 = Player.new(game_window)</code></pre>
+      <p>I do this by typing in the initialize method, after the line with super:</p>
+<pre><code>@player1 = Player.new(self)</code></pre>
 
-      <p>This tells the player which window to draw itself on.</p>
+      <p>This tells the player which window to draw itself on. The "self" argument is the reference to the game window that is just being instantiated.</p>
       <p>Then we add: </p>
       <pre><code>@player1.draw</code></pre>
       <p>in the draw method of the game window.</p>
