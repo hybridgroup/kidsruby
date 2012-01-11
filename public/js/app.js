@@ -232,7 +232,9 @@ $(document).ready(function() {
   });
 
   $('#clear').click(function(e) {
-    clearCode();
+    if (confirm("Are you sure you want to clear all your Ruby code from the editor?"))
+      clearCode();
+
     return false;
   });
 
