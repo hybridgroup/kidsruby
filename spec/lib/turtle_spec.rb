@@ -147,5 +147,9 @@ describe Turtle do
     it "must know about chocolate" do
       @turtle.chocolate.must_equal("#d2691e")
     end
+
+    it "must know about rgb colors" do
+      @turtle.rgb(255, 0, 0).must_equal("#ff0000")
+    end
   end
 end
