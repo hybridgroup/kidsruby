@@ -105,7 +105,7 @@ Then I drag my image to the screen.<br />
         <p>Next, I go to my player class and I add this icon to it. I do this, by typing the following:</p>
           <pre><code>def initialize(game_window)
   @game_window = game_window
-  @icon = Gosu::Image.new(@game_window, "images/player1.png", true)
+  @icon = Gosu::Image.new(@game_window, "gosu/player1.png", true)
 end</code></pre>
 
       <p>Then we add a draw method to the player. We do this, by typing:</p>
@@ -116,7 +116,7 @@ end</code></pre>
       <p>Now, we're almost ready to try this again. I need to go to the <code>MyGame</code> class first, and I need to instantiate this player.</p>
 
       <p>I do this by typing in the initialize method:</p>
-<pre><code>@player1 = Player.new(game_window)</code></pre>
+<pre><code>@player1 = Player.new(self)</code></pre>
 
       <p>This tells the player which window to draw itself on.</p>
       <p>Then we add: </p>
@@ -125,7 +125,7 @@ end</code></pre>
 
       <p>This will draw the player when the game is running.</p>
 
-      <p>Let's try it! CLick on the "Run" button. Did it work?</p>
+      <p>Let's try it! Click on the "Run" button. Did it work?</p>
     </section>
   </article>
 
