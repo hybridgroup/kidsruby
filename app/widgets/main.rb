@@ -9,7 +9,7 @@ class MainWidget < Qt::WebView
   alternate_theme "ace/theme/clouds"
 
   signals 'stdInRequested()'
-  slots 'rejectStdin()', 'acceptStdin()',
+  slots 'rejectStdin()', 'acceptStdin()', 'QString language()',
         'evaluateRuby(QString)', 'stopRuby()', 'runnerFinished(int, QProcess::ExitStatus)',
         'setupQtBridge()', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)',
         'QString gets()', 'alert(const QString&)', 'QString ask(const QString&)',
@@ -48,10 +48,6 @@ class MainWidget < Qt::WebView
     'KidsRuby v' + KidsRuby::VERSION
   end
 
-  def language
-    KidsRuby.language 
-  end
-
   def keyPressEvent(event)
     return false if event.key == Qt::Key_Escape
     notify_stdin_event_listeners(event) if @acceptStdin
@@ -59,6 +55,10 @@ class MainWidget < Qt::WebView
   end
 
   private
+
+  def language
+    KidsRuby::Language.current
+  end
 
   def initialize_stdin_connection
     Qt::Object.connect(self, SIGNAL("stdInRequested()"), 

@@ -203,6 +203,11 @@ function scrollToOutputEnd() {
   $('#output').scrollTop(height);
 }
 
+function initHelp() {
+  language = QTApi["language()"]()
+  $("#help-iframe").attr("src", "help/" + language + "/index.html");
+}
+
 $(document).ready(function() {
   var tabs = $("#tabs").tabs();
   $("#tabs").data("mytabs", tabs);
@@ -237,6 +242,8 @@ $(document).ready(function() {
 
     return false;
   });
+
+  initHelp();
 
   initTurtle();
 
