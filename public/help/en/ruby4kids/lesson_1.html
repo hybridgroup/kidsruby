@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+    <!-- Load styles -->
+    <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+    <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+    <!-- Load js -->
+
+    <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="../../../js/ruby4kids.js"></script>
+</head>
+<body class="lesson-set">
+<h1>Ruby4Kids - Game Programming - Lesson 1</h1>
+<nav id="top">
+    <a href="#back" id="prev-lesson">&laquo; Back</a>
+    <a href="index.html">Back to Lessons</a>
+    <a href="lesson_2.html" id="next-lesson">Next &raquo;</a>
+</nav>
+
+<article class="lesson"><h1>Welcome!</h1>
+    <section class="page"><h1>This is Ruby4Kids</h1>
+        <p>Since you are using KidsRuby, you are ready to get started making your first game using Ruby.<br />
+        <p>This is the file that will contain our first program.</p>
+        <p>We will use the gosu library. </p>
+        <p>We will do this by typing:</p>
+        <pre><code>require 'gosu'</code></pre>
+        <p>We will then start our game by inheriting from the <code>Gosu</code> class</p>
+        <p>We will call our game</p>
+<pre><code>class MyGame < Gosu::Window
+end
+</code></pre>
+        <p>Now inside of this class, <code>Gosu</code> needs us to define three methods:</p>
+        <p>We do this like this:</p>
+<pre><code>class MyGame < Gosu::Window
+  def initialize
+  end
+
+  def update
+  end
+
+  def draw
+  end
+end
+</code></pre>
+        <p>What happens here is that when the game starts, the <code>initialize</code> method is called.</p>
+
+        <p>Then the game stays running and it goes in a loop, calling the methods: <code>update</code> and <code>draw</code></p>
+
+        <p>Update, then draw, update then draw, update then draw. Like this several times a second.</p>
+
+        <p>OK, so we are almost ready to run this code. The next step that we need to do now is tell <code>Gosu</code> how big a window we want for the game.</p>
+        <p>We do this in the <code>initialize</code> method, by passing it three parameters like this</p>
+        <pre><code>def initialize
+  super(300, 300, false)
+end
+</code></pre>
+        <p>What this does, is make the window 300 pixels wide by 300 pixels high. A pixel is a single dot in your screen. If you put your face right next to the display, you can almost see the dots. Those are called pixels.</p>
+
+        <p>The third parameter you pass to the initialize method is false. This tells gosu not to take over the whole sreen. I hate when games just take over your whole screen. So we will say false for this.</p>
+
+        <p>OK, let's see if this works. Let's run this.</p>
+
+        <p>To run what we have so far, we have to use the class we just defined in our program.</p>
+
+        <p>We do this by adding the following after the class definition.</p>
+<pre><code>window = MyGame.new
+window.show</code></pre>
+        <p>The first line creates an instance of the new game. Then calling the <code>show</code> method, tells the game to show the game window.</p>
+
+        <p>We are ready to run the program now.</p>
+
+        <p>Now, just click on the "Run" button</p>
+
+        <p>If everything worked correctly, you will have seen your screen show up. You have written your first game program!</p>
+
+        <p>Granted, this does not do anything exciting, but at least you now know how to open a window in a computer game.</p>
+
+        <p>The next step will be to add objects to the game.</p>
+    </section>
+    <section class="page"><h1>The Player</h1>
+        <p>It will be good to have a player in the game. So let's create one.</p>
+
+        <p>We do this by adding a new class. I will call it <code>Player</code>.
+
+        <p>Now we will define what our player will do.</p>
+
+        <p>Do this by typing:</p>
+        <pre><code>class Player
+  def initialize(game_window)
+    @game_window = game_window
+  end
+end
+</code></pre>
+        <p>Next, we will add an icon to this player so that we can see it on the screen</p>
+
+        <p>We do this by finding a .png picture, I happen to have a picture of an icon and I will place it on an images folder in my game folder. I do this by right clicking on the game folder icon and selecting new folder.<br />
+Then I call it images.<br />
+Then I drag my image to the screen.<br />
+        </p>
+
+        <p>Next, I go to my player class and I add this icon to it. I do this, by typing the following:</p>
+          <pre><code>def initialize(game_window)
+  @game_window = game_window
+  @icon = Gosu::Image.new(@game_window, "gosu/player1.png", true)
+end</code></pre>
+
+      <p>Then we add a draw method to the player. We do this, by typing:</p>
+<pre><code>def draw
+  @icon.draw(50,50,1)
+end</code></pre>
+
+      <p>Now, we're almost ready to try this again. I need to go to the <code>MyGame</code> class first, and I need to instantiate this player.</p>
+
+      <p>I do this by typing in the initialize method:</p>
+<pre><code>@player1 = Player.new(self)</code></pre>
+
+      <p>This tells the player which window to draw itself on.</p>
+      <p>Then we add: </p>
+      <pre><code>@player1.draw</code></pre>
+      <p>in the draw method of the game window.</p>
+
+      <p>This will draw the player when the game is running.</p>
+
+      <p>Let's try it! Click on the "Run" button. Did it work?</p>
+    </section>
+  </article>
+
+  <a href="#top">Back to top</a>
+
+</body>
+</html>

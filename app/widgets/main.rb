@@ -48,6 +48,10 @@ class MainWidget < Qt::WebView
     'KidsRuby v' + KidsRuby::VERSION
   end
 
+  def language
+    KidsRuby.language 
+  end
+
   def keyPressEvent(event)
     return false if event.key == Qt::Key_Escape
     notify_stdin_event_listeners(event) if @acceptStdin

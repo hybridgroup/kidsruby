@@ -1,10 +1,9 @@
 # rake tasks go here
-task :default => :spec
+require 'rake/testtask'
 
-task :spec do
-  Dir[File.dirname(__FILE__) + "/spec/**/*_spec.rb"].each do |path|
-    require path
-  end
-
-  MiniTest::Unit.autorun
+Rake::TestTask.new do |t|
+  t.libs.push "spec"
+  t.pattern = "spec/**/*_spec.rb"
+  t.verbose = true
 end
+
