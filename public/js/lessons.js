@@ -21,3 +21,13 @@ jQuery(document).ready(function($){
     return false;
   });
 });
+
+function formatCode(t) {
+  $(t).snippet("ruby", {style:"neon", showNum:true})
+}
+
+function loadCode(target, src) {
+  $(target).load(src, function() {
+    formatCode(this);
+  });
+}

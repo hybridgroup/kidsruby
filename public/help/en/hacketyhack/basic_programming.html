@@ -6,13 +6,24 @@
   <!-- Load styles -->
   <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
   <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
 
   <!-- Load js -->
-
   <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
   <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
   <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-1-1", "../../shared/hacketyhack/code1_1.html");
+      loadCode("#code-1-2", "../../shared/hacketyhack/code1_2.html");
+      loadCode("#code-1-3", "../../shared/hacketyhack/code1_3.html");
+      loadCode("#code-1-4", "../../shared/hacketyhack/code1_4.html");
+      loadCode("#code-1-5", "../../shared/hacketyhack/code1_5.html");
+    });
+  </script>
 </head>
+
 <body class="lesson-set">
   <h1>Basic Programming</h1>
   <nav id="top">
@@ -20,6 +31,8 @@
     <a href="index.html">Back to Lessons</a>
     <a href="#next" id="next-lesson">Next &raquo;</a>
   </nav>
+
+
 
   <article class="lesson"><h1>Hello there!</h1>
     <section class="page"><h1>Round One</h1>
@@ -74,6 +87,7 @@
   </article>
 
 
+
   <article class="lesson"><h1>Turtles, all the way down.</h1>
     <section class="page"><h1>Drawing... with turtles?</h1>
       <p>Okay! Enough of these thinking experiments. Let's actually make something. I bet you've been wondering when that was going to start, right? It's really important to get the basics down first.</p>
@@ -102,12 +116,9 @@
 
     <section class="page"><h1>Changing the background</h1>
       <p>Let's try this: we can tell the <code>Turtle</code> that we want to use a different background color by using the <code>background</code> command. Check it out:</p>
-<p>
-        <pre>
-<code>Turtle.draw do
-  background maroon
-end</code></pre>
-</p>
+      <p>
+      <pre id="code-1-1" class="sampleCode">Code automatically inserted here...</pre>
+      </p>
       <p>Type this in and click 'Run'!</p>
     </section>
 
@@ -122,26 +133,21 @@ end</code></pre>
   </article>
 
 
+
   <article class="lesson"><h1>Drawing lines</h1>
     <section class="page"><h1>Sally forth!</h1>
       <p>Okay, enough dilly-dallying. Let's tell the turtle to draw a line! Here's my line. Give this one a shot, then try your own colors and numbers!</p>
-<p><pre><code>Turtle.draw do
-  background lightslategray
-  pencolor honeydew
-  forward 50
-end</code></pre></p>
+      <p>
+      <pre id="code-1-2" class="sampleCode">Code automatically inserted here...</pre>
+      </p>
       <p>50 is the number of pixels to move forward, by the way.</p>
     </section>
 
     <section class="page"><h1>You spin me right round, baby</h1>
       <p>Great! So you've got a line. But what if you don't want the <code>Turtle</code> to move forward? Well, you can tell it to turn by using a <code>turnleft</code> or <code>turnright</code> command, like this:</p>
-<p><pre><code>Turtle.draw do
-  background lightslategray
-  pencolor honeydew
-  forward 50
-  turnright 90
-  forward 50
-end</code></pre></p>
+      <p>
+      <pre id="code-1-3" class="sampleCode">Code automatically inserted here...</pre>
+      </p>
      <p>Give that a shot, then play with it a bit!</p>
      <p>If you're wondering what 90 means, it's the number of degrees that it'll turn.</p>
     </section>
@@ -162,17 +168,7 @@ end</code></pre></p>
 
     <section class="page"><h1>Here's my version</h1>
       <p>Here's how I did it:</p>
-<p><pre><code>Turtle.draw do
-  background lightslategray
-  pencolor honeydew
-  forward 50
-  turnright 90
-  forward 50
-  turnright 90
-  forward 50
-  turnright 90
-  forward 50
-end</code></pre></p>
+      <pre id="code-1-4" class="sampleCode">Code automatically inserted here...</pre>
     </section>
   </article>
 
@@ -185,14 +181,7 @@ end</code></pre></p>
 
     <section class="page"><h1>Repeating repeating ourselves ourselves</h1>
       <p>Check it out: our <code>Turtle</code> actually knows numbers. For example:</p>
-<p><pre><code>Turtle.draw do
-  background lightslategray
-  pencolor honeydew
-  4.times do
-    forward 50
-    turnright 90
-  end
-end</code></pre></p>
+      <pre id="code-1-5" class="sampleCode">Code automatically inserted here...</pre>
       <p>Try running this example. It also draws a square! Wow!</p>
     </section>
 
@@ -204,6 +193,7 @@ end</code></pre></p>
       <p>Have a blast: make some fun shapes of your own!</p>
     </section>
   </article>
+
 
 
   <article class="lesson"><h1>Summary</h1>
