@@ -13,6 +13,20 @@
   <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
   <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
   <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-1-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/hacketyhack/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/hacketyhack/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/hacketyhack/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/hacketyhack/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/hacketyhack/code2_6.rb");
+      loadCode("#code-2-7", "../../shared/hacketyhack/code2_7.rb");
+      loadCode("#code-2-8", "../../shared/hacketyhack/code2_8.rb");
+      loadCode("#code-2-9", "../../shared/hacketyhack/code2_9.rb");
+    });
+  </script>  
 </head>
 <body class="lesson-set">
   <h1>Basic Ruby</h1>
@@ -30,6 +44,7 @@
     </section>
   </article>
 
+
   <article class="lesson"><h1>A bit more about Ruby</h1>
     <section class="page"><h1>Konnichiwa, Ruby!</h1>
       <p><em>Ruby</em> was created by</p>
@@ -43,64 +58,64 @@
     </section>
   </article>
 
+
   <article class="lesson"><h1>Displaying Things</h1>
     <section class="page"><h1>Let's do this!</h1>
       <p>Okay! The very first thing that you need to know is how to show something on the screen. Otherwise, you won't know what's going on!</p>
     </section>
     <section class="page"><h1>Hello, World!</h1>
       <p>There are two ways of doing this. Here's the first: alert</p>
-      <code>alert "Hello, world!"</code>
+      <pre id="code-2-1" class="sampleCode">Code automatically inserted here...</pre>
       <p>Type this in and press the 'Run' button.</p>
     </section>
     <section class="page"><h1>alert</h1>
       <p>Okay, let's break this down: There's two main parts to this little program: you have an <code>alert</code> and a <code>"Hello, world!"</code>. These two parts work just like an English sentence: The <code>alert</code> is a verb and the stuff in the ""s is an object. In Ruby, we call verbs <strong>methods</strong>. The <code>alert</code> verb says 'Put an alert box on the screen, and the content of the box is whatever thing you give me.'</p>
       <p>We'll talk about the <code>"Hello, world!"</code> in just a second. Here's the other way of making this happen:</p>
-      <code>puts "Hello, world!"</code>
+      <pre id="code-2-2" class="sampleCode">Code automatically inserted here...</pre>
       <p>If you try that here, it will work! The <code>puts</code> method doesn't display a dialog box, it puts text out to the output instead. We'll be using <code>alert</code>s throughout these tutorials, but if you look at other Ruby tutorials, you may see <code>puts</code>.</p>
     </section>
   </article>
 
+
   <article class="lesson"><h1>Letters, words, and sentences</h1>
     <section class="page"><h1> Strings </h1>
-      <p> Okay! Now that you've got that verb bit down, it's time to learn about <em>String</em>s. Strings are what we call a bunch of words between a pair of " characters. The "s are used to tell the computer what words you actually want to say. Let's think about our example:<p>
-      <code>alert "Hello, world!"</code>
+      <p>Okay! Now that you've got that verb bit down, it's time to learn about <em>String</em>s. Strings are what we call a bunch of words between a pair of " characters. The "s are used to tell the computer what words you actually want to say. Let's think about our example:</p>
+      <pre id="code-2-1-1" class="sampleCode">Code automatically inserted here...</pre>
       <p>If you didn't have the "s, the computer wouldn't know which words were methods and which ones were part of the string! And consider this:</p>
-      <code>alert "I am on high alert!"</code>
+      <pre id="code-2-3" class="sampleCode">Code automatically inserted here...</pre>
       <p>Without making all of those words a string, how would Ruby know that the second alert was some text you wanted to say, rather than another alert box?</p>
     </section>
     <section class="page"><h1>Adding Strings </h1>
-      <p>Now, if you want to put two bits of strings together, you can use the <code>+</code> character to do it. Try typing this:<p>
-      <code>alert "Hello, " + "world!"</code>
+      <p>Now, if you want to put two bits of strings together, you can use the <code>+</code> character to do it. Try typing this:</p>
+      <pre id="code-2-4" class="sampleCode">Code automatically inserted here...</pre>
       <p>Same thing! The <code>+</code> sticks the two strings together. This will end up being super useful later!</p>
     </section>
   </article>
 
+
   <article class="lesson"><h1>Numbers and Math</h1>
     <section class="page"><h1> Numbers </h1>
-      <p>You can just use numbers, and Ruby understands them:<p>
-      <code>alert 2</code>
-      <p>You can even use numbers that have a decimal point in them:<p>
-      <code>alert 1.5</code>
+      <p>You can just use numbers, and Ruby understands them:</p>
+      <pre id="code-2-5" class="sampleCode">Code automatically inserted here...</pre>
+      <p>You can even use numbers that have a decimal point in them:</p>
+      <pre id="code-2-6" class="sampleCode">Code automatically inserted here...</pre>
     </section>
     <section class="page"><h1> Basic Math </h1>
-      <p>You can also do math with numbers, and it'll work out pretty well:<p>
-      <code>alert 1 + 2</code><br/>
-      <code>alert 5 - 3</code><br/>
-      <code>alert 2 * 3</code><br/>
-      <code>alert 4 / 2</code>
-      <p><p>
-      <p>But if you try this, nothing happens:<p>
-      <code>alert "hey" + 2</code>
-      <p>This is kind of fun and silly, though:<p>
-      <code>alert "hey" * 2</code>
+      <p>You can also do math with numbers, and it'll work out pretty well:</p>
+      <pre id="code-2-7" class="sampleCode">Code automatically inserted here...</pre>
+      <p>But if you try this, nothing happens:</p>
+      <pre id="code-2-8" class="sampleCode">Code automatically inserted here...</pre>
+      <p>This is kind of fun and silly, though:</p>
+      <pre id="code-2-9" class="sampleCode">Code automatically inserted here...</pre>
     </section>
     <section class="page"><h1>Errors </h1>
-      <p>You know how nothing happened when you hit the Run button earlier? That was because there was an error. You can see any errors that run by hitting either Alt-/ or Command-/, depending on what kind of computer you're using.<p>
+      <p>You know how nothing happened when you hit the Run button earlier? That was because there was an error. You can see any errors in the 'Output' tab.</p>
       <p>The error that results from <code>alert "hey" + 2</code> is:</p>
       <code>can't convert Fixnum into String</code>
       <p>What is that?</p>
     </section>
   </article>
+
 
   <article class="lesson"><h1>A few words about types</h1>
     <section class="page"><h1> Why's it do that? </h1>

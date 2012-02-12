@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
 });
 
 function formatCode(t) {
-  $(t).snippet("ruby", {style:"neon", showNum:true})
+  $(t).snippet("ruby", {style:"pablo", showNum:true})
 }
 
 function loadCode(target, src) {
