@@ -1,8 +1,8 @@
 # KidsRuby
 
-KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. It is heavily influenced by Hackety Hack (http://hackety-hack.com). 
+KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. If what you want is just to download/install KidsRuby, please go to http://kidsruby.com/download 
 
-In fact, you can run many of the same code samples from Hackety Hack in KidsRuby. For example:
+KidsRuby is heavily influenced by Hackety Hack (http://hackety-hack.com). In fact, you can run many of the same code samples from Hackety Hack in KidsRuby. For example:
 
 ``` ruby
 color = ask("what is your favorite color")
@@ -106,19 +106,17 @@ Someone please describe this procedure here.
 * A couple of funny things with the formatting of gets
 * need to display complete debug info on errors again
 * make the turtle canvas keep a correct aspect ratio when resized
+* switch editor colors to white background for better presentation display. we already have inverse css file, just need a way to switch to it, and back
 
 ## TODO
 
 ### ROADMAP
-* 0.8 - Switch to Ace from CodeMirror
-* 0.9 - Fun
-* 1.0 - Release!
+* 1.1 - Localization
 
 ### TURTLE
 * correct pencolor so it works when switching color while drawing
 
 ### EDITOR
-* switch editor colors to white background for better presentation display. we already have inverse css file, just need a way to switch to it, and back
 * paste into editor (copy already works)
 
 ### HELP/TUTORIAL
