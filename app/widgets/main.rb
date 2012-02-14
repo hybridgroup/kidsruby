@@ -31,6 +31,9 @@ class MainWidget < Qt::WebView
 
     @coder = HTMLEntities.new
 
+    settings.setAttribute(Qt::WebSettings::LocalContentCanAccessRemoteUrls, true)
+    settings.setAttribute(Qt::WebSettings::LocalContentCanAccessFileUrls, true)
+
     Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), 
                           self, SLOT('setupQtBridge()'))
     initialize_stdin_connection

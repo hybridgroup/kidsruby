@@ -25,6 +25,16 @@
       loadCode("#code-2-7", "../../shared/hacketyhack/code2_7.rb");
       loadCode("#code-2-8", "../../shared/hacketyhack/code2_8.rb");
       loadCode("#code-2-9", "../../shared/hacketyhack/code2_9.rb");
+      loadCode("#code-2-10", "../../shared/hacketyhack/code2_10.rb");
+      loadCode("#code-2-11", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-11-1", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-12", "../../shared/hacketyhack/code2_12.rb");
+      loadCode("#code-2-13", "../../shared/hacketyhack/code2_13.rb");
+      loadCode("#code-2-14", "../../shared/hacketyhack/code2_14.rb");
+      loadCode("#code-2-15", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-15-1", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-16", "../../shared/hacketyhack/code2_16.rb");
+      loadCode("#code-2-17", "../../shared/hacketyhack/code2_17.rb");
     });
   </script>  
 </head>
@@ -124,86 +134,63 @@
     </section>
     <section class="page"><h1>Adding numbers to words</h1>
       <p>That's why</p>
-      <code>alert "hey" + 2</code>
+      <pre id="code-2-10" class="sampleCode">Code automatically inserted here...</pre>
       <p>doesn't really work: "hey" is a <code>String</code> object, and 2 is a <code>Fixnum</code> object. And adding <code>String</code>s and <code>Fixnum</code>s doesn't make any sense. We can make this code work, though!</p>
       <p>All we need to do is turn the <code>Fixnum</code> into a <code>String</code>. We can do this by using the <code>to_s</code> method.</p>
-      <code>alert "hey" + 2.to_s</code>
+      <pre id="code-2-11" class="sampleCode">Code automatically inserted here...</pre>
     </section>
     <section class="page"><h1>Let's look at that again</h1>
-      <code>alert "hey" + 2.to_s</code>
+      <pre id="code-2-11-1" class="sampleCode">Code automatically inserted here...</pre>
       <p>Okay, this isn't bad. We have our <code>alert</code> method. We're giving it <code>"hey" + 2.to_s</code>. The <code>2.to_s</code> turns a <code>Fixnum</code> 2, which is like the mathematical idea of a 2, into the <code>String</code> 2, which is like when you write a 2 down on a piece of paper.</p>
     </section>
   </article>
+
 
   <article class="lesson"><h1>Variables</h1>
     <section class="page"><h1> They're like boxes </h1>
       <p>What happens if we want to keep something around? Most programs are not one line, I assure you. You can use a <em>variable</em> to hold a value and use it later. It's like a box that you put things in.</p>
       <p>Let's try one out:</p>
-<pre><code>message = "Hello, world!"
-alert message</code></pre>
+      <pre id="code-2-12" class="sampleCode">Code automatically inserted here...</pre>
       <p>Give that a run.</p>
     </section>
     <section class="page"><h1> Assignment </h1>
       <p>Cool stuff! We used an <code>=</code> to <em>assign</em> the <code>String</code> "Hello, world!" into the variable <code>message</code>. We then passed that <code>message</code> to the <code>alert</code> method.</p>
       <p>As you can see, we can use variables in place of another value. Try this:</p>
-<pre><code>number = 5
-	number = number * 2
-	number = number - 8
-	number = number + 1
-	alert number</code></pre>
+      <pre id="code-2-13" class="sampleCode">Code automatically inserted here...</pre>
       <p>Make a guess before you run this program.</p>
     </section>
   </article>
 
+
   <article class="lesson"><h1>User Input</h1>
     <section class="page"><h1>ask-ing for it.</h1>
       <p>We can ask the user of our program for some input, and then put their answer into a variable. It's easy! Check this program out:</p>
-<pre><code>name = ask "What is your name?"
-  alert "Hello, " + name</code></pre>
+      <pre id="code-2-14" class="sampleCode">Code automatically inserted here...</pre>
       <p>The <code>ask</code> method brings up a box and lets our users type something in. Fun! We put their answer into the <code>name</code> variable and then showed it with <code>alert</code> Sweet!</p>
     </section>
   </article>
+
 
   <article class="lesson"><h1>Basic flow control</h1>
     <section class="page"><h1> if... </h1>
       <p>Remember back to that Beginning Programming lesson... we talked about how programs are one big list, that the computer follows in order.</p>
       <p>Well, guess what? We can actually change this order by using certain bits of code. Compare these two programs:</p>
-<pre><code>number = 2
-if number == 2
-  alert "Yes!"
-else
-	alert "No!"
-end</code></pre>
-<pre><code>number = 1
-if number == 2
-	alert "Yes!"
-else
-	alert "No!"
-end</code></pre>
+      <pre id="code-2-15" class="sampleCode">Code automatically inserted here...</pre>
+      <pre id="code-2-16" class="sampleCode">Code automatically inserted here...</pre>
       <p>There are a few new things here.</p>
     </section>
     <section class="page"><h1>"=="</h1>
       <p>Here it is again:</p>
-<pre><code>number = 2
-if number == 2
-	alert "Yes!"
-else
-	alert "No!"
-end</code></pre>
+      <pre id="code-2-15-1" class="sampleCode">Code automatically inserted here...</pre>
       <p>The == command is just a bit different than the = command. == tests the <code>Object</code> on its right against the <code>Object</code> on its left. If the two are equal, then the code after the <code>if</code> will run. If they're not equal, you get the code after the <code>else</code>. The <code>("end")</code> lets us know we're done with our <code>if</code>.</p>
     </section>
   </article>
 
+
   <article class="lesson"><h1>Example: a guessing game</h1>
     <section class="page"><h1> Guess! </h1>
       <p>Let's put this all together:</p>
-<pre><code>secret_number = 42
-guess = ask "I have a secret number. Take a guess!"
-if guess == secret_number
-	alert "Yes! You guessed right!"
-else
-	alert "Sorry, you\'ll have to try again."
-end</code></pre>
+      <pre id="code-2-17" class="sampleCode">Code automatically inserted here...</pre>
     </section>
   </article>
 
@@ -214,7 +201,7 @@ end</code></pre>
       <p>* <code>alert</code> and <code>ask</code></p>
       <p>* <code>=</code> variables, and <code>==</code></p>
       <p>* <code>if</code> and <code>else</code></p>
-      <p>Awesome! You'll want to check out Basic Shoes next!</p>
+      <p>Awesome! You'll want to check out Ruby Warrior next!</p>
     </section>
   </article>
 
