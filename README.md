@@ -62,8 +62,9 @@ Take note that the native compilation of qt (the line `Installing qtbindings (4.
 I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
 
-However, since Qt is now at a higher version, you need to use the following:
-
+However, since KidsRuby requires Qt 4.7, you need to use the following (thanks @clemcke for updated instructions):
+    cd /usr/local/Library/Formula
+    git checkout 83f742e /usr/local/Library/Formula/qt.rb
     brew install qt
     for DIR in /usr/local/Cellar/qt/*/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
     brew install cmake
