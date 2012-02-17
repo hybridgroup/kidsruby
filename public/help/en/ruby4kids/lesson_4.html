@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+    <!-- Load styles -->
+    <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+    <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+    <!-- Load js -->
+
+    <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/ruby4kids.js"></script>
+</head>
+<body class="lesson-set">
+  <h1>Ruby4Kids - Game Programming - Lesson 4</h1>
+  <nav id="top">
+    <a href="#back" id="prev-lesson">&laquo; Back</a>
+    <a href="index.html">Back to Lessons</a>
+    <a href="lesson_2.html" id="next-lesson">Next &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lesson 4</h1>
+  <section class="page"><h1>This is Ruby4Kids</h1>
+  <p> When running your program, did you notice that your icon disappears after a while? The guy keeps moving left until he left the screen, never to be seen again :(. </p>
+
+  <p> So, the first thing we're going to do is limit where the icon can go. One of the ways of limiting movement is by adding another conditional under <code>def move_left</code> </p>
+
+  <pre><code>
+ def move_left
+   if @x < 0
+     @x = 0 
+  </pre></code>
+
+  <p> Now, what we did above was limit the movement of the icon to stay within a positive x area. That is, if x starts going less than 0, we reset the icon to be at zero. This reset acts as a limit for the icon on the screen. Now, we are going to add another conditional statement called <code>else</code>, which just means "otherwise". So, again, we type enter this code under the <code>def move_left</code></p>
+
+  <pre><code>
+  def move_left
+   if @x < 0
+     @x = 0 
+   else
+     @x = @x - 10
+   end
+ end
+  </pre></code>
+
+  The <code>else</code>, in this case, refers to regular movement. So, if x is 0 or greater, than the movement to the left is going to be using the code that we developed in the last lesson:<code>@x = @x - 10</code>.</pre> That's it for this lesson! Next, we're going to learn how to move the icons in the other directions. 
+
+    </section>
+  </article>
+
+  <a href="#top">Back to top</a>
+
+</body>
+</html
