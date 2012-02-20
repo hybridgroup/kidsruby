@@ -1,3 +1,3 @@
-def draw
-  @icon.draw(@x,@y,1)
+def move_left
+  @x = @x - 10
 

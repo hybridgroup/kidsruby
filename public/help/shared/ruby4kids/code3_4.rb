@@ -1,3 +1,3 @@
-@x = 50
-@y = 50
+def draw
+  @icon.draw(@x,@y,1)
 
