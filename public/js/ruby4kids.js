@@ -1,24 +1,22 @@
 jQuery(document).ready(function($){
-  var $current = $('article.lesson');
-
+  $('article.lesson:gt(0)').hide();
   $('#next-lesson').click(function(){
-    followUnlessMatches('#next', this.href);
+    var $current =  $("article").filter(function() { return $(this).css("display") == "inline" || $(this).css("display") == "block" });
+    if($current.next('article.lesson').length == 0)
+      return false;
+
+    $current.hide();
+    $current.next().show();
     return false;
   });
 
   $('#prev-lesson').click(function(){
-    followUnlessMatches('#back', this.href);
-    return false;
-  });
-
-  function followUnlessMatches(str, href) {
-    if(href.match(str)) {
+    var $current =  $("article").filter(function() { return $(this).css("display") == "inline" || $(this).css("display") == "block" });
+    if($current.prev('article.lesson').length == 0)
       return false;
 
-    } else {
-      $('article.lesson').slideUp(500, function(){
-        window.location = href;
-      });
-    }
-  }
+    $current.hide();
+    $current.prev().show();
+    return false;
+  });
 });
