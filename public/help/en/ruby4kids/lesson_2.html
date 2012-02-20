@@ -6,75 +6,69 @@
   <!-- Load styles -->
   <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
   <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
 
   <!-- Load js -->
-
   <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
   <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
-  <script type="text/javascript" src="../../../js/ruby4kids.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/ruby4kids/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/ruby4kids/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/ruby4kids/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/ruby4kids/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/ruby4kids/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/ruby4kids/code2_6.rb");
+    });
+  </script>
 </head>
+
 <body class="lesson-set">
   <h1>Ruby4Kids - Game Programming - Lesson 2</h1>
   <nav id="top">
-    <a href="lesson_1.html" id="prev-lesson">&laquo; Back</a>
+    <a href="#prev" id="prev-lesson">&laquo; Back</a>
     <a href="index.html">Back to Lessons</a>
     <a href="#next" id="next-lesson">Next &raquo;</a>
   </nav>
 
-  <article class="lesson"><h1>Lesson 2</h1>
-    <section class="page"><h1>This is Ruby4Kids</h1>
-      <p>OK, the first lesson we learned, was to open a window in Gosu.
-We learned to draw a player inside the game window.
-We learned to move this player around the game window.
-We also limited its movement to just the bounds of the game window.</p>
-      <p>Now we are ready to add more excitement to the game.</p>
-      <p>How about if we play dodge ball with our player? We can have a ball that appears as if thrown into the game window, and our player dodges the ball by moving with the arrow keys.</p>
-      <p>So let's try that. First let's find a picture of a ball we can use. Save it somewhere on disk you can find it.</p>
+  <article class="lesson"><h1>Lesson 2 - Add A Player</h1>
+    <section class="page"><h1>Create A Player</h1>
+      <p>It will be good to have a player in the game. So let's create one.</p>
+      <p>We do this by adding a new class. I will call it <code>Player</code>.
+      <p>Now we will define what our player will do. Do this by typing:</p>
+      <pre id="code-2-1" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>So we create a new class for our dodge ball: </p>
-<pre><code>class Ball
-  def initialize(game_window)
-    @game_window = game_window
-  end
+      <p>Next, we will add an icon to this player so that we can see it on the screen.</p>
+      <p>We do this by finding a .png picture. KidsRuby happens to have a picture already that you can use.</p>
+      <p>Go to your player class and add an icon to it, by typing the following:</p>
+      <pre id="code-2-2" class="sampleCode">Code automatically inserted here...</pre>
 
-  def update
-  end
-
-  def draw
-  end
-end</code></pre>
-      <p>Now we will make this ball come from the top of the screen, and drop down from random places.</p>
-      <p>We accomplish this by setting the initial position <code>@x</code> to a random number between 0 and the width of the game window, in pixels.</p>
-      <code>@x = rand(@game_window.width)</code>
-      <p>This means that when the game starts, that the random method will give us a position somewhere between 0 and the width of the game window</p>
-      <p>The <code>@y</code> position for this ball will be 0 since it is at the top during initialize.</p>
-      <p>Now with each update, we need to make the ball move down, so let's say the ball moves 1 pixel with every update. We will see how fast that is.</p>
-      <p>We do this in the update, where we change the <code>@y</code> position by 1 pixel like this:</p>
-      <pre><code>@y = @y -1</code></pre>
-      <p>As we have learned, we need to trap for when the ball goes off of the screen. If the ball goes beyond the screen, we want to start again, find a random position from the top of the screen and drop the ball again.</p>
-      <p>So we can do this by adding our familiar if statement like this:</p>
-<pre>
-<code>if @y > @game_window.height
-  @y = 0
-else
-  @y = @y - 1
-end</code>
-</pre>
-      <p>Now we will do something else, we want the ball to start dropping from another position. Not the same x position as before. So in the line where we reset @y to 0, we also change the @x position to be another random position like this:</p>
-
-    <pre><code>@x = rand(@game_window.width)</code></pre>
-    </section>
-    <section class="page"><h1>OK, let's see if this works.</h1>
-      <p>The ball goes down as expected, we now need to make sure that if the ball hits the player, the game stops. How do we do this?</p>
-      <p>Let's go back to our update method. In the update method, we can write a method to check for this and stop the game if hit.</p>
-      <p>Distance between ball and the player:</p>
-<pre><code>if @player1.hit_by? @ball
-  stop_the_game
-end
-if Gosu::distance(@x, @y, star.x, star.y) &lt; 35
-end</code></pre>
+      <p>Then we add a draw method to the player. We do this by typing:</p>
+      <pre id="code-2-3" class="sampleCode">Code automatically inserted here...</pre>
     </section>
   </article>
+
+
+  <article class="lesson"><h1>Lesson 2 - Add A Player</h1>
+    <section class="page"><h1>Add Player To Game</h1>
+      <p>Now, we're almost ready to try this again. I need to go back to the <code>MyGame</code> class first, and I need to instantiate this player.</p>
+      <p>Do this by adding this code to the initialize method of the MyGame class:</p>
+      <pre id="code-2-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>This tells the player which window to draw itself on.</p>
+      <p>Last, we need to add:</p>
+      <pre id="code-2-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>in the draw method of the game window.</p>
+      <p>This will draw the player when the game is running.</p>
+      <p>Let's try it! Click on the "Run" button. Did it work?</p>
+      <p>Here is the entire program you should have written so far:</p>
+      <pre id="code-2-6" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+  </article>
+
 
   <a href="#top">Back to top</a>
 
