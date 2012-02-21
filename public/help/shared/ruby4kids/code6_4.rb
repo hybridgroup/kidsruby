@@ -1,5 +1,6 @@
-if @player1.hit_by? @ball
-  stop_the_game
+if @y > @game_window.height
+  @y = 0
+else
+  @y = @y - 1
 end
-if Gosu::distance(@x, @y, star.x, star.y) &lt; 35
-end
+

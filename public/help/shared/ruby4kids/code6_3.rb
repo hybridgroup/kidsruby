@@ -1,1 +1,1 @@
-@x = rand(@game_window.width)
+@y = @y -1

@@ -1,5 +1,1 @@
-if @y > @game_window.height 
-  @y = 0
-else
-  @y = @y - 1
-end
+@x = rand(@game_window.width)
