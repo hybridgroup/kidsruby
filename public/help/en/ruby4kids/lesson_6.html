@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-6-1", "../../shared/ruby4kids/code6_1.rb");
+      loadCode("#code-6-2", "../../shared/ruby4kids/code6_2.rb");
+      loadCode("#code-6-3", "../../shared/ruby4kids/code6_3.rb");
+      loadCode("#code-6-4", "../../shared/ruby4kids/code6_4.rb");
+      loadCode("#code-6-5", "../../shared/ruby4kids/code6_5.rb");
+      loadCode("#code-6-6", "../../shared/ruby4kids/code6_6.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+<h1>Ruby4Kids - Game Programming - Lesson 6</h1>
+<nav id="top">
+    <a href="#back" id="prev-lesson">&laquo; Back</a>
+    <a href="index.html">Back to Lessons</a>
+    <a href="lesson_2.html" id="next-lesson">Next &raquo;</a>
+</nav>
+
+<article class="lesson"><h1>Lesson 6 - Adding a Dodgeball</h1>
+  <section class="page"><h1>Creating a New Class and Randomizing</h1>
+      <p>OK, in the first lesson, we learned how to open a window in Gosu. 
+         Then, we learned to draw a player inside the game window. Next, learned to move this player around the game window
+         We also limited its movement to just the bounds of the game window.</p>
+      <p>Now, we are ready to add more excitement to the game.</p>
+      <p>How about if we play dodge ball with our player? We can have a ball that appears as if thrown into the game window, and our player dodges the ball by moving with the arrow keys.</p>
+      <p>So let's try that. First let's find a picture of a ball we can use. Save it somewhere on disk you can find it.</p>
+
+      <p>So we create a new class for our dodge ball: </p>
+     
+      <pre id="code-6-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Now we will make this ball come from the top of the screen, and drop down from random places.</p>
+      <p>We accomplish this by setting the initial position <code>@x</code> to a random number between 0 and the width of the game window, in pixels.</p>
+
+      <pre id="code-6-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>This means that when the game starts, the random method will give us a position somewhere between 0 and the width of the game window.</p>
+      <p>The <code>@y</code> position for this ball will be 0, since it is at the top during initialize.</p>
+  </section>
+</article>
+
+
+
+<article class="lesson"><h1>Lesson 6 - Adding a Dodgeball</h1>
+  <section class="page"><h1>Changing Positions and adding an "If"</h1>
+      <p>Now, with each update, we need to make the ball move down. So, let's say the ball moves 1 pixel with every update. We will see how fast that is.</p>
+      <p>We do this in the update, where we change the <code>@y</code> position by 1 pixel like this:</p>
+
+      <pre id="code-6-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>As we have learned, we need to trap for when the ball goes off of the screen. If the ball goes beyond the screen, we want to start again, find a random position from the top of the screen and drop the ball again.</p>
+      <p>So we can do this by adding our familiar if statement like this:</p>
+
+      <pre id="code-6-4" class="sampleCode">Code automatically inserted here...</pre>
+  </section>
+</article>
+
+<article class="lesson"><h1>Lesson 6 - Adding a Dodgeball</h1>
+  <section class="page"><h1>Things are Getting Pretty Random</h1>
+
+      <p>Now we will do something else, we want the ball to start dropping from another position. Not the same x position as before. So in the line where we reset @y to 0, we also change the @x position to be another random position like this:</p>
+
+      <pre id="code-6-5" class="sampleCode">Code automatically inserted here...</pre>
+  
+      <p>The ball goes down as expected, we now need to make sure that if the ball hits the player, the game stops. How do we do this?</p>
+      <p>Let's go back to our update method. In the update method, we can write a method to check for this and stop the game if hit.</p>
+      <p>Distance between ball and the player:</p>
+
+      <pre id="code-6-6" class="sampleCode">Code automatically inserted here...</pre>
+
+  </section>
+</article>
+
+<p>You've made it to the end of the 6th lesson! It seems like I've underestimated you. I didn't think anyone could make it this far, but you keep proving me wrong. cmon, genius, let's see what <a href="lesson_7.html">else we can do</a>!</p>
+
+  <a href="#top">Back to top</a>
+
+</body>
+</html>
