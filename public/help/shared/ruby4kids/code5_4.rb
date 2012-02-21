@@ -1,8 +1,3 @@
-def move_up
-  if @y < 0
-    @y = 0
-  else 
-    @y = @y - 10
-  end
-end
+if button_down? Gosu::Button::KbUp
+  @player1.move_up
 
