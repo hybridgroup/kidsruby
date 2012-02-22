@@ -35,18 +35,18 @@
 
 <article class="lesson"><h1>Lesson 7 - Getting Hit</h1>
   <section class="page"><h1>Defining a Hit</h1>
-      <p>OK, so now it's time to make sure that when the ball hits the player, the game stops. </p>
-      <p>So, the first thing we need to do is go to the <code>Game</code> class and in the <code>@ball.update</code>, we will define a hit:</p>
+    <p>OK, so now it's time to make sure that when the ball hits the player, the game stops. </p>
+    <p>So, the first thing we need to do is go to the <code>Game</code> class and in the <code>@ball.update</code>, we will define a hit:</p>
 
- <pre id="code-7-1" class="sampleCode">Code automatically inserted here...</pre>
+    <pre id="code-7-1" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Now, let's go over to our player and define this <code>hit_by?</code> method. So, we'll go to the <code>Player</code> class and define what it means to be hit by the ball: </p>
+    <p>Now, let's go over to our player and define this <code>hit_by?</code> method. So, we'll go to the <code>Player</code> class and define what it means to be hit by the ball: </p>
 
-<pre id="code-7-2" class="sampleCode">Code automatically inserted here...</pre>
+    <pre id="code-7-2" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Now, what we did above is add a method that Gosu gives us, called <code>distance</code>, where we pass the x coordinate and y coordinate of one object and the x coordinate and y coordinate of another object.</p>
+    <p>Now, what we did above is add a method that Gosu gives us, called <code>distance</code>, where we pass the x coordinate and y coordinate of one object and the x coordinate and y coordinate of another object.</p>
 
-      <p>We also wrote that if the distance between these two coordinates is less than 50, we're going to make that a hit. </p>
+    <p>We also wrote that if the distance between these two coordinates is less than 50, we're going to make that a hit. </p>
 
   </section>
 </article>
@@ -54,12 +54,17 @@
 <article class="lesson"><h1>Lesson 7 - Getting Hit</h1>
   <section class="page"><h1>More Defining</h1>
 
-      <p>Let's go back to the <code>Game</code> class. We've said that if a player is hit by a ball, we should stop the game. So, we need to define what stopping the game means. </p>
+    <p>Let's go back to the <code>Game</code> class. We've said that if a player is hit by a ball, we should stop the game. So, we need to define what stopping the game means. </p>
 
-      <p>Now, we'll introduce a new here to make the definition work, called <code>running</code>. So, under the <code>Game</code>class, we'll type:
+    <p>Now, we'll introduce a new here to make the definition work, called <code>running</code>. So, under the <code>Game</code>class, we'll type:
      
-      <pre id="code-7-3" class="sampleCode">Code automatically inserted here...</pre>
-      <p> So, if we stop the game, the running will be false. However, we need to first add this <code>running</code> variable and make it equal to true. So, when the game starts, the game is running. When the player hets hit by the ball, the method<code>stop_game!</code> is going to set the variable, <code>running</code>, to false, which stops the game. 
+    <pre id="code-7-3" class="sampleCode">Code automatically inserted here...</pre>
+    <p> So, if we stop the game, the running will be false. However, we need to first add this <code>running</code> variable and make it equal to true. So, when the game starts, the game is running. When the player hets hit by the ball, the method<code>stop_game!</code> is going to set the variable, <code>running</code>, to false, which stops the game. 
+    
+  </section>
+</article>
+
+
 
 <article class="lesson"><h1>Lesson 7 - Getting Hit</h1>
   <section class="page"><h1>Stop! Hammer Time</h1>
