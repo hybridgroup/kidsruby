@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-10-1", "../../shared/ruby4kids/code10_1.rb");
+      loadCode("#code-10-2", "../../shared/ruby4kids/code10_2.rb");
+      loadCode("#code-10-3", "../../shared/ruby4kids/code10_3.rb");
+      loadCode("#code-10-4", "../../shared/ruby4kids/code10_4.rb");
+      loadCode("#code-10-5", "../../shared/ruby4kids/code10_5.rb");
+      loadCode("#code-10-6", "../../shared/ruby4kids/code10_6.rb");     
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Game Programming - Lesson 10</h1>
+  <nav id="top">
+    <a href="#back" id="prev-lesson">&laquo; Back</a>
+    <a href="index.html">Back to Lessons</a>
+    <a href="#next" id="next-lesson">Next &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lesson 10 - Creating a Pause Menu</h1>
+nu    <section class="page"><h1>In this Instance, we'll Create an Instance</h1>
+
+      <p>It's the final stretch! You're almost there! You can feel it in your bones! I think I'm too excited! OK, for this last lesson, we're going to create  apause menu in the game, similar to conventional video games.</p>
+
+      <p>The first thing we have to do is go to the class<code>MyGame</code> and under the <code>def initialize</code> we'll type some more code that should end up like this:</p>
+
+      <pre id="code-10-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>So, all we did was create an instance variable called <code>pause</code> and then set it to <code>false</code>. Next, we're going to go to the <code>def update</code> in the same class and add an <code>if</code> statement, which should come out like so:</p>
+
+      <pre id="code-10-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>So, all we did was say that if <code>pause</code> is false, then everything underneath it will run. However, if <code>pause</code> is true, then everything under will stop.</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 10 - Creating a Pause Menu</h1>
+    <section class="page"><h1>Setting Pause to True/False</h1>
+
+      <p>The next step is to set the pause variable to true, and we'll do that with a keystroke.</p>
+
+      <p>So, Gosu gives us a method called <code>button_down</code>, that you can define in the class<code>MyGame</code>. We'll type:
+
+      <pre id="code-10-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>What we did above was make it so when we press the leter "p" once, it pauses the game and when we press it again, the game starts once more.</p>
+       </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 10 - Creating a Pause Menu</h1>
+    <section class="page"><h1>Let's Start Texting</h1>
+      <p>Now, we're going to make some text that tells us that game is paused.</p> 
+
+      <p>So, we'll use the gosu <code>Font</code> class to create some font. To do that, we'll type some code under the class <code>MyGame</code> and then under <code>def initialize</code>.  So, it should look like this:</p>
+
+      <pre id="code-10-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>So, what we did above was use the <code>System</code>font, which will render the font in any computer. Then, I just added the size of the font, which is <code>24</code>.</p>
+
+      <p> Finally, under <code>def draw</code> we'll type:</p>
+
+      <pre id="code-10-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      </p> So, what we now did was tell the program what to draw and where to draw it. So, we asked the program to draw <code>"The game is paused".</code> and then set where the drawing is going to be placed. For the placement, we chose <code>50, 100</code> and then chose the layer to be at <code>10</code>. 
+
+      <p> So, your total code should look like this:</p>
+
+<pre id="code-10-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Can it be? Is this the end? Have you really gone through the entire tutorial? The answer is, YES! CONGRATULATIONS, YOU MADE IT! You developed a program that you can play on and show off! I hope you'll continue your interest into programming, because if you've made it this far, you've got what it takes :).</p>
+
+    </section>
+  </article>
+
+      <a href="#top">Back to top</a>
+
+</body>
+</html>
+
+
