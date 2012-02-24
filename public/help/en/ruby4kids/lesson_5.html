@@ -38,7 +38,7 @@
   <article class="lesson"><h1>Lesson 5 - Moving Right, Up, and Down</h1>
     <section class="page"><h1>This is Ruby4Kids</h1>
 
-      <p>Now we're going to learn how to move right, up, and down. To move right, weneed to add another <code>if</code> statement to the <code>def update</code> under the class <code>MyGame</code>. So, let's add an if statement for the right key.</p>
+      <p>Now we're going to learn how to move right, up, and down. To move right, we need to add another <code>if</code> statement to the <code>def update</code> under the class <code>MyGame</code>. So, let's add an if statement for the right key.</p>
       <pre id="code-5-1" class="sampleCode">Code automatically inserted here...</pre>
 
       <p>The part above is the same as the code for turning left, except that now we type <code>KbRight</code> instead of <code>KbLeft</code></p> 
@@ -76,7 +76,7 @@
 
       <p> Now, you'll notice that both the <code>if</code> and <code>else</code> statements are both different than what we did before. The firt difference is that we're now using a y coordinate. The y coordinate is used, because we are going up and down (in this case, up), rather than left and right, just like on a grid!</p>
 
-      <p> So, you might also be wondering, why is the formula <code>y < 0</code>? Isn't <code>y < 0</code> supposed to be for going down? Aha, I knew you were intuitive! That would have been the case, had the pixel count increased as you went up. Instead, it's the other way around. </p>
+      <p> So, you might also be wondering, why is the formula <code>y < 0</code>? Isn't <code>y < 0</code> supposed to be for going down? That would have been the case, had the pixel count increased as you went up. Instead, it's the other way around. </p>
 
       <p> Basically, it means that the very top of the screen is at 0.00 and increases as you go down the y-axis. So, as the icon moves up, it's actually decreasing the pixel count. This decrease in count is also the reason why we have a <code>- 10</code> instead of a <code>+ 10</code> </p>. 
     </section>
@@ -94,7 +94,7 @@
 
       <pre id="code-5-7" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p> So, the only difference that you'll see here is that the <code>- 10</code> is <code>+ 10</code>, because the numbers increase as you go down :). That's it for moving around! I hope I see you in the next lesson. </p> 
+      <p> So, the only difference that you'll see here is that the <code>- 10</code> is <code>+ 10</code>, because the numbers increase as you go down :). That's it for moving around!</p> 
       
       <p>Here is the entire program you should have written so far:</p>
       <pre id="code-5-8" class="sampleCode">Code automatically inserted here...</pre>
