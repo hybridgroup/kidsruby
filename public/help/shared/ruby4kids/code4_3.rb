@@ -1,5 +1,4 @@
 require 'gosu'
-require 'player'
 
 class MyGame < Gosu::Window
   def initialize
@@ -10,6 +9,7 @@ class MyGame < Gosu::Window
   def update
     if button_down? Gosu::Button::KbLeft
       @player1.move_left
+    end
   end
 
   def draw

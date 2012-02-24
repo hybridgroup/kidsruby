@@ -1,6 +1,4 @@
 require 'gosu'
-require 'player'
-require 'ball'
 
 class MyGame < Gosu::Window
   def initialize
@@ -31,6 +29,7 @@ class MyGame < Gosu::Window
 
   def draw
     @player1.draw
+    @ball.draw
   end
 end
 
@@ -43,7 +42,7 @@ class Player
   end
 
   def draw
-    @icon.draw(@x,@y,1)
+    @icon.draw(@x, @y, 1)
   end
 
   def move_left
@@ -55,10 +54,10 @@ class Player
   end
 
   def move_right
-    if @x > @game_window.width - 100)
+    if @x > (@game_window.width - 100)
       @x = @game_window.width - 100
     else
-      @x = x + 10
+      @x = @x + 10
     end
   end
 
@@ -82,7 +81,7 @@ end
 class Ball
   def initialize(game_window)
     @game_window = game_window
-    @icon = Gosu::Image.new(@game_window, "Images/ball.png", true)
+    @icon = Gosu::Image.new(@game_window, "gosu/asteroid.png", true)
     @x = rand(@game_window.width)
     @y = 0 
   end
@@ -92,13 +91,9 @@ class Ball
   end
 
   def draw
-    @icon.draw(@x,@y,2)
+    @icon.draw(@x, @y, 2)
   end
-
 end
 
 window = MyGame.new
 window.show
-
-
-

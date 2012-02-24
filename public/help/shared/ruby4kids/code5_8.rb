@@ -1,5 +1,4 @@
 require 'gosu'
-require 'player'
 
 class MyGame < Gosu::Window
   def initialize
@@ -51,10 +50,10 @@ class Player
   end
 
   def move_right
-    if @x > @game_window.width - 100)
+    if @x > (@game_window.width - 100)
       @x = @game_window.width - 100
     else
-      @x = x + 10
+      @x = @x + 10
     end
   end
 
