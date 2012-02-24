@@ -5,4 +5,3 @@ def move_right
     @x = @x + 10
   end
 end
-

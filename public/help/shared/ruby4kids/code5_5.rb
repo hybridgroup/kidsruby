@@ -5,4 +5,3 @@ def move_up
     @y = @y - 10
   end
 end
-

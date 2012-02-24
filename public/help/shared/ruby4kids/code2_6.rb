@@ -1,4 +1,5 @@
 require 'gosu'
+require 'player'
 
 class MyGame < Gosu::Window
   def initialize
