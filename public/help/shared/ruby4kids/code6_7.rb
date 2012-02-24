@@ -61,7 +61,7 @@ class Player
     end
   end
 
-  def move_up 
+  def move_up
     if @y < 0
       @y = 0
     else
