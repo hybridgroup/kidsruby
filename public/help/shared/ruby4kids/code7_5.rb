@@ -5,4 +5,3 @@ end
 def y
   @y
 end
-
