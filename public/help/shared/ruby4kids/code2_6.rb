@@ -1,5 +1,4 @@
 require 'gosu'
-require 'player'
 
 class MyGame < Gosu::Window
   def initialize
@@ -22,7 +21,7 @@ class Player
   end
 
   def draw
-    @icon.draw(50,50,1)
+    @icon.draw(50, 50, 1)
   end
 end
 
