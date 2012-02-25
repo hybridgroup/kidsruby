@@ -203,6 +203,40 @@ function scrollToOutputEnd() {
   $('#output').scrollTop(height);
 }
 
+function loadLanguage(lang){
+  $.ajax({
+    url: 'js/i18n/' + lang + '.js',
+    type: "GET",
+    crossdomain: true,
+    dataType: 'json',
+    success: function(data) {
+      localizeUI(data);
+    },
+    error: function(x, s, t) {
+      // handles special case for windows webkit
+      if (x.status == 0) {
+        localizeUI(x.responseText);
+      }
+    }
+  });
+}
+
+function localizeUI(data) {
+  $("#run").html(data['buttons']['run']);
+  $("#clear").html(data['buttons']['clear']);
+  $("#open").html(data['buttons']['open']);
+  $("#save").html(data['buttons']['save']);
+
+  $("#help-link").html(data['tabs']['help-link']);
+  $("#output-link").html(data['tabs']['output-link']);
+  $("#turtle-link").html(data['tabs']['turtle-link']);
+}
+
+function initUI() {
+  language = QTApi["language()"]()
+  loadLanguage(language);
+}
+
 function initHelp() {
   language = QTApi["language()"]()
   $("#help-iframe").attr("src", "help/" + language + "/index.html");
@@ -242,6 +276,8 @@ $(document).ready(function() {
 
     return false;
   });
+
+  initUI();
 
   initHelp();
 
