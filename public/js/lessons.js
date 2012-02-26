@@ -24,7 +24,7 @@ function loadCode(target, src){
 
 jQuery(document).ready(function($){
   $('article.lesson:gt(0)').hide();
-  $('#next-lesson').click(function(){
+  $('.next-lesson').click(function(){
     var $current =  $("article").filter(function() { return $(this).css("display") == "inline" || $(this).css("display") == "block" });
     if($current.next('article.lesson').length == 0)
       return false;
@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
     return false;
   });
 
-  $('#prev-lesson').click(function(){
+  $('.prev-lesson').click(function(){
     var $current =  $("article").filter(function() { return $(this).css("display") == "inline" || $(this).css("display") == "block" });
     if($current.prev('article.lesson').length == 0)
       return false;
