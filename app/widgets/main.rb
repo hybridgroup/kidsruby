@@ -9,7 +9,7 @@ class MainWidget < Qt::WebView
   alternate_theme "ace/theme/clouds"
 
   signals 'stdInRequested()'
-  slots 'rejectStdin()', 'acceptStdin()', 'QString language()',
+  slots 'rejectStdin()', 'acceptStdin()', 'QString language()', 'QStringList languages()',
         'evaluateRuby(QString)', 'stopRuby()', 'runnerFinished(int, QProcess::ExitStatus)',
         'setupQtBridge()', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)',
         'QString gets()', 'alert(const QString&)', 'QString ask(const QString&)',
@@ -60,6 +60,10 @@ class MainWidget < Qt::WebView
 
   def language
     KidsRuby::Language.current
+  end
+
+  def languages
+    KidsRuby::Language.supported
   end
 
   def initialize_stdin_connection
