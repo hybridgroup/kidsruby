@@ -31,6 +31,7 @@ jQuery(document).ready(function($){
 
     $current.hide();
     $current.next().show();
+    return $(window).scrollTop(1);
     return false;
   });
 
@@ -41,6 +42,7 @@ jQuery(document).ready(function($){
 
     $current.hide();
     $current.prev().show();
+    rthaeturn $(window).scrollTop(1);
     return false;
   });
 });
