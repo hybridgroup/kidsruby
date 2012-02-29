@@ -37,7 +37,7 @@
   <article class="lesson"><h1>Lesson 7 - Getting Hit</h1>
     <section class="page"><h1>Defining a Hit</h1>
       <p>OK, so now it's time to make sure that when the ball hits the player, the game stops. </p>
-      <p>So, the first thing we need to do is go to the <code>Game</code> class and in the <code>@ball.update</code>, we will define a hit:</p>
+      <p>So, the first thing we need to do is go to the <code>Game</code> class and under <code>@ball.update</code>, we will define a hit:</p>
 
       <pre id="code-7-1" class="sampleCode">Code automatically inserted here...</pre>
 
@@ -60,7 +60,7 @@
 
       <p>Let's go back to the <code>Game</code> class. We've said that if a player is hit by a ball, we should stop the game. So, we need to define what stopping the game means. </p>
 
-      <p>Now, we'll introduce a new here to make the definition work, called <code>running</code>. So, under the <code>Game</code>class, we'll type:
+      <p>Now, we'll introduce a new variable here to make the definition work, called <code>running</code>. So, under the <code>Game</code>class, we'll type:
      
       <pre id="code-7-3" class="sampleCode">Code automatically inserted here...</pre>
       <p> So, if we stop the game, the running will be false. However, we need to first add this <code>running</code> variable and make it equal to true. So, when the game starts, the game is running. When the player hets hit by the ball, the method <code>stop_game!</code> is going to set the variable, <code>running</code>, to false, which stops the game.</p> 
@@ -80,7 +80,7 @@
  
       <pre id="code-7-4" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Now let's go back to the <code>Player</code> class. We are now going to define two methods on the ball: x and y. To do this, we type:
+      <p>Now, let's go back to the <code>Player</code> class. We are now going to define two methods on the ball: x and y. To do this, we type:
 
       <pre id="code-7-5" class="sampleCode">Code automatically inserted here...</pre>
 
@@ -102,7 +102,7 @@
 
       <pre id="code-7-6" class="sampleCode">Code automatically inserted here...</pre>      
 
-      <p>I want to make the y at 150, so it's further at the bottom. This is make it easier for me to dodge the ball. </p>
+      <p>I want to make the y at 150, so it's further at the bottom. This makes it easier for me to dodge the ball.</p>
       
       <p>Once again, here is the entire program you should have written so far:</p>
       <pre id="code-7-7" class="sampleCode">Code automatically inserted here...</pre>
