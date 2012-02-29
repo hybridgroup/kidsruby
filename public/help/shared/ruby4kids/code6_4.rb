@@ -1,6 +1,6 @@
-if @y > @game_window.height
-  @y = 0
-else
-  @y = @y - 1
-end
+  def initialize
+    super(300, 400, false)
+    @player1 = Player.new(self)
+    @ball = Ball.new(self)
+  end
 
