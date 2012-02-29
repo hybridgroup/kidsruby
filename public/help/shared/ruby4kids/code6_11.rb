@@ -5,42 +5,31 @@ class MyGame < Gosu::Window
     super(300, 400, false)
     @player1 = Player.new(self)
     @ball = Ball.new(self)
-    @running = true
   end
 
   def update
-    if @running
-      if button_down? Gosu::Button::KbLeft
-        @player1.move_left
-      end
-
-      if button_down? Gosu::Button::KbRight
-        @player1.move_right
-      end
-
-      if button_down? Gosu::Button::KbUp
-        @player1.move_up
-      end
-
-      if button_down? Gosu::Button::KbDown
-        @player1.move_down
-      end
-
-      @ball.update
-
-      if @player1.hit_by? @ball
-         stop_game!
-      end
+    if button_down? Gosu::Button::KbLeft
+      @player1.move_left
     end
+
+    if button_down? Gosu::Button::KbRight
+      @player1.move_right
+    end
+
+    if button_down? Gosu::Button::KbUp
+      @player1.move_up
+    end
+
+    if button_down? Gosu::Button::KbDown
+      @player1.move_down
+    end
+
+    @ball.update
   end
 
   def draw
     @player1.draw
     @ball.draw
-  end
-
-  def stop_game!
-    @running = false
   end
 end
 
@@ -49,11 +38,11 @@ class Player
     @game_window = game_window
     @icon = Gosu::Image.new(@game_window, "gosu/player1.png", true)
     @x = 50
-    @y = 150
+    @y = 50
   end
 
   def draw
-    @icon.draw(@x,@y,1)
+    @icon.draw(@x, @y, 1)
   end
 
   def move_left
@@ -68,11 +57,11 @@ class Player
     if @x > (@game_window.width - 100)
       @x = @game_window.width - 100
     else
-      @x = x + 10
+      @x = @x + 10
     end
   end
 
-  def move_up 
+  def move_up
     if @y < 0
       @y = 0
     else
@@ -87,7 +76,7 @@ class Player
       @y = @y + 10
     end
   end
-
+  
   def hit_by?(ball)
     Gosu::distance(@x, @y, ball.x, ball.y) < 50
   end
@@ -96,27 +85,18 @@ end
 class Ball
   def initialize(game_window)
     @game_window = game_window
-    @icon = Gosu::Image.new(@game_window, "Images/ball.png", true)
+    @icon = Gosu::Image.new(@game_window, "gosu/asteroid.png", true)
     @x = rand(@game_window.width)
     @y = 0 
   end
 
   def update
-    @y = @y + 1
+    @y = @y + 10
   end
 
   def draw
-    @icon.draw(@x,@y,2)
+    @icon.draw(@x, @y, 2)
   end
-
-  def x
-    @x
-  end
- 
-  def y
-    @y
-  end
-
 end
 
 window = MyGame.new
