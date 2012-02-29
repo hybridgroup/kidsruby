@@ -1,1 +1,2 @@
-@x = rand(@game_window.width)
+  @ball.update
+end
