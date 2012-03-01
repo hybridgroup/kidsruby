@@ -32,7 +32,7 @@ class MyGame < Gosu::Window
         stop_game!
       end
     else
-      #the game is currently stopped
+      # the game is currently stopped
       if button_down? Gosu::Button::KbEscape
         restart_game
       end
@@ -51,6 +51,7 @@ class MyGame < Gosu::Window
   def restart_game
     @running = true
     @ball.reset!
+  end
 end
 
 class Player
@@ -74,10 +75,10 @@ class Player
   end
 
   def move_right
-    if @x > @game_window.width - 100)
+    if @x > (@game_window.width - 100)
       @x = @game_window.width - 100
     else
-      @x = x + 10
+      @x = @x + 10
     end
   end
 
@@ -105,7 +106,7 @@ end
 class Ball
   def initialize(game_window)
     @game_window = game_window
-    @icon = Gosu::Image.new(@game_window, "Images/ball.png", true)
+    @icon = Gosu::Image.new(@game_window, "gosu/asteroid.png", true)
     reset!
   end
 
@@ -133,7 +134,6 @@ class Ball
     @y = 0
     @x = rand(@game_window.width)
   end
-
 end
 
 window = MyGame.new
