@@ -16,5 +16,7 @@ end
 
 group :test do
   # only needed for testing
+  gem 'rake', '0.8.7'
+  gem 'minitest'
   gem 'mocha'
 end

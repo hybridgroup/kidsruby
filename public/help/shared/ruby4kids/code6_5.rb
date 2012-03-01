@@ -1,0 +1,2 @@
+  @ball.update
+end

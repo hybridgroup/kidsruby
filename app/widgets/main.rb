@@ -9,7 +9,7 @@ class MainWidget < Qt::WebView
   alternate_theme "ace/theme/clouds"
 
   signals 'stdInRequested()'
-  slots 'rejectStdin()', 'acceptStdin()',
+  slots 'rejectStdin()', 'acceptStdin()', 'QString language()', 'QStringList languages()',
         'evaluateRuby(QString)', 'stopRuby()', 'runnerFinished(int, QProcess::ExitStatus)',
         'setupQtBridge()', 'openRubyFile(const QString&)', 'saveRubyFile(const QString&)',
         'QString gets()', 'alert(const QString&)', 'QString ask(const QString&)',
@@ -30,6 +30,8 @@ class MainWidget < Qt::WebView
     @runner = Runner.new(self)
 
     @coder = HTMLEntities.new
+
+    settings.setAttribute(Qt::WebSettings::LocalContentCanAccessRemoteUrls, true)
 
     Qt::Object.connect(@frame,  SIGNAL("javaScriptWindowObjectCleared()"), 
                           self, SLOT('setupQtBridge()'))
@@ -55,6 +57,14 @@ class MainWidget < Qt::WebView
   end
 
   private
+
+  def language
+    KidsRuby::Language.current
+  end
+
+  def languages
+    KidsRuby::Language.supported
+  end
 
   def initialize_stdin_connection
     Qt::Object.connect(self, SIGNAL("stdInRequested()"), 

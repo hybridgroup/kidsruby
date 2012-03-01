@@ -17,14 +17,14 @@ class Turtle
 
     alias_method :draw, :start
   end
-  
+
   def init_turtle
     if @interface.valid?
       reply = @interface.call("init_turtle")
       $stderr.puts("init_turtle call failed: %s\n" % reply.error_message) unless reply.valid?
     end
   end
-  
+
   def send_commands
     cmds = @commands.join(".")
     if @interface.valid?
@@ -38,7 +38,7 @@ class Turtle
     end  
     return nil
   end
-  
+
   def add_command(command)
     @commands << command
   end
@@ -53,7 +53,7 @@ class Turtle
       end
 
       $stderr.puts("background call failed: %s\n" % reply.error_message)
-    end  
+    end
     return nil
   end
 
@@ -90,7 +90,7 @@ class Turtle
   def turnright(degrees)
     add_command "turn(#{degrees.abs})"
   end
-  
+
   def draw
     add_command "draw();"
     send_commands
@@ -107,7 +107,7 @@ class Turtle
     end
     return nil
   end
-  
+
   def height
     if @interface.valid?
       reply = @interface.call("height")
@@ -119,12 +119,12 @@ class Turtle
     end
     return nil
   end
-  
+
   # colors
   def method_missing(method, *args, &block)
     return COLORS[method.to_s]
   end
-  
+
   def self.rgb(r, g, b)
     hex_string = "#"
     hex_string << "%02x" % r.to_i
@@ -132,7 +132,11 @@ class Turtle
     hex_string << "%02x" % b.to_i
     hex_string
   end
-  
+
+  def rgb(r, g, b)
+    self.class.rgb(r, g, b)
+  end
+
   COLORS = {
     'aliceblue' => rgb(240, 248, 255),
     'antiquewhite' => rgb(250, 235, 215),

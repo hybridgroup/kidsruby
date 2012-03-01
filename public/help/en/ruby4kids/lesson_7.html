@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-7-1", "../../shared/ruby4kids/code7_1.rb");
+      loadCode("#code-7-2", "../../shared/ruby4kids/code7_2.rb");
+      loadCode("#code-7-3", "../../shared/ruby4kids/code7_3.rb");
+      loadCode("#code-7-4", "../../shared/ruby4kids/code7_4.rb");
+      loadCode("#code-7-5", "../../shared/ruby4kids/code7_5.rb");
+      loadCode("#code-7-6", "../../shared/ruby4kids/code7_6.rb");
+      loadCode("#code-7-7", "../../shared/ruby4kids/code7_7.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Game Programming - Lesson 7</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Back</a>
+    <a href="index.html">Back to Lessons</a>
+    <a href="#next" class="next-lesson">Next &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lesson 7 - Getting Hit</h1>
+    <section class="page"><h1>Defining a Hit</h1>
+      <p>OK, so now it's time to make sure that when the ball hits the player, the game stops. </p>
+      <p>So, the first thing we need to do is go to the <code>Game</code> class and under <code>@ball.update</code>, we will define a hit:</p>
+
+      <pre id="code-7-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Now, let's go over to our player and define this <code>hit_by?</code> method. So, we'll go to the <code>Player</code> class and define what it means to be hit by the ball: </p>
+      <pre id="code-7-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Now, what we did above is add a method that Gosu gives us, called <code>distance</code>, where we pass the x coordinate and y coordinate of one object and the x coordinate and y coordinate of another object.</p>
+
+      <p>We also wrote that if the distance between these two coordinates is less than 50, we're going to make that a hit. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Lesson 7 - Getting Hit</h1>
+    <section class="page"><h1>More Defining</h1>
+
+      <p>Let's go back to the <code>Game</code> class. We've said that if a player is hit by a ball, we should stop the game. So, we need to define what stopping the game means. </p>
+
+      <p>Now, we'll introduce a new variable here to make the definition work, called <code>running</code>. So, under the <code>Game</code>class, we'll type:
+     
+      <pre id="code-7-3" class="sampleCode">Code automatically inserted here...</pre>
+      <p> So, if we stop the game, the running will be false. However, we need to first add this <code>running</code> variable and make it equal to true. So, when the game starts, the game is running. When the player hets hit by the ball, the method <code>stop_game!</code> is going to set the variable, <code>running</code>, to false, which stops the game.</p> 
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+    
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 7 - Getting Hit</h1>
+    <section class="page"><h1>Stop! Hammer Time</h1>
+      <p>Now, we want the player and ball to stop moving when the game stops. So, if you look at the update method, you'll see that we have all this that makes either the player move or makes the ball move. Now, that will work as long as the game is running. But, once it stops, we don't want any of that to happen. So, directly under <code>def update</code>, we'll type:
+ 
+      <pre id="code-7-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Now, let's go back to the <code>Player</code> class. We are now going to define two methods on the ball: x and y. To do this, we type:
+
+      <pre id="code-7-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>So, if you recall, the ball has x and y coordinate variables, which we cannot get to from the player. However, we can call the methods on the player. So, what we did above was call the x method, which will return the x variable and called the y method, which will return the y variable to us. 
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 7 - Getting Hit</h1>
+    <section class="page"><h1>Getting too Close</h1>
+
+      <p>Finally, we want the player to start on a different y position. The 50 is fine for the x position, but the y position is getting too close to the top of the window. So, under <code>def intitialize(game_window)</code>, we'll change te y to 150. It should end up looking like this:</p>
+
+      <pre id="code-7-6" class="sampleCode">Code automatically inserted here...</pre>      
+
+      <p>I want to make the y at 150, so it's further at the bottom. This makes it easier for me to dodge the ball.</p>
+      
+      <p>Once again, here is the entire program you should have written so far:</p>
+      <pre id="code-7-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Alright, hot shot, it looks like you do got what it takes. Let's take it to the <a href="lesson_8.html">next level in lesson 8</a>!</p>
+    </section>
+  </article>
+
+  <a href="#top">Back to top</a>
+
+</body>
+</html>

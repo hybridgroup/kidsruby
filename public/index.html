@@ -6,6 +6,7 @@
   <!-- Load styles -->
   <link rel="stylesheet" href="css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style">
   <link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="style">
+  <link rel="stylesheet" href="css/jquery.snippet.min.css" type="text/css" media="screen" title="style">
 
   <!-- jQuery-ish -->
   <script type="text/javascript" src="js/jquery/jquery-1.6.2.min.js"></script>
@@ -51,13 +52,13 @@
 
     <aside id="tabs">
       <ul>
-        <li><a href="#help">Help</a></li>
-        <li><a href="#output">Output</a></li>
-        <li><a href="#turtle">Turtle</a></li>
+        <li><a id="help-link" href="#help">Help</a></li>
+        <li><a id="output-link" href="#output">Output</a></li>
+        <li><a id="turtle-link" href="#turtle">Turtle</a></li>
       </ul>
 
       <div id="help">
-        <iframe src="help/index.html"></iframe>
+        <iframe id="help-iframe" src="help/en/index.html"></iframe>
       </div>
 
       <div id="output">

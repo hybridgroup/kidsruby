@@ -13,6 +13,7 @@ GEM
     guard-shell (0.1.1)
       guard (>= 0.2.0)
     htmlentities (4.2.3)
+    minitest (2.11.1)
     mocha (0.9.10)
       rake
     qtbindings (4.6.3.4)
@@ -34,8 +35,10 @@ DEPENDENCIES
   guard
   guard-shell
   htmlentities
+  minitest
   mocha
   qtbindings
+  rake (= 0.8.7)
   rb-fchange
   rb-fsevent
   rb-inotify
