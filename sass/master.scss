@@ -85,10 +85,10 @@ body.lesson-set section h1 {
 }
 
 #buttons {
-  position: relative;
+  position: absolute;
   float: right;
-  top: 93%;
-  width: 100%;
+  bottom: 2px;
+  width: 49%;
 }
 #buttons button {
   background-color: red;
@@ -173,11 +173,10 @@ iframe h1 {
 
 #rubycode {
   width: 49%;
-  height: 94%;
   margin: 0;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 48px;
   left: 0;
   right: 0;
   clear: both;
