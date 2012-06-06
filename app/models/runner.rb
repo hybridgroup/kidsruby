@@ -32,7 +32,8 @@ class Runner < Qt::Process
 
   def build_code_from_fragment(code)
     # add any default requires for kid code
-    new_code = "require '" + File.expand_path(File.dirname(__FILE__) + "/../../lib/kidsruby") + "'\n"
+    new_code = "# -*- coding: utf-8 -*-\n"
+    new_code << "require '" + File.expand_path(File.dirname(__FILE__) + "/../../lib/kidsruby") + "'\n"
     new_code << code
     new_code
   end

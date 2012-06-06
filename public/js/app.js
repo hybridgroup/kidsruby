@@ -57,7 +57,7 @@ function copyStdIntoStdOut() {
 }
 
 function updateStdOut(newHtml) {
-  $("#stdout").append(unescape(newHtml));
+  $("#stdout").append(decodeURI(newHtml));
   scrollToOutputEnd()
 };
 
