@@ -249,6 +249,7 @@ $(document).ready(function() {
   $("#run").click(function(e) {
     if ($("#run").html() == 'Run') {
       resizeCanvas();
+      $("#run").blur();
       startRun(getEditor());
     } else {
       stopRun();
