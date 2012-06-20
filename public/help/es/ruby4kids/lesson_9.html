@@ -28,23 +28,23 @@
 </head>
 
 <body class="lesson-set">
-  <h1>Ruby4Kids - Game Programming - Lesson 9</h1>
+  <h1>Ruby4Kids - Programación de Juegos - Lección 9</h1>
   <nav id="top">
     <a href="#back" class="prev-lesson">&laquo; Back</a>
     <a href="index.html">Back to Lessons</a>
     <a href="#next" class="next-lesson">Next &raquo;</a>
   </nav>
 
-  <article class="lesson"><h1>Lesson 9 - Creating Multiple Balls</h1>
-    <section class="page"><h1>I Can Barely Fit in this Window</h1>
+  <article class="lesson"><h1>Lección 9 - Creando múltiples pelotas</h1>
+    <section class="page"><h1>Apenas quepo en esta ventana</h1>
 
-      <p>Now that we are going to add more balls to dodge, we should create a larger window to work in.</p>
+      <p>Ahora que vamos a agregar más pelotas para esquivar, deberíamos crear una ventana más grande en la cual poder trabajar.</p>
 
-      <p> So, in order to do that, let's go to the <code>MyGame</code> class and under <code>def initialize</code>, let's change the numbers to <code>(600, 400, false)</code>. The result should look like this:</p>
+      <p> Entonces, para hacer eso, vayamos a la clase <code>MyGame</code> y debajo de <code>def initialize</code> cambiemos los numeros a <code>(600, 400, false)</code>. El resultado debería de verse así:</p>
 
       <pre id="code-9-1" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Then, we'll just adjust the player to start off at the bottom of the screen. First, we need to go to the <code>player</code> class. Now, let's change the x coordinate of the player to 150 and the y coordinate to 330. Your result should look like this:</p>
+      <p>Luego, sólo ajustaremos el jugador para que empiece en la parte baja de la pantalla. Primero, necesitamos dirigirnos a la clase <code>player</code>. Ahora, cambiemos la coordenada X del jugador a 150 y la coordenada Y a 330. Tu resultado debería de verse así:</p>
 
       <pre id="code-9-2" class="sampleCode">Code automatically inserted here...</pre>
 
@@ -57,27 +57,27 @@
 
 
 
-  <article class="lesson"><h1>Lesson 9 - Creating Multiple Balls</h1>
-    <section class="page"><h1>Pluralize!</h1>
+  <article class="lesson"><h1>Lección 9 - Creando múltiples pelotas</h1>
+    <section class="page"><h1>Pluraliza!</h1>
 
-      <p>Now, let's try adding 3 more balls! So, we'll go to the <code>MyGame</code> class and change some things under <code>def initialize</code>:</p>
+      <p>Ahora, tratemos de agregar 3 pelotas mas! Entonces, nos dirigiremos a la clase <code>MyGame</code> y cambiaremos algunas cosas justo por debajo de <code>def initialize</code>:</p>
 
       <pre id="code-9-3" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>All we did above was pluralize <code>ball</code> and then changed the code to create 3 balls, instead of one.</p>
-      <p>Next, let's update each ball, instead of just updating one of them. We'll also pluralize the <code>@ball</code>. So,under the class, <code>MyGame</code>, we'll go ahead and change the code to:</p>
+      <p>Todo lo que hicimos en el código mostrado arriba fue pluralizar <code>ball</code> y luego cambiarlo para crear 3 pelotas en lugar de 1.</p>
+      <p>A continuación, actualicemos cada pelota, en lugar de solo actualizar una de ellas. De igual manera pluralizaremos <code>@ball</code>. Entonces, por debajo de la clase <code>MyGame</code> cambiaremos el codigo a:</p>
 
       <pre id="code-9-4" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p> Next, we're going to do some more of the same stuff. So, we'll go to <code>def draw</code> to pluralize <code>@ball</code> and to change the code so that it draws each ball, instead of just one. You should end up with the following:</p>
+      <p> A continuación, haremos un poco más de lo mismo. Entonces, iremos a <code>def draw</code> y para pluralizar <code>@ball</code> cambiaremos el código, eso dibujara cada pelota, en lugar de solo una. Tu resultado final debería de ser algo como lo siguiente:</p>
 
       <pre id="code-9-5" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Since we're already pluralizing, why don't we go ahead and do some more! So, we'll go to the class, <code>Player</code>, and change it to the following: </p>
+      <p>Ahora que estamos pluralizando, porque no vamos y hacemos algo más! Entonces, iremos a la clase <code>Player</code> y la cambiaremos a lo siguiente: </p>
 
       <pre id="code-9-6" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p> Again, we're just adjusting the methods, so that they will work with multiple balls. For the code above, we have added the method, <code>any?</code>, which just means that being hit by any one of the balls will cause a hit. </p>
+      <p> Nuevamente, sólo estamos ajustando los métodos, así trabajaran con múltiples pelotas. En el codigo de arriba, añadimos el método <code>any?</code>, el cual nos dice que al ser golpeado por cualquiera de las pelotas ésto provocara un golpe.</p>
 
       <a href="#prev" class="prev-lesson">&laquo; Back</a>
       <a href="index.html">Back to Lessons</a>
@@ -88,17 +88,17 @@
 
 
 
-  <article class="lesson"><h1>Lesson 9 - Creating Multiple Balls</h1>
-    <section class="page"><h1>No More Pluralizing...Maybe</h1>
+  <article class="lesson"><h1>Lección 9 - Creando múltiples pelotas</h1>
+    <section class="page"><h1>No más pluralizar... Quizá</h1>
 
-      <p>Now, you must hate pluralizing by now, so we'll stop....right after this next pluralization! So, we'll go to the class, <code>MyGame</code>, and change the restart game definition to the following:</p>
+      <p>En estos momentos debes de odiar pluralizar, entonces nos detendremos... justo despues de la siguiente pluralización! Entonces, iremos a la clase <code>MyGame</code> y cambiaremos la definición para reiniciar el juego a los siguiente:</p>
 
       <pre id="code-9-7" class="sampleCode">Code automatically inserted here...</pre>
-      <p>You're done capitalizing (promise)! Now, let's just look over what all of your code should look like:</p>
+      <p>Has terminado de capitalizar (es una promesa)! Ahora, demos una mirada a como debería de verse todo tu código:</p>
 
       <pre id="code-9-8" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Can it be? Is this the end? Have you really gone through the entire tutorial? The answer is, YES! CONGRATULATIONS, YOU MADE IT! You developed a program that you can play on and show off! We hope you'll continue your interest into programming, because if you've made it this far, you've got what it takes :).</p>
+      <p>Puede ser? Éste es el final? Realmente has recorrido todo el tutotial? La respuesta es, SI! FELICIDADES, LO LOGRASTE! Desarrollaste un programa en el que puedes jugar y que también puedes mostrar! Esperamos que continues interesado en la programación, porque si lo lograste así de rápido, tienes lo que se necesita :).</p>
 
       <a href="#prev" class="prev-lesson">&laquo; Back</a>
       <a href="index.html">Back to Lessons</a>
