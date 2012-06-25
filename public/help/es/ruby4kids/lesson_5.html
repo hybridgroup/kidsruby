@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Ruby4Kids - Programming For The Fun Of It</title>
+  <title>Ruby4Kids - Programando sólo porque es divertido</title>
 
   <!-- Load styles -->
   <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
@@ -28,54 +28,56 @@
 </head>
 
 <body class="lesson-set">
-  <h1>Ruby4Kids - Game Programming - Lesson 5</h1>
+  <h1>Ruby4Kids - Programación de Juegos - Lesson 5</h1>
   <nav id="top">
-    <a href="#back" class="prev-lesson">&laquo; Back</a>
-    <a href="index.html">Back to Lessons</a>
-    <a href="#next" class="next-lesson">Next &raquo;</a>
+    <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+    <a href="index.html">Ir a las lecciones</a>
+    <a href="#next" class="next-lesson">Siguiente &raquo;</a>
   </nav>
 
-  <article class="lesson"><h1>Lesson 5 - Moving Right, Up, and Down</h1>
-    <section class="page"><h1>This is Ruby4Kids</h1>
+  <article class="lesson"><h1>Lección 5 - Movimiento Hacia la Derecha, Arriba y Abajo</h1>
+    <section class="page"><h1>Esto es Ruby4Kids</h1>
 
-      <p>Now, we're going to learn how to move right, up, and down. To move right, we need to add another <code>if</code> statement to the <code>def update</code> under the class <code>MyGame</code>. So, let's add an <code>if</code> statement for the right key:</p>
-      <pre id="code-5-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Ahora, Vamos a aprender como movernos hacia la izquierda, arriba y abajo. Para movernos hacia la derecha, necesitamos agregar otra sentencia <code>if</code> a <code>def update</code> abajo de la clase <code>MyGame</code>. Entonces, agreguemos una sentencia <code>if</code> para la tecla de la flecha derecha:</p>
+      <pre id="code-5-1" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p>The part above is the same as the code for turning left, except that now we type <code>KbRight</code> instead of <code>KbLeft</code>.</p> 
+      <p>El código de arriba es el mismo código que agregamos para movernos hacia la izquierda, con la diferencia que ahora esribimos <code>KbRight</code> en lugar de <code>KbLeft</code>.</p> 
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <article class="lesson"><h1>Lesson 5 - Moving Right, Up, and Down</h1>
-    <section class="page"><h1>Plus 10</h1>
+  <article class="lesson"><h1>Lección 5 - Movimiento Hacia la Derecha, Arriba y Abajo</h1>
+    <section class="page"><h1>Mas 10</h1>
 
-      <p> Now, we're going to be going to the <code>Player</code> class and adding: </p>
+      <p> Ahora vamos a ir a la clase <code>Player</code> y agregamos lo siguiente: </p>
    
-      <pre id="code-5-2" class="sampleCode">Code automatically inserted here...</pre>
+      <pre id="code-5-2" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p> So, this time the code is a bit less similar to what we did in the last lesson. You'll notice that we added <code>+ 10</code> instead of <code>- 10</code>, because we're going right instead of left. </p>
+      <p>Esta vez el código es un poco mas diferente al de la última lección. Te podras dar cuenta que ingresamos <code>+ 10</code> en lugar de <code>- 10</code>, puesto que vamos a ir la derecha en lugar de la izquierda. </p>
 
-      <p> Another difference is that we limit the icon by the game window's width and then subtract a certain amount of pixels from that width. Now, we subtract those pixels, because the position x is actually on the left side of the icon. That means that we have to make up for that amount by subtracting from the pixel count. You can try putting in different numbers within: </p>
-      <pre id="code-5-3" class="sampleCode">Code automatically inserted here...</pre>
-      <p> to see what I mean, as long as both the numbers match up. </p>
+      <p>Otra diferencia es que limitamos el movimiento del icono por medio de la anchura de la ventana del juego y le restamos un cierto número de pixeles de esa anchura. Les restamos esos pixeles, ya que la posicion en x es realmente la posición del icono por el lado izquierdo. That means that we have to make up for that amount by subtracting from the pixel count. You can try putting in different numbers within: </p>
+      
+      <pre id="code-5-3" class="sampleCode">Código insertado automáticamente aquí...</pre>
+      
+      <p>para ver a lo que me refiero, mientras ambos números coinciden. </p>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <article class="lesson"><h1>Lesson 5 - Moving Right, Up, and Down</h1>
-    <section class="page"><h1>Moving Up</h1>
+  <article class="lesson"><h1>Lección 5 - Movimiento Hacia la Derecha, Arriba y Abajo</h1>
+    <section class="page"><h1>Movimiento Hacia Arriba</h1>
 
       <p> OK, now that we've accomplished going left and right, we're going to try out how to go up. So, we'll first type the following code under the <code>def update</code> in the <code>MyGame</code> class
       <pre id="code-5-4" class="sampleCode">Code automatically inserted here...</pre>
