@@ -76,56 +76,56 @@
 
 
 
-  <article class="lesson"><h1>Lección 5 - Movimiento Hacia la Derecha, Arriba y Abajo</h1>
+  	<article class="lesson"><h1>Lección 5 - Movimiento Hacia la Derecha, Arriba y Abajo</h1>
     <section class="page"><h1>Movimiento Hacia Arriba</h1>
 
-      <p> OK, now that we've accomplished going left and right, we're going to try out how to go up. So, we'll first type the following code under the <code>def update</code> in the <code>MyGame</code> class
-      <pre id="code-5-4" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Muy bien, ahora que ya tenemos el movimiento hacia la izquierda y hacia la derecha, vamos a averiguar como movernos hacia arriba. Entonces, primeramente vamos a escribir el siguiente código abajo de <code>def update</code> en la clase <code>MyGame</code>:
+      <pre id="code-5-4" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p>So, that part was familiar. Now, we're going to go to the <code>Player</code> class and add: </p>
-      <pre id="code-5-5" class="sampleCode">Code automatically inserted here...</pre>
+      <p> Esa parte fue algo familiar. Ahora, vamor a la clase <code>Player</code> y agregamos: </p>
+      <pre id="code-5-5" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p> Now, you'll notice that both the <code>if</code> and <code>else</code> statements are both different than what we did before. The first difference is that we're now using a y coordinate. The y coordinate is used, because we are going up and down (in this case, up), rather than left and right, just like on a grid!</p>
+      <p> Ahora, te darás cuenta que ambas sentencias, <code>if</code> y <code>else</code>, son diferentes a las que habiamos hecho anteriormente. La primer diferencia es que ahora estamos usando una coodenada y. La coordenada y es usada, porque estamos yendo hacia arriba y abajo (en este caso, hacia arriba), y no hacia la izquierda o derecha, ¡Como en un plano!</p>
 
-      <p> So, you might also be wondering, why is the formula <code>y < 0</code>? Isn't <code>y < 0</code> supposed to be for going down? That would have been the case, had the pixel count increased as you went up. Instead, it's the other way around. </p>
+      <p> Te estarás preguntando, ¿Por qué la fórmula es <code>y < 0</code>? ¿No se supone que <code>y < 0</code> es para ir hacia abajo? Ese habría sido el caso, los pixeles incrementarian a medida que irias hacia arriba. En vez de eso, es de forma opuesta. </p>
 
-      <p> Basically, it means that the very top of the screen is at 0.00 and increases as you go down the y-axis. So, as the icon moves up, it's actually decreasing the pixel count. This decrease in count is also the reason why we have a <code>- 10</code> instead of a <code>+ 10</code>.</p>. 
+      <p> Basicamente, significa que en la parte superior de la pantalla es 0.00 e incrementa a medida que bajas en el eje-y. Asi, a medida que el icono se mueve hacia arriba, en realidad decrece el número de pixel. Este decrecimiento en el pixel es la razón por la que tenemos <code>- 10</code> en lugar de <code>+ 10</code>.</p>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <article class="lesson"><h1>Lesson 5 - Moving Right, Up, and Down</h1>
+  <article class="lesson"><h1>Lección 5 - Movimiento Hacia la Derecha, Arriba y Abajo</h1>
     <section class="page"><h1>Moving Down</h1>
-      <p> Now, let's finish up by adding the <code>move_down</code> code. These steps  should look really familiar to the steps where we learned how to move right. First, let's write the following under the class <code>MyGame</code>, right below <code>def update</code>:
+      <p> Ahora, terminemos añadiendo el código de <code>move_down</code>. Estos pasos deberian de parecer muy familiares a los pasos que hemos aprendido para movernos hacia la derecha. Primeramente, agreguemos lo sigueinte abajo de la clase <code>MyGame</code>, justamente abajo de <code>def update</code>:
 
-      <pre id="code-5-6" class="sampleCode">Code automatically inserted here...</pre>
+      <pre id="code-5-6" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p>Finally, we'll type the following under the <code>player</code> class </p>
+      <p>Finalmente, escribiremos lo siguiente abajo de la clase <code>player</code>:</p>
 
-      <pre id="code-5-7" class="sampleCode">Code automatically inserted here...</pre>
+      <pre id="code-5-7" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p> So, the only difference that you'll see here is that the <code>- 10</code> is changed to <code>+ 10</code>, because the numbers increase as you go down :). That's it for moving around!</p> 
+      <p> Ahora, la única diferencia que verás es que <code>- 10</code> lo cambiamos a <code>+ 10</code>, esto porque los números incrementan conforme vas bajando :). ¡Eso es para crear movimiento!</p> 
       
-      <p>Here is the entire program you should have written so far:</p>
-      <pre id="code-5-8" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Aquí está el programa completo que deberías de haber escrito hasta ahora:</p>
+      <pre id="code-5-8" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p>You've accomplished so much already, so why stop?! How about we turn up the heat and add some <a href="lesson_6.html">dodgeballs in lesson 6</a>!</p>
+      <p>Ya has hecho mucho hasta ahora, ¡¿Asi que por qué parar?! ¡¿Qué te parece seguir avanzando y agregar algunas <a href="lesson_6.html">pelotas en la lección 6</a>?!</p>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
 
     </section>
   </article>
 
    
-<a href="#top">Back to top</a>
+<a href="#top">Ir Hacia Arriba</a>
 
 </body>
 </html>
