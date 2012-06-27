@@ -78,11 +78,11 @@ function stopRun() {
 }
 
 function setRunButtonToStop() {
-  $("#run").html('Stop');
+  $("#run").html(getLocalizedString('buttons', 'stop'));
 }
 
 function setStopButtonToRun() {
-  $("#run").html('Run');
+  $("#run").html(getLocalizedString('buttons', 'run'));
 }
 
 function clearOutputs() {
@@ -167,7 +167,7 @@ function resizeCanvas() {
 
 function setDefaultEditorContent() {
   // set initial value and position
-  getEditor().setValue("# Type in your code just below here:\n");
+  getEditor().setValue('# ' + getLocalizedString('editor', 'your-code') + '\n');
   getAce().gotoLine(2);
 }
 
@@ -222,14 +222,28 @@ function loadLanguage(lang){
 }
 
 function localizeUI(data) {
-  $("#run").html(data['buttons']['run']);
-  $("#clear").html(data['buttons']['clear']);
-  $("#open").html(data['buttons']['open']);
-  $("#save").html(data['buttons']['save']);
+  saveLocalizedStrings(data);
 
-  $("#help-link").html(data['tabs']['help-link']);
-  $("#output-link").html(data['tabs']['output-link']);
-  $("#turtle-link").html(data['tabs']['turtle-link']);
+  $("#run").html(getLocalizedString('buttons', 'run'));
+  $("#clear").html(getLocalizedString('buttons', 'clear'));
+  $("#open").html(getLocalizedString('buttons', 'open'));
+  $("#save").html(getLocalizedString('buttons', 'save'));
+
+  $("#help-link").html(getLocalizedString('tabs', 'help-link'));
+  $("#output-link").html(getLocalizedString('tabs', 'output-link'));
+  $("#turtle-link").html(getLocalizedString('tabs', 'turtle-link'));
+
+  initEditor();
+}
+
+function saveLocalizedStrings(data) {
+  var localStrings = data ;
+  $("#container").data("localized", localStrings);
+}
+
+function getLocalizedString(t, i) {
+  var localStrings = $("#container").data("localized");
+  return localStrings[t][i];
 }
 
 function initUI() {
@@ -247,7 +261,7 @@ $(document).ready(function() {
   $("#tabs").data("mytabs", tabs);
 
   $("#run").click(function(e) {
-    if ($("#run").html() == 'Run') {
+    if ($("#run").html() == getLocalizedString('buttons', 'run')) {
       resizeCanvas();
       $("#run").blur();
       startRun(getEditor());
@@ -272,7 +286,7 @@ $(document).ready(function() {
   });
 
   $('#clear').click(function(e) {
-    if (confirm("Are you sure you want to clear all your Ruby code from the editor?"))
+    if (confirm(getLocalizedString('editor', 'confirm-clear')))
       clearCode();
 
     return false;
@@ -285,6 +299,4 @@ $(document).ready(function() {
   initTurtle();
 
   selectTab(0); // default to help tab
-
-  initEditor();
 });
