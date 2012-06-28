@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>はじめてのプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-1-1", "../../shared/hacketyhack/code1_1.rb");
+      loadCode("#code-1-2", "../../shared/hacketyhack/code1_2.rb");
+      loadCode("#code-1-3", "../../shared/hacketyhack/code1_3.rb");
+      loadCode("#code-1-4", "../../shared/hacketyhack/code1_4.rb");
+      loadCode("#code-1-5", "../../shared/hacketyhack/code1_5.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>はじめてのプログラミング</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+
+
+  <article class="lesson"><h1>やあ!</h1>
+    <section class="page"><h1>第一ラウンド</h1>
+      <p>さて 君はコードをハックする、一番いい やり方を知りたい。でしょ？ もし そうなら、ここで まちがい なし。 これは、君につたえる ひつようが ある はじめての レッスンだ。 すべては ここから はじまる。</p>
+      <p>君に できるだけ楽に、プログラム作りはじめて ほしい。だから、楽しいものを画面（がめん）に出す、かんたんなプログラムをいくつか書いてみようね。でも その前に ちょっとだけ、プログラム作りって何かを お話しさせてね。 いいかな？ さあ はじめよう！</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>まずプログラミングに ついて話そう</h1>
+    <section class="page"><h1>命令がすべて</h1>
+      <p>かんたんに まとめて言うと、プログラミングは<strong>アルゴリズム</strong>だと言うほかない。 アルゴリズムと言ったけど、「命令（めいれい）のリスト（いちらん表）」の ことを、かっこよく言っただけ。すべてのプログラムは、ただの大きな「やることリスト」なんだ。コンピューターは、「やることリスト」に書いてある やることを見て、じゅんばんに やる。</p>
+      <p>君が よく考えれば、ほとんどの ことを、命令のリストに する ことが できる。 たいてい 君は手じゅんの１つ１つを考える ことなしに、いろんな ことを してきたよね。 君は、それらのことをするだけ。 これは とても自然なことだ。</p>
+    </section>
+
+    <section class="page"><h1>たんじゅんなコンピューター</h1>
+      <p>ざんねんだけど、コンピューターは、本当はとても たんじゅん なんだ。 君たちが今まで聞いてきた ことと ちがうかな。でも これは本当の ことなんだ。 コンピューターが、人の脳（のう）に たとえられる ことが あるよね。でも これは ほんとうに へた な たとえなんだ。 かんたんで つまらない ことを、まちがい なく何度（なんど）でも くりかえす。これがコンピューターの とくいわざ。 自分で考える ことなんて できない！</p>
+      <p>コンピューターが むずかしく見える わけは これだ。 コンピューターは、命令（めいれい）が、いいか、わるいかを まったく考えない。あたえられた命令には、なんでも 言いなりに したがう。 かんたんな言葉だけで考えるのって むずかしい！</p>
+    </section>
+
+    <section class="page"><h1>君の ことを よく わかるように はなそう</h1>
+      <p>プログラムするときは、コンピューターに 君のことを くわしく せつめい する ひつようが ある。この ことを わすれない ように しよう。 コンピューターは、君が言おうと してる ことを、わかろうと してくれない。だから君は、言おうと している ことの意味（いみ）まで くわしく言う ひつようが ある！</p>
+      <p>これには、練習（れんしゅう）が ひつようだ。だから、かんたん な言葉で せつめい する練習から はじめよう。 これは、君より小さな子に、計算のし方を せつめい するのに、とてもよく にている。君は次のようにする ひつようが ある。ゆっくりと すすめる。君のやり方を、十分に たしかめる。そして、小さな子に わからない ときは、がまんづよく。</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>命令の リスト</h1>
+    <section class="page"><h1>買い物リストでなく やることリスト</h1>
+      <p>「コンピューターは、命令（めいれい）リストに したがう」と、言ったら、このリストは、買い物リストでなく、やることリストなんだ。 つまり、このリストには、コンピューターが したがう<strong>命令</strong>が書いてある。 コンピューターは、命令されたことを、リストに書いてある順番（じゅんばん）に次から次にやるんだ。できるだけ速いスピードでね。</p>
+      <p>買い物リストはべつのものだ。 スーパーに買い物に行ったとき、お店の なかの すきな通路（つうろ）を通って いいよね。そして、お店から出る前に、買い物リストに書かれた ものを、ぜんぶ買うことが できれば、すべてオーケーだ。 これはコンピューターが やる こととは まったく ちがう。</p>
+    </section>
+
+    <section class="page"><h1>だれかに やって ほしい ことを、どうやって教える？</h1>
+      <p>このれいを ためして みよう：紙に正方形をかく やり方を、言葉を使って だれかに教えたいとき どうする？</p>
+      <p>「こんなふうに」とか「このように」といった言葉を使っちゃ だめだよ！ 君は、やってほしいことを、ていねいに、細かく言う ひつようがある。</p>
+    </section>
+
+    <section class="page"><h1>もう一度：コンピューターは たんじゅん</h1>
+      <p>どうだい？ うまく言えたかな。これが、たんじゅんなコンピューターと、人とをくらべた、ひとつのたとえなんだ。 正方形の線の長さを言うの わすれちゃった？ わすれてなかったらグッドジョブ！</p>
+      <p>それはそうと、下のようだったら だいたい いい。 これはひとつの れい だ。ほかにも、いいやり方があるはずだね。</p>
+      <p>1.  紙の上にペンを下ろす。</p>
+      <p>2.  右に５センチかく。</p>
+      <p>3.  下に５センチかく。</p>
+      <p>4.  左に５センチかく。</p>
+      <p>5.  上に５センチかく。</p>
+      <p>6.  紙からペンを上げる。</p>
+      <p>7.  できあがり!</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>カメさんタートル、ずっとずっと下までカメさんタートル。</h1>
+    <section class="page"><h1>カメさんタートルで．．．絵をかく。えー？</h1>
+      <p>オーケーイ！ 頭の体そうは もう十分。 じっさいに何か作ってみよう。 なかなか はじまらないなぁ．．．ってずっと思ってたね。あたりかな？ はじめに もと になるものを知ることは、とても大切なんだよ。</p>
+      <p>これから、コンピューターに、形のかき方を教えてみよう．．．カメのタートルでね。 もちろん君の聞いた ことは まちがいじゃない。 君は、これからカメのタートルに、形をかくための命令を あたえる ひつようがある。</p>
+      <p>この特別なタートルはペンを持っている。 君は紙をもっている。 タートルは、君の言った ひとつひとつの言葉すべてに したがって動くんだ。 でもこのタートルは、ちょっとだけ動きがおそい。そして、ちゅういして ていねいに あつかう ひつようがある。 できるかな？</p>
+    </section>
+
+    <section class="page"><h1>タートルとそのコマンド</h1>
+      <p>タートルに、何をしたら いいのかを教えたい。このことを、まずRuby（ルビー）に教える ひつようが ある。 それを するために、<code>Turtle</code>（タートル） コマンドがある。「コマンド」は、コンピュータに あたえる命令の ことだ。 君は <code>Turtle</code>（タートル）に、２つのことを教えることができる:</p>
+      <p><code>draw</code>（ドロー：お絵かきする）: タートルは、君の命令の通りに かみなりの光のように速く動く。そして形を、まばたきする間に えがく。
+      <p><code>start</code>（スタート）: タートルとお話する ための窓が出てくる。タートルが、プログラムの ひとつひとつの命令の順番に動くのを 見ることが できる。 君は、君のペースで すすめる ことができる。 タートルが君の思った通りに動かない ときに べんり だね！
+    </section>
+
+    <section class="page"><h1>入力してみよう！</h1>
+      <p>クール。 じゃ、これを入力してみて：</p>
+      <p><code>Turtle.draw</code></p>
+      <p> <code>Turtle</code> と <code>draw</code> の間の点が、２つを くっつけてる。 プログラミング言語（げんご）にもルールがある。日本語にもルールがあるのと同じだね。 <code>Turtle</code> が「何が、どうする」の「何が」の ところで、 <code>draw</code> が、「どうする」の ところなんだ。 ２つ つなげると、タートル（Turtle）が、お絵かきする（draw）という言葉になるよ。drawは日本語で、「お絵かきする」という意味だ。</p>
+      <p>入力し終わったら、「動かす」ボタンをクリックしてみよう。 タートルはとても速く <code>draw</code> （ドロー：お絵かき）モード（お絵かき できる じょうたい）になる。たとえ君にタートルが見えなくてもだ。でも、たしかにタートルはそこにいるんだ！</p>
+    </section>
+
+    <section class="page"><h1>とにかく やってみよう。</h1>
+      <p>すばらしい！ 君は少なくともタートルを動かし はじめる ことが できたね。 よし。つぎは、何を えがけば いいのかを タートルに教えよう!</p>
+      <p>すべてのプログラムは、命令のリストと いうことを わすれて ないかな？ このれいでは、君のプログラムは、つぎの１つの命令だけだ。<code>Turtle</code>draw （タートルが お絵かきする） 何かの 絵を！ でも <code>Turtle</code> （タートル）に、命令のリストを あたえる ことが できなきゃ だめだよね。</p>
+      <p>これには、つぎの２つの言葉を使う： <code>do</code> と <code>end</code>。do（ドゥ）は日本語で、「やる」。end（エンド）は日本語で「おわり」だ。 この２つの言葉で、<code>Turtle</code>（タートル）のための、２つ目の小さなリスト <em>サブリスト</em> を作ることができる！</p>
+    </section>
+
+    <section class="page"><h1>はいけい を かえる</h1>
+      <p>やってみよう：はいけい を別の色に したいと いうことを、 <code>background</code> （バックグランド）コマンドで、 <code>Turtle</code> （タートル）に教えることができるんだ。 これを見て:</p>
+      <pre id="code-1-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>これを入力して、「動かす」をクリックしてみよう！</p>
+    </section>
+
+    <section class="page"><h1>タートルは、命令をもらった。</h1>
+      <p>クール！ はいけいが マルーン（マロニエの みの いろ）になった。 <a href="colors.html">ここをクリックすると、タートルが使うことができる色の いちらんを見ることができるよ</a>。
+      <p>これも <code>Turtle</code> （タートル）のための命令を作る やりかた なんだけど。 プログラムを見やすくするために、プログラマーは、よく２つのスペース（文字をいれずに空けておくところ）を、サブリストの前に入れるんだ。 この くせは つけて おいたほうが いいよ。後で きっと やくにたつ！</p>
+    </section>
+
+    <section class="page"><h1>ザ・ペン</h1>
+      <p>粋（いき）な はいけい にする ことが できたね。じゃあ、どうやって線を かこうか？ まずはじめに、ペンのことを知ろう。 <code>Turtle</code>（タートル）は１本のペンを はこぶんだ。そのペンを地面に ひきづりながらね。 君は、ペンの色を <code>pencolor</code> （ペンカラー）コマンドでかえることができる。</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>線をかく</h1>
+    <section class="page"><h1>やってみよう！</h1>
+      <p>オーケイ、ぐずぐずしてる ひま はない。 タートルに、線を かくことを教えて みよう。 こんな ふうに やるんだよ。 これを一度（いちど）やってみてから、ほかの色や数でも ためして みよう！</p>
+      <pre id="code-1-2" class="sampleCode">Code automatically inserted here...</pre>
+      <p>ちなみに50は、前へ進む長さだよ。コンピューター画面上の長さの きじゅんでピクセルという。</p>
+    </section>
+
+    <section class="page"><h1>右回りにぐるぐる回っちゃうよベイビー</h1>
+      <p>グレート！ そう。君の命令で１本の線を かくことが できた。 でも、 <code>Turtle</code> （タートル）に前へ すすんで ほしくないときは、どうしようか？ 君は、 <code>turnleft</code>（ターンレフト：回れ左） または <code>turnright</code> （ターンライト：回れ右）コマンドで、回るように教えることができる。こんなふうにだ：</p>
+      <pre id="code-1-3" class="sampleCode">Code automatically inserted here...</pre>
+     <p>これをやってみて。それから少し あそんで みよう！</p>
+     <p>９０は、どれだけ回れば よいのかを あらわす数で、角度（かくど）というものだ。３６０だと、ぐるっと一回り、１８０だと、反対（はんたい）をむく。９０だと、ま横（よこ）を むくよ。</p>
+    </section>
+
+    <section class="page"><h1>すすめ すすめ</h1>
+      <p>オーケイ、調子いいね！ それじゃ、おさらいしてみよう:</p>
+      <p><code>Turtle.draw</code> で、何かを えがいて ほしいということを<code>Turtle</code> （タートル）に教える。 点が２つをくっつけてる。</p>
+      <p><code>do ... end</code> は、サブリスト。 <code>Turtle</code> に えがかせたい ことだ。 プログラムの他の 部分の ためでない。
+      <p><code>pencolor</code> で <code>Turtle</code> が ひきづるペンの色を えらぶ。そして、 <code>background</code> で はいけい の色を えらぶ。</p>
+      <p><code>turnright</code> や なかまの <code>turnleft</code>で、<code>Turtle</code> に、回れ右または左することを教える。</p>
+      <p><code>forward</code> （フォワード：前へ）や ともだちの <code>backward</code>（バックワード：後ろへ） で、<code>Turtle</code> に いどう することを教える。</p>
+    </section>
+
+    <section class="page"><h1>正方形をかいてみよう。</h1>
+      <p>それじゃあ、はじめよう。 やってみて。 <code>Turtle</code> に正方形をかかせるんだ。</p>
+      <p>まってるよ。 :)</p>
+    </section>
+
+    <section class="page"><h1>やり方の れい</h1>
+      <p>こんなふうに やると できるよ:</p>
+      <pre id="code-1-4" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>同じことをくりかえす</h1>
+    <section class="page"><h1>ピートとリピートふねの上。ピートがおちた。のこったのは？リピート ピートとリピート...</h1>
+      <p>やれやれ、何回くりかえせば いいんだ！ <code>forward</code> と <code>turnright</code> を何回も入力したから、指が ぬけそうだよ！</p>
+      <p>いいニュースがある。前に、コンピューターの ことに ついて言った ことが あるよね。 コンピューターは、たいくつな ことを なんども やることが とくい という ことだったね！ 君がうまく教えてあげれば、コンピューターは、なんども なんども ずっと同じことを くりかえし やる。</p>
+    </section>
+
+    <section class="page"><h1>同じことを　同じことを　くりかえす　くりかえす</h1>
+      <p>これを見て：君の<code>Turtle</code> は、ほんとうは 算数を知ってるんだよ。 たとえば:</p>
+      <pre id="code-1-5" class="sampleCode">Code automatically inserted here...</pre>
+      <p>このれいを ためしてみよう。 正方形が えがかれた！ ワオ！</p>
+    </section>
+
+    <section class="page"><h1>4.times</h1>
+      <p>むずかしくないよ： <code>4</code> も命令を うける ことが できるんだ。君の <code>Turtle</code>みたいにね。 このコマンドは、命令のリストをその数だけ なんども やるんだ。 たのしい！ ４回。 そして、 <code>do</code> と <code>end</code> は、<code>4</code> が <code>Turtle</code>のかわりにやる、命令リストだ。</p>
+    </section>
+
+    <section class="page"><h1>やってみよう！</h1>
+      <p>はじけちゃおう: 自由に 楽しい形を作ってみよう！</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>まとめ</h1>
+    <section class="page"><h1>おめでとう！</h1>
+      <p>ワオ、すばらしい。 よくやった。自分を ほめて あげよう。 ハイターッチ。 君は、もと になる 大切なことを知ることができたんだ！</p>
+      <p>それじゃあ、つぎは、 <em>はじめての Ruby</em> のレッスンをやってみよう。まったくちがう、エキサイトすることを見つけよう！</p>
+    </section>
+  </article>
+
+  <a href="#top">一番上へもどる</a>
+
+</body>
+</html>
