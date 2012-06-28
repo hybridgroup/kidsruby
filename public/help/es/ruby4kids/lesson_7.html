@@ -44,7 +44,7 @@
       <p>Ahora, vamos a ir al jugador y vamos a definir el método <code>hit_by?</code>. Vamos a la clase <code>Player</code> y definimos como funciona ser golpeado por la pelota: </p>
       <pre id="code-7-2" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p>Ahora, lo que acabamos de hacer es agregar un método que Gosu nos proporciona, llamado <code>distance</code>, al que le pasamos las coordenadas x y y de un objeto y las coordenadas x y y de otro objeto.</p>
+      <p>Ahora, lo que acabamos de hacer es agregar un método que Gosu nos proporciona, llamado <code>distance</code>, al que le pasamos las coordenadas <i>x</i> y <i>y</i> de un objeto y las coordenadas <i>x</i> y <i>y</i> de otro objeto.</p>
 
       <p>Tambien ingresamos que si la distancia entre estas dos coordenadas es menor a 50, vamos a tomer eso como un golpe. </p>
 
@@ -84,7 +84,7 @@
 
       <pre id="code-7-5" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p>Si recordamos, la pelota tiene las variables para las coordenadas x y y, las cuales no podemos obtener directamente desde jugador. Aun así, podemos llamar los métodos desde el jugador. Asi, lo que hicimos en el código anterior fué mandar a llamar el método <code>x</code>, que nos regresa el valor de x y tambien mandamos a llamar el método <code>y</code>, que nos regresa el valor de la variable y.</p>
+      <p>Si recordamos, la pelota tiene las variables para las coordenadas <i>x</i> y <i>y</i>, las cuales no podemos obtener directamente desde jugador. Aun así, podemos llamar los métodos desde el jugador. Asi, lo que hicimos en el código anterior fué mandar a llamar el método <code>x</code>, que nos regresa el valor de <i>x</i> y tambien mandamos a llamar el método <code>y</code>, que nos regresa el valor de <i>y</i>.</p>
 
       <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
       <a href="index.html">Ir a las lecciones</a>
@@ -98,11 +98,11 @@
   <article class="lesson"><h1>Lección 7 - Ser Golpeado por la Pelota</h1>
     <section class="page"><h1>Acercarse a la Pelota</h1>
 
-      <p>Finalmente, queremos que empiece en una diferente posición en y. Para la posición en x esta bien que empiece en 50, pero la posición en y se acerca mucho a la parte superior de la ventana. Entonces, abajo de <code>def intitialize(game_window)</code>, cambiaremos el valor de y a 150. Debe de quedar de la siguiente manera:</p>
+      <p>Finalmente, queremos que empiece en una diferente posición en <i>y</i>. Para la posición en <i>x</i> esta bien que empiece en 50, pero la posición en <i>y</i> se acerca mucho a la parte superior de la ventana. Entonces, abajo de <code>def intitialize(game_window)</code>, cambiaremos el valor de <i>y</i> a 150. Debe de quedar de la siguiente manera:</p>
 
       <pre id="code-7-6" class="sampleCode">Código insertado automáticamente aquí...</pre>      
 
-      <p>Pondremos la posición en y en 150, esto para que esté mas lejos de la parte superior de la ventana. Esto nos facilitará poder esquivar la pelota.</p>
+      <p>Pondremos la posición en <i>y</i> en 150, esto para que esté mas lejos de la parte superior de la ventana. Esto nos facilitará poder esquivar la pelota.</p>
       
       <p>Una vez mas, aquí está el programa completo que deberías de haber escrito hasta ahora:</p>
       <pre id="code-7-7" class="sampleCode">Código insertado automáticamente aquí...</pre>
