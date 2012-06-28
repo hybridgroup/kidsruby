@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>はじめてのRuby</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-1-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/hacketyhack/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/hacketyhack/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/hacketyhack/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/hacketyhack/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/hacketyhack/code2_6.rb");
+      loadCode("#code-2-7", "../../shared/hacketyhack/code2_7.rb");
+      loadCode("#code-2-8", "../../shared/hacketyhack/code2_8.rb");
+      loadCode("#code-2-9", "../../shared/hacketyhack/code2_9.rb");
+      loadCode("#code-2-10", "../../shared/hacketyhack/code2_10.rb");
+      loadCode("#code-2-11", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-11-1", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-12", "../../shared/hacketyhack/code2_12.rb");
+      loadCode("#code-2-13", "../../shared/hacketyhack/code2_13.rb");
+      loadCode("#code-2-14", "../../shared/hacketyhack/code2_14.rb");
+      loadCode("#code-2-15", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-15-1", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-16", "../../shared/hacketyhack/code2_16.rb");
+      loadCode("#code-2-17", "../../shared/hacketyhack/code2_17.rb");
+    });
+  </script>  
+</head>
+<body class="lesson-set">
+  <h1>はじめてのRuby</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+
+  <article class="lesson"><h1>やあ!</h1>
+    <section class="page"><h1>さあはじめよう</h1>
+      <p>Ruby（ルビー）のはじめてのレッスンへようこそ！ はじけちゃうよ。</p>
+      <p>Rubyは、なんでも できる すばらしいプログラミング言語なんだ。 どんどん いこう！</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Rubyについて もう少し</h1>
+    <section class="page"><h1>Konnichiwa（こんにちは）Ruby!</h1>
+      <p><em>Ruby</em> は、</p>
+      <p>まつもと ゆきひろ さん</p>
+      <p>(マッツとよばれている) が、１９９５年に作ったんだ。 マッツは日本の人なんだよ。 マッツ登場：</p>
+    </section>
+    <section class="page"><h1>Rubyは楽しい</h1>
+      <p>マッツはRubyについてこう言っている：</p>
+      <p><em>世界中の すべてのプログラマー（プログラムを作る人）が、もっと楽（らく）にプログラムを作ったり、しあわせに なる。そんな てだすけを、Rubyがしてくれたらいいな。 これがRubyというプログラミング言語の、いちばん だいじな めあてなんだよ。</em></p>
+      <p>Rubyについて もうひとつだけ： ルビースト(ルビーがすきな人) がよく使う言葉がある： <strong>MINSWAN</strong>（ミンスワン）。 これは次の えいごの、頭の文字から できた言葉なんだよ。<strong>M</strong>atz <strong>I</strong>s <strong>N</strong>ice <strong>S</strong>o <strong>W</strong>e <strong>A</strong>re <strong>N</strong>ice.　マッツはしんせつ。 だから、私たちも しんせつ。 かわいくてナイスな言葉だね。 君も、みんなに しんせつに しよう。手だすけが いる だれかに、手をかして あげよう！</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>いろんな ものを画面に出す</h1>
+    <section class="page"><h1>これを やってみよう！</h1>
+      <p>オーケーイ！ まず はじめに、画面（がめん）に何かを出す やり方を、知る ひつようが ある。 でないと、君は 何が おきているのか わからなく なっちゃう！</p>
+    </section>
+    <section class="page"><h1>Hello, World!（ハロー、ワールド！）</h1>
+      <p>やり方には２つある。 １つ目のやり方はこれ：alert（アラート）。alertは、日本語で「ちゅういする」 だ。</p>
+      <pre id="code-2-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>これを入力して「動かす」ボタンを押してみよう。</p>
+    </section>
+    <section class="page"><h1>alert</h1>
+      <p>よし、それじゃあ もう少し せつめい しよう：この小さなプログラムには２つの部分がある：ひ１つ目は <code>alert</code> ２つ目は <code>"Hello, world!"</code>だ。 この２つの部分は、言葉に にている： <code>alert</code> は、「何を、どうする」の「どうする」の部分で、""でかこまれた部分は、「何を、どうする」の「何を」の部分だ。 Rubyでは、「どうする」の部分を <strong>メソッド</strong> と言う。 「どうする」の部分 <code>alert</code> は、「ちゅういをする ための箱を画面に出す。」ということなんだ。そして、この箱の中身は、君が あたえた ものだ。画面にでる このような箱を ダイアログボックスと言うよ。</p>
+      <p><code>"Hello, world!"</code> については、すぐ後で話そう。 ２つ目のやり方はこれ：</p>
+      <pre id="code-2-2" class="sampleCode">Code automatically inserted here...</pre>
+      <p>これも ためして みよう。動くはずだ！ <code>puts</code>（プッツ）メソッドはダイアログボックスを画面に出さない。文字を そのまま画面に出すんだ。 このRubyのやり方のお話では、<code>alert</code> を使って画面に出す。ほかのRubyのやり方のお話では、<code>puts</code>が 使われる ことも あるよ。</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>文字と言葉と文</h1>
+    <section class="page"><h1> String （ストリング） </h1>
+      <p>オーケーイ！ 「どうする」の部分が少し わかったね。つぎは、<em>String</em>（ストリング）という、ならんだ文字のことを知ろう。 " ふ号（ごう）の間のにある たくさんの、文字や言葉のあつまりを、ストリングと言うんだ。 " は、君が言いたい言葉をコンピューターに 教える ときに 使う。 このれいを考えよう：</p>
+      <pre id="code-2-1-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>" ふ号を使わないと、コンピューターは、どこがメソッドで、どこがストリングなのかが わからなく なる！ それと、これも考えてみよう：</p>
+      <pre id="code-2-3" class="sampleCode">Code automatically inserted here...</pre>
+      <p>これらの言葉をストリングにしないと、Rubyは、２つ目のalertが、ちゅうい するための箱で なく、君が画面に出したい言葉だと わからないよね。</p>
+    </section>
+    <section class="page"><h1>ストリングをたす </h1>
+      <p> <code>+</code> ふ号を使って、２つのストリングを まとめる ことが できる。 これを入力してみよう：</p>
+      <pre id="code-2-4" class="sampleCode">Code automatically inserted here...</pre>
+      <p>同じだね！ <code>+</code> は、２つのストリングをくっつけて いっしょにする。 これは、後で すごく べんりな ものに なるよ！</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>算数</h1>
+    <section class="page"><h1> 数 </h1>
+      <p>数は そそまま使えるよ。Rubyは数を知っているんだ：</p>
+      <pre id="code-2-5" class="sampleCode">Code automatically inserted here...</pre>
+      <p>小数点がついた数も使える：</p>
+      <pre id="code-2-6" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+    <section class="page"><h1> かんたんな計算 </h1>
+      <p>数を使って計算することもできる。なかなか うまく答えを 出してくれるよ：</p>
+      <pre id="code-2-7" class="sampleCode">Code automatically inserted here...</pre>
+      <p>でも、これを ためしても何も できない：</p>
+      <pre id="code-2-8" class="sampleCode">Code automatically inserted here...</pre>
+      <p>これは さすがに なんか へんだけど：</p>
+      <pre id="code-2-9" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+    <section class="page"><h1>エラー </h1>
+      <p>動くボタンを押した時に何も できなかったよね。どうしてだろう？ それは、やりそこない があるからなんだ。やりそこないの ことを エラーと いうよ。 出力タブで、エラーを見ることができるよ。</p>
+      <p><code>alert "hey" + 2</code> から出たエラーは：</p>
+      <code>can't convert Fixnum into String （数をストリングに かえることが、できない）</code>
+      <p>これって どういうこと？</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>タイプ（せいしつ や かた）の ことを ちょっとだけ</h1>
+    <section class="page"><h1> どうして そうなるの？ </h1>
+      <p>Rubyの ひとつひとつの部品は、<code>オブジェクト</code>なんだ。 今のところ、<code>オブジェクト</code> は「もの」のようだと知っておこう。 君のプログラムは、いっしょに はたらいて いる多くの <code>オブジェクト</code> から できている。</p>
+      <p><code>オブジェクト</code>については、後で もっと くわしく知ろうね。でも ひとつだけ伝えて おこう：<code>オブジェクト</code> には、「タイプ」があるんだ。車や人にもタイプがあるのと同じだね。Rubyは、このタイプをみる ことで<code>オブジェクト</code>が どんな しゅるいかを知ることが できるんだ。 </p>
+    </section>
+    <section class="page"><h1>数たす言葉</h1>
+      <p>なぜこれが</p>
+      <pre id="code-2-10" class="sampleCode">Code automatically inserted here...</pre>
+      <p>動かないのかな： "hey" は<code>String</code>（ストリング）タイプのオブジェクトだね。2は<code>Fixnum</code>（フィックスナム：数）タイプのオブジェクトだ。 言葉の あつまりの<code>String</code>に、数の<code>Fixnum</code>を たすと いっても ピンと こないよね。 でもね、このコードを ちゃんと 動くように できるんだ！</p>
+      <p>数の<code>Fixnum</code>を、言葉のあつまり<code>String</code>に かえちゃえば いい。 これは、<code>to_s</code> メソッドで できるんだ。</p>
+      <pre id="code-2-11" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+    <section class="page"><h1>もういちど、これを見てみよう</h1>
+      <pre id="code-2-11-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>オーケイ、わるくない。 <code>alert</code>メソッドがあるね。 そして、<code>"hey" + 2.to_s</code>を あたえて いる。 <code>2.to_s</code>で、算数の計算で使う<code>Fixnum</code>の2を、紙に書く時と同じような<code>String</code>の2にかえているんだ。</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>変数（へんすう）</h1>
+    <section class="page"><h1> 入れ物の ような もの </h1>
+      <p>何かを とっておきたい時は、どうしよう？ ほとんどのプログラムは、１行だけじゃ ないんだ。 <em>変数</em>（へんすう）を使うと、数や文字の あつまりを とって おいて、後で使うことが できる。 変数は、何かを入れる ための 入れ物 のような ものだ。</p>
+      <p>これを やってみて：</p>
+      <pre id="code-2-12" class="sampleCode">Code automatically inserted here...</pre>
+      <p>動かしてみよう。</p>
+    </section>
+    <section class="page"><h1> だいにゅう（あてがう） </h1>
+      <p>クール！ <code>=</code>ふ号で、<code>String</code> "Hello, world!"を、変数の<code>message</code>という 入れ物に<em>だいにゅうする</em>（あてがって入れる）ことができる。 そして、<code>message</code>という入れ物を<code>alert</code>メソッドに わたす ことが できるんだ。</p>
+      <p>見ての通り、数や文字のあつまりの かわりに、変数を使うことが できる。 これをやってみて：</p>
+      <pre id="code-2-13" class="sampleCode">Code automatically inserted here...</pre>
+      <p>このプログラムを動かす前に考えてみよう。</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>ユーザー入力</h1>
+    <section class="page"><h1>何かをたずねる。</h1>
+      <p>君は、「何かを入力してほしい」と、ユーザー（プログラムを使っている人）に、たずねる ことが できる。そして、答えを、変数に入れる ことが できるんだ。 かんたんだよ！ このプログラムを見てみて：</p>
+      <pre id="code-2-14" class="sampleCode">Code automatically inserted here...</pre>
+      <p><code>ask</code>メソッドは、箱を出す。プログラムを使っている人は、この箱に何かを入力できる。 たのしい！ 答えを<code>name</code>変数に入れて、<code>alert</code>で、画面に出すんだね。 すてきだ！</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>流れを かえる きほん</h1>
+    <section class="page"><h1> もし．．． </h1>
+      <p>はじめてのプログラミングで言った ことを おぼえてるかな？プログラムは、大きなリスト。コンピューターはリストに書いてある ことを見て、じゅんばんに やる。という話を したよね。</p>
+      <p>で、なんだと思う？ じつは、ちょっとしたコードで、じゅんばんを かえることが できるんだ。 この２つのプログラムをくらべよう：</p>
+      <pre id="code-2-15" class="sampleCode">Code automatically inserted here...</pre>
+      <pre id="code-2-16" class="sampleCode">Code automatically inserted here...</pre>
+      <p>あたらしいのが でてきたね。</p>
+    </section>
+    <section class="page"><h1>"=="</h1>
+      <p>また登場：</p>
+      <pre id="code-2-15-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>== は、= と少しちがうんだよ。 == は、右の<code>オブジェクト</code>と左の<code>Object</code>を くらべるんだ。 もしも、２つが同じなら、<code>if</code> （イフ）の後のコードが動く。「if」は日本語で「もしも なになに なら」という いみだ。 もしも、同じでないなら <code>else</code>（エルス）の後のコードが動く。「else」は日本語で「そうでないなら」という いみなんだ。 <code>("end")</code>（エンド）は、<code>if</code>のおわりを あらわす。</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>れい：すいりゲーム</h1>
+    <section class="page"><h1> すいりしよう！ </h1>
+      <p>これまでに知ったことを組み合わせてつくろう：</p>
+      <pre id="code-2-17" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+  </article>
+
+  <article class="lesson"><h1>れい：すいりゲーム</h1>
+    <section class="page"><h1> すいりしよう！ </h1>
+      <p>おめでとう！ 君はRubyのきほんを、しっかり おぼえた。 でも まだまだ 多くのことを知る ひつようが ある！</p>
+      <p>これが、これまでに君が おぼえた ことだよ：</p>
+      <p>* <code>alert</code> と <code>ask</code></p>
+      <p>* <code>=</code> 変数（へんすう）, と <code>==</code></p>
+      <p>* <code>if</code> と <code>else</code></p>
+      <p>すばらしい！ レッスンの いちらんに もどって、次はRuby ウォリアーをやってみよう！</p>
+    </section>
+  </article>
+
+  <a href="../index.html">レッスンいちらんにもどる</a>
+</body>
+</html>
