@@ -1,13 +1,13 @@
 {
   "buttons": {
-    "run": "Run",
-    "clear": "Clear",
-    "open": "Open",
-    "save": "Save"
+    "run": "Executer",
+    "clear": "Effacer",
+    "open": "Ouvrir",
+    "save": "Enregistrer"
   },
   "tabs": {
-    "help-link": "Help",
-    "output-link": "Output",
-    "turtle-link": "Turtle"
+    "help-link": "Aide",
+    "output-link": "Sortie",
+    "turtle-link": "Tortue"
   }
 }
