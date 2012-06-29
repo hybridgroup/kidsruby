@@ -43,16 +43,16 @@
       <p>Muy bien, en la primera lección, aprendimos como abrir una ventana en Gosu. 
          Luego, aprendimos como dibujar un jugador dentro de la misma ventana.
          Luego, aprendimos como mover este jugador dentro de la ventana del juego.
-         Tambien limitamos su movimiento tomando como límite los bordes de la ventana.</p>
-      <p>Ahora, estamos listos para agregar mas emoción al juego.</p>
-      <p>¿Qué tal si jugamos a la pelota con nuestro jugador? Podemos tener una pelota que parezca que la lanzan a la ventana del juego, y nuestro jugador esquiva la pelota moviendose con las teclas de las flechas.</p>
-      <p>Intentemos eso. Ya tenemos una imagen inluída en KidsRuby que puedes usar.</p>
+         También limitamos su movimiento tomando como límite los bordes de la ventana.</p>
+      <p>Ahora, estamos listos para agregar más emoción al juego.</p>
+      <p>¿Qué tal si jugamos a la pelota con nuestro jugador? Podemos tener una pelota que parezca que la lanzan a la ventana del juego, y nuestro jugador esquiva la pelota moviéndose con las teclas de las flechas.</p>
+      <p>Intentemos eso. Ya tenemos una imagen incluída en KidsRuby que puedes usar.</p>
       <p>Para empezar vamos a crear una nueva clase para nuestra pelota: </p>
 
       <pre id="code-6-1" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p>Ahora, vamos a hacer que esta pelota salga de la parte superior de pa pantalla y caiga desde lugares aleatorios.</p>
-      <p>Para hacer esto, primeramente definimos la posición inicial de <code>@x</code> a un número aleatorio entre 0 y la anchura de la ventana, en pixeles. La posición inicial en <code>@y</code> para la pelota será 0, ya que sale desde la parte superior. Asi que, tu código debería quedar de la siguiente manera:</p>
+      <p>Ahora, vamos a hacer que esta pelota salga de la parte superior de la pantalla y caiga desde lugares aleatorios.</p>
+      <p>Para hacer esto, primeramente definimos la posición inicial de <code>@x</code> a un número aleatorio entre 0 y la anchura de la ventana, en pixeles. La posición inicial en <code>@y</code> para la pelota será 0, ya que sale desde la parte superior. Así que, tu código debería quedar de la siguiente manera:</p>
 
       <pre id="code-6-2" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
@@ -69,7 +69,7 @@
 
   <article class="lesson"><h1>Lección 6 - Agregar una Pelota</h1>
     <section class="page"><h1>Cambiar, Definir y Actualizar Posiciones</h1>
-      <p>Ahora, con cada actualización, necesitamos que la pelota se mueva hacia abajo. Asi que, digamos que la pelota se mueve 1 pixel con cada actualización. Veremos que tan rápido será esto.</p>
+      <p>Ahora, con cada actualización, necesitamos que la pelota se mueva hacia abajo. Así que, digamos que la pelota se mueve 1 pixel con cada actualización. Veremos que tan rápido será esto.</p>
       <p>Para hacer esto vamos al método <code>update</code>, donde cambiamos la posición en <code>@y</code> por 1 pixel:</p>
       <pre id="code-6-3" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
@@ -77,7 +77,7 @@
 
       <pre id="code-6-4" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
-      <p>Luego, vamos a <code>def update</code> y le indicamos a la pelota que se actualize a sí misma. Asi que, escribimos:</p>
+      <p>Luego, vamos a <code>def update</code> y le indicamos a la pelota que se actualice a sí misma. Así que, escribimos:</p>
 
       <pre id="code-6-5" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
@@ -92,7 +92,7 @@
 
   <article class="lesson"><h1>Lección 6 - Agregar una Pelota</h1>
     <section class="page"><h1>Agregar y Dibujar el Icono</h1>
-      <p>Ahora, de la misma manera que hicimos con el jugador, tambien vamos a necesitar un icono para la pelota. Asi que solamente copiamos el código de <code>@icon</code> de la clase <code>Player</code> y lo pegamos justamente debajo de <code>@game_window = game_window</code> en la clase <code>Ball</code>. Luego, vamos a cambiar <code>player1.png</code> a <code>asteroid.png</code>. Tu código debería verse de la siguiente manera:</p>
+      <p>Ahora, de la misma manera que hicimos con el jugador, también vamos a necesitar un icono para la pelota. Así que solamente copiamos el código de <code>@icon</code> de la clase <code>Player</code> y lo pegamos justamente debajo de <code>@game_window = game_window</code> en la clase <code>Ball</code>. Luego, vamos a cambiar <code>player1.png</code> a <code>asteroid.png</code>. Tu código debería verse de la siguiente manera:</p>
 
       <pre id="code-6-6" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
@@ -117,12 +117,12 @@
     <section class="page"><h1>Las Cosas se Vuelven Aleatorias</h1>
 
       <p>Por lo que hemos aprendido, necesitamos detectar cuando la pelota sale de la pantalla. Si la pelota sale de la pantalla, queremos empezar con una nueva pelota, encontrar una posición aleatoria en la parte superior de la pantalla, y tirar la pelota nuevamente.</p>
-      <p>Podemos hacer esto con la sentencia ya muy conocida <code>if</code> de la siguiente manera:</p>
+      <p>Podemos hacer esto usamos la sentencia ya muy conocida <code>if</code> de la siguiente manera:</p>
 
       <pre id="code-6-9" class="sampleCode">Código insertado automáticamente aquí...</pre>
 
 
-      <p>Ahora, harémos algo mas. Queremos que la pelota empiece a caer desde una posición diferente, y no la misma posición en <i>x</i>. Asi que, en la línea donde reseteamos @y a 0, también cambiamos la posición en @x para que sea otra posición aleatoria. Asi que, el código deberia quedar de la siguiente manera:</p>
+      <p>Ahora, haremos algo más. Queremos que la pelota empiece a caer desde una posición diferente, y no la misma posición en <i>x</i>. Así que, en la línea donde reseteamos @y a 0, también cambiamos la posición en @x para que sea otra posición aleatoria. Así que, el código debería quedar de la siguiente manera:</p>
 
       <pre id="code-6-10" class="sampleCode">Código insertado automáticamente aquí...</pre>
   
@@ -130,7 +130,7 @@
       <p>Aquí está el programa completo que deberías de haber escrito hasta ahora:</p>
       <pre id="code-6-11" class="sampleCode">Código insertado automáticamente aquí...</pre>
       
-      <p>¡Haz completado la lección 6! Ahora, ¡veamos si puedes manejar ser <a href="lesson_7.html">golpeado por las pelotas en la lección 7</a>!</p>
+      <p>¡Has completado la lección 6! Ahora, ¡veamos si puedes manejar ser <a href="lesson_7.html">golpeado por las pelotas en la lección 7</a>!</p>
 
       <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
       <a href="index.html">Ir a las lecciones</a>
