@@ -35,18 +35,18 @@
   </nav>
 
   <article class="lesson"><h1>Leçon 7 - Se Faire Toucher par le Ballon</h1>
-    <section class="page"><h1>Defining a Hit</h1>
-      <p>OK, so now it's time to make sure that when the ball hits the player, the game stops. </p>
-      <p>So, the first thing we need to do is go to the <code>Game</code> class and under <code>@ball.update</code>, we will define a hit:</p>
+    <section class="page"><h1>Définir un Contact</h1>
+      <p>Il est temps de s'assurer que lorsque la balle touche le joueur, le jeu s'arrête.</p>
+      <p>La première chose que l'on doit faire est d'aller dans la classe <code>Game</code>, et dans <code>@ball.update</code>nous allons définir un contact (un "hit" en anglais) :</p>
 
       <pre id="code-7-1" class="sampleCode">Code inséré automatiquement ici...</pre>
 
-      <p>Now, let's go over to our player and define this <code>hit_by?</code> method. So, we'll go to the <code>Player</code> class and define what it means to be hit by the ball: </p>
+      <p>Et maintenant, allons voir notre joueur et définissons cette méthode <code>hit_by?</code>. On va dans la classe <code>Player</code> et on définit ce que cela signifie d'être touché par la balle :</p>
       <pre id="code-7-2" class="sampleCode">Code inséré automatiquement ici...</pre>
 
-      <p>Now, what we did above is add a method that Gosu gives us, called <code>distance</code>, where we pass the x coordinate and y coordinate of one object and the x coordinate and y coordinate of another object.</p>
+      <p>Ce qu'on vient de faire c'est ajouter une méthode que Gosu nous donne, appelée <code>distance</code>, où l'on passe les coordonnées x et y de l'objet et les coordonnées x et y d'un autre objet.</p>
 
-      <p>We also wrote that if the distance between these two coordinates is less than 50, we're going to make that a hit. </p>
+      <p>Nous avons aussi écrit que si la distance entre ces deux coordonnées est inférieure à 50, on va percuter la balle.</p>
 
       <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
       <a href="index.html">Retour aux Leçons</a>
@@ -56,14 +56,14 @@
   </article>
 
   <article class="lesson"><h1>Leçon 7 - Se Faire Toucher par le Ballon</h1>
-    <section class="page"><h1>More Defining</h1>
+    <section class="page"><h1>Définir Encore Plus</h1>
 
-      <p>Let's go back to the <code>Game</code> class. We've said that if a player is hit by a ball, we should stop the game. So, we need to define what stopping the game means. </p>
+      <p>Revenons à la classe <code>Game</code>. On a dit que si un joueur est touché par la balle, on arrête le jeu. Donc on a besoin de définir ce que stopper le jeu signifie.</p>
 
-      <p>Now, we'll introduce a new variable here to make the definition work, called <code>running</code>. So, under the <code>Game</code>class, we'll type:
+      <p>A présent, nous allons introduire une nouvelle variable ici pour appliquer ce que l'on a défini, appelée <code>running</code> ("en train de s'exécuter"). En dessous de la classe <code>Game</code>, on va taper :</p>
      
       <pre id="code-7-3" class="sampleCode">Code inséré automatiquement ici...</pre>
-      <p> So, if we stop the game, the running will be false. However, we need to first add this <code>running</code> variable and make it equal to true. So, when the game starts, the game is running. When the player hets hit by the ball, the method <code>stop_game!</code> is going to set the variable, <code>running</code>, to false, which stops the game.</p> 
+      <p>Si on arrête le jeu, il ne sera plus en train de s'exécuter (logique). Alors on doit d'abord ajouter cette variable <code>running</code> et la mettre à true. Quand le jeu commence, le jeu est "running". Quand le joueur est touché, la méthode <code>stop_game!</code> va mettre la variable <code>running</code> à false, ce qui va arrêter le jeu.</p> 
 
       <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
       <a href="index.html">Retour aux Leçons</a>
@@ -75,16 +75,16 @@
 
 
   <article class="lesson"><h1>Leçon 7 - Se Faire Toucher par le Ballon</h1>
-    <section class="page"><h1>Stop! Hammer Time</h1>
-      <p>Now, we want the player and ball to stop moving when the game stops. So, if you look at the update method, you'll see that we have all this that makes either the player move or makes the ball move. Now, that will work as long as the game is running. But, once it stops, we don't want any of that to happen. So, directly under <code>def update</code>, we'll type:
+    <section class="page"><h1>Stop ! On Frappe</h1>
+      <p>Maintenant, on veut que le joueur et le ballon arrêtent de bouger quand le jeu s'arrête. Si tu regarde la méthode "update", tu verras que nous avons tout ce qui fait bouger le joueur ou la balle. Maintenant, cela va fonctionner tant que le jeu est "running". Mais une fois qu'il s'arrêtera, on veut qu'il n'y ait rien de tout cela qui se passe. Alors, directement dans <code>def update</code>, on tape :</p>
  
       <pre id="code-7-4" class="sampleCode">Code inséré automatiquement ici...</pre>
 
-      <p>Now, let's go back to the <code>Player</code> class. We are now going to define two methods on the ball: x and y. To do this, we type:
-
+      <p>A présent, revenons à la classe <code>Player</code>. On va maintenant définir deux méthodes sur la balle : x et y. Pour faire ça, on tape :
+	  
       <pre id="code-7-5" class="sampleCode">Code inséré automatiquement ici...</pre>
 
-      <p>So, if you recall, the ball has x and y coordinate variables, which we cannot get to from the player. However, we can call the methods on the player. So, what we did above was call the x method, which will return the x variable and called the y method, which will return the y variable to us. 
+      <p>Si tu t'en souviens, la balle a des coordonnées variables x et y, qu'on ne peut pas connaître du point de vue du joueur. Par contre, on peut appeler les méthodes. Ce que l'on a fait ci-dessus est appeler la méthode x, qui retournera la variable x, et appelé la méthode y qui nous donnera la variable y.</p>
 
       <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
       <a href="index.html">Retour aux Leçons</a>
@@ -96,18 +96,17 @@
 
 
   <article class="lesson"><h1>Leçon 7 - Se Faire Toucher par le Ballon</h1>
-    <section class="page"><h1>Getting too Close</h1>
+    <section class="page"><h1>Et Si On Est Trop Près...</h1>
 
-      <p>Finally, we want the player to start on a different y position. The 50 is fine for the x position, but the y position is getting too close to the top of the window. So, under <code>def intitialize(game_window)</code>, we'll change te y to 150. It should end up looking like this:</p>
-
+      <p>Finalement, on veut que le joueur démarre depuis une position y différente. Le 50 va bien pour x, mais y est trop près du haut de la fenêtre. Alors, sous <code>def intitialize(game_window)</code>, on va mettre y à 150. A la fin cela devrait donner :</p>
       <pre id="code-7-6" class="sampleCode">Code inséré automatiquement ici...</pre>      
 
-      <p>I want to make the y at 150, so it's further at the bottom. This makes it easier for me to dodge the ball.</p>
+      <p>Je veux que y soit à 150, c'est donc plus loin vers le bas. Cela me permettra d'esquiver le ballon plus rapidement.</p>
       
-      <p>Once again, here is the entire program you should have written so far:</p>
+      <p>Une fois de plus, voici le programme que tu devrais avoir écrit, en entier :</p>
       <pre id="code-7-7" class="sampleCode">Code inséré automatiquement ici...</pre>
 
-      <p>Alright, hot shot, it looks like you do got what it takes. Let's take it to the <a href="lesson_8.html">next level in lesson 8</a>!</p>
+      <p>Et voilà, on dirait que tu as ce qu'il faut. Continuons vers le <a href="lesson_8.html">prochain niveau, la leçon 8</a> !</p>
     </section>
   </article>
 
