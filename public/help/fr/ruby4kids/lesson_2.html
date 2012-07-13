@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmer en s'Amusant !</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/ruby4kids/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/ruby4kids/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/ruby4kids/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/ruby4kids/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/ruby4kids/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/ruby4kids/code2_6.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programmation de Jeux - Leçon 2</h1>
+  <nav id="top">
+    <a href="#prev" class="prev-lesson">&laquo; Retour</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Leçon 2 - Ajout d'un Joueur</h1>
+    <section class="page"><h1>Créer un Joueur</h1>
+      <p>Ca serait sympa d'avoir un joueur dans le jeu, donc créons en un !</p>
+      <p>Nous allons faire ca en ajoutant une nouvelle classe. Nous allons l'appeler <code>Player</code>.
+      <p>Maintenant, nous allons définir ce que va pouvoir faire notre joueur. Il suffit pour cela de taper ce qui suit :</p>
+      <pre id="code-2-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ensuite, nous allons ajouter une image à ce joueur pour pouvoir le voir à l'écran.</p>
+      <p>Nous allons faire ça en trouvant un fichier .png. KidsRuby contient déjà une image que tu vas pouvoir utiliser.</p>
+      <p>Va dans la classe de ton joueur et ajoute lui cette image avec le code suivant :</p>
+      <pre id="code-2-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Il nous reste juste à ajouter une méthode draw qui va dessiner le joueur avec cette image. Tape ce qui suit :</p>
+      <pre id="code-2-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Retour</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 2 - Ajout d'un Joueur</h1>
+    <section class="page"><h1>Ajouter le Joueur dans le Jeu</h1>
+      <p>Maintenant, nous sommes pratiquement prêts à relancer le jeu. Il nous faut d'abord retourner dans la classe <code>MyGame</code>, et instancier le joueur que nous avons défini.</p>
+      <p>Pour faire ça il suffit d'ajouter le code suivant à la méthode d'initialisation de la classe MyGame :</p>
+      <pre id="code-2-4" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ca va dire au joueur dans quelle fenêtre il doit se dessiner.</p>
+      <p>Pour finir, nous devons ajouter ceci dans la méthode <code>draw</code> de la fenêtre du jeu :</p>
+      <pre id="code-2-5" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Ca va permettre de dessiner le joueur quand le jeu sera executé.</p>
+      <p>Encore une dernière chose ! Nous avons besoin de mettre <code>require 'player'</code> juste en dessous de <code>require 'gosu'</code>, ainsi le programme va savoir que nous utilisons la classe <code>Player</code>.</p>
+      <p>Maintenant testons tout ça ! Clique sur le bouton "Exécuter". Est-ce que ça a marché ?</p>
+      <p>Voici le programme en entier comme tu as dû l'écrire :</p>
+      <pre id="code-2-6" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Ca y est tu as appris comment on fait pour ajouter un joueur. Pourquoi n'allons nous pas voir comment faire pour que <a href="lesson_3.html">le joueur bouge vers la gauche dans la leçon 3</a> ?!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Retour</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+  <a href="#top">Retour en Haut</a>
+
+</body>
+</html>

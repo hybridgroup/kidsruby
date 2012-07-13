@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmer en s'Amusant !</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-4-1", "../../shared/ruby4kids/code4_1.rb");
+      loadCode("#code-4-2", "../../shared/ruby4kids/code4_2.rb");
+      loadCode("#code-4-3", "../../shared/ruby4kids/code4_3.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programmation de Jeux - Leçon 4</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Précédent</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Leçon 4 - Limites de Déplacement</h1>
+    <section class="page"><h1>L'icône qui disparaît</h1>
+      <p>Lorsque vous lancez votre programme, avez-vous remarqué que votre icône disparait après un moment ? Elle n'arrête pas d'aller sur la gauche jusqu'à sortir de l'écran pour ne jamais revenir. :(</p>
+
+      <p>Donc, la première chose que nous allons faire est de limiter la zone où l'icône peut aller. Une des façons de limiter le mouvement est de rajouter une condition dans <code>def move_left</code>.</p>
+
+      <pre id="code-4-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ce que nous venons de faire est de limiter le mouvement de l'icône pour qu'elle garde une valeur x positive. Ce qui veut dire que si x commence à avoir une valeur négative, on lui redonne la valeur zéro. Cet action limite l'icône à la zone de l'écran.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+  </section>
+</article>
+
+
+  <article class="lesson"><h1>Leçon 4 - Limites de Déplacement</h1>
+    <section class="page"><h1>Quoi d'autre ?</h1>
+      <p>Nous allons à présent ajouter une autre condition appelée <code>else</code>, qui veut juste dire "sinon". Encore une fois nous écrivons ce code dans <code>def move_left</code> :</p>
+
+      <pre id="code-4-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Le <code>else</code>, dans ce cas, se réfère à un mouvement régulier. Donc, si x est égal ou supérieur à 0, le mouvement vers la gauche va utiliser le code que nous avons développé lors de la leçon précédente :<code>@x = @x - 10</code>.</p>
+      
+      <p>Voici le programme que tu devrais avoir écrit jusqu'à présent :</p>
+      <pre id="code-4-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Maintenant que nous savons comment déplacer sur la gauche et limiter le mouvement, <a href="lesson_5.html">ajoutons et limitons d'autres mouvements dans la leçon 5 </a>!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+      
+<a href="#top">Retour en haut</a>
+</body>
+</html>
