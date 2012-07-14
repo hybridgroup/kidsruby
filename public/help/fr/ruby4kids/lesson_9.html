@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmer en s'Amusant !</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-9-1", "../../shared/ruby4kids/code9_1.rb");
+      loadCode("#code-9-2", "../../shared/ruby4kids/code9_2.rb");
+      loadCode("#code-9-3", "../../shared/ruby4kids/code9_3.rb");
+      loadCode("#code-9-4", "../../shared/ruby4kids/code9_4.rb");
+      loadCode("#code-9-5", "../../shared/ruby4kids/code9_5.rb");
+      loadCode("#code-9-6", "../../shared/ruby4kids/code9_6.rb");
+      loadCode("#code-9-7", "../../shared/ruby4kids/code9_7.rb");
+      loadCode("#code-9-8", "../../shared/ruby4kids/code9_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programmation de Jeux - Leçon 9</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Précédent</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Leçon 9 - Création de Plusieurs Ballons</h1>
+    <section class="page"><h1>Je peux à peine tenir dans cette fenêtre</h1>
+
+      <p>Puisque que nous allons ajouter plus de ballons à éviter, nous devrions créer une fenêtre de jeux plus grande.</p>
+
+      <p>Pour faire cela, allons voir la classe <code>MyGame</code> et sous <code>def initialize</code>, remplaçons les nombres par <code>(600, 400, false)</code>. Le résultat devrait ressembler à ça :</p>
+
+      <pre id="code-9-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Nous allons alors ajuster la position du joueur pour le faire démarrer en bas de l'écran. D'abord, nous avons besoin d'aller voir la classe <code>player</code>. Mettons l'abscisse (x) du joueur à 150, et son ordonnée (y) à 330. Ton résultat devrait ressembler à ça :</p>
+
+      <pre id="code-9-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 9 - Création de Plusieurs Ballons</h1>
+    <section class="page"><h1>Multiplions !</h1>
+
+      <p>Maintenant, essayons d'ajouter 3 ballons de plus ! Alors allons à la classe <code>MyGame</code> et changeons quelques trucs sous <code>def initialize</code> :</p>
+
+      <pre id="code-9-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Tout ce que nous avons fait précédemment a été de multiplier <code>ball</code> et donc de changer le code pour créer 3 ballons au lieu d'un.</p>
+
+      <p>Maintenant, mettons à jour chaque ballon, plutôt qu'un seul. Nous allons aussi multiplier le <code>@ball</code>. Pour ça, dans la classe <code>MyGame</code>, nous allons changer le code en :</p>
+
+      <pre id="code-9-4" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ensuite, nous allons devoir répéter un peu ce principe. Nous allons à <code>def draw</code> pour multiplier <code>@ball</code> et changer le code pour que ça dessine chaque balle au lieu d'une seule. Tu devrais avoir au final :</p>
+
+      <pre id="code-9-5" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Maintenant que nous avons pluralisé, pourquoi ne pas aller de l'avant et faire encore plus ! Allons donc dans la classe <code>Player</code>, et changeons-la de cette façon :</p>
+
+      <pre id="code-9-6" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Encore une fois, nous avons juste ajusté les méthodes pour faire en sorte qu'elles fonctionnent avec plusieurs ballons. Pour le code ci-dessus, nous avons ajouté la méthode <code>any?</code>, ce qui signifie juste qu'être touché par une des balles provoquera un coup.</p>
+      
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 9 - Création de Plusieurs Ballons</h1>
+    <section class="page"><h1>Rien de plus... Peut-être</h1>
+
+      <p>Maintenant que tu dois haïr la multiplication des ballons, on va arrêter... juste après un dernier ajout ! Alors va à la classe <code>MyGame</code>, et change la définition du redémarrage du jeux tel que ceci :</p>
+
+      <pre id="code-9-7" class="sampleCode">Code inséré automatiquement ici...</pre>
+	  
+      <p>Tu as fini (promis) ! Maintenant, regardons juste ce à quoi l'intégralité de ton code devrait ressembler :</p>
+
+      <pre id="code-9-8" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>C'est vrai ? C'est la fin ? Tu as vraiment parcouru l'intégralité du tutoriel ? Eh bien la réponse est OUI ! FELICITATIONS, TU L'AS FAIT ! Tu as développé un programme auquel tu peux jouer et que tu peux montrer ! On espère que tu vas continuer à t'intéresser à la programmation, parce que si tu es allé aussi loin, c'est que tu as tout ce qu'il faut :).</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+  <a href="#top">Retour en haut</a>
+
+</body>
+</html>
+

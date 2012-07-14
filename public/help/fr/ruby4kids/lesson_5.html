@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmer en s'Amusant !</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-5-1", "../../shared/ruby4kids/code5_1.rb");
+      loadCode("#code-5-2", "../../shared/ruby4kids/code5_2.rb");
+      loadCode("#code-5-3", "../../shared/ruby4kids/code5_3.rb");
+      loadCode("#code-5-4", "../../shared/ruby4kids/code5_4.rb");
+      loadCode("#code-5-5", "../../shared/ruby4kids/code5_5.rb");
+      loadCode("#code-5-6", "../../shared/ruby4kids/code5_6.rb");
+      loadCode("#code-5-7", "../../shared/ruby4kids/code5_7.rb");
+      loadCode("#code-5-8", "../../shared/ruby4kids/code5_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programmation de Jeux - Leçon 5</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Précédent</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Leçon 5 - Déplacement vers la Droite, Haut et Bas</h1>
+    <section class="page"><h1>Voici Ruby4Kids</h1>
+
+      <p>A présent, nous allons apprendre comment se déplacer vers la droite, le haut et le bas. Pour se déplacer vers la droite, nous avons besoin d'ajouter une autre instruction <code>if</code> au <code>def update</code> dans la classe <code>MyGame</code>. Alors ajoutons une instruction <code>if</code> pour la touche "Droite" :</p>
+      <pre id="code-5-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>La partie ci-dessus est la même que le code pour tourner à gauche, sauf que maintenant on écrit <code>KbRight</code> au lieu de <code>KbLeft</code>.</p> 
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 5 - Déplacement vers la Droite, Haut et Bas</h1>
+    <section class="page"><h1>Plus 10</h1>
+
+      <p>Maintenant, nous allons aller vers la classe <code>Player</code> et ajouter :</p>
+   
+      <pre id="code-5-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Donc, cette fois le code ressemble un peu moins à ce que l'on faisait dans la leçon précédente. Tu remarqueras que nous avons ajouté <code>+ 10</code> au lieu de <code>- 10</code>, parce que nous allons à droite au lieu d'aller à gauche.</p>
+
+      <p>Une autre différence est que l'on limite l'icône à la largeur de la fenêtre, et ensuite on soustrait une certaine quantité de pixels à cette largeur. On soustrait ces pixels, car la position x est en fait sur le côté gauche de l'icône. Cela signifie que nous devons prendre en compte cette quantité de pixels en la soustrayant au reste quand on est du côté droit. Tu peux essayer de mettre différents nombres dedans :</p>
+      <pre id="code-5-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>pour voir ce que je veux dire, tant que les nombres sont cohérents.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 5 - Déplacement vers la Droite, Haut et Bas</h1>
+    <section class="page"><h1>Déplacement vers le haut</h1>
+
+      <p>OK, maintenant que nous avons réussi à aller à droite et à gauche, nous allons chercher comment aller vers le haut. D'abord nous allons taper le code suivant dans le <code>def update</code> de la classe <code>MyGame</code>.</p>
+      <pre id="code-5-4" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Cette partie nous était familière. Maintenant, nous allons aller dans la classe <code>Player</code> et ajouter :</p>
+      <pre id="code-5-5" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Tu remarqueras que les deux instructions <code>if</code> et <code>else</code> sont différents que ce que nous avions auparavant. La première différence est que nous utilisons maintenant une coordonnée "y". La coordonnée "y" est utilisée parce que nous allons en haut et en bas (dans ce cas, en haut), plutôt qu'à gauche et à droite, comme dans un tableau !</p>
+
+      <p>Tu te demandes peut être pourquoi on a la formule <code>y < 0</code> ? <code>y < 0</code> n'est-il pas supposé pour aller vers le bas ? Cela aurait été le cas si le nombre de pixels avait augmenté pendant que tu allais vers le haut. Mais c'est le contraire.</p>
+
+      <p>En gros, cela signifique que le haut de l'écran est à 0.00 et augmente quand tu descends l'axe y. Donc quand l'icône se déplace vers le haut, le nombre de pixels diminue. Cette diminution est aussi la raison pour laquelle on a un <code>- 10</code> au lieu d'un <code>+ 10</code>.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 5 - Déplacement vers la Droite, Haut et Bas</h1>
+    <section class="page"><h1>Déplacement vers le bas</h1>
+      <p>Maintenant, finissons en ajoutant le code <code>move_down</code>. Ces étapes doivent te sembler très similaires à celles où on cherchait à se déplacer vers la droite. Tout d'abord, écrivons le code suivant dans la classe <code>MyGame</code>, juste en dessous de <code>def update</code> :
+
+      <pre id="code-5-6" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Finalement, nous écrirons le code suivant dans la classe <code>player</code> :</p>
+
+      <pre id="code-5-7" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Et donc l'unique différence que tu verras ici est que le code <code>- 10</code> est changé en <code>+ 10</code>, car les nombres augmentent quand tu vas vers le bas :). Et voilà pour se déplacer partout !</p> 
+      
+      <p>Voici l'intégralité du progrmme que tu devrais avoir écrit jusqu'ici :</p>
+      <pre id="code-5-8" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Tu as tellement accompli déjà, alors pourquoi s'arrêter en si bon chemin ?! Et si on augmentait la température en ajoutant quelques <a href="lesson_6.html">ballons dans la leçon 6</a> !</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+   
+<a href="#top">Retour en haut</a>
+
+</body>
+</html>

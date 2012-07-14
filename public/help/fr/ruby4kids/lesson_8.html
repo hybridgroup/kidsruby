@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmer en s'Amusant !</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-8-1", "../../shared/ruby4kids/code8_1.rb");
+      loadCode("#code-8-2", "../../shared/ruby4kids/code8_2.rb");
+      loadCode("#code-8-3", "../../shared/ruby4kids/code8_3.rb");
+      loadCode("#code-8-4", "../../shared/ruby4kids/code8_4.rb");
+      loadCode("#code-8-5", "../../shared/ruby4kids/code8_5.rb");
+      loadCode("#code-8-6", "../../shared/ruby4kids/code8_6.rb");
+      loadCode("#code-8-7", "../../shared/ruby4kids/code8_7.rb");
+      loadCode("#code-8-8", "../../shared/ruby4kids/code8_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programmation de Jeux - Leçon 8</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Précédent</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Leçon 8 - La Touche Echap Met le Jeu en Pause</h1>
+    <section class="page"><h1>Les Commentaires et le Reste</h1>
+
+      <p>Dans cette leçon, nous souhaitons que le jeu se remette à zéro en pressant la touche Echap. Donc, allons dans la classe <code>MyGame</code> et trouvons où nous avions tapé ceci :</p>
+
+      <pre id="code-8-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Maintenant, juste en dessous du code ci-dessus, nous allons écrire :</p>
+
+      <pre id="code-8-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ce que l'on a fait ci-dessus est d'ajouter une instruction <code>else</code>, qui aura lieu après que le jeu soit stoppé.</p>
+
+      <p>On a écrit un commentaire sous l'instruction <code>else</code>, qui nous dit que le jeu est actuellement arrêté. Ensuite, nous avons écrit une commande qui devrait t'être familière. Ce code dit juste que si la touche Echap est pressée, le jeu recommence.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+   
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Leçon 8 - La Touche Echap Met le Jeu en Pause</h1>
+    <section class="page"><h1>Bien, Alors Définissons</h1>
+
+      <p>Maintenant, nous allons donc plus loin où l'on a :</p>
+
+      <pre id="code-8-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Juste en dessous du code ci-dessus, on va écrire :</p>
+
+      <pre id="code-8-4" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ce que l'on a fait a été de définir comment redémarrer le jeu. On met <code>@running</code> à "true" et on remet à zéro la balle, pour qu'elle reparte à sa position d'origine.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Leçon 8 - La Touche Echap Met le Jeu en Pause</h1>
+    <section class="page"><h1>Lis, Set, Reset !</h1>
+
+      <p>On doit maintenant aller en base de notre classe <code>Ball</code> et définir notre méthode Reset. Allons-y, et tapons :</p>
+
+      <pre id="code-8-5" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Tout ce que l'on a fait dans le code ci-dessus était la même chose que ce que l'on a fait quand on a défini <code>update</code> et <code>initialize</code>. C'est à dire qu'on met y à zéro, ce qui va placer la balle tout en haut, et on met x à random et on ne sait pas où elle va se trouver sur l'axe horizontal x.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Leçon 8 - La Touche Echap Met le Jeu en Pause</h1>
+    <section class="page"><h1>Read, Set, Reset!</h1>
+
+      <p>Finalement, on va remplacer ces deux zones où on a répété :</p>
+
+      <pre id="code-8-6" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>et le remplacer par <code>reset!</code>. Encore une fois, ces deux répétitions sont dans <code>def initialize</code> et <code>def update</code>. Le résultat final ressemble à cela :</p>
+
+      <pre id="code-8-7" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Et voici le programme en entier :</p>
+      <pre id="code-8-8" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Et voilà pour cette leçon ! Tu commences à aimer ça non ?! Allez, rendons le jeu encore plus intéressant en ajoutant <a href="lesson_9.html">plusieurs balles dans la leçon 9</a> !</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+  <a href="#top">Retour en haut</a>
+
+</body>
+</html>
+
