@@ -181,13 +181,13 @@ class MainWidget < Qt::WebView
   end
 
   def alert(text)
-    Qt::MessageBox::information(self, tr(version_description), text)
+    Qt::MessageBox::information(self, tr(version_description), URI.decode(text))
   end
 
   def ask(text)
     ok = Qt::Boolean.new
     val = Qt::InputDialog.getText(self, tr(version_description),
-                                  tr(text), Qt::LineEdit::Normal,
+                                  URI.decode(text), Qt::LineEdit::Normal,
                                   "", ok)
     return val
   end
