@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ruby4Kids - 楽しいプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-4-1", "../../shared/ruby4kids/code4_1.rb");
+      loadCode("#code-4-2", "../../shared/ruby4kids/code4_2.rb");
+      loadCode("#code-4-3", "../../shared/ruby4kids/code4_3.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - ゲーム プログラミング - レッスン 4</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+  <article class="lesson"><h1>レッスン 4 - 動きを制限する</h1>
+    <section class="page"><h1>消えるアイコン</h1>
+      <p> プログラムを動かしたときに、何度か左矢印を押すとアイコンが消えることに、気がついたかな？ プレイヤーは画面からはみ出すまで左に動き続ける。そして、もう ぜったいに出てこない :(。 </p>
+
+      <p> そこで、まずはじめに、アイコンが行ける所を制限する。 動きを制限する一つの方法はこれ。条件を<code>def move_left</code>にたす。 </p>
+
+      <pre id="code-4-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> さてと、上のコードでやったことはこうだ。アイコンの動きを、xが０以上となる場所の中に、とどめる ように制限した。 つまり、x が０より小さくなって しまう ときに、アイコンの位置をゼロに もどすように したんだ。 ゼロにもどすことで、アイコンを画面からはみ出さないように制限しているんだ。</p>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+  </section>
+</article>
+
+
+  <article class="lesson"><h1>レッスン 4 - 動きを制限する</h1>
+    <section class="page"><h1>そのほか（Else）は？</h1>
+      <p>さて、別の条件文を たす ことに しよう。条件文は<code>else</code>（エルス）だ。意味は、「そのほか」や「でなければ」だ。 それじゃ、<code>def move_left</code>の下に、さらに このコードを入力しよう：</p>
+
+      <pre id="code-4-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>この場合、<code>else</code>は、特別なことがないときの動きに当てはまる。 だから、x が 0以上のときは、前のレッスンで作ったコード：<code>@x = @x - 10</code>を使って左に動く。</p>
+      
+      <p>これが これまでに書くプログラムの すべてだ：</p>
+      <pre id="code-4-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>よし、これで左に動かすやり方と、動きを制限する やり方を知ることができた。次は<a href="lesson_5.html">別の動きの追加と制限をする、レッスン５</a>をやってみよう！</p>
+
+      <a href="#prev" class="prev-lesson">« 前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a> </section> </article> <a href="#top">一番上へ戻る</a>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ruby4Kids - 楽しいプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-8-1", "../../shared/ruby4kids/code8_1.rb");
+      loadCode("#code-8-2", "../../shared/ruby4kids/code8_2.rb");
+      loadCode("#code-8-3", "../../shared/ruby4kids/code8_3.rb");
+      loadCode("#code-8-4", "../../shared/ruby4kids/code8_4.rb");
+      loadCode("#code-8-5", "../../shared/ruby4kids/code8_5.rb");
+      loadCode("#code-8-6", "../../shared/ruby4kids/code8_6.rb");
+      loadCode("#code-8-7", "../../shared/ruby4kids/code8_7.rb");
+      loadCode("#code-8-8", "../../shared/ruby4kids/code8_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - ゲーム プログラミング - レッスン 8</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+  <article class="lesson"><h1>レッスン 8 - エスケープ キーでゲームを中断する</h1>
+    <section class="page"><h1>コメントとエルス</h1>
+
+      <p>このレッスンでは、エスケープ（Esc)キーが押された時に、ゲームをリセットする（最初にもどす）ようにしたいんだ。 だからまず、MyGameクラスで次のコードを入力したところを見つけよう： </p>
+
+      <pre id="code-8-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>上のコードの真下に、これを入力する：</p>
+
+      <pre id="code-8-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>上のコードで<code>else</code>文をたした。これは、ゲームが とまって いる ときのコードだ。 </p>
+
+      <p>そこで、<code>else</code>文の下にコメント書いた。このコメントで、ゲームがその時点で とまって いることが わかりやすく なる。 その後に、見なれたコマンドを書いたよね。 このコードは、エスケープキーが押されたら、ゲームをリスタートする（最初にもどってまたはじめる）と言っている。 </p>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+   
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>レッスン 8 - エスケープ キーでゲームを中断する</h1>
+    <section class="page"><h1>よし、定義しよう</h1>
+
+      <p>じゃ、次のコードが出てくるまで下へ行って：</p>
+
+      <pre id="code-8-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>上のコードの真下に、これを入力する：</p>
+
+      <pre id="code-8-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>上のコードで、どのようにゲームをリスタートするのかを定義したんだ。 <code>@running</code>をtrueにした。そして、ボールをリセットした。ボールが元の位置にもどるようにね。 </p>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+  <article class="lesson"><h1>レッスン 8 - エスケープ キーでゲームを中断する</h1>
+    <section class="page"><h1>リード、セット、リセット！</h1>
+
+      <p>それじゃあ、<code>Ball</code>クラスの一番下まで行って、リセットメソッドをたそう。  これを入力してみて：</p>
+
+      <pre id="code-8-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>上のコードでやった ことは<code>update</code>や<code>initialize</code>を定義したときと同じだ。 yをゼロにしてボールを一番上に置く。そしてｘをランダムにする。ｘ軸のどこからボールが くるのかが わからない ようにね。  </p>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>レッスン 8 - エスケープ キーでゲームを中断する</h1>
+    <section class="page"><h1>リード、セット、リセット！</h1>
+
+      <p>それから最後に、次のコードと同じコードが くりかえされている２つの部分を置きかえる：</p>
+
+      <pre id="code-8-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>この部分を<code>reset!</code>に変える。 もう一度。くりかえされている部分は、 <code>def initialize</code>と<code>def update</code>の中だよ。 最終的にこうなったはずだ：</p>
+
+      <pre id="code-8-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>さらに もう一度、これが これまでに書くプログラムのすべてだ：</p>
+      <pre id="code-8-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>このレッスンはこれまで！ このゲームが好きに なって きたんじゃないかな？ よし、このゲームをもっと難しくしてみよう。<a href="lesson_9.html">レッスン ９でたくさんのボール</a>を、たすんだ！</p>
+
+      <a href="#prev" class="prev-lesson">« 前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a> </section> </article> <a href="#top">一番上へ戻る</a>
+
+</body>
+</html>
+
