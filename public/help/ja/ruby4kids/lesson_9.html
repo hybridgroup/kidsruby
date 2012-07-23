@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ruby4Kids - 楽しいプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-9-1", "../../shared/ruby4kids/code9_1.rb");
+      loadCode("#code-9-2", "../../shared/ruby4kids/code9_2.rb");
+      loadCode("#code-9-3", "../../shared/ruby4kids/code9_3.rb");
+      loadCode("#code-9-4", "../../shared/ruby4kids/code9_4.rb");
+      loadCode("#code-9-5", "../../shared/ruby4kids/code9_5.rb");
+      loadCode("#code-9-6", "../../shared/ruby4kids/code9_6.rb");
+      loadCode("#code-9-7", "../../shared/ruby4kids/code9_7.rb");
+      loadCode("#code-9-8", "../../shared/ruby4kids/code9_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - ゲーム プログラミング - レッスン 9</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+  <article class="lesson"><h1>レッスン 9 - ボールをたくさん作る</h1>
+    <section class="page"><h1>ウインドウにかろうじてフィット</h1>
+
+      <p>よけなくちゃ いけないボールをもっと たして みるよ。だから、もっと大きなウインドウを作らなくちゃね。</p>
+
+      <p> そのために、<code>MyGame</code>クラスの<code>def initialize</code>の下に行く。そして、数を<code>(600, 400, false)</code>に変えよう。 こうなったはずだ：</p>
+
+      <pre id="code-9-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>そして、プレイヤーを、画面の一番下からはじめるように調整する。 はじめに、<code>player</code>クラスに行く。 で、プレイヤーのx座標を150にする。そして、y座標を330にする。 こうなったはずだ：</p>
+
+      <pre id="code-9-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 9 - ボールをたくさん作る</h1>
+    <section class="page"><h1>複数形！</h1>
+
+      <p>じゃあ、ボールを３つたしてみよう！ <code>MyGame</code>クラスに行って、 <code>def initialize</code>の下を、なんかしょか かえる。</p>
+
+      <pre id="code-9-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>上のコードでやったことはこれだけ。<code>ball</code>にsをつけて英語の複数形にした。そして、１つだけでなく、３つのボールを作るようにコードをかえたんだ。</p>
+      <p>次は、ひとつひとつのボールをアップデートするようにする。ひとつだけをアップデートするんじゃなくだ。 <code>@ball</code>も複数形にする。 <code>MyGame</code>の下でコードをこのようにかえよう：</p>
+
+      <pre id="code-9-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> 次に、同じことをもっとやる。 <code>def draw</code>に行って<code>@ball</code>を複数形にする。そして、ひとつひとつの ボールを えがく ように、コードをかえる。ひとつだけ えがくんじゃ なくだね。 こうなるはずだ：</p>
+
+      <pre id="code-9-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>複数にしたんだ。だから先にすすんで、もっとやってみよう！ <code>Player</code>クラスに行って、下のようにかえる： </p>
+
+      <pre id="code-9-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> あらためて言うけど、複数のボールで動くように、メソッドを調整しているだけなんだ。 上のコードに、<code>any?</code>メソッドを追加したよね。これは、複数あるボールのどれか一つにあたったら、あたりと なることを意味するんだ。 </p>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 9 - ボールをたくさん作る</h1>
+    <section class="page"><h1>これで複数形にするところはおしまい…たぶん</h1>
+
+      <p>もう複数形にするのが いやに なったよね。だから これで おしまい…複数形にする次の作業の後でだけどね！ では、<code>MyGame</code>クラスに行って、ゲームのリスタートの定義を次のようにかえる：</p>
+
+      <pre id="code-9-7" class="sampleCode">Code automatically inserted here...</pre>
+      <p>これで全部だ。太字で（約束する）！ さて、ひと通りコードを見てみよう。コードはこのようになるはずだ：</p>
+
+      <pre id="code-9-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>そうなの？ これでおわり？ 手引きをぜんぶやったの？ 答えは、イエス！ おめでとう やったね！ 君はプログラムを作った。それで遊ぶことも できるし、みんなに見せびらかす ことも できる！ これからも、プログラミングへの きょうみを持ち続けて ほしいな。だって、ここまで やったってことは、君には それを やるだけの力があるって いうことなんだから :)。</p>
+
+      <a href="#prev" class="prev-lesson">« 前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a> </section> </article> <a href="#top">一番上へ戻る</a>
+
+</body>
+</html>
+

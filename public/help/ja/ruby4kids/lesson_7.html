@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ruby4Kids - 楽しいプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-7-1", "../../shared/ruby4kids/code7_1.rb");
+      loadCode("#code-7-2", "../../shared/ruby4kids/code7_2.rb");
+      loadCode("#code-7-3", "../../shared/ruby4kids/code7_3.rb");
+      loadCode("#code-7-4", "../../shared/ruby4kids/code7_4.rb");
+      loadCode("#code-7-5", "../../shared/ruby4kids/code7_5.rb");
+      loadCode("#code-7-6", "../../shared/ruby4kids/code7_6.rb");
+      loadCode("#code-7-7", "../../shared/ruby4kids/code7_7.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Game Programming - Lesson 7</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+  <article class="lesson"><h1>レッスン 7 - あたる</h1>
+    <section class="page"><h1>Hitを定義する</h1>
+      <p>OK、それじゃあ、ボールがプレイヤーに あたったら、ゲームを とめる ように しよう。 </p>
+      <p>で、まず<code>Game</code>クラスの<code>@ball.update</code>の下に、hit（ヒット：あたり）を定義しよう。</p>
+
+      <pre id="code-7-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>そして、プレヤーに<code>hit_by?</code> メソッドを定義する。 <code>Player</code>クラスに行って、ボールに あたると いうこととは、どいう ことかを定義するんだ： </p>
+      <pre id="code-7-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>上のコードでやった ことは こうだ。ゴスの<code>distance</code>というメソッドをたした。 そして、ひとつ目のオブジェクトのｘ座標とｙ座標と、もうひとつのオブジェクトのx座標とy座標を渡したんだ。</p>
+
+      <p>さらに、これら２つの座標の距離が５０より小さいとき、ヒットした（あたった）ことにする。 </p>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+  <article class="lesson"><h1>レッスン 7 - あたる</h1>
+    <section class="page"><h1>さらに定義</h1>
+
+      <p><code>Game</code>クラスに もどろう。 プレイヤーがボールに あたったら、ゲームを とめると言ったよね。 だらか、ゲームを とめると いうことが、どういう ことかを定義する必要がある。 </p>
+
+      <p>定義がうまく いくように、ここで新しい変数<code>running</code>（ランニング）を使おう。 <code>Game</code>クラスの下の ほうで これを入力する：
+     
+      <pre id="code-7-3" class="sampleCode">Code automatically inserted here...</pre>
+      <p> そう、ゲームをとめたら、runningはfalse（フォルス）になる。 でも、まずはじめに やるべき ことが ある。 <code>running</code>変数をたして、それをtrue（トゥルー：真実）にすることだ。 ゲームがスタートしたら、ゲームはrunningしている（動いている）。 プレイヤーがボールにあたると、<code>stop_game!</code>メソッドが <code>running</code>変数をfalseにしてゲームをとめる。</p> 
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+    
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 7 - あたる</h1>
+    <section class="page"><h1>とめる！ ハンマータイム</h1>
+      <p>さて、ゲームがとまったら、プレイヤーとボールの動きを とめたいんだよね。 で、アップデートメソッドを見ると、プレイヤーとボールを動かすことだけが、書いて ある ことが わかる。 ゲームが動いているかぎり、それでいい。 でも、ゲームがとまったら、そうは させたくない。 だから、<code>def update</code>のすぐ下にこれを入力する：
+ 
+      <pre id="code-7-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>次に、<code>Ball</code>クラスに行く。 そして ボールにx と yの、２つのメソッドを定義する。 これをするにはこうする：
+
+      <pre id="code-7-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>覚えているよね。ボールはｘとｙ座標変数を持っている。でも、プレイヤーは、ボールのxとyを える ことが できない。 でもプレイヤーでメソッドを呼び出すことはできる。 上のコードでやったことはこうだ。ｘメソッドが呼ばれるとｘ変数の値を返し、ｙメソッドが呼ばれるとｙ変数の値を返すようにした。 <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 7 - あたる</h1>
+    <section class="page"><h1>近すぎ</h1>
+
+      <p>最後に、プレイヤーが別のｙの位置ではじまる ように したい。 50はｘの位置にはちょうどいい。でもｙの位置は、ウインドウの一番上に近すぎる。 だから、<code>def intitialize(game_window)</code>の下のyを150に変える。 コードはこうなるはずだ：</p>
+
+      <pre id="code-7-6" class="sampleCode">Code automatically inserted here...</pre>      
+
+      <p>プレイヤーがもっと下の ほうに くる ように、ｙを150にしたんだ。  これで、ボールをよけやすく なった。</p>
+      
+      <p>もう一度、これが、これまでに書くプログラムのすべてだ：</p>
+      <pre id="code-7-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>よし。なかなかやるね。君は必要な力をもったんだ。 その力を<a href="lesson_8.html">次のレベルのレッスン 8</a>で使おう！</p>
+    </section>
+  </article>
+
+  <a href="#top">一番上へもどる</a>
+
+</body>
+</html>

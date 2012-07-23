@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ruby4Kids - 楽しいプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-1-1", "../../shared/ruby4kids/code1_1.rb");
+      loadCode("#code-1-2", "../../shared/ruby4kids/code1_2.rb");
+      loadCode("#code-1-3", "../../shared/ruby4kids/code1_3.rb");
+      loadCode("#code-1-4", "../../shared/ruby4kids/code1_4.rb");
+      loadCode("#code-1-5", "../../shared/ruby4kids/code1_5.rb");
+      loadCode("#code-1-6", "../../shared/ruby4kids/code1_6.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - ゲーム プログラミング</h1>
+  <nav id="top">
+      <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+
+  <article class="lesson"><h1>レッスン 1 - はじめに</h1>
+    <section class="page">
+      <p>君はKidsRubyを使っているよね。だから 最初のゲームを、いつでも作りはじめる ことが できる。Gosu（ゴス）を使ってね。</p>
+      <p>この手引きに、君が最初に作るプログラムをのせてある。</p>
+      <p>まずgosuライブラリ（楽にプログラムできるように あらかじめ用意された プログラムの集まり）を使うんだけど。 これは次のように入力すればいい：</p>
+      <pre id="code-1-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>それから、ライブラリに用意されている<code>Gosu</code>クラスを受け継いで、君のゲーム作りをはじめる。あらかじめ用意してあるクラスを利用して、新しいクラスを作ることを、「クラスを受け継ぐ」とか、「クラスを継承する」というんだ。</p>
+      <p>ゲームの名前は、<code>MyGame</code>（マイゲーム）にしよう。次のように：</p>
+      <pre id="code-1-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>で、クラスの中になんだけど、<code>Gosu</code>には３つのメソッドを定義する必要があるんだ：</p>
+      <p>こんなふうにメソッドを定義する：</p>
+      <pre id="code-1-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>何が起こるのかな。答えは、これ。ゲームがはじまるときに、<code>initialize</code>（イニシャライズ：最初の状態にする）メソッドが呼び出されるんだ。 そして、ゲームは動き続けて、メソッド：<code>update</code>（アップデート：新しくする） と <code>draw</code>（ドロー：えがく）が、ぐるぐる繰り返し呼び出される。</p>
+      <p>アップデートしてドロー。 アップデートしてドロー。 アップデートしてドロー。 これが１秒間に何回も繰り返される。</p>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>レッスン 1 - ウインドウを作る</h1>
+    <section class="page"><h1>ウインドウを作る</h1>
+      <p>OK、コードを動かす準備はほとんど できた。 次に やるべき ことは、ゲームで使うウインドウ（まど）の大きさを、<code>Gosu</code>に教えることだ。</p>
+      <p><code>initialize</code> メソッドの中でこれをやる。次のように、３つのパラメーターを渡すんだ：</p>
+      <pre id="code-1-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>このコードは、横３００ピクセル、高さ４００ピクセルのウインドウを作る。  ピクセルは画面の中のひとつの点なんだ。 画面の間近に顔をよせると、やっとのことで小さな点々を見ることができる。 この点々をピクセルというんだ。</p>
+      <p>イニシャライズ メソッドに渡した３つ目のパラメーターは、false（フォルス）だね。 これは、画面のすべてをひとりじめして使わないようにgosuに教えるんだ。 すべてを使うのは正しくない（false）と言うということだ。</p>
+      <p>OK、もう少しで、君のゲームが動くかどうか見ることができるよ。</p>
+      <p>今までに できた ことを見せる ために、プログラムで定義したクラスを使う必要がある。</p>
+      <p>これは、クラスの定義の後に、次のコードを追加することでできる：</p>
+      <pre id="code-1-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>１行目で新しいゲームのインスタンスを作成する。 そして、<code>show</code>（ショー：見せる） メソッドで、君のゲームに、ゲームウインドウを見せるように教える。</p>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>レッスン 1 - 動かそう！</h1>
+    <section class="page"><h1>君のプログラムを動かす</h1>
+      <p>プログラムを動かす準備はできた。</p>
+      <p>じゃ、「動かす」ボタンをクリックしてみて</p>
+      <p>すべて うまくいけば、ゲームウインドウが表示される。 君は 最初のゲームプログラムを書いたんだ！</p>
+      <p>これが これまでに書くプログラムの すべてだ：</p>
+      <pre id="code-1-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>このゲームだけど、まだ わくわく するような ことを してないよね。でも コンピュータ ゲームのウインドウの開け方は わかったね。</p>
+      <p>いつでも次のレッスンに行く準備ができた。<a href="lesson_2.html">レッスン 2</a>をやってみよう。</p>
+
+      <a href="#prev" class="prev-lesson">« 前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a> </section> </article> <a href="#top">一番上へ戻る</a>
+</body>
+</html>
+
