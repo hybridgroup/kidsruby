@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ruby4Kids - 楽しいプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/ruby4kids/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/ruby4kids/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/ruby4kids/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/ruby4kids/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/ruby4kids/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/ruby4kids/code2_6.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - ゲーム プログラミング - レッスン 2</h1>
+  <nav id="top">
+    <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+  <article class="lesson"><h1>レッスン 2 - プレイヤーを追加する</h1>
+    <section class="page"><h1>プレイヤーを作る</h1>
+      <p>ゲームの中にプレイヤーが いたほうが いいよね。だからプレイヤーを作ろう。</p>
+      <p>これをやるには、新しいクラスを追加するんだ。 クラスは<code>Player</code>（プレイヤー）という名前にしよう。
+      <p>よし ここで 君のプレイヤーがやる ことを定義して みると しよう。 これを やるには、次を入力する：</p>
+      <pre id="code-2-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>次に、プレイヤーにアイコンを たそう。画面でプレイヤーを見ることが できる ようにね。</p>
+      <p>.pngがついた絵や写真を見つけて これをやる。 KidsRubyはちょうど よく絵を持っているから、その絵を使うことに しよう。</p>
+      <p>プレイヤークラスで、次を入力してアイコンを追加する：</p>
+      <pre id="code-2-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>それから、プレイヤーにドローメソッドをたす。 このように入力してね：</p>
+      <pre id="code-2-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 2 - プレイヤーを追加する</h1>
+    <section class="page"><h1>プレイヤーをゲームに追加する</h1>
+      <p>さて、ほとんど準備ができた。あと ちょっとで ゲームを ためす ことが できる。 まず<code>MyGame</code>クラスへもどって、プレイヤーをインスタンス化する必要がある。</p>
+      <p>MyGameクラスのイニシャライズ メソッドに このコードを たすんだ：</p>
+      <pre id="code-2-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>これでプレイヤーに、プレイヤー自身を出すウインドウを教える。</p>
+      <p>そして、ゲームウインドウ（MyGameクラス）のドローメソッドに次のコードを たす：</p>
+      <pre id="code-2-5" class="sampleCode">Code automatically inserted here...</pre>
+      <p>これで、ゲームが動くと君のプレイヤーが 画面に えがかれる。</p>
+      <p> . . 
+      <p>じゃあ やってみようか！ 「動かす」をクリックしてみて。 動いたかな？</p>
+      <p>これが これまでに書くプログラムの すべてだ：</p>
+      <pre id="code-2-6" class="sampleCode">Code automatically inserted here...</pre>
+      <p>よし、君はプレイヤーのたし方を知ることが できた。次は<a href="lesson_3.html">プレイヤーを左に動かすレッスン３</a>をやってみようか？！</p>
+
+      <a href="#prev" class="prev-lesson">« 前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a> </section> </article> <a href="#top">一番上へ戻る</a>
+
+</body>
+</html>
