@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ruby4Kids - 楽しいプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-5-1", "../../shared/ruby4kids/code5_1.rb");
+      loadCode("#code-5-2", "../../shared/ruby4kids/code5_2.rb");
+      loadCode("#code-5-3", "../../shared/ruby4kids/code5_3.rb");
+      loadCode("#code-5-4", "../../shared/ruby4kids/code5_4.rb");
+      loadCode("#code-5-5", "../../shared/ruby4kids/code5_5.rb");
+      loadCode("#code-5-6", "../../shared/ruby4kids/code5_6.rb");
+      loadCode("#code-5-7", "../../shared/ruby4kids/code5_7.rb");
+      loadCode("#code-5-8", "../../shared/ruby4kids/code5_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - ゲーム プログラミング - レッスン 5</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+  <article class="lesson"><h1>レッスン 5 - 右・上・下に動かす</h1>
+    <section class="page"><h1>Ruby4Kids</h1>
+
+      <p>これから、右・上・下に動かす やり方を知ろう。 右に動かすには、別の<code>if</code>文を、<code>MyGame</code>の中の<code>def update</code>にたす。 では、<code>if</code>文を右キーのために たそう：</p>
+      <pre id="code-5-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>ここでたした部分は、左に動かすときのコードと同じだ。<code>KbLeft</code>の代わりに<code>KbRight</code>と入力した所は違うけどね。</p> 
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 5 - 右・上・下に動かす</h1>
+    <section class="page"><h1>10をたす</h1>
+
+      <p> じゃあ、<code>Player</code>クラスに行って これを たそう： </p>
+   
+      <pre id="code-5-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> これは前のレッスンのコードと ちょっとだけど似てない所があるね。 気がついたと思うけど、<code>+ 10</code>を<code>- 10</code>の代わり入力した。これは 左でなくて、右に行くからだよね。 </p>
+
+      <p> それと ここも違う。プレイヤーアイコンを、ゲームウインドウの幅（width）で制限している所だ。そして その幅から、決まったピクセルの数をひいている。 これは 位置ｘがアイコンの左側にあるからなんだ。 つまり、ピクセルス数から、アイコンの分をひいて調整する必要がある。 次の部分に別の数を入れてためしてみてごらん： </p>
+      <pre id="code-5-3" class="sampleCode">Code automatically inserted here...</pre>
+      <p> ２つの数を同じ数にすると いうことさえ まもれば、言っている意味がわかるよ。 </p>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 5 - 右・上・下に動かす</h1>
+    <section class="page"><h1>上に動かす</h1>
+
+      <p> OK、左や右に行くことができるようになったね。これから、上に行くのをやってみるよ。 で、まず下のコードを<code>MyGame</code>クラスの<code>def update</code>の下に入力する
+      <pre id="code-5-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>これは もう おなじみだね。 さて次に<code>Player</code>クラスでこれをたす： </p>
+      <pre id="code-5-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> さてと、<code>if</code>と<code>else</code>文なんだけど、両方とも前にやったのと違うね。 まず y座標という、位置をあらわす変数が使われている。 y座標が使われているのは、左や右でなく、上や下に（今回は上に）行くからなんだ。ちょうど方眼紙の線の上を動くようにね！</p>
+
+      <p> それと あと、何で式が<code>y &lt; 0</code>なんだろうと ふしぎに思ってない？ <code>y &lt; 0</code>の式は、下に行くときの ためじゃ ないのかな？ ピクセルの数が、上に 行くに したがって増えるなら そうだね。 じつは 逆なんだ。 </p>
+
+      <p> 多くの場合なんだけど、画面の一番上が0で、ｙ軸を下に行くに したがって数が増えるんだ。 だから、アイコンが上に行くとピクセル数は減る。 同じ理由で、上に行くのに<code>+ 10</code>でなく、<code>- 10</code>を使っている。</p>. <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 5 - 右・上・下に動かす</h1>
+    <section class="page"><h1>下に動かす</h1>
+      <p> それじゃあ、<code>move_down</code>コードをたして仕上げよう。 この作業は、きっと見覚えがあるよ。右に動かすやり方でやったからね。 まず、<code>MyGame</code>クラスの<code>def update</code>の中の一番下にこれを書く：
+
+      <pre id="code-5-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>そして、<code>player</code>クラスにこれを入力する </p>
+
+      <pre id="code-5-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> 見てのとおり、<code>- 10</code>を<code>+ 10</code>に変えているところが違う。下に行くにしたがって、数が増えるようにしてるんだ :)。 これで動き まわる ことが できる！</p> 
+      
+      <p>これが これまでに書くプログラムの すべてだ：</p>
+      <pre id="code-5-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>これまでに、多くのことを やりとげて きた。とどまる必要はない！ 燃えていこう。<a href="lesson_6.html">レッスン 6でドッジボール</a>をドッジドッジ追加しよう！</p>
+
+      <a href="#prev" class="prev-lesson">« 前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a> </section> </article> <a href="#top">一番上へ戻る</a>
+
+</body>
+</html>

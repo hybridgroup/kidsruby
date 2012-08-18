@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ruby4Kids - 楽しいプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-3-1", "../../shared/ruby4kids/code3_1.rb");
+      loadCode("#code-3-2", "../../shared/ruby4kids/code3_2.rb");
+      loadCode("#code-3-3", "../../shared/ruby4kids/code3_3.rb");
+      loadCode("#code-3-4", "../../shared/ruby4kids/code3_4.rb");
+      loadCode("#code-3-5", "../../shared/ruby4kids/code3_5.rb");
+      loadCode("#code-3-6", "../../shared/ruby4kids/code3_6.rb");
+      loadCode("#code-3-7", "../../shared/ruby4kids/code3_7.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - ゲーム プログラミング - レッスン 3</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+  <article class="lesson"><h1>レッスン 3 - プレイヤーを左に動かす</h1>
+    <section class="page"><h1>Ruby4Kids</h1>
+      <p> OK、じゃあプレイヤーを動かしてみよう。 前のレッスンで、プレイヤーの絵を出したよね。今度は、プレイヤーの動かし方を知ろう。 </p>
+      <p> ゴスでは、矢印キーを使って、プレイヤーを上・下・左・右に動かすやり方がある。 ゲーム ウインドウには、アップデートメソッドがあるよね。ここで何かのキーが押されたかどうか確かめるんだ。 プログラミングでは、<code>if</code>（イフ）文などの条件文を使って確認する。 </p>
+      <p>ということで、<code>def update</code>の下にこれを書く：</p>
+      <pre id="code-3-1" class="sampleCode">Code automatically inserted here...</pre>
+ 
+      <p> で、これが何を言っているのか。答えは、「左矢印が押されたら、プレイヤーは左に動く」だ。 でも、左に動くと いうことが何かを定義する前に やるべき ことが ある。変えることが できない５０，５０という位置にいるプレイヤーを、自由に動けるように するんだ。</p> 
+
+      <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 3 - プレイヤーを左に動かす</h1>
+    <section class="page"><h1>変数を追加する</h1>
+      <p> プレイヤーの位置を動かしたいときは、いくつかの変数をあたえる必要があるんだ。 これらの変数を、イニシャライズ メソッドの中で、最初の状態にする。最初の状態にすることをイニシャライズという。 そこでだ、次のようになっているdef initializeメソッドの下に：
+      <pre id="code-3-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> 次のコードをたせばいい： </p>
+      <pre id="code-3-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> 次に、<code>@icon.draw(50,50,1)</code>の<code>50,50</code>を<code>@x, @y</code>に変える。 そうすると、このようになる：
+
+      <pre id="code-3-4" class="sampleCode">Code automatically inserted here...</pre>
+      <p> さて やったことは こうだ。アイコンを動かせるようにした。プレイヤーの位置が固定されて変えられなかったのを、変えられるようにしたんだ。２つの変数を使ってね！ ２つの変数は、プレイヤーのイニシャライズメソッドの中で、イニシャライズされた。 だから、最初のx と y の位置は50だ。 </p>
+
+      <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 3 - プレイヤーを左に動かす</h1>
+    <section class="page"><h1>「左に移動」を定義する</h1>
+      <p> さて プレイヤーが左に動くときにはいつも、位置xを左に動かす必要がある。 それをやるために はじめに"moving left"（左に移動）を定義する。そして、簡単な式をその下にたすんだ。  というわけで、これを入力する： </p>
+
+      <pre id="code-3-5" class="sampleCode">Code automatically inserted here...</pre> 
+      <p> 入力した式は、プレイヤー アイコンを左に10ピクセル動かす。左矢印が押された時にだ。 さあやってみよう！ クールだよね？</p> 
+      
+      <p>これが これまでに書くプログラムの すべてだ：</p>
+      <pre id="code-3-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>OK、物知り顔だ。君は左に動かす やり方を知ることが できた。それじゃあ、<a href="lesson_4.html">プレイヤーの動きを制限する レッスン 4</a>をやって みよう！</p>
+
+      <a href="#back" class="prev-lesson">« 前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a> </section> </article> <a href="#top">一番上へ戻る</a>
+
+</body>
+</html>
+
