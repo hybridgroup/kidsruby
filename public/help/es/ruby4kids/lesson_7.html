@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programando sólo porque es divertido</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-7-1", "../../shared/ruby4kids/code7_1.rb");
+      loadCode("#code-7-2", "../../shared/ruby4kids/code7_2.rb");
+      loadCode("#code-7-3", "../../shared/ruby4kids/code7_3.rb");
+      loadCode("#code-7-4", "../../shared/ruby4kids/code7_4.rb");
+      loadCode("#code-7-5", "../../shared/ruby4kids/code7_5.rb");
+      loadCode("#code-7-6", "../../shared/ruby4kids/code7_6.rb");
+      loadCode("#code-7-7", "../../shared/ruby4kids/code7_7.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programación de Juegos - Lección 4</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+    <a href="index.html">Ir a las lecciones</a>
+    <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lección 7 - Ser Golpeado por la Pelota</h1>
+    <section class="page"><h1>Definiendo el Golpe</h1>
+      <p>Muy bien, es tiempo de hacer que cuando la pelota golpee al jugador, el juego se detenga. </p>
+      <p>Así que, primeramente tenemos que ir a la clase <code>Game</code> y abajo de <code>@ball.update</code>, vamos a definir el golpe:</p>
+
+      <pre id="code-7-1" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Ahora, vamos a ir al jugador y vamos a definir el método <code>hit_by?</code>. Vamos a la clase <code>Player</code> y definimos como funciona ser golpeado por la pelota: </p>
+      <pre id="code-7-2" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Ahora, lo que acabamos de hacer es agregar un método que Gosu nos proporciona, llamado <code>distance</code>, al que le pasamos las coordenadas <i>x</i> y <i>y</i> de un objeto y las coordenadas <i>x</i> y <i>y</i> de otro objeto.</p>
+
+      <p>También ingresamos que si la distancia entre estas dos coordenadas es menor a 50, vamos a tomar eso como un golpe. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Lección 7 - Ser Golpeado por la Pelota</h1>
+    <section class="page"><h1>Mas Definiciones</h1>
+
+      <p>Vamos nuevamente a la clase <code>Game</code>. Anteriormente mencionamos que si la pelota golpea al jugador, el juego se detiene. Así que, necesitamos definir como se detiene el juego. </p>
+
+      <p>Ahora, vamos a introducir una nueva variable para que la definición funcione, llamaremos a esta variable <code>running</code>. Abajo de la clase <code>Game</code>, escribimos:
+     
+      <pre id="code-7-3" class="sampleCode">Código insertado automáticamente aquí...</pre>
+      <p> Entonces, si detenemos el juego, la variable <code>running</code> tendrá el valor de falso. Pero, primeramente necesitamos agregar la variable <code>running</code> y asignarle el valor de verdadero. Así, cuando el juego comienza, el juego está corriendo. Cuando el jugador es golpeado por la pelota, el método <code>stop_game!</code> va a asignarle el valor de falso a la variable <code>running</code>, lo cual detendrá el juego.</p> 
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+    
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lección 7 - Ser Golpeado por la Pelota</h1>
+    <section class="page"><h1>Stop! Hammer Time</h1>
+      <p>Ahora, queremos que el jugador y la pelota se dejen de mover cuando el juego se detiene. Así que, si observas el método <code>update</code>, verás que tenemos todo listo para que el jugador se mueva así como para que la pelota también se mueva. Ahora, eso seguirá funcionando mientras el juego esté en ejecución. Pero, una vez que se detiene, no queremos que siga funcionando ninguna de estas dos funciones. Entonces, directamente abajo de <code>def update</code>, escribimos:
+ 
+      <pre id="code-7-4" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Ahora, regresemos a la clase <code>Player</code>. Vamos a definir dos métodos nuevos para la pelota: <code>x</code> y <code>y</code>. Para hacer esto, escribimos:
+
+      <pre id="code-7-5" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Si recordamos, la pelota tiene las variables para las coordenadas <i>x</i> y <i>y</i>, las cuales no podemos obtener directamente desde jugador. Aun así, podemos llamar los métodos desde el jugador. Entonces, lo que hicimos en el código anterior fue mandar a llamar el método <code>x</code>, que nos regresa el valor de <i>x</i> y también mandamos a llamar el método <code>y</code>, que nos regresa el valor de <i>y</i>.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lección 7 - Ser Golpeado por la Pelota</h1>
+    <section class="page"><h1>Acercarse a la Pelota</h1>
+
+      <p>Finalmente, queremos que empiece en una diferente posición en <i>y</i>. Para la posición en <i>x</i> está bien que empiece en 50, pero la posición en <i>y</i> se acerca mucho a la parte superior de la ventana. Entonces, abajo de <code>def intitialize(game_window)</code>, cambiaremos el valor de <i>y</i> a 150. Debe de quedar de la siguiente manera:</p>
+
+      <pre id="code-7-6" class="sampleCode">Código insertado automáticamente aquí...</pre>      
+
+      <p>Pondremos la posición en <i>y</i> en 150, esto para que esté más lejos de la parte superior de la ventana. Esto nos facilitará poder esquivar la pelota.</p>
+      
+      <p>Una vez más, aquí está el programa completo que deberías de haber escrito hasta ahora:</p>
+      <pre id="code-7-7" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>¡Muy bien!, parece que cuentas con todo lo que se necesita. ¡Vamos a avanzar al <a href="lesson_8.html">siguiente nivel en la lección 8</a>!</p>
+    </section>
+  </article>
+
+  <a href="#top">Ir Hacia Arriba</a>
+
+</body>
+</html>

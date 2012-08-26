@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Programación básica</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-1-1", "../../shared/hacketyhack/code1_1.rb");
+      loadCode("#code-1-2", "../../shared/hacketyhack/code1_2.rb");
+      loadCode("#code-1-3", "../../shared/hacketyhack/code1_3.rb");
+      loadCode("#code-1-4", "../../shared/hacketyhack/code1_4.rb");
+      loadCode("#code-1-5", "../../shared/hacketyhack/code1_5.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Basic Programming</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+    <a href="index.html">Ir a las lecciones</a>
+    <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+  </nav>
+
+
+
+  <article class="lesson"><h1>Hola!</h1>
+    <section class="page"><h1>Primer asalto</h1>
+      <p>Así que te gustaría aprender cómo escribir código con el mejor de todos, no? Bueno, has llegado al lugar correcto. Esta es la primer lección que tengo para compartir contigo. Todo empieza aquí.</p>
+      <p>Quiero iniciarte de la mejor manera en el arte de escribir programas, empezaremos hablando un poco acerca de qué es la programación, y después escribiremos algunos programas básicos para dibujar cosas divertidas en la pantalla. Te gusta la idea? Ahí vamos!</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Hablemos sobre programación</h1>
+    <section class="page"><h1>Todo es acerca de instrucciones</h1>
+      <p>Ya cuando empiezas a programar te das cuenta de que la programación tiene todo que ver con <strong>algoritmos</strong>. Esa es una palabra elegante para decir 'lista de instrucciones.' Cada programa es, simplemente, una lista de instrucciones que la computadora debe seguir.</p>
+      <p>Si lo piensas bien, puedes convertir casi cualquier cosa en una lista de instrucciones. La mayor parte del tiempo, practicas tanto una cosa que llega un momento en el que ya no piensas en los pasos que vas siguiendo. Simplemente los llevas a cabo. Es muy natural.</p>
+    </section>
+
+    <section class="page"><h1>Las computadores son simples</h1>
+      <p>Desafortunadamente, las computadores son muy simples. Esto podría ser lo contrario a lo que has escuchado, pero es la verdad. Incluso, aunque compararemos a las computadoras con cosas como nuestros cerebros, en realidad es una analogía muy pobre. Para lo que las computadores son realmente buenas es para ejecutar cosas simples y aburridas una y otra vez con mucha presición, pero no pueden pensar por sí mismas!</p>
+      <p>Esta es la razón por la que las computadoreas aparentan ser complejas. Siguen ciegamente cualquier orden que se les dé, sin pensar si las instrucciones son buenas o malas. Es dificil pensar en términos tan simples!</p>
+    </section>
+
+    <section class="page"><h1>Explícate bien</h1>
+      <p>Es importante recordar que debes explicarle muy bien a la computadora qué hacer cuando estás programando. Ella no puede adivinar lo que quieres decir, así que tienes que decir exactamente lo que quieres decir!</p>
+      <p>Esto toma algo de práctica, así que empezaremos con algunos ejercicios sobre cómo explicarnos bien en términos básicos. Es casi como explicarle matemáticas a un joven: tienes que ir muy despacio, revisar lo que has hecho varias veces, y tener paciencia cuando la computadora no te entienda.</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lista de instrucciones</h1>
+    <section class="page"><h1>Una lista de tareas no una lista de compras</h1>
+      <p>Cuando digo que las computadores siguen listas de instrucciones quiero decir una lista de tareas, no una lista de compras. Lo que quiero decir es que estas listas tienen un <strong>orden</strong> que la computadora debe seguir. Realiza cada paso tan rápido como ella pueda.</p>
+      <p>Una lista de compras es un tipo de lista completamente diferente. Puedes ir a cualquier pasillo que quieras y mientras tengas todo antes de irte, todo está bien. Esto no es lo que una computadora hace en absoluto.</p>
+    </section>
+
+    <section class="page"><h1>Cómo le dirías a una persona que lo haga?</h1>
+      <p>Intentemos con un ejemplo: Si tuvieras que decirle a alguien con palabras cómo dibujar un cuadro en una hoja de papel, cómo lo harías?</p>
+      <p>No se permite decir "así" o "de esta forma", eso es hacer trampa! Debes decirlo con todo detalle.</p>
+    </section>
+
+    <section class="page"><h1>Una vez más: Las computadoras son simples</h1>
+      <p>Cómo lo harías? No puedo ver lo que dices, pero aquí hay un ejemplo sobre qué tan simple son las computadores comparadas con las personas. Olvidaste mencionar qué tan largo debería haber ser cada lado del cuadrado? Si no lo hiciste, buen trabajo!</p>
+      <p>Por cierto, aquí está cómo lo haría yo. Esta no es la única respuesta correcta, es sólo un ejemplo:</p>
+      <p>1. Pon tu lápiz sobre el papel.</p>
+      <p>2. Dibuja 1 cm. a la derecha.</p>
+      <p>3. Dibuja 1 cm. hacia abajo.</p>
+      <p>4. Dibuja 1 cm. a la izquierda.</p>
+      <p>5. Dibuja 1 cm. hacia arriba.</p>
+      <p>6. Quita tu lápiz del papel.</p>
+      <p>7. Listo!</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Tortugas, hasta el fondo.</h1>
+    <section class="page"><h1>Dibujando... con tortugas?</h1>
+      <p>Muy bien! Suficiente con tanto pensar. Hagamos algo ya. Te apuesto a que has estado preguntándote cuándo llegaría este momento, no? Pero es importante conocer las cosas básicas primero.</p>
+      <p>Vamos a decirle a la computadora cómo dibujar cuadros... con tortugas. Sí, has leído bien. Vas a tener que darle instrucciones a una tortuga.</p>
+      <p>Esta tortuga en particular trae consigo un lápiz; tú tienes una hoja de papel; la tortuga seguirá cada palabra tuya; pero la tortuga es un poco lenta y necesita instrucciones muy cuidadosas. Crees poder hacerlo?</p>
+    </section>
+
+    <section class="page"><h1>La tortuga y sus órdenes</h1>
+      <p>Debemos decirle a Ruby que queremos decirle a la tortuga qué hacer. Para hacerlo, tenemos una tortuga que se llama <code>Turtle</code>, que en realidad significa Tortuga en el idioma Inglés. Nosotros podemos decirle a <code>Turtle</code> dos cosas:</p>
+      <p><code>draw</code> (dibuja): la tortuga seguirá nuestras instrucciones a una velocidad relámpago, dibujando nuestra imagen completa en menos de un parpadeo.
+      <p><code>start</code> (comienza): una ventana interactiva aparecerá, la cual te deja ver a la tortuga moviéndose en cada paso del programa. Puedes moverla como tú quieras. Esto es útil si la tortuga no está haciendo lo que esperas!
+    </section>
+
+    <section class="page"><h1>Escríbelo!</h1>
+      <p>Bien. Ahora escribe esto:</p>
+      <p><code>Turtle.draw</code></p>
+      <p>El punto entre <code>Turtle</code> y <code>draw</code> los connecta. Los lenguajes de programación tienen reglas, justo como el Español tiene sus reglas! Puedes pensar en <code>Turtle</code> como un sujeto, y en <code>draw</code> como un verbo. Juntos hacen una frase: oye, tortuga, dibuja algo para mí!</p>
+      <p>Una vez que hayas escrito eso, presiona el botón "Ejecutar". La tortuga se mueve tan rápido cuando está dibujando que ni siquiera la verás, pero te lo aseguro, ahí está!</p>
+    </section>
+
+    <section class="page"><h1>Haz.... lo que te digo que hagas</h1>
+      <p>Excelente! Hemos hecho que la tortuga se mueva, al menos. Ahora debemos decirle qué queremos que dibuje!</p>
+      <p>Recuerdas cuando dijimos que todos los programas eran listas de instrucciones? En este caso, nuestro programa sólo tiene una instrucción: tortuga, dibuja algo!, en Ruby decimos: <code>Turtle.draw</code>. Pero necesitamos poder darle a <code>Turtle</code> su propia lista de instrucciones.</p>
+      <p>Para hacerlo, usaremos estas palabras: <code>do</code> (hacer) and <code>end</code> (terminar). Estas dos palabras juntas hacen una <em>sublista</em> de cosas sólo para <code>Turtle</code>!</p>
+    </section>
+
+    <section class="page"><h1>Cambiando el fondo</h1>
+      <p>Probemos con esto: podemos decirle a <code>Turtle</code> que queremos usar un color diferente de fondo usando la orden <code>background</code> (fondo). Mira:</p>
+      <pre id="code-1-1" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Escribe esto y presiona 'Ejecutar'!</p>
+    </section>
+
+    <section class="page"><h1>La tortuga recibe sus órdenes</h1>
+      <p>Buenísimo! El fondo es marrón ahora. <a href="colors.html">Presiona aquí para ver la lista completa de colores disponibles.</a>.
+      <p>Así es como haces listas de instrucciónes para que <code>Turtle</code> las siga. Para hacerlo un poco más fácil de entender, los progamadores ponen dos espacios en las sublistas. Toma ese hábito desde este momento, ya me agradecerás después!</p>
+    </section>
+
+    <section class="page"><h1>El lápiz</h1>
+      <p>Ahora que ya tenemos ese atractivo color de fondo, cómo dibujamos algunas líneas? Bueno, lo primero de lo que tienes que saber es del lápiz. <code>Turtle</code> trae consigo un lápiz y lo lleva a donde vaya y va dibujando conforme va caminando. Puedes cambiar el color de la linea que el lápiz dibuja con la orden <code>pencolor</code> (color del lápiz).</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Dibujando líneas</h1>
+    <section class="page"><h1>Dibujemos!</h1>
+      <p>Bien, suficiente pérdida de tiempo. Digámosle a nuestra tortuga que dibuje una línea! Aquí está mi línea. Échale un ojo, después intenta con tus propios colores y números!</p>
+      <pre id="code-1-2" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Por cierto, 50 es el número de pixeles que la tortuga se moverá hacia adelante.</p>
+    </section>
+
+    <section class="page"><h1>Démosle la vuelta</h1>
+      <p>Genial! Ya tienes una línea. Pero, si no quieres que <code>Turtle</code> se mueva hacia adelante? Buen, puedes decirle que dé la vuelta usando las órdenes <code>turnleft</code> (vuelta a la izquierda) or <code>turnright</code> (vuelta a la derecha), algo como esto:</p>
+      <pre id="code-1-3" class="sampleCode">Código insertado aquí automáticamente...</pre>
+     <p>Échale un ojo y juego con eso un poco!</p>
+     <p>Si te estás preguntando qué significa 90, es el número de grados que la tortuga girará.</p>
+    </section>
+
+    <section class="page"><h1>Muévete, muévete</h1>
+      <p>Bien, ya estámos entrados en materia! Recapitulemos:</p>
+      <p><code>Turtle.draw</code> le dice a <code>Turtle</code> que queremos que dibuje algunas cosas. El punto conecta a la tortuga con la orden.</p>
+      <p><code>do ... end</code> es una sublista de cosas. Esto es lo que queremos que <code>Turtle</code> dibuje en este momento, no para el resto del programa.
+      <p><code>pencolor</code> define el color del lápiz que la tortuga va arrastrando detrás de ella, y <code>background</code> define el color de fondo.</p>
+      <p><code>turnright</code> (o su amiguito <code>turnleft</code>) le dice a <code>Turtle</code> que gire a la derecha o a la izquierda.</p>
+      <p><code>forward</code> (o su amiguito <code>backward</code>) le dice a <code>Turtle</code> que se mueva hacia adelante.</p>
+    </section>
+
+    <section class="page"><h1>Intentemos dibujar un cuadrado</h1>
+      <p>Adelante, inténtalo. Trata de hacer que <code>Turtle</code> dibuje un cuadrado.</p>
+      <p>Yo estaré esperando. :)</p>
+    </section>
+
+    <section class="page"><h1>Aquí está mi versión</h1>
+      <p>Aquí está cómo lo hice yo:</p>
+      <pre id="code-1-4" class="sampleCode">Código insertado aquí automáticamente...</pre>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Repetir lo que hagamos</h1>
+    <section class="page"><h1>Pita y Repita...</h1>
+      <p>Amigo, eso fue mucha repetición! Mis dedos casi se me entumen de tanto escribir <code>forward</code> y <code>turnright</code>!</p>
+      <p>Pero tengo buenas noticias: Te mencioné algo acerca de las computadoras hace unos minutos. Resulta que hacer cosas aburridas y repetitivas es algo en lo que son muy buenas! Hacen la misma cosa una y otra vez, para siempre, a menos de que les digas con mucho respeto que dejen de hacerlo.</p>
+    </section>
+
+    <section class="page"><h1>Repitiendo repitiendo lo que hacemos lo que hacemos</h1>
+      <p>Mira esto: <code>Turtle</code> conoce los números. Por ejemplo:</p>
+      <pre id="code-1-5" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Intenta ejecutar este ejemplo. También dibuja un cuadro! Wow!</p>
+    </section>
+
+    <section class="page"><h1>4.times</h1>
+      <p>Es muy fácil: <code>4</code> también puede recibir instrucciones, justo como <code>Turtle</code>. Esta orden repite una lista de instrucciones ese número de veces. Divertido! Cuatro veces. y <code>do</code> y <code>end</code> muestran qué lista de instrucciones van con el <code>4</code> y no con <code>Turtle</code>.</p>
+    </section>
+
+    <section class="page"><h1>Prueba haciéndolo!</h1>
+      <p>Diviértete haciendo figuras por tí mismo!</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Sumario</h1>
+    <section class="page"><h1>Felicidades!</h1>
+      <p>Wow, eres increíble. Date una palmada en la espalda. Celebra con alguien más. Has terminado los conceptos básicos!</p>
+      <p>Revisa la lección <em>Ruby Básico</em> para hacer otras cosas totalmente diferentes y divertidas!</p>
+    </section>
+  </article>
+
+  <a href="#top">Regresar al inicio</a>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programando sólo porque es divertido</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-8-1", "../../shared/ruby4kids/code8_1.rb");
+      loadCode("#code-8-2", "../../shared/ruby4kids/code8_2.rb");
+      loadCode("#code-8-3", "../../shared/ruby4kids/code8_3.rb");
+      loadCode("#code-8-4", "../../shared/ruby4kids/code8_4.rb");
+      loadCode("#code-8-5", "../../shared/ruby4kids/code8_5.rb");
+      loadCode("#code-8-6", "../../shared/ruby4kids/code8_6.rb");
+      loadCode("#code-8-7", "../../shared/ruby4kids/code8_7.rb");
+      loadCode("#code-8-8", "../../shared/ruby4kids/code8_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programación de Juegos - Lección 8</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+    <a href="index.html">Ir a las lecciones</a>
+    <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lección 8 - La tecla Escape pausa el juego</h1>
+    <section class="page"><h1>Comentando y "Else"</h1>
+
+      <p>En esta lección, queremos hacer que el juego se reinicie presionando la tecla Escape. Así que, vamos a la clase MyGame y dirijámonos al área en donde escribimos lo siguiente:</p>
+
+      <pre id="code-8-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Ahora, justo debajo del código mostrado arriba, vamos a escribir:</p>
+
+      <pre id="code-8-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Lo que hicimos en el código mostrado arriba fue agregar una sentencia <code>else</code>, la cual se ejecuta después de que el juego es detenido. </p>
+
+      <p>Entonces, escribimos un comentario debajo de la sentencia <code>else</code>, la cual nos dice que el juego se encuentra detenido. Después de eso, escribimos un comando que debería de parecernos familiar. Este código sólo dice que si la tecla Escape es presionada, el juego se reiniciará.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+   
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lección 8 - La tecla Escape pausa el juego</h1>
+    <section class="page"><h1>Bien, definamos</h1>
+
+      <p>Ahora, vayamos hasta donde veas lo siguiente:</p>
+
+      <pre id="code-8-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Justo debajo del código mostrado arriba, vamos a escribir:</p>
+
+      <pre id="code-8-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Entonces, lo que hicimos en el codigo mostrado arriba solo fue definir como reiniciar el juego. Establecimos <code>@running</code> para que sea verdadero y después hacemos que la pelota regrese a su posición original.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Lección 8 - La tecla Escape pausa el juego</h1>
+    <section class="page"><h1>Lee, Establece, Reinicia!</h1>
+
+      <p>Ahora tenemos que ir al final de nuestra clase <code>Ball</code> y definir nuestro método para reiniciar. Entonces, escribamos:</p>
+
+      <pre id="code-8-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Lo que hicimos en el código mostrado arriba fue lo mismo que hicimos cuando definimos <code>update</code> y cuando definimos <code>initialize</code>. Esto es, definimos Y con un valor de cero, lo que posiciona la pelota en la parte más alta y establece X como valor aleatorio, por lo tanto no sabemos de dónde vendrá en el eje de las X. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lección 8 - La tecla Escape pausa el juego</h1>
+    <section class="page"><h1>Lee, Establece, Reinicia!</h1>
+
+      <p>Finalmente, vamos a reemplazar las dos áreas en donde repetimos:</p>
+
+      <pre id="code-8-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>y reemplázalo con <code>reset!</code>. Nuevamente, esas dos repeticiones están bajo <code>def initialize</code> y <code>def update</code>. Tu resultado final debe de verse asi:</p>
+
+      <pre id="code-8-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Una vez más, aquí está el programa completo que ya debes de haber escrito hasta el momento:</p>
+      <pre id="code-8-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Eso es todo en esta lección! Está empezando a gustarte esto, no es así?! Ahora, hagamos un juego más desafiante añadiendo <a href="lesson_9.html">múltiples pelotas en la Lección 9</a>!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+    <a href="#top">Regresar al inicio</a>
+
+</body>
+</html>
+

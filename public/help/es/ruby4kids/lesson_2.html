@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programando sólo porque es divertido</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/ruby4kids/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/ruby4kids/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/ruby4kids/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/ruby4kids/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/ruby4kids/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/ruby4kids/code2_6.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programación de Juegos - Lección 2</h1>
+  <nav id="top">
+    <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+    <a href="index.html">Ir a las lecciones</a>
+    <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lección 2 - Agregar un Jugador</h1>
+    <section class="page"><h1>Crear un Jugador</h1>
+      <p>Sería bueno tener un jugador en el juego, así que creemos uno.</p>
+      <p>Hacemos esto agregando una nueva clase. La llamaremos <code>Player</code>.
+      <p>Ahora, definiremos lo que nuestro jugador hará. Hacemos esto de la siguiente manera:</p>
+      <pre id="code-2-1" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Ahora, agregamos un icono al jugador para que podamos verlo en la pantalla.</p>
+      Para esto buscamos una imagen de tipo <i>.png</i>. KidsRuby tiene ya una imagen que puedes usar.</p>
+      <p>Vamos a la clase <code>Player</code> y le agregamos el icono, escribiendo lo siguiente:</p>
+      <pre id="code-2-2" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Ahora, agregamos el método <code>draw</code> al jugador, escribiendo lo siguiente:</p>
+      <pre id="code-2-3" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lección 2 - Agregar un Jugador</h1>
+    <section class="page"><h1>Agregar el Jugador al Juego </h1>
+      <p>Ahora, casi estamos listos para probas esto nuevamente. Primeramente necesitamos regresar a la clase <code>MyGame</code>, y necesitamos instanciar éste jugador.</p>
+      <p>Hacemos esto añadiendo el siguiente código al método <code>initialize</code> de la clase <code>MyGame</code>:</p>
+      <pre id="code-2-4" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Esto le dice al jugador en que ventana dibujarse.</p>
+      <p>Por último, necesitamos agregar lo siguiente al método <code>draw</code> de la ventana del juego:</p>
+      <pre id="code-2-5" class="sampleCode">Código insertado automáticamente aquí...</pre>
+      <p>Esto dibujará al jugador cuando el juego esté corriendo.</p>
+      <p>¡Una última cosa! Necesitamos escribir <code>require 'player'</code> justamente abajo de <code>require 'gosu'</code>, para que el programa sepa  que estamos usando la clase <code>Player</code>. 
+      <p>Ahora, ¡vamos a probarlo! Da click sobre el botón "Run". ¿Funcionó?</p>
+      <p>Aquí está el programa completo que deberías de haber escrito hasta ahora:</p>
+      <pre id="code-2-6" class="sampleCode">Código insertado automáticamente aquí...</pre>
+      <p>Ahora que has aprendido como agregar un jugador, ¡¿Por qué no continuamos con <a href="lesson_3.html">mover el jugador hacia la izquierda en la lección 3</a>?!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <a href="#top">Ir Hacia Arriba</a>
+
+</body>
+</html>

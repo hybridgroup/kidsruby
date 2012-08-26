@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Bases de Ruby</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-1-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/hacketyhack/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/hacketyhack/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/hacketyhack/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/hacketyhack/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/hacketyhack/code2_6.rb");
+      loadCode("#code-2-7", "../../shared/hacketyhack/code2_7.rb");
+      loadCode("#code-2-8", "../../shared/hacketyhack/code2_8.rb");
+      loadCode("#code-2-9", "../../shared/hacketyhack/code2_9.rb");
+      loadCode("#code-2-10", "../../shared/hacketyhack/code2_10.rb");
+      loadCode("#code-2-11", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-11-1", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-12", "../../shared/hacketyhack/code2_12.rb");
+      loadCode("#code-2-13", "../../shared/hacketyhack/code2_13.rb");
+      loadCode("#code-2-14", "../../shared/hacketyhack/code2_14.rb");
+      loadCode("#code-2-15", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-15-1", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-16", "../../shared/hacketyhack/code2_16.rb");
+      loadCode("#code-2-17", "../../shared/hacketyhack/code2_17.rb");
+    });
+  </script>  
+</head>
+<body class="lesson-set">
+  <h1>Bases de Ruby</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Précédent</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+
+  <article class="lesson"><h1>Salut !</h1>
+    <section class="page"><h1>C'est parti</h1>
+      <p>Bienvenue à ta première leçon de Ruby ! Tu vas voir, c'est génial.</p>
+      <p>Ruby est un super langage de programmation que tu peux utiliser pour faire des tas de choses. Allons y !</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Un peu plus d'infos à propos de Ruby</h1>
+    <section class="page"><h1>Konnichiwa, Ruby !</h1>
+      <p><em>Ruby</em> a été créé par</p>
+      <p>まつもと ゆきひろ</p>
+      <p>(tu peux simplement l'appeler Matz) en 1995. Si tu ne l'as pas deviné, il est Japonais. Le voici :</p>
+    </section>
+    <section class="page"><h1>Ruby est sympa</h1>
+      <p>Matz dit cela à propos de Ruby :</p>
+      <p><em>J'espère voir Ruby aider tous les programmeurs du monde à être productif, à aimer programmer, et à être heureux. C'est le premier objectif du langage Ruby.</em></p>
+      <p>Autre chose à propos de Ruby : les Rubyistes (c'est comme cela que ceux qui aiment Ruby aiment à s'appeler) ont une devise :<strong>MINSWAN</strong>. Cela veut dire (en anglais) <strong>M</strong>atz <strong>I</strong>s <strong>N</strong>ice <strong>S</strong>o <strong>W</strong>e <strong>A</strong>re <strong>N</strong>ice. ("Matz est gentil donc on l'est aussi"). Ce qui est une assez belle parole. Sois bien avec tout le monde, et aide-les quand ils en ont besoin !</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Afficher des Trucs</h1>
+    <section class="page"><h1>C'est parti !</h1>
+      <p>Allez ! La toute première chose que tu dois savoir faire est d'afficher quelque chose sur l'écran. Sinon, tu ne sauras pas ce qui se passe !</p>
+    </section>
+    <section class="page"><h1>Hello, World ! Bonjour le monde !</h1>
+      <p>Il y a deux moyens de le faire. Voici le premier : l'alerte :</p>
+      <pre id="code-2-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Tape ça et appuie sur le bouton "Exécuter".</p>
+    </section>
+    <section class="page"><h1>alert</h1>
+      <p>Voyons voir ça de plus près : il y a deux parties principales dans ce petit programme : tu as un <code>alert</code> et un <code>"Hello, world!"</code>. Cela fonctionne comme une phrase en anglais : Le mot <code>alert</code> ("alerte") est un verbe et ce qui est entre guillemets est un objet. En Ruby, on appelle les verbes les <strong>methods</strong>. Le verbe <code>alert</code> veut dire "Mets une boîte d'alerte sur l'écran, et le contenu de la boîte sera n'importe quelle chose que tu me donnes"</p>
+      <p>On va parler de <code>"Hello, world!"</code> dans une seconde. Voici l'autre moyen de le faire :</p>
+      <pre id="code-2-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Si tu essayes cela ici, ça va marcher ! La méthode <code>puts</code> n'affiche pas une boîte de dialogue, elle sort plutôt le texte sur la sortie. On va utiliser des <code>alert</code>es dans ces tutoriels, mais si tu en regardes d'autres tu verras peut être <code>puts</code>.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lettres, mots et phrases</h1>
+    <section class="page"><h1>Chaînes de Caractères</h1>
+      <p>OK ! Maintenant que tu as un verbe, il est temps d'apprendre les <em>String</em>s (chaînes de caractères). Les chaînes de caractères sont ce que nous appelons des mots entre une paire de guillemets (""). Les guillemets sont utilisés pour dire à l'ordinateur quels mots tu veux effectivement dire. Pensons à notre exemple :</p>
+      <pre id="code-2-1-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Si tu n'avais pas de guillemets, l'ordinateur ne saurait pas quels mots sont les méthodes et lequels font partie de la chaîne de caractères ! Et regarde :</p>
+      <pre id="code-2-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Sans faire de tous ces mots une chaîne de caractères, comment Ruby saurait-il que la deuxième alerte soit du texte que tu voulais dire, plutôt qu'une autre boîte d'alerte ?</p>
+    </section>
+    <section class="page"><h1>Additionner des Chaînes</h1>
+      <p>Maintenant, si tu veux mettre deux morceaux de chaînes ensemble, tu peux utiliser le caractère <code>+</code>. Essaye de taper ça :</p>
+      <pre id="code-2-4" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Même chose ! Le <code>+</code> colle les 2 chaînes ensemble. Cela va être très utile pour la suite !</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Nombre et Maths</h1>
+    <section class="page"><h1>Nombres</h1>
+      <p>Tu peux utiliser les nombres simplement, Ruby les comprend :</p>
+      <pre id="code-2-5" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Tu peux même en utiliser qui ont un point pour la décimale (en anglais, c'est un point plutôt qu'une virgule) :</p>
+      <pre id="code-2-6" class="sampleCode">Code inséré automatiquement ici...</pre>
+    </section>
+    <section class="page"><h1>Maths Simples</h1>
+      <p>Tu peux aussi faire des maths avec les nombres, ça va marcher :</p>
+      <pre id="code-2-7" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Mais si tu essayes ça, rien ne se passe :</p>
+      <pre id="code-2-8" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>C'est assez simple et idiot :</p>
+      <pre id="code-2-9" class="sampleCode">Code inséré automatiquement ici...</pre>
+    </section>
+    <section class="page"><h1>Erreurs</h1>
+      <p>Sais-tu pourquoi rien ne s'est passé quand tu as appuyé sur Exécuter avant ? C'était parce qu'il y a eu une erreur. Tu peux voir les erreurs dans l'onglet "Sortie".</p>
+      <p>L'erreur qui vient de <code>alert "hey" + 2</code> est :</p>
+      <code>can't convert Fixnum into String</code>
+      <p>Qu'est-ce que c'est que ça ?</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Un mot sur les Types</h1>
+    <section class="page"><h1>Pourquoi ça a fait ça ?</h1>
+      <p>Chaque partie d'un programme Ruby est un <code>Object</code>. Maintenant, tout ce que tu dois savoir sur les <code>Object</code>s est que c'est un peu comme dire quelque chose. Ton programme est fait d'un ensemble d'objets qui travaillent ensemble.</p>
+      <p>On en apprendra plus sur les objets dans une future leçon, mais je te dirai une chose : les <code>Object</code>s ont un "type". Cela permet à Ruby de savoir quel genre d'<code>Object</code> c'est.</p>
+    </section>
+    <section class="page"><h1>Additionner des Nombres et des Mots</h1>
+      <p>C'est pour cela que</p>
+      <pre id="code-2-10" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>ne fonctionne pas vraiment : "hey" est un objet de type <code>String</code>, et 2 est un objet <code>Fixnum</code>. Et ajouter des <code>String</code>s et des <code>Fixnum</code>s n'a pas de sens. Mais on peut quand même faire fonctionner ce code !</p>
+      <p>On a juste besoin de transformer le <code>Fixnum</code> en <code>String</code>. On peut le faire en utilisant la méthode <code>to_s</code>.</p>
+      <pre id="code-2-11" class="sampleCode">Code inséré automatiquement ici...</pre>
+    </section>
+    <section class="page"><h1>Regardons Encore ça</h1>
+      <pre id="code-2-11-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Pas mal. On a notre méthode <code>alert</code>. On lui donne <code>"hey" + 2.to_s</code>. Le <code>2.to_s</code> transforme un <code>Fixnum</code> 2, qui est comme la valeur mathématique du 2, en la chaîne de caractère <code>String</code> 2, qui est comme quand tu écris un 2 sur une feuille de papier.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Variables</h1>
+    <section class="page"><h1>Ce sont comme des boîtes</h1>
+      <p>Que se passe-t-il si on veut garder quelque chose ? La plupart des programmes ne sont pas en ligne, je t'assure. On peut utiliser une <em>variable</em> pour garder une valeur et l'utiliser plus tard. C'est comme une boîte où tu ranges des affaires.</p>
+      <p>Essayons-en une :</p>
+      <pre id="code-2-12" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Fais tourner ça.</p>
+    </section>
+    <section class="page"><h1>Assignation</h1>
+      <p>Trop cool ! On a utilisé un <code>=</code> pour <em>assigner</em> la <code>String</code> "Hello, world!" dans la variable <code>message</code>. Ensuite on a passé ce <code>message</code> à la méthode <code>alert</code>.</p>
+      <p>Comme tu peux voir, on peut utiliser les variable à la place d'une autre valeur. Essaye :</p>
+      <pre id="code-2-13" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Devine ce qui va se passer avant de faire tourner ce programme.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Les Entrées Utilisateur</h1>
+    <section class="page"><h1>"ask" : Demande ce que tu veux !</h1>
+      <p>Il est possible de demander à l'utilisateur de notre programme d'entrer quelque chose, et d'ensuite mettre la réponse dans une variable. C'est facile ! Regarde ce programme :</p>
+      <pre id="code-2-14" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>La méthode <code>ask</code> apporte une boîte et laisse nos utilisateurs écrire quelque chose dedans. Marrant ! On met leur réponse dans la variable <code>name</code> et ensuite on le montre avec l'<code>alert</code> Sympa !</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Contrôle de Flux Basique</h1>
+    <section class="page"><h1>"if"... Si...</h1>
+      <p>Souviens-toi la leçon sur les Bases de la Programmation... On a parlé du fait que les programmes sont une grande liste que l'ordinateur suit dans l'ordre.</p>
+      <p>Eh bien tu sais quoi ? on peut changer cet ordre en utilisant un peu de code. Compare ces deux programmes :</p>
+      <pre id="code-2-15" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <pre id="code-2-16" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Il y a quelques nouvelles choses là.</p>
+    </section>
+    <section class="page"><h1>"=="</h1>
+      <p>Le revoilà :</p>
+      <pre id="code-2-15-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>La commande == est un peu différente de la commande =. == teste l'<code>Object</code> à droite et l'<code>Object</code> à gauche. Si les deux sont égaux, alors le code après le <code>if</code> s'exécutera. Si ils sont différents, ce sera le code après le <code>else</code>. Le <code>("end")</code> nous dit que le <code>if</code> est fini.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Exemple : un Jeu de Devinettes</h1>
+    <section class="page"><h1>Devine !</h1>
+      <p>Mettons tout ça ensemble :</p>
+      <pre id="code-2-17" class="sampleCode">Code inséré automatiquement ici...</pre>
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Exemple : un Jeu de Devinettes</h1>
+    <section class="page"><h1>Devine !</h1>
+      <p>Bravo ! Tu as maintenant toutes les bases de Ruby. Mais tu as beaucoup plus à apprendre !</p>
+      <p>Voici tout ce que tu viens de voir :</p>
+      <p>* <code>alert</code> et <code>ask</code></p>
+      <p>* <code>=</code>, les variables, et <code>==</code></p>
+      <p>* <code>if</code> et <code>else</code></p>
+      <p>Génial ! Tu peux maintenant revenir aux "Leçons" et ensuite jeter un coup d'oeil à Ruby Warrior !</p>
+    </section>
+  </article>
+
+  <a href="../index.html">Retour aux Leçons</a>
+</body>
+</html>

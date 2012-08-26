@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby básico</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-1-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/hacketyhack/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/hacketyhack/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/hacketyhack/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/hacketyhack/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/hacketyhack/code2_6.rb");
+      loadCode("#code-2-7", "../../shared/hacketyhack/code2_7.rb");
+      loadCode("#code-2-8", "../../shared/hacketyhack/code2_8.rb");
+      loadCode("#code-2-9", "../../shared/hacketyhack/code2_9.rb");
+      loadCode("#code-2-10", "../../shared/hacketyhack/code2_10.rb");
+      loadCode("#code-2-11", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-11-1", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-12", "../../shared/hacketyhack/code2_12.rb");
+      loadCode("#code-2-13", "../../shared/hacketyhack/code2_13.rb");
+      loadCode("#code-2-14", "../../shared/hacketyhack/code2_14.rb");
+      loadCode("#code-2-15", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-15-1", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-16", "../../shared/hacketyhack/code2_16.rb");
+      loadCode("#code-2-17", "../../shared/hacketyhack/code2_17.rb");
+    });
+  </script>  
+</head>
+<body class="lesson-set">
+  <h1>Ruby básico</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+    <a href="index.html">Ir a las lecciones</a>
+    <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+  </nav>
+
+
+  <article class="lesson"><h1>Hola!</h1>
+    <section class="page"><h1>Empecemos</h1>
+      <p>Bienvenid@ a tu primera lección de Ruby! Vas a pasártela muy bien.</p>
+      <p>Ruby es un lenguaje de programación tan grandioso que puedes usarlo para hacer todo tipo de cosas. Veamos!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Un poco acerca de Ruby</h1>
+    <section class="page"><h1>Konnichiwa, Ruby!</h1>
+      <p><em>Ruby</em> fue creado por</p>
+      <p>まつもと ゆきひろ</p>
+      <p>(puedes llamarlo simplemente Matz) en 1995. Si no te has dado cuenta, Matz es de Japón. Este es él:</p>
+    </section>
+    <section class="page"><h1>Ruby es agradable</h1>
+      <p>Matz ha dicho esto de Ruby:</p>
+      <p><em>Espero ver que Ruby ayude a todos los programadores en el mundo a ser productivos, disfrutar de la programación y a ser felices. Ese es el principal propósito del lenguaje Ruby.</em></p>
+      <p>Una cosa más acerca de Ruby: Los Rubistas (así como se llama a los que los que hacen Ruby) tienen un dicho: <strong>MINSWAN</strong>. En inglés, esto quiere decir: <strong>M</strong>atz <strong>I</strong>s <strong>N</strong>ice <strong>S</strong>o <strong>W</strong>e <strong>A</strong>re <strong>N</strong>ice. Lo cual en español significa: Matz es buena onda, así que nosotros somos buena onda. El cual es muy buen dicho. Sé buena onda con todos y dales una mano cuando lo necesiten!"</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Mostrando cosas</h1>
+    <section class="page"><h1>Hagámoslo!</h1>
+      <p>Muy bien! La primer cosa que necesitas saber es cómo mostrar cosas en la pantalla. De otra forma, no sabrías qué es lo que está pasando!</p>
+    </section>
+    <section class="page"><h1>Hola, Mundo!</h1>
+      <p>Hay dos formas de hacerlo. Aquí está la primera: alert</p>
+      <pre id="code-2-1" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Escribe esto y presiona el botón 'Ejecutar'.</p>
+    </section>
+    <section class="page"><h1>alert</h1>
+      <p>Bien, vamos a dividir esto en partes: Hay 2 partes principales en este pequeño programa: tienes una orden llamada <code>alert</code> (alerta) y <code>"Hola, mundo!"</code>. Estas dos partes son justo como una frase en inglés: <code>alert</code> es un verbo y lo que está dentro de las comillas es un objeto. En Ruby, a los verbos les llamamos <strong>métodos</strong>. El verbo <code>alert</code>  dice 'Pon una ventana de alerta en la pantalla, y el contenido de la ventana es cualquier cosa que me des.'</p>
+      <p>Te hablaremos de <code>"Holla, mundo!"</code> en un segundo. Aquí está otra forma de hacerlo:</p>
+      <pre id="code-2-2" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Si intentas hacer esto aquí funcionará! El método <code>puts</code> (poner) no muestra una ventana, sino que pone texto en la salida. Estaremos usando <code>alert</code> a lo largo de todo el tutorial, pero si ves algún otro tutorial sobre Ruby vas a ver que usan <code>puts</code>.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Letras, palabras y frases</h1>
+    <section class="page"><h1> Cadenas</h1>
+      <p>Bien! Ahora que aprendiste un poco sobre verbos, es momento de aprender sobre cadenas, o en inglés, <em>String</em>s. Cadenas es como llamamos a un montón de palabras encerradas entre comillas, es decir, "". Las comillas dobles son usadas para decirle a la computadora qué palabras quieres decirle. Pensemos un poco en nuestro ejemplo:</p>
+      <pre id="code-2-1-1" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Si no encerraras en comillas tus palabras la computadora no sabría qué palabras son métodos (verbos) y cuales son parte de una cadena! Y considera esto:</p>
+      <pre id="code-2-3" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Si no hacemos todas estas palabras parte de una cadena, cómo sabría Ruby si la segunda alerta fue un texto que querías decirle u otra ventana de alerta?</p>
+    </section>
+    <section class="page"><h1>Uniendo cadenas</h1>
+      <p>Ahora, is quieres unir dos cadenas, puedes usar el símbolo <code>+</code> para hacerlo. Prueba escribiendo esto:</p>
+      <pre id="code-2-4" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Es lo mismo! <code>+</code> une dos cadenas. Esto será muy útil más adelante!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Números y matemáticas</h1>
+    <section class="page"><h1> Números </h1>
+      <p>Podrías usar números y Ruby los entendería:</p>
+      <pre id="code-2-5" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Incluso puedes usar números que tienen punto decimal:</p>
+      <pre id="code-2-6" class="sampleCode">Código insertado aquí automáticamente...</pre>
+    </section>
+    <section class="page"><h1> Matemáticas básicas </h1>
+      <p>Incluso puedes hacer matemáticas con números y funcionará:</p>
+      <pre id="code-2-7" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Pero si haces esto nada pasará:</p>
+      <pre id="code-2-8" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Esto es algo curioso y divertido:</p>
+      <pre id="code-2-9" class="sampleCode">Código insertado aquí automáticamente...</pre>
+    </section>
+    <section class="page"><h1>Errores </h1>
+      <p>Notaste que nada pasó cuando presionaste el botón de 'Ejecutar' en el penúltimo ejemplo? Fue porque hubo un error. Puedes ver los errores en la pestaña "Resultado".</p>
+      <p>El error que resulta de <code>alert "hey" + 2</code> es:</p>
+      <code>can't convert Fixnum into String</code>(en español, No se puede convertir NúmeroEntero a Cadena)
+      <p>Qué es eso?</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Una explicación rápida acerca de tipos de datos</h1>
+    <section class="page"><h1> Por qué pasó eso? </h1>
+      <p>Cada parte de un programa en Ruby es un objeto, en inglés, <code>Object</code>. Por ahora, todo lo que necesitas saber sobre los objetos es que son cosas a las que se les puede hablar. Tu programa está hecho de un montón de objetos trabajando juntos.</p>
+      <p>Aprenderemos más sobre objetos en futuras lecciones, pero hay una cosa que te voy a decir: Los objetos son de cierto tipo, o 'type', en inglés, estos le hacen saber a Ruby qué clase de objeto es. </p>
+    </section>
+    <section class="page"><h1>Sumando números a palabras</h1>
+      <p>Aquí está el por qué</p>
+      <pre id="code-2-10" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>no funciona: "hey" is un objeto tipo <code>String</code> (Cadena), 2 es un objeto tipo número entero, en inglés, <code>Fixnum</code>. Y sumar <code>String</code>s y <code>Fixnum</code>s no tiene ningún sentido. Pero aún así podemos hacerlo funcionar!</p>
+      <p>Todo lo que tenemos que hacer es convertir <code>Fixnum</code> en <code>String</code>. Podemos hacer esto usando el método <code>to_s</code>.</p>
+      <pre id="code-2-11" class="sampleCode">Código insertado aquí automáticamente...</pre>
+    </section>
+    <section class="page"><h1>Echémosle un vistazo de nuevo</h1>
+      <pre id="code-2-11-1" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Bien, esto no está mal. Tenemos nuestro método <code>alert</code>. Le estamos pasando <code>"hey" + 2.to_s</code>. <code>2.to_s</code> convierte el número 2, que es un entero, que Ruby entiende que es tipo <code>Fixnum</code>, en un "2", el cual es una cadena o <code>String</code>, que es como un 2 escrito en un papel.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Variables</h1>
+    <section class="page"><h1> Son como cajas </h1>
+      <p>Qué pasa si quieres mantener algo a la mano? La mayoría de los programas no son de una sola línea, te lo aseguro. Puedes usar una <em>variable</em> para almacenar un valor y usarlo después. Es como una caja donde pones cosas.</p>
+      <p>Probemos usando una de ellas:</p>
+      <pre id="code-2-12" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Ejecuta el código de arriba, ya sabes cómo, no es así?.</p>
+    </section>
+    <section class="page"><h1> Asignación </h1>
+      <p>Genial! Usamos el signo de igual, es decir, <code>=</code> para <em>asignar</em> la <code>String</code> (cadena) "Hola, mundo!" a una variable llamada <code>message</code> (mensaje). Le pasamos dicho <code>message</code> al método <code>alert</code>.</p>
+      <p>Como puedes ver, podemos usar las variables en lugar de el valor en sí. Prueba esto:</p>
+      <pre id="code-2-13" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Intenta adivinar qué va a pasar antes de ejecutar el programa.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Entrada del usuario</h1>
+    <section class="page"><h1>pidiendole cosas al usuario.</h1>
+      <p>Podemos pedirle al usuario de nuestro programa que introduzca ciertos datos, y después poner la respuesta dentro de una variable. Es fácil! Mira este programa:</p>
+      <pre id="code-2-14" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>El método <code>ask</code> (preguntar) abre una ventana y le permite a los usuario escribir algo en ella. Divertido! Ponemos su respuesta en la variable <code>name</code> (nombre) y después la mostramos con el método <code>alert</code>, Genial!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Control básico del flujo</h1>
+    <section class="page"><h1> si... </h1>
+      <p>Recuerda la lección de Empezando a programar... hablábamos de que los programas eran como una gran lista de tareas que la computadora seguía en orden.</p>
+      <p>Bueno, adivina qué? Podemos cambiar este orden usando cierto código. Compara estos dos programas:</p>
+      <pre id="code-2-15" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <pre id="code-2-16" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>Hay algunas cosas aquí.</p>
+    </section>
+    <section class="page"><h1>"=="</h1>
+      <p>Aquí está de nuevo:</p>
+      <pre id="code-2-15-1" class="sampleCode">Código insertado aquí automáticamente...</pre>
+      <p>La orden == es sólo un poco diferente que =. == prueba el Objeto a su derecha contra el objeto a su izquierda. Si los dos son iguales, entonces el código después de <code>if</code> (en españo, si) correrá. Si no son iguales, entonces se corre el código después de <code>else</code> (si no). El <code>("end")</code> (fin) nos hace saber que hemos terminado con nuestro <code>if</code>.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Ejemplo: adivinando un nombre</h1>
+    <section class="page"><h1> Adivina! </h1>
+      <p>Recapitulemos:</p>
+      <pre id="code-2-17" class="sampleCode">Código insertado aquí automáticamente...</pre>
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Ejemplo: un juego de adivinanzas</h1>
+    <section class="page"><h1> Adivina! </h1>
+      <p>Felicidades! Ahora ya sabes lo básico de Ruby, aunque aún hay mucho qué aprender!</p>
+      <p>Aquí está lo que has aprendido hasta ahora:</p>
+      <p>* <code>alert</code> (alerta) y <code>ask</code> (preguntar)</p>
+      <p>* <code>=</code> y <code>==</code></p>
+      <p>* Variables</p>
+      <p>* <code>if</code> (si) y <code>else</code> (si no)</p>
+      <p>Increíble! Ahora regresa a las "Lecciones" y continua con Guerrero Ruby!</p>
+    </section>
+  </article>
+
+  <a href="../index.html">Ir a las Lecciones</a>
+</body>
+</html>

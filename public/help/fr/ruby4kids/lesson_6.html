@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmer en s'Amusant !</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-6-1", "../../shared/ruby4kids/code6_1.rb");
+      loadCode("#code-6-2", "../../shared/ruby4kids/code6_2.rb");
+      loadCode("#code-6-3", "../../shared/ruby4kids/code6_3.rb");
+      loadCode("#code-6-4", "../../shared/ruby4kids/code6_4.rb");
+      loadCode("#code-6-5", "../../shared/ruby4kids/code6_5.rb");
+      loadCode("#code-6-6", "../../shared/ruby4kids/code6_6.rb");
+      loadCode("#code-6-7", "../../shared/ruby4kids/code6_7.rb");
+      loadCode("#code-6-8", "../../shared/ruby4kids/code6_8.rb");
+      loadCode("#code-6-9", "../../shared/ruby4kids/code6_9.rb");
+      loadCode("#code-6-10", "../../shared/ruby4kids/code6_10.rb");
+      loadCode("#code-6-11", "../../shared/ruby4kids/code6_11.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programmation de Jeux - Leçon 6</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Précédent</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Leçon 6 - Ajout d'un Ballon à Eviter</h1>
+    <section class="page"><h1>Créer une Nouvelle Classe et des Phénomènes Aléatoires</h1>
+      <p>OK, dans la première leçon, nous avons appris comment ouvrir une fenêtre dans Gosu.
+		 Ensuite, nous avons appris à dessiner un joueur dans la fenêtre de jeu.
+		 Puis à faire se déplacer ce joueur autour de la fenêtre de jeu.
+		 On a aussi limité ses mouvements aux bords de la fenêtre de jeu.</p>
+      <p>Alors nous sommes prêts à ajouter encore plus de piment au jeu.</p>
+      <p>Et si on jouait au ballon avec notre joueur ? On pourrait avoir une balle qui apparaitrait comme si elle était lancée dans la fenêtre de jeu, et notre joueur taperait la balle en bougeant avec les touches fléchées.</p>
+      <p>Essayons ça. On a déjà une image qui peut être utilisée, incluse dans KidsRuby.</p>
+      <p>Commençons par créer une nouvelle classe pour notre ballon :</p>
+
+      <pre id="code-6-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Maintenant, nous allons faire en sorte que ce ballon vienne du haut de l'écran et tombe depuis des endroits aléatoires.</p>
+      <p>On peut faire cela en mettant le <code>@x</code> de la position initiale à un nombre aléatoire entre 0 et la largeur de la fenêtre de jeu, en pixels. La position <code>@y</code> sera 0, étant donné qu'elle est en haut quand on initialise. Le code devrait ressembler à ça :</p>
+
+      <pre id="code-6-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Cela signifique que lorsque le jeu commence, la méthode aléatoire va nous donner une position entre 0 et la largeur de la fenêtre de jeu.</p>
+     
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 6 - Ajout d'un Ballon à Eviter</h1>
+    <section class="page"><h1>Changer les positions, Définir, et Mettre à Jour</h1>
+      <p>Maintenant, avec chaque mise à jour, nous avons besoin de faire se déplacer la balle vers le bas. Disons alors que la balle va se déplacer de 1 pixel à chaque mise à jour. Nous verrons à quelle vitesse ça va aller.</p>
+      <p>On fait ça dans la mise à jour, où l'on change la position <code>@y</code> de 1 pixel comme cela :</p>
+      <pre id="code-6-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ensuite on a juste besoin de définir notre balle dans la classe <code>MyGame</code> sous le <code>def initialize</code>. Donc cela devrait donner :</p>
+
+      <pre id="code-6-4" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ensuite, on va dans <code>def update</code> et on dit à la balle de se mettre à jour. On tape :</p>
+
+      <pre id="code-6-5" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 6 - Ajout d'un Ballon à Eviter</h1>
+    <section class="page"><h1>Ajouter l'Icône et Dessiner</h1>
+      <p>Et maintenant, de la même manière que ce qu'on a fait avec le joueur, nous allons aussi avoir besoin d'une icône pour le ballon. Donc on va simplement copier le code de <code>@icon</code> de la classe <code>Player</code> et le coller juste sous <code>@game_window = game_window</code> dans la classe <code>Ball</code>. Ensuite, nous allons changer le nom <code>player1.png</code> en <code>asteroid.png</code>. Ton code devrait donner ceci :</p>
+
+      <pre id="code-6-6" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ensuite, pour dessiner la balle, nous ajoutons le code suivant dans la classe <code>Ball</code> :</p>
+
+      <pre id="code-6-7" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>A présent, le dernier nombre entre parenthèse dans le code ci-dessus définit si la balle va tomber devant ou derrière le joueur. Pour l'instant, on va faire passer la balle devant le joueur, ce qui explique pourquoi le nombre est fixé à <code>2</code> plutôt que <code>1</code>.</p>
+
+      <p>Maintenant nous allons dans la classe <code>MyGame</code> et ajouter <code>@ball.draw</code> à la méthode <code>def draw</code>. Cela devrait donner ceci :</p>
+
+      <pre id="code-6-8" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+ 
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Leçon 6 - Ajout d'un Ballon à Eviter</h1>
+    <section class="page"><h1>Les Choses Deviennent Vraiment Aléatoires</h1>
+
+      <p>Comme nous l'avons appris, nous devons rattrapper la balle quand elle sort de l'écran. Si la balle va derrière l'écran, nous voulons recommencer, trouver une position aléatoire depuis le haut de l'écran, et encore laisser tomber la balle.</p>
+      <p>On peut faire ça en ajoutant notre instruction <code>if</code> que l'on connaît bien, comme ceci :</p>
+
+      <pre id="code-6-9" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Et là, nous allons faire autre chose. On veut que le ballon recommence à tomber depuis une autre position, pas la même qu'avant. Donc dans la ligne où on remet <code>@y</code> à 0, on va aussi mettre la position <code>@x</code> à une autre position aléatoire. Alors le code devrait ressembler à cela :</p>
+	  
+      <pre id="code-6-10" class="sampleCode">Code inséré automatiquement ici...</pre>
+  
+      <p>Maintenant, le ballon devrait aller vers le bas comme prévu.</p>
+      <p>Voici l'intégralité du programme que tu devrais avoir écrit jusqu'ici :</p>
+      <pre id="code-6-11" class="sampleCode">Code inséré automatiquement ici...</pre>
+      
+      <p>Tu as réussi jusqu'à la fin de la 6ème leçon ! Alors voyons voir si tu vas supporter de te faire <a href="lesson_7.html">percuter par des ballons dans la leçon 7</a> !</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+ 
+    </section>
+  </article>
+
+
+
+  <a href="#top">Retour en haut</a>
+
+</body>
+</html>
+

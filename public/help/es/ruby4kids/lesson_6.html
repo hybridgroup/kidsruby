@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programando sólo porque es divertido</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-6-1", "../../shared/ruby4kids/code6_1.rb");
+      loadCode("#code-6-2", "../../shared/ruby4kids/code6_2.rb");
+      loadCode("#code-6-3", "../../shared/ruby4kids/code6_3.rb");
+      loadCode("#code-6-4", "../../shared/ruby4kids/code6_4.rb");
+      loadCode("#code-6-5", "../../shared/ruby4kids/code6_5.rb");
+      loadCode("#code-6-6", "../../shared/ruby4kids/code6_6.rb");
+      loadCode("#code-6-7", "../../shared/ruby4kids/code6_7.rb");
+      loadCode("#code-6-8", "../../shared/ruby4kids/code6_8.rb");
+      loadCode("#code-6-9", "../../shared/ruby4kids/code6_9.rb");
+      loadCode("#code-6-10", "../../shared/ruby4kids/code6_10.rb");
+      loadCode("#code-6-11", "../../shared/ruby4kids/code6_11.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programación de Juegos - Lección 4</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+    <a href="index.html">Ir a las lecciones</a>
+    <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lección 6 - Agregar una Pelota</h1>
+    <section class="page"><h1>Crear una Nueva Clase y generaciones Aleatorias</h1>
+      <p>Muy bien, en la primera lección, aprendimos como abrir una ventana en Gosu. 
+         Luego, aprendimos como dibujar un jugador dentro de la misma ventana.
+         Luego, aprendimos como mover este jugador dentro de la ventana del juego.
+         También limitamos su movimiento tomando como límite los bordes de la ventana.</p>
+      <p>Ahora, estamos listos para agregar más emoción al juego.</p>
+      <p>¿Qué tal si jugamos a la pelota con nuestro jugador? Podemos tener una pelota que parezca que la lanzan a la ventana del juego, y nuestro jugador esquiva la pelota moviéndose con las teclas de las flechas.</p>
+      <p>Intentemos eso. Ya tenemos una imagen incluída en KidsRuby que puedes usar.</p>
+      <p>Para empezar vamos a crear una nueva clase para nuestra pelota: </p>
+
+      <pre id="code-6-1" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Ahora, vamos a hacer que esta pelota salga de la parte superior de la pantalla y caiga desde lugares aleatorios.</p>
+      <p>Para hacer esto, primeramente definimos la posición inicial de <code>@x</code> a un número aleatorio entre 0 y la anchura de la ventana, en pixeles. La posición inicial en <code>@y</code> para la pelota será 0, ya que sale desde la parte superior. Así que, tu código debería quedar de la siguiente manera:</p>
+
+      <pre id="code-6-2" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Esto quiere decir que cuando el juego comienza, el método <code>rand</code> nos dará una posición aleatoria entre 0 y la anchura de la ventana del juego.</p>
+     
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lección 6 - Agregar una Pelota</h1>
+    <section class="page"><h1>Cambiar, Definir y Actualizar Posiciones</h1>
+      <p>Ahora, con cada actualización, necesitamos que la pelota se mueva hacia abajo. Así que, digamos que la pelota se mueve 1 pixel con cada actualización. Veremos que tan rápido será esto.</p>
+      <p>Para hacer esto vamos al método <code>update</code>, donde cambiamos la posición en <code>@y</code> por 1 pixel:</p>
+      <pre id="code-6-3" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Luego, solamente necesitamos definir la pelota dentro de la clase <code>MyGame</code>, abajo de <code>def initialize</code>. Debería quedar de la siguiente manera:</p>
+
+      <pre id="code-6-4" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Luego, vamos a <code>def update</code> y le indicamos a la pelota que se actualice a sí misma. Así que, escribimos:</p>
+
+      <pre id="code-6-5" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones </a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lección 6 - Agregar una Pelota</h1>
+    <section class="page"><h1>Agregar y Dibujar el Icono</h1>
+      <p>Ahora, de la misma manera que hicimos con el jugador, también vamos a necesitar un icono para la pelota. Así que solamente copiamos el código de <code>@icon</code> de la clase <code>Player</code> y lo pegamos justamente debajo de <code>@game_window = game_window</code> en la clase <code>Ball</code>. Luego, vamos a cambiar <code>player1.png</code> a <code>asteroid.png</code>. Tu código debería verse de la siguiente manera:</p>
+
+      <pre id="code-6-6" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Luego, cuando queremos dibujar la pelota, solamente añadimos dentro de la clase <code>Ball</code> lo siguiente:</p>
+
+      <pre id="code-6-7" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>El último número en los paréntesis en el código anterior, se refiere a si la pelota irá detrás del jugador o por encima del jugador. Por ahora, vamos a hacer que la pelota vaya por encima del jugador, por lo cual ingresamos un <code>2</code> en lugar de <code>1</code>.</p>
+
+      <p> Muy bien, ahora vamos a la clase <code>MyGame</code> y agregamos <code>@ball.draw</code> al método <code>def draw</code>. Debería quedar de la siguiente manera:</p>
+
+      <pre id="code-6-8" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+ 
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Lección 6 - Agregar una Pelota</h1>
+    <section class="page"><h1>Las Cosas se Vuelven Aleatorias</h1>
+
+      <p>Por lo que hemos aprendido, necesitamos detectar cuando la pelota sale de la pantalla. Si la pelota sale de la pantalla, queremos empezar con una nueva pelota, encontrar una posición aleatoria en la parte superior de la pantalla, y tirar la pelota nuevamente.</p>
+      <p>Podemos hacer esto usamos la sentencia ya muy conocida <code>if</code> de la siguiente manera:</p>
+
+      <pre id="code-6-9" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+
+      <p>Ahora, haremos algo más. Queremos que la pelota empiece a caer desde una posición diferente, y no la misma posición en <i>x</i>. Así que, en la línea donde reseteamos @y a 0, también cambiamos la posición en @x para que sea otra posición aleatoria. Así que, el código debería quedar de la siguiente manera:</p>
+
+      <pre id="code-6-10" class="sampleCode">Código insertado automáticamente aquí...</pre>
+  
+      <p>Ahora, la pelota debería caer de la forma que queremos.</p>
+      <p>Aquí está el programa completo que deberías de haber escrito hasta ahora:</p>
+      <pre id="code-6-11" class="sampleCode">Código insertado automáticamente aquí...</pre>
+      
+      <p>¡Has completado la lección 6! Ahora, ¡veamos si puedes manejar ser <a href="lesson_7.html">golpeado por las pelotas en la lección 7</a>!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+ 
+    </section>
+  </article>
+
+
+
+      <a href="#top">Ir Hacia Arriba</a>
+
+</body>
+</html>
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programando sólo porque es divertido</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-3-1", "../../shared/ruby4kids/code3_1.rb");
+      loadCode("#code-3-2", "../../shared/ruby4kids/code3_2.rb");
+      loadCode("#code-3-3", "../../shared/ruby4kids/code3_3.rb");
+      loadCode("#code-3-4", "../../shared/ruby4kids/code3_4.rb");
+      loadCode("#code-3-5", "../../shared/ruby4kids/code3_5.rb");
+      loadCode("#code-3-6", "../../shared/ruby4kids/code3_6.rb");
+      loadCode("#code-3-7", "../../shared/ruby4kids/code3_7.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programación de Juegos - Lección 1</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+    <a href="index.html">Ir a las lecciones</a>
+    <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lección 3 - Movimiento del Jugador Hacia la Izquierda</h1>
+    <section class="page"><h1>Esto es Ruby4Kids</h1>
+      <p>Muy bien, ahora vamos a tratar a hacer que el jugador se mueva. En la lección pasada, teníamos la imagen del jugador, y ahora vamos a encontrar la manera de cómo hacer que ese jugador se mueva. </p>
+      <p> En <code>Gosu</code>, podemos usar las teclas de las flechas para mover el jugador hacia arriba, abajo, izquierda, y derecha. La ventana del juego tiene un método <code>update</code>, que es donde necesitamos checar si alguna tecla fué presionada. En programación, hacemos esto por medio de sentencias condicionales, como la sentencia <code>if</code>. </p>
+      <p>Entonces, bajo <code>def update</code> escribimos:</p>
+      <pre id="code-3-1" class="sampleCode">Código insertado automáticamente aquí...</pre>
+ 
+      <p>Entonces, lo que el segmento de arriba nos dice, es que si la tecla de la flecha izquierda es presionada, el jugador se moverá hacia la izquierda. De cualquier manera, antes de que podamos definir lo que es el movimiento hacia la izquierda, necesitamos mover el jugador de una posición predefinida en 50,50.</p> 
+
+      <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lección 3 - Mover el Jugador Hacia la Izquierda</h1>
+    <section class="page"><h1>Agregando Variables</h1>
+      <p>Si queremos mover la posición, tenemos que darle algunas variables. Para inicializar esas variables lo hacemos desde el método <code>initialize</code>. Asi que, abajo de <code>def initialize</code>, lo que tenemos es:
+      <pre id="code-3-2" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p> Ahora, solo necesitamos agregar lo siguiente: </p>
+      <pre id="code-3-3" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p> Después, vamos a reemplazar <code>50,50</code> en el código <code>@icon.draw(50,50,1)</code> con <code>@x, @y</code>. Entonces, el resultado final va a quedar de la siguiente manera:
+
+      <pre id="code-3-4" class="sampleCode">Código insertado automáticamente aquí...</pre>
+      <p> Ahora, lo que acabamos de hacer es hacer el icono móvil cambiando el icono de una posición fija a una posición variable, ¡usando variables! Estas variables fueron inicializadas desde el método <code>initialize</code> del jugador. Así, la posición inicial para <i>x</i> y para <i>y</i> es de 50 para ambas. </p>
+
+      <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lección 3 - Mover el Jugador Hacia la Izquierda</h1>
+    <section class="page"><h1>Definir "Moving Left"</h1>
+      <p>Ahora necesitamos hacer que la posición x se mueva hacia la izquierda cada vez que el jugador se mueve hacia la izquierda. Así que, en orden para hacer esto, primero tenemos que definir el método <code>moving left</code> y agregar una simple ecuación bajo la definición. Para esto escribimos lo siguiente: </p>
+
+      <pre id="code-3-5" class="sampleCode">Código insertado automáticamente aquí...</pre> 
+      <p>La ecuación que escribimos mueve el icono 10 pixeles hacia la izquierda cada vez que presionamos la tecla de la flecha izquierda. ¡Adelante, pruébalo! Genial, ¿no?</p> 
+      
+      <p>Aquí está el programa completo que deberías haber escrito hasta ahora:</p>
+      <pre id="code-3-7" class="sampleCode">Código insertado automáticamente aquí...</pre>
+
+      <p>Muy bien chico listo, ahora que sabes cómo moverte hacia la izquierda, probemos <a href="lesson_4.html">limitar el movimiento de nuestro jugador en la lección 4</a>!</p>
+
+      <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+<a href="#top">Ir Hacia Arriba</a>
+
+</body>
+</html>
+

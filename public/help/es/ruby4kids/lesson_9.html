@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programando sólo porque es divertido</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-9-1", "../../shared/ruby4kids/code9_1.rb");
+      loadCode("#code-9-2", "../../shared/ruby4kids/code9_2.rb");
+      loadCode("#code-9-3", "../../shared/ruby4kids/code9_3.rb");
+      loadCode("#code-9-4", "../../shared/ruby4kids/code9_4.rb");
+      loadCode("#code-9-5", "../../shared/ruby4kids/code9_5.rb");
+      loadCode("#code-9-6", "../../shared/ruby4kids/code9_6.rb");
+      loadCode("#code-9-7", "../../shared/ruby4kids/code9_7.rb");
+      loadCode("#code-9-8", "../../shared/ruby4kids/code9_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programación de Juegos - Lección 9</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+    <a href="index.html">Ir a las lecciones</a>
+    <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lección 9 - Creando múltiples pelotas</h1>
+    <section class="page"><h1>Apenas quepo en esta ventana</h1>
+
+      <p>Ahora que vamos a agregar más pelotas para esquivar, deberíamos crear una ventana más grande en la cual poder trabajar.</p>
+
+      <p> Entonces, para hacer eso, vayamos a la clase <code>MyGame</code> y debajo de <code>def initialize</code> cambiemos los numeros a <code>(600, 400, false)</code>. El resultado debería de verse así:</p>
+
+      <pre id="code-9-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Luego, sólo ajustaremos el jugador para que empiece en la parte baja de la pantalla. Primero, necesitamos dirigirnos a la clase <code>player</code>. Ahora, cambiemos la coordenada X del jugador a 150 y la coordenada Y a 330. Tu resultado debería verse así:</p>
+
+      <pre id="code-9-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lección 9 - Creando múltiples pelotas</h1>
+    <section class="page"><h1>Pluraliza!</h1>
+
+      <p>Ahora tratemos de agregar 3 pelotas más! Entonces, nos dirigiremos a la clase <code>MyGame</code> y cambiaremos algunas cosas justo por debajo de <code>def initialize</code>:</p>
+
+      <pre id="code-9-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Todo lo que hicimos en el código mostrado arriba fue pluralizar <code>ball</code> y luego cambiarlo para crear 3 pelotas en lugar de 1.</p>
+      <p>A continuación, actualicemos cada pelota, en lugar de sólo actualizar una de ellas. De igual manera pluralizaremos <code>@ball</code>. Entonces, por debajo de la clase <code>MyGame</code> cambiaremos el codigo a:</p>
+
+      <pre id="code-9-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> A continuación, haremos un poco más de lo mismo. Entonces, iremos a <code>def draw</code> y para pluralizar <code>@ball</code> cambiaremos el código, eso dibujará cada pelota, en lugar de sólo una. Tu resultado final debería ser algo como lo siguiente:</p>
+
+      <pre id="code-9-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Ahora que estamos pluralizando, porque no vamos y hacemos algo más! Entonces, iremos a la clase <code>Player</code> y la cambiaremos a lo siguiente: </p>
+
+      <pre id="code-9-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> Nuevamente, sólo estamos ajustando los métodos, así trabajarán con múltiples pelotas. En el código de arriba, añadimos el método <code>any?</code>, el cual nos dice que al ser golpeado por cualquiera de las pelotas ésto provocará un golpe.</p>
+
+      <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lección 9 - Creando múltiples pelotas</h1>
+    <section class="page"><h1>No más pluralizar... Quizá</h1>
+
+      <p>En estos momentos debes de odiar pluralizar, entonces nos detendremos... justo después de la siguiente pluralización! Entonces, iremos a la clase <code>MyGame</code> y cambiaremos la definición para reiniciar el juego a los siguiente:</p>
+
+      <pre id="code-9-7" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Has terminado de capitalizar (es una promesa)! Ahora, demos una mirada a como debería de verse todo tu código:</p>
+
+      <pre id="code-9-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Puede ser? Éste es el final? Realmente has recorrido todo el tutotial? La respuesta es, SÍ! FELICIDADES, LO LOGRASTE! Desarrollaste un programa en el que puedes jugar y que también puedes mostrar! Esperamos que continues interesado en la programación, porque si lo lograste así de rápido, tienes lo que se necesita :).</p>
+
+      <a href="#back" class="prev-lesson">&laquo; Anterior</a>
+      <a href="index.html">Ir a las lecciones</a>
+      <a href="#next" class="next-lesson">Siguiente &raquo;</a>
+
+    </section>
+  </article>
+
+      <a href="#top">Regresar al inicio</a>
+
+</body>
+</html>
+

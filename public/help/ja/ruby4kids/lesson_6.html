@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ruby4Kids - 楽しいプログラミング</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-6-1", "../../shared/ruby4kids/code6_1.rb");
+      loadCode("#code-6-2", "../../shared/ruby4kids/code6_2.rb");
+      loadCode("#code-6-3", "../../shared/ruby4kids/code6_3.rb");
+      loadCode("#code-6-4", "../../shared/ruby4kids/code6_4.rb");
+      loadCode("#code-6-5", "../../shared/ruby4kids/code6_5.rb");
+      loadCode("#code-6-6", "../../shared/ruby4kids/code6_6.rb");
+      loadCode("#code-6-7", "../../shared/ruby4kids/code6_7.rb");
+      loadCode("#code-6-8", "../../shared/ruby4kids/code6_8.rb");
+      loadCode("#code-6-9", "../../shared/ruby4kids/code6_9.rb");
+      loadCode("#code-6-10", "../../shared/ruby4kids/code6_10.rb");
+      loadCode("#code-6-11", "../../shared/ruby4kids/code6_11.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - ゲーム プログラミング - レッスン 6</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+  </nav>
+
+  <article class="lesson"><h1>レッスン 6 - ドッジボールを追加する</h1>
+    <section class="page"><h1>新しいクラスを作ることとランダム化</h1>
+      <p>OK、最初のレッスンで、ゴスにウインドウをあける方法を知った。  そして、プレイヤーをウインドウの中に えがく方法を知った。 次に、プレイヤーをゲームウインドウの中で動かす方法を知った。 動きをゲームウインドウの わくの中に制限する こともした。</p>
+      <p>そして今、準備がととのった。もっとわくわくすることをゲームにたすことができるよ。</p>
+      <p>プレイヤーとドッジボールをするのはどうだろう？ こんなボールを手に入れることができるんだ。そのボールは、あたかもゲームウインドウに投げこんだかのように見える。そして、プレイヤーは矢印キーで動いて、ひらりとそのボールをよけるんだ。</p>
+      <p>じゃあ、やってみよう。 画像はKidsRubyに用意されているからそれを使うことができるよ。</p>
+      <p>ドッジボールの新しいクラスを作ることからはじめよう： </p>
+
+      <pre id="code-6-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>ボールを画面の一番上の、いろんな所から、落とすようにしよう。</p>
+      <p>これを やるには こうする。最初の<code>@x</code>の位置を、０からゲームウインドウの幅の間の、ランダム（ばらばら）なピクセル数にセットする。ボールは最初、一番上にあるから<code>@y</code>の位置は０だ。 コードはこのようになる：</p>
+
+      <pre id="code-6-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>ゲームがはじまると、random（ランダム）メソッドが、０からゲームウインドウの間のどこかの位置をくれる。</p>
+     
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 6 - ドッジボールを追加する</h1>
+    <section class="page"><h1>位置を変える、定義する、そしてアップデートする</h1>
+      <p>さて、ひとつひとつのアップデートで、ボールを下に動かす必要がある。 例えば、ひとつひとつのアップデートで、ボールが１ピクセルずつ動くようにする。 これが どれだけの速さか見ることが できるよ。</p>
+      <p>アップデートの中でこれをやる。<code>@y</code>の位置を１ピクセル変えるんだ。こんなふうに：</p>
+      <pre id="code-6-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>次に、<code>MyGame</code>クラスの中の、<code>def initialize</code>の下でボールを定義する。 このようになるはずだ：</p>
+
+      <pre id="code-6-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>そして、<code>def update</code>で、ボールにボール自身をアップデートするように教える。 というわけで、これを入力する：</p>
+
+      <pre id="code-6-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>レッスン 6 - ドッジボールを追加する</h1>
+    <section class="page"><h1>アイコンを たして えがく</h1>
+      <p>さて、プレイヤーと同じように、ボールにもアイコンが必要だよね。 だから、<code>Player</code>クラスの<code>@icon</code>コードをコピーして、<code>Ball</code> クラスの<code>@game_window = game_window</code> の真下に貼りつけよう。 そして、<code>player1.png</code>を<code>asteroid.png</code>に変える。 コードはこのようになる：</p>
+
+      <pre id="code-6-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>次はこうだ。ボールを えがきたい ときには、<code>Ball</code>クラスにこれをたす：</p>
+
+      <pre id="code-6-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>上のコードのカッコの中の最後の数は、ボールが落とされるのが、プレイヤーの前なのか、後ろなのかをしめしている。 今回は、ボールがプレイヤーの前に行くようにする。というわけで、数を <code>1</code>ではなく<code>2</code>にしている。。</p>
+
+      <p> OK、それじゃあ<code>MyGame</code>クラスの<code>def draw</code>メソッドに、<code>@ball.draw</code>をたそう。 このようになるはずだ：</p>
+
+      <pre id="code-6-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">«前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a>
+ 
+    </section>
+  </article>
+
+  <article class="lesson"><h1>レッスン 6 - ドッジボールを追加する</h1>
+    <section class="page"><h1>いろんな動きがでてきた</h1>
+
+      <p>もう知っているよね。ボールが画面からはみ出すときには わなが必要だ。 ボールが画面から出たら、また最初からはじめたいよね。また画面の一番上の、ランダムな位置を見つけて、ボールを落とすんだ。</p>
+      <p>よく知っている<code>if</code>文を使ってこれをやる。こんなふうに：</p>
+
+      <pre id="code-6-9" class="sampleCode">Code automatically inserted here...</pre>
+
+
+      <p>さて、もうひとつ やってみよう。 ボールを前のxの位置でなく、前とは違う位置から落としたいんだ。 だから、@yを0にもどしている行で、@xの位置を別のランダムな位置に変える。 で、コードはこのように なる はずだ：</p>
+
+      <pre id="code-6-10" class="sampleCode">Code automatically inserted here...</pre>
+  
+      <p>これで、ボールが思った通りに落ちる ように なる はずだ。</p>
+      <p>これが これまでに書くプログラムの すべてだ：</p>
+      <pre id="code-6-11" class="sampleCode">Code automatically inserted here...</pre>
+      
+      <p>６番目のレッスンの終わりまでやりとげた！ それじゃあ、<a href="lesson_7.html">レッスン 7でドッジボールにあたる</a>というのを うまく プログラムできるか ためしてみよう！</p>
+
+      <a href="#prev" class="prev-lesson">« 前へ</a> <a href="index.html">一覧へ戻る</a> <a href="#next" class="next-lesson">次へ »</a> </section> </article> <a href="#top">一番上へ戻る</a>
+
+</body>
+</html>
+

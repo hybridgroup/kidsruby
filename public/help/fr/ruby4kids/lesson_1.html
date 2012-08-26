@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmer en s'Amusant !</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-1-1", "../../shared/ruby4kids/code1_1.rb");
+      loadCode("#code-1-2", "../../shared/ruby4kids/code1_2.rb");
+      loadCode("#code-1-3", "../../shared/ruby4kids/code1_3.rb");
+      loadCode("#code-1-4", "../../shared/ruby4kids/code1_4.rb");
+      loadCode("#code-1-5", "../../shared/ruby4kids/code1_5.rb");
+      loadCode("#code-1-6", "../../shared/ruby4kids/code1_6.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programmation de Jeux - Leçon 1</h1>
+  <nav id="top">
+    <a href="#prev" class="prev-lesson">&laquo; Retour</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+
+  <article class="lesson"><h1>Leçon 1 - Préparation</h1>
+    <section class="page">
+      <p>Comme tu es déjà en train d'utiliser KidsRuby, tu es donc prêt à commencer à programmer ton premier jeu en utilisant Gosu.</p>
+      <p>Voici le fichier qui va contenir notre premier programme.</p>
+      <p>Nous allons utiliser la librairie gosu en écrivant :</p>
+      <pre id="code-1-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Nous allons ensuite commencer notre jeu en héritant de la classe <code>Gosu</code>.</p>
+      <p>Nous appelerons notre jeu <code>MyGame</code> comme ça :</p>
+      <pre id="code-1-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Maintenant, à l'intérieur de cette classe, <code>Gosu</code> a besoin de nous pour définir trois méthodes :</p>
+      <p>Nous définissons nos méthodes comme ça :</p>
+      <pre id="code-1-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Que se passe t-il donc ici ? Quand le jeu démarre, la méthode <code>initialize</code> est appelée. Ensuite le jeu continue de s'exécuter en boucle en appelant successivement les méthodes :<code>update</code> et <code>draw</code>.</p>
+      <p>Met à jour, puis dessine. Met à jour puis dessine. Met à jour puis dessine. Ce cycle se répète à l'infini plusieurs fois par seconde !</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Retour</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Leçon 1 - Création d'une Fenêtre</h1>
+    <section class="page"><h1>Création d'une Fenêtre</h1>
+      <p>Cool, on est donc quasiment prêts à lancer ce code. La prochaine étape va être de dire à <code>Gosu</code> la taille de la fenêtre que nous voulons afficher à l'écran pour notre jeu.</p>
+      <p>Nous allons faire ça dans la méthode <code>initialize</code> en lui passant trois paramètres comme ceci :</p>
+      <pre id="code-1-4" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Les deux premiers paramètres signifient que la fenêtre fera 300 pixels de largeur et 400 pixels de hauteur. Un pixel est un point unique sur ton écran. Si tu regarde de très très près le moniteur, tu pourra les apercevoir !</p>
+      <p>Le troisième paramètre <code>false</code>, qui signifie "faux" en français, permet de dire à gosu de ne pas prendre l'écran entier.</p>
+      <p>Très bien, nous sommes presque prêts pour voir si ça marche.</p>
+      <p>Pour afficher le résultat de ce que nous avons codé, il va falloir utiliser la classe que nous avons définie dans notre programme.</p>
+      <p>Nous allons faire ça en ajoutant ce qui suit après la définition de la classe :</p>
+      <pre id="code-1-5" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>La première ligne crée une instance du nouveau jeu. Ensuite, en appelant la méthode <code>show</code>, nous demandons au jeu de nous montrer la fenêtre.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Retour</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Leçon 1 - Exécute-le !</h1>
+    <section class="page"><h1>Exécute Ton Programme</h1>
+      <p>Nous sommes maintenant prêt à exécuter le programme.</p>
+      <p>C'est parti ! Clique sur le bouton "Exécuter".</p>
+      <p>Si tout s'est bien passé, tu as vu la fenêtre s'afficher. Bravo, tu viens d'écrire ton premier programme de jeu !</p>
+      <p>Voici le programme en entier comme tu as dû l'écrire :</p>
+      <pre id="code-1-6" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Bon c'est vrai que ça ne fait rien d'extraordinaire, mais au moins tu sais maintenant comment faire pour afficher une fenêtre dans un jeu !</p>
+      <p>Tu es maintenant prêt pour la <a href="lesson_2.html">Leçon 2</a>.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Retour</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+  <a href="#top">Retour en Haut</a>
+  
+</body>
+</html>

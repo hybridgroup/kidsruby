@@ -20,6 +20,8 @@ class KidsRubyStdIo
     #   Or simple_format from actionpack/lib/action_view/helpers/text_helper.rb
     text.gsub(/\n/,"<br/>")
   end
+
+  def flush; end
 end
 
 class StdOut < KidsRubyStdIo

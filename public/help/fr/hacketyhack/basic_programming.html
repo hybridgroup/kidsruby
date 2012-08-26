@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Bases de la Programmation</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-1-1", "../../shared/hacketyhack/code1_1.rb");
+      loadCode("#code-1-2", "../../shared/hacketyhack/code1_2.rb");
+      loadCode("#code-1-3", "../../shared/hacketyhack/code1_3.rb");
+      loadCode("#code-1-4", "../../shared/hacketyhack/code1_4.rb");
+      loadCode("#code-1-5", "../../shared/hacketyhack/code1_5.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Bases de la Programmation</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Précédent</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+
+
+  <article class="lesson"><h1>Bonjour à tous !</h1>
+    <section class="page"><h1>Premier Round</h1>
+      <p>Bon, tu es là pour apprendre comment hacker du code avec les meilleurs d'entre eux hein ? Cool, t'es au bon endroit. C'est la première des leçons que je dois partager avec toi, et ça commence maintenant.</p>
+      <p>Je tiens à t'aider à partir du bon pied dans la programmation, donc on va commencer par parler un peu de ce qu'EST la programmation, et ensuite on va commencer à écrire quelques programmes basiques pour dessiner des trucs cools à l'écran. Ca te plaît ? Eh bien c'est parti !</p>
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Parlons Programmation !</h1>
+    <section class="page"><h1>Tout est une Question d'Instructions</h1>
+      <p>Quand tu te mets à la programmation, tout est question d'<strong>algorithmes</strong>. C'est un mot bien compliqué pour dire "une liste d'instructions". Chaque programme est simplement une grosse liste d'instructions que l'ordinateur doit accomplir.</p>
+      <p>Tu peux à peu près tout traduire en liste d'instructions si tu y réfléchis. La plupart du temps, tu es habitué à tout découper en étapes sans y penser... Tu le fais simplement, naturellement.</p>
+    </section>
+
+    <section class="page"><h1>L'Ordinateur est Simple</h1>
+      <p>Malheureusement, les ordinateurs sont en effet assez simples. C'est sans doute contraire à tout ce que tu as pu entendre, mais c'est la vérité. Même si l'on compare les ordinateurs à quelque chose comme notre cerveau, c'est une analogie assez simpliste. En réalité les ordinateurs sont juste très forts pour effectuer des tâches simples et ennuyeuses, encore et encore, très vite. Ils n'ont pas de pensée propre !</p>
+      <p>C'est la raison pour laquelle les ordinateurs ont l'air si complexes. Ils suivent aveuglément les ordres reçus, en ne sachant nullement si les instructions sont bonnes ou mauvaises. C'est dur de penser avec des mots si simples !</p>
+    </section>
+
+    <section class="page"><h1>Explique-Toi Bien</h1>
+      <p>Il est important de se rappeler que tu dois tout expliquer entièrement à l'ordinateur quand tu programmes. Il ne peut pas interpréter ce que tu essayes de dire, alors tu dois le lui dire clairement !</p>
+      <p>Cela demande un peu de pratique, donc on va commencer par quelques exercices en nous exprimant en termes très simples. C'est un peu comme essayer d'expliquer les maths à un jeune enfant : tu dois aller doucement, vérifier trois fois ton travail, et avoir une certaine patience quand il n'a pas tout compris.</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Listes d'Instructions</h1>
+    <section class="page"><h1>Une liste de choses à faire, pas une liste de courses</h1>
+      <p>Quand je dis que l'ordinateur suit une liste d'instructions, je veux dire une liste de choses à faire, pas une liste de commissions. Ce que j'essaye de dire, c'est que cette liste a un <strong>ordre</strong> que l'ordinateur suit. Il effectue chaque étape dans l'ordre, le plus rapidement possible.</p>
+      <p>Une liste de courses est un type de liste différent. Tu peux choisir n'importe quel élément, et à partir du moment où tu as tout fait au moment de quitter, tout va bien. Ce n'est pas du tout ce que l'ordinateur fait.</p>
+    </section>
+
+    <section class="page"><h1>Comment dirais-tu à une personne de le faire ?</h1>
+      <p>Un exemple : si tu avais à dire en quelques mots à une personne comment dessiner un carré sur un papier, comment ferais-tu ?</p>
+      <p>Tu n'es pas autorisé à dire "comme ça", ou "de cette façon", c'est triché ! Tu dois lui détailler chaque action.</p>
+    </section>
+
+    <section class="page"><h1>Encore une fois : les ordinateurs sont simples.</h1>
+      <p>Comment ferais-tu ? As-tu oublié de mentionner la taille de chaque côté du carré ? Si c'est le cas, c'est raté...</p>
+      <p>Voilà comment je l'aurais fait. Ce n'est pas la seule bonne réponse, c'est juste un exemple :</p>
+      <p>1. Pose ton crayon sur le papier.</p>
+      <p>2. Dessine vers la droite sur un cm.</p>
+      <p>3. Dessine vers le bas d'un cm.</p>
+      <p>4. Dessine vers la gauche d'un cm.</p>
+      <p>5. Dessine vers le haut d'un cm.</p>
+      <p>6. Lève ton crayon du papier.</p>
+      <p>7. C'est fait !</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Tortues.</h1>
+    <section class="page"><h1>Dessiner... avec des tortues?</h1>
+      <p>OK ! Assez parlé, maintenant on va réaliser quelque chose. Tu te demandes quand on va enfin commencer, non ? Mais c'est très important de maîtriser quelques bases avant...</p>
+      <p>On va dire à l'ordinateur comment dessiner quelques motifs... avec des tortues.</p>
+      <p>Cette tortue un peu particulière tient un crayon. Tu as un morceau de papier. Cette tortue va suivre chacun de tes mots. Mais cette tortue est un peu lente, et a besoin d'instructions bien précises. Tu te sens prêt ?</p>
+    </section>
+
+    <section class="page"><h1>La Tortue et ses commandes</h1>
+      <p>Nous devons dire à Ruby que nous voulons dire à la Tortue quoi faire. Pour ça, nous avons une commande <code>Turtle</code>. Turtle veut dire Tortue en anglais. Nous pouvons dire à la <code>Turtle</code> deux choses :</p>
+      <p><code>draw</code> : la tortue va suivre nos instructions à la vitesse de la lumière, et dessiner l'image entière en un clignement de paupière.</p>
+      <p><code>start</code> : une fenêtre intéractive va apparaître, ce qui te permettra de voir la tortue se déplacer à chaque étape du programme. Tu peux avancer à ton rythme, c'est pratique si la tortue ne fait pas ce à quoi tu t'attendais.</p>
+    </section>
+
+    <section class="page"><h1>Ecrivons le !</h1>
+      <p>Cool. Maintenant tape ceci :</p>
+      <p><code>Turtle.draw</code></p>
+      <p>La période entre la <code>Turtle</code> et le <code>draw</code> les interconnecte. La programmation a des règles, tout comme le Français en a. Tu peux imaginer la <code>Turtle</code> comme un sujet, et <code>draw</code> comme un verbe. Ensemble, ils forment une phrase : Hey la tortue, dessine-moi un truc !</p>
+      <p>Une fois que tu as tapé ça, poursuivons en cliquant sur le bouton "Exécuter". La tortue bouge si vite en mode <code>draw</code> que tu ne la verras pas, mais je le promets, elle bouge !</p>
+    </section>
+
+    <section class="page"><h1>Fait... Ce que je te dis</h1>
+      <p>Trop cool ! On a au moins une tortue qui bouge. Maintenant, on veut pouvoir lui dire ce qu'elle doit dessiner !</p>
+      <p>Tu te rappelles quand on a dit que tous les programmes ne sont que des listes d'instructions ? Dans notre cas, notre programme a seulement une instruction : <code>Turtle</code> dessine quelque chose ! Mais on a besoin de pouvoir donner à la <code>Turtle</code> sa propre liste d'instructions.</p>
+      <p>Pour ce faire, on va utiliser deux mots : <code>do</code> et <code>end</code>. Ces deux mots réunis font une <em>sous-liste</em> de choses, juste pour la <code>Turtle</code> !</p>
+    </section>
+
+    <section class="page"><h1>Modification de l'arrière plan</h1>
+      <p>Essayons ceci : on peut dire à la <code>Turtle</code> que nous voulons utiliser une couleur d'arrière-plan différente en utilisant la commande <code>background</code>. Vérifions :</p>
+      <pre id="code-1-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Tape ceci et clique sur "Exécuter" !</p>
+    </section>
+
+    <section class="page"><h1>La Tortue a ses ordres</h1>
+      <p>Beau boulot ! L'arrière-plan est maintenant marron. <a href="colors.html">Clique ici pour voir a liste complète de couleurs supportées</a>.</p>
+      <p>C'est aussi la façon dont on fait des listes d'instructions que la <code>Turtle</code> suit. Pour le rendre un peu plus facile à lire, les programmeurs mettent souvent deux espaces devant les sous-listes. Prends l'habitude dès maintenant, tu me remercieras plus tard !</p>
+    </section>
+
+    <section class="page"><h1>Le crayon</h1>
+      <p>Maintenant que nous avons une couleur d'arrière plan, comment dessiner quelques lignes ? Bon, la première chose dont on a besoin, c'est d'un crayon. La <code>Turtle</code> traîne un crayon avec elle. On peut en changer la couleur avec la commande <code>pencolor</code>.</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Dessiner Des Lignes</h1>
+    <section class="page"><h1>Suite !</h1>
+      <p>OK, assez tergiversé. Demandons à la tortue de dessiner une ligne ! Voici la mienne. Essaye, et personnalise-la avec tes propres couleurs et chiffres !</p>
+      <pre id="code-1-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Au fait, 50 est le nombre de pixels que va parcourir la Tortue.</p>
+    </section>
+
+    <section class="page"><h1>Tu me fais tourner la tête, chérie !</h1>
+      <p>Cool, tu as une ligne. Mais que faire si tu ne veux pas seulement faire avancer tout droit ta <code>Turtle</code> ? Eh bien tu peux lui dire de tourner en utilisant les commandes <code>turnleft</code> ou <code>turnright</code>, comme ceci :</p>
+      <pre id="code-1-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+     <p>Essaye ça, et joue un peu avec !</p>
+     <p>Si tu te demandes ce que 90 veut dire, c'est le nombre de degrés de rotation effectués par la Tortue.</p>
+    </section>
+
+    <section class="page"><h1>I like to move it, move it</h1>
+      <p>Maintenant on va cuisiner ! Touillons tout ça encore un peu :</p>
+      <p><code>Turtle.draw</code> dit à la <code>Turtle</code> que nous voulons dessiner quelque chose. Le point connecte la Tortue avec "draw" (dessiner).</p>
+      <p><code>do ... end</code> est une sous-liste de choses. C'est ce que nous voulons faire dessiner à la <code>Turtle</code>.</p>
+      <p><code>pencolor</code> configure la couleur du crayon que la <code>Turtle</code> transporte, et <code>background</code> configure la couleur de l'arrière plan.</p>
+      <p><code>turnright</code> (ou son frère <code>turnleft</code>) dit à la <code>Turtle</code> de tourner à droite ou à gauche.</p>
+      <p><code>forward</code> (ou son copain <code>backward</code>) ordonne à la <code>Turtle</code> d'avancer ou reculer.</p>
+    </section>
+
+    <section class="page"><h1>Essayons de dessiner un carré</h1>
+      <p>En avant, essaye de faire dessiner un carré à la <code>Turtle</code>.</p>
+      <p>J'attends. :)</p>
+    </section>
+
+    <section class="page"><h1>Ma version</h1>
+      <p>Voilà comment j'ai fait :</p>
+      <pre id="code-1-4" class="sampleCode">Code inséré automatiquement ici...</pre>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Se le Répéter</h1>
+    <section class="page"><h1>Encore et encore...</h1>
+      <p>Hé, ça c'était un peu trop répété ! Mes doigts à moi ont juste dû taper <code>forward</code> et <code>turnright</code> !</p>
+      <p>J'ai cependant de bonnes nouvelles : j'ai mentionné plus tôt quelque chose au sujet des ordinateurs. Il s'avère que faire des choses répétitives ennuyeuses, c'est un truc pour lequel ils sont vraiment bons ! Ils vont faire la même chose maintes et maintes fois, aussi longtemps que tu veux si tu le lui demandes gentiment.</p>
+    </section>
+
+    <section class="page"><h1>Se le Se le Répéter Répéter</h1>
+      <p>Souviens-toi : notre <code>Turtle</code> connait les nombres. Par exemple :</p>
+      <pre id="code-1-5" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Essaye d'exécuter cet exemple. Il dessine aussi un carré ! Wah !</p>
+    </section>
+
+    <section class="page"><h1>4.times</h1>
+      <p>C'est assez simple : <code>4</code> peut aussi recevoir des intructions, tout comme notre <code>Turtle</code>. Cette commande répète une liste d'instructions autant de fois que demandé. Fun ! Quatre fois. Et le code <code>do</code> ainsi que <code>end</code> montrent quelle liste d'instructions vont avec le <code>4</code> plutôt qu'avec la <code>Turtle</code>.</p>
+    </section>
+
+    <section class="page"><h1>Essaye par toi-même !</h1>
+      <p>Lance-toi un défi : dessine autant de chouettes formes que tu peux !</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Résumé</h1>
+    <section class="page"><h1>Félicitations !</h1>
+      <p>Wah, t'as été trop fort, tope-la ! Tu connais maintenant la base.</p>
+      <p>Jette un oeil aux leçons <em>Bases de Ruby</em> pour apprendre des choses encore différentes et excitantes !!</p>
+    </section>
+  </article>
+
+  <a href="#top">Retour en haut</a>
+
+</body>
+</html>

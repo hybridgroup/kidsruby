@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmer en s'Amusant !</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-7-1", "../../shared/ruby4kids/code7_1.rb");
+      loadCode("#code-7-2", "../../shared/ruby4kids/code7_2.rb");
+      loadCode("#code-7-3", "../../shared/ruby4kids/code7_3.rb");
+      loadCode("#code-7-4", "../../shared/ruby4kids/code7_4.rb");
+      loadCode("#code-7-5", "../../shared/ruby4kids/code7_5.rb");
+      loadCode("#code-7-6", "../../shared/ruby4kids/code7_6.rb");
+      loadCode("#code-7-7", "../../shared/ruby4kids/code7_7.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Programmation de Jeux - Leçon 7</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Précédent</a>
+    <a href="index.html">Retour aux Leçons</a>
+    <a href="#next" class="next-lesson">Suivant &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Leçon 7 - Se Faire Toucher par le Ballon</h1>
+    <section class="page"><h1>Définir un Contact</h1>
+      <p>Il est temps de s'assurer que lorsque la balle touche le joueur, le jeu s'arrête.</p>
+      <p>La première chose que l'on doit faire est d'aller dans la classe <code>Game</code>, et dans <code>@ball.update</code>nous allons définir un contact (un "hit" en anglais) :</p>
+
+      <pre id="code-7-1" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Et maintenant, allons voir notre joueur et définissons cette méthode <code>hit_by?</code>. On va dans la classe <code>Player</code> et on définit ce que cela signifie d'être touché par la balle :</p>
+      <pre id="code-7-2" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Ce qu'on vient de faire c'est ajouter une méthode que Gosu nous donne, appelée <code>distance</code>, où l'on passe les coordonnées x et y de l'objet et les coordonnées x et y d'un autre objet.</p>
+
+      <p>Nous avons aussi écrit que si la distance entre ces deux coordonnées est inférieure à 50, on va percuter la balle.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Leçon 7 - Se Faire Toucher par le Ballon</h1>
+    <section class="page"><h1>Définir Encore Plus</h1>
+
+      <p>Revenons à la classe <code>Game</code>. On a dit que si un joueur est touché par la balle, on arrête le jeu. Donc on a besoin de définir ce que stopper le jeu signifie.</p>
+
+      <p>A présent, nous allons introduire une nouvelle variable ici pour appliquer ce que l'on a défini, appelée <code>running</code> ("en train de s'exécuter"). En dessous de la classe <code>Game</code>, on va taper :</p>
+     
+      <pre id="code-7-3" class="sampleCode">Code inséré automatiquement ici...</pre>
+      <p>Si on arrête le jeu, il ne sera plus en train de s'exécuter (logique). Alors on doit d'abord ajouter cette variable <code>running</code> et la mettre à true. Quand le jeu commence, le jeu est "running". Quand le joueur est touché, la méthode <code>stop_game!</code> va mettre la variable <code>running</code> à false, ce qui va arrêter le jeu.</p> 
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+    
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 7 - Se Faire Toucher par le Ballon</h1>
+    <section class="page"><h1>Stop ! On Frappe</h1>
+      <p>Maintenant, on veut que le joueur et le ballon arrêtent de bouger quand le jeu s'arrête. Si tu regarde la méthode "update", tu verras que nous avons tout ce qui fait bouger le joueur ou la balle. Maintenant, cela va fonctionner tant que le jeu est "running". Mais une fois qu'il s'arrêtera, on veut qu'il n'y ait rien de tout cela qui se passe. Alors, directement dans <code>def update</code>, on tape :</p>
+ 
+      <pre id="code-7-4" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>A présent, revenons à la classe <code>Player</code>. On va maintenant définir deux méthodes sur la balle : x et y. Pour faire ça, on tape :
+	  
+      <pre id="code-7-5" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Si tu t'en souviens, la balle a des coordonnées variables x et y, qu'on ne peut pas connaître du point de vue du joueur. Par contre, on peut appeler les méthodes. Ce que l'on a fait ci-dessus est appeler la méthode x, qui retournera la variable x, et appelé la méthode y qui nous donnera la variable y.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Précédent</a>
+      <a href="index.html">Retour aux Leçons</a>
+      <a href="#next" class="next-lesson">Suivant &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Leçon 7 - Se Faire Toucher par le Ballon</h1>
+    <section class="page"><h1>Et Si On Est Trop Près...</h1>
+
+      <p>Finalement, on veut que le joueur démarre depuis une position y différente. Le 50 va bien pour x, mais y est trop près du haut de la fenêtre. Alors, sous <code>def intitialize(game_window)</code>, on va mettre y à 150. A la fin cela devrait donner :</p>
+      <pre id="code-7-6" class="sampleCode">Code inséré automatiquement ici...</pre>      
+
+      <p>Je veux que y soit à 150, c'est donc plus loin vers le bas. Cela me permettra d'esquiver le ballon plus rapidement.</p>
+      
+      <p>Une fois de plus, voici le programme que tu devrais avoir écrit, en entier :</p>
+      <pre id="code-7-7" class="sampleCode">Code inséré automatiquement ici...</pre>
+
+      <p>Et voilà, on dirait que tu as ce qu'il faut. Continuons vers le <a href="lesson_8.html">prochain niveau, la leçon 8</a> !</p>
+    </section>
+  </article>
+
+  <a href="#top">Retour en haut</a>
+
+</body>
+</html>
