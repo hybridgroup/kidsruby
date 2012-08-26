@@ -215,7 +215,7 @@ function loadLanguage(lang){
     error: function(x, s, t) {
       // handles special case for windows webkit
       if (x.status == 0) {
-        localizeUI(x.responseText);
+        localizeUI($.parseJSON(x.responseText));
       }
     }
   });

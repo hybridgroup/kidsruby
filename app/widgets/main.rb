@@ -124,6 +124,7 @@ class MainWidget < Qt::WebView
 
       while !inf.atEnd()
         line = escape_for_open(inf.readLine())
+        line.force_encoding("UTF-8")
         @frame.evaluateJavaScript("addCode('#{line}');")
       end
     end
@@ -140,6 +141,7 @@ class MainWidget < Qt::WebView
 	    end
 
 	    outf = Qt::TextStream.new(file)
+	    code.force_encoding("UTF-8")
 	    outf << code
 	    outf.flush
 	  end
