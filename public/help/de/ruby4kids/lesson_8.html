@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-8-1", "../../shared/ruby4kids/code8_1.rb");
+      loadCode("#code-8-2", "../../shared/ruby4kids/code8_2.rb");
+      loadCode("#code-8-3", "../../shared/ruby4kids/code8_3.rb");
+      loadCode("#code-8-4", "../../shared/ruby4kids/code8_4.rb");
+      loadCode("#code-8-5", "../../shared/ruby4kids/code8_5.rb");
+      loadCode("#code-8-6", "../../shared/ruby4kids/code8_6.rb");
+      loadCode("#code-8-7", "../../shared/ruby4kids/code8_7.rb");
+      loadCode("#code-8-8", "../../shared/ruby4kids/code8_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Game Programming - Lesson 8</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Back</a>
+    <a href="index.html">Back to Lessons</a>
+    <a href="#next" class="next-lesson">Next &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lesson 8 - Escape Key Pauses the Game</h1>
+    <section class="page"><h1>Commenting and Else</h1>
+
+      <p>In this lesson, we want to make the game reset by pressing the escape key. So, let’s go to the MyGame class and find where we typed the following:</p>
+
+      <pre id="code-8-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Now, right under the code above, we’re going to type:</p>
+
+      <pre id="code-8-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>What we did above was add an <code>else</code> statement, which occurs after the game is stopped. </p>
+
+      <p>So, we wrote a comment under the <code>else</code>statement, which tells us that the game is currently stopped. After that, we wrote a command that should look familiar. This code just says that if the escape key is pressed, the game restarts. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+   
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lesson 8 - Escape Key Pauses the Game</h1>
+    <section class="page"><h1>Fine, let's Define</h1>
+
+      <p>Now, we just go further down where we have:</p>
+
+      <pre id="code-8-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Right underneath the code above, we are going to write:</p>
+
+      <pre id="code-8-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>So, what we did above was just define how to restart the game. We set <code>@running</code> to be true and then reset the ball, so that the ball will go back to its original position. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Lesson 8 - Escape Key Pauses the Game</h1>
+    <section class="page"><h1>Read, Set, Reset!</h1>
+
+      <p>We now have to go to the bottom of our <code>Ball</code> class and define our reset method. So, let’s go ahead and type:</p>
+
+      <pre id="code-8-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>All we did in the code above, was the same thing that we’ve done when we defined <code>update</code> and when we defined <code>initialize</code>. That is, we set the y to zero, which places the ball at the top position and set the x to random, so we don’t know where it’s going to come from on the x axis. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lesson 8 - Escape Key Pauses the Game</h1>
+    <section class="page"><h1>Read, Set, Reset!</h1>
+
+      <p>Finally, we’re going to replace those two areas where we’ve repeated:</p>
+
+      <pre id="code-8-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>and replace it with <code>reset!</code>. Again, those two repetitions are under <code>def initialize</code> and <code>def update</code>. Your end result should look like this:</p>
+
+      <pre id="code-8-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Yet again, here is the entire program you should have written so far:</p>
+      <pre id="code-8-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>That’s it for this lesson! You're starting to like this stuff, aren't you?! Now, let’s make the game more challenging by adding <a href="lesson_9.html">multiple balls in lesson 9</a>!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+    <a href="#top">Back to top</a>
+
+</body>
+</html>
+
