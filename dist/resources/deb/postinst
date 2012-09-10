@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e -u
+
+ln -sf /usr/local/kidsruby/bin/kidsruby /usr/bin/kidsruby
