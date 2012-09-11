@@ -6,10 +6,12 @@ file pkg("/kidsruby-#{version}.deb") => distribution_files("deb") do |t|
       assemble resource("deb/kidsruby"), "bin/kidsruby", 0755
     end
 
+    sh "tar czvf data.tar.gz usr/local/kidsruby --owner=root --group=root"
+
     assemble resource("deb/control"), "control"
     assemble resource("deb/postinst"), "postinst"
 
-    sh "tar czvf data.tar.gz usr/local/kidsruby --owner=root --group=root"
+#    sh "tar czvf data.tar.gz usr/local/kidsruby --owner=root --group=root"
     sh "tar czvf control.tar.gz control postinst"
 
     File.open("debian-binary", "w") do |f|

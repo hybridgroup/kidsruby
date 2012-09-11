@@ -1,5 +1,6 @@
 Package: kidsruby 
 Version: <%= version %>
+Installed-Size: <%= installedsize %>
 Section: main
 Priority: standard
 Architecture: all

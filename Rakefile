@@ -93,3 +93,6 @@ def version
   require File.expand_path("../app/models/version", __FILE__)
   KidsRuby::VERSION
 end
+def installedsize
+  File.size?(File.expand_path("../pkg/data.tar.gz", __FILE__)) / 1024
+end
