@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=KidsRuby
+Comment=KidsRuby
+Exec=kidsruby
+Icon=kidsrubylogo
+Terminal=false
+Categories=Application;Other;Programming

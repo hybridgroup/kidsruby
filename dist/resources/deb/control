@@ -4,6 +4,6 @@ Installed-Size: <%= installedsize %>
 Section: main
 Priority: standard
 Architecture: all
-Depends: ruby1.9.1
+Depends: ruby1.9.1, ruby1.9.1-dev, build-essential, cmake, libqt4-dev
 Maintainer: kidsruby
 Description: Teaching kids fun stuff!
