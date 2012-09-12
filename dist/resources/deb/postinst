@@ -1,9 +1,8 @@
 #!/bin/sh
 
 set -e -u
-
-gem install bundle
-gem install qtbindings
+gem install bundle --no-ri --no-rdoc
+gem install qtbindings --no-ri --no-rdoc
 cd /usr/local/kidsruby/
 bundle install
 
