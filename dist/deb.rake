@@ -2,7 +2,6 @@ file pkg("/kidsruby-#{version}.deb") => distribution_files("deb") do |t|
   mkchdir(File.dirname(t.name)) do
     mkchdir("usr/local/kidsruby") do
       assemble_distribution
-#      assemble_gems
       assemble resource("deb/kidsruby"), "bin/kidsruby", 0755
     end
     mkchdir("usr/share") do
@@ -15,7 +14,6 @@ file pkg("/kidsruby-#{version}.deb") => distribution_files("deb") do |t|
     assemble resource("deb/control"), "control"
     assemble resource("deb/postinst"), "postinst"
 
-#    sh "tar czvf data.tar.gz usr/local/kidsruby --owner=root --group=root"
     sh "tar czvf control.tar.gz control postinst"
 
     File.open("debian-binary", "w") do |f|
