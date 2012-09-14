@@ -34,5 +34,5 @@ task "deb:build" => pkg("/kidsruby-#{version}.deb")
 desc "Remove build artifacts for .deb"
 task "deb:clean" do
   clean pkg("kidsruby-#{version}.deb")
-  FileUtils.rm_rf("pkg/kidsruby-#{version}") if Dir.exists?("pkg/kidsruby-#{version}")
+  FileUtils.rm_rf("pkg/") if Dir.exists?("pkg/")
 end

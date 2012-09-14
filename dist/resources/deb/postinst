@@ -1,9 +1,11 @@
 #!/bin/sh
 
 set -e -u
-gem install bundle --no-ri --no-rdoc
-gem install qtbindings --no-ri --no-rdoc
+export PATH=$PATH:/var/lib/gems/1.9.1/bin/
+gem1.9.1 install bundle --no-ri --no-rdoc
+gem1.9.1 install qtbindings --no-ri --no-rdoc
 cd /usr/local/kidsruby/
 bundle install
 
 ln -sf /usr/local/kidsruby/bin/kidsruby /usr/bin/kidsruby
+ln -sf /usr/bin/ruby1.9.1 /usr/local/kidsruby/bin/ruby

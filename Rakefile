@@ -33,34 +33,34 @@ def assemble_distribution(target_dir=Dir.pwd)
   end
 end
 
-GEM_BLACKLIST = %w( bundler kidsruby )
+#GEM_BLACKLIST = %w( bundler kidsruby )
 
-def assemble_gems(target_dir=Dir.pwd)
-  lines = %x{ bundle show }.strip.split("\n")
-  raise "error running bundler" unless $?.success?
-
-  %x{ env BUNDLE_WITHOUT="development:test" bundle show }.split("\n").each do |line|
-    if line =~ /^  \* (.*?) \((.*?)\)/
-      next if GEM_BLACKLIST.include?($1)
-      puts "vendoring: #{$1}-#{$2}"
-      gem_dir = %x{ bundle show #{$1} }.strip
-      FileUtils.mkdir_p "#{target_dir}/vendor/gems"
-      %x{ cp -R "#{gem_dir}" "#{target_dir}/vendor/gems" }
-    end
-  end.compact
-end
+#def assemble_gems(target_dir=Dir.pwd)
+#  lines = %x{ bundle show }.strip.split("\n")
+#  raise "error running bundler" unless $?.success?
+#
+#  %x{ env BUNDLE_WITHOUT="development:test" bundle show }.split("\n").each do |line|
+#    if line =~ /^  \* (.*?) \((.*?)\)/
+#      next if GEM_BLACKLIST.include?($1)
+#      puts "vendoring: #{$1}-#{$2}"
+#      gem_dir = %x{ bundle show #{$1} }.strip
+#      FileUtils.mkdir_p "#{target_dir}/vendor/gems"
+#      %x{ cp -R "#{gem_dir}" "#{target_dir}/vendor/gems" }
+#    end
+#  end.compact
+#end
 
 def clean(file)
   rm file if File.exists?(file)
 end
 
 def distribution_files(type=nil)
-  base_files = files
-  type_files = type ?
-    Dir[File.expand_path("../dist/resources/#{type}/**/*", __FILE__)] :
-    []
-  #base_files.concat(type_files)
-  base_files
+#  type_files = type ?
+#    Dir[File.expand_path("../{dist,spec}/**/*", __FILE__)] :
+#    []
+#  t = files - type_files
+#  t
+  files
 end
 
 def files
