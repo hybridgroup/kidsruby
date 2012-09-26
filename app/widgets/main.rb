@@ -21,6 +21,9 @@ class MainWidget < Qt::WebView
     @turtle = TurtleInterface.new(self)
     @server = KidsRubyServer.new(self, @turtle)
 
+    # A workaround for lack of composition events on qtbindings 4.6.3.4-mingw
+    @inComposition = false
+ 
     self.window_title = version_description
     resize(@@app.desktop.width, @@app.desktop.height * 0.9)
     move(0,0)
@@ -39,6 +42,33 @@ class MainWidget < Qt::WebView
     self.load Qt::Url.new(File.expand_path(File.dirname(__FILE__) + "/../../public/index.html"))
     show
   end
+
+  # A workaround for lack of composition events on qtbindings 4.6.3.4-mingw
+  # The lack of composition events finally causes an IME input problem.
+  # This IME input problem is addressed by Qt4.7 (or later) + latest Ace editor combination.
+  # This workaround should be removed in the future when KidsRuby uses Qt4.8 based qtbindings-mingw + latest Ace editor combination.
+  def inputMethodEvent(event)
+    
+    if RUBY_PLATFORM.downcase !~ /mingw/ || Qt::version() !~ /^4\.6\./
+      super
+      return
+    end
+    
+    if !event.preeditString().nil?
+      preeditstr = event.preeditString()
+      preeditstr.force_encoding("utf-8")
+      if !@inComposition
+        @frame.evaluateJavaScript("window.editor.onCompositionStart()")
+        @inComposition = true
+      end
+      @frame.evaluateJavaScript("window.editor.onCompositionUpdate('#{preeditstr}')")
+    else
+      @frame.evaluateJavaScript("window.editor.onCompositionEnd()")
+      @inComposition = false
+      super
+    end
+  end
+  # The end of the lack of composition events workaround
 
   protected
 
