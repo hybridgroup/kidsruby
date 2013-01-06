@@ -1,18 +1,18 @@
-{
+﻿{
   "buttons": {
-    "run": "Run",
-    "clear": "Clear",
-    "open": "Open",
-    "save": "Save",
-    "stop": "Stop"
+    "run": "Kör",
+    "clear": "Rensa",
+    "open": "Öppna",
+    "save": "Spara",
+    "stop": "Stoppa"
   },
   "tabs": {
-    "help-link": "Help",
-    "output-link": "Output",
-    "turtle-link": "Turtle"
+    "help-link": "Hjälp",
+    "output-link": "Utskrift",
+    "turtle-link": "Sköldpaddan"
   },
   "editor": {
-    "your-code": "Type in your code just below here",
-    "confirm-clear": "Are you sure you want to clear all your Ruby code from the editor?"
+    "your-code": "Skriv in din kod här nedanför",
+    "confirm-clear": "Är du säker på att du vill rensa bort all Ruby-kod från editorn?"
   }
 }
