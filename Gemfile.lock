@@ -23,7 +23,7 @@ GEM
     rake (0.8.7)
     rb-fchange (0.0.5)
       ffi
-    rb-fsevent (0.4.3.1)
+    rb-fsevent (0.9.3)
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
     rubywarrior-i18n (0.0.3)
@@ -44,6 +44,6 @@ DEPENDENCIES
   qtbindings
   rake (= 0.8.7)
   rb-fchange
-  rb-fsevent
+  rb-fsevent (~> 0.9.3)
   rb-inotify
   rubywarrior-i18n

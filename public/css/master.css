@@ -23,6 +23,7 @@ body.lesson-set {
 /* line 21, ../../sass/master.scss */
 body.lesson-set.intro {
   background: url("background.png") no-repeat top center;
+  background-size: cover;
   margin-top: 215px;
 }
 /* line 25, ../../sass/master.scss */
