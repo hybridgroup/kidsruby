@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Ruby4Kids - Programming For The Fun Of It</title>
+  <title>Ruby4Kids - Programmering för skojs skull</title>
 
   <!-- Load styles -->
   <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
@@ -26,63 +26,62 @@
 </head>
 
 <body class="lesson-set">
-  <h1>Ruby4Kids - Game Programming - Lesson 2</h1>
+  <h1>Ruby4Kids - Spelprogrammering - Lektion 2</h1>
   <nav id="top">
-    <a href="#prev" class="prev-lesson">&laquo; Back</a>
-    <a href="index.html">Back to Lessons</a>
-    <a href="#next" class="next-lesson">Next &raquo;</a>
+    <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till lektioner</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
   </nav>
 
-  <article class="lesson"><h1>Lesson 2 - Add A Player</h1>
-    <section class="page"><h1>Create A Player</h1>
-      <p>It will be good to have a player in the game, so let's create one.</p>
-      <p>We do this by adding a new class. I will call it <code>Player</code>.
-      <p>Now, we will define what our player will do. Do this by typing:</p>
+  <article class="lesson"><h1>Lektion 2 - Lägg till en spelare</h1>
+    <section class="page"><h1>Skapa en spelare</h1>
+      <p>Det skulle vara bra att ha en spelare i spelet, så låt oss skapa en.</p>
+      <p>Vi gör detta genom att lägga till en ny klass. Vi kallar den för <code>Player</code>.
+      <p>Nu ska vi definiera vad vår spelare ska göra. Det gör vi genom att skriva:</p>
       <pre id="code-2-1" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Next, we will add an icon to this player so that we can see it on the screen.</p>
-      <p>We do this by finding a .png picture. KidsRuby happens to have a picture already that you can use.</p>
-      <p>Go to your player class and add an icon to it, by typing the following:</p>
+      <p>Därefter ska vi lägga till en ikon så att vi kan se spelaren på skärmen.</p>
+      <p>Det gör vi genom att hitta en bildfil av typen .png. Kids Ruby råkar ha en färdig bild som du kan använda.</p>
+      <p>Gå till player-klassen och lägg till en ikon genom att skriva följande:</p>
       <pre id="code-2-2" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Then, we add a draw method to the player. We do this by typing:</p>
+      <p>Sedan lägger vi till en draw-metod till spelaren. Vi skriver så här:</p>
       <pre id="code-2-3" class="sampleCode">Code automatically inserted here...</pre>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <article class="lesson"><h1>Lesson 2 - Add A Player</h1>
-    <section class="page"><h1>Add Player To Game</h1>
-      <p>Now, we're almost ready to try this again. I need to go back to the <code>MyGame</code> class first, and I need to instantiate this player.</p>
-      <p>Do this by adding this code to the initialize method of the MyGame class:</p>
+  <article class="lesson"><h1>Lektion 2 - Lägg till en spelare</h1>
+    <section class="page"><h1>Skapa en spelare</h1>
+      <p>Nu kan vi snart provköra programmet igen. Först behöver vi gå tillbaka till <code>MyGame</code>-klassen och instansiera, skapa en instans av, den här spelaren.</p>
+      <p>Det gör vi genom att lägga till den här koden till initialize-metoden i klassen MyGame:</p>
       <pre id="code-2-4" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>This tells the player which window to draw itself on.</p>
-      <p>Last, we need to add the following in the draw method of the game window:</p>
+      <p>Det här talar om för spelaren i vilket fönster den ska rita sig själv.</p>
+      <p>Till sist behöver vi lägga till följande i draw-metoden i spelfönstret:</p>
       <pre id="code-2-5" class="sampleCode">Code automatically inserted here...</pre>
-      <p>This will draw the player when the game is running.</p>
-      <p> One last thing! We need to type <code>require 'player'</code> right under <code>require 'gosu'</code>, so that the program knows that we're using the <code>Player</code> class. 
-      <p>Now, let's try it! Click on the "Run" button. Did it work?</p>
-      <p>Here is the entire program you should have written so far:</p>
+      <p>Koden gör så att spelaren ritas när spelet körs.</p>
+      <p>Nu provar vi spelet! Klicka på "Kör"-knappen. Funkade det?</p>
+      <p>Här är hela det program du ska ha skrivit så här långt:</p>
       <pre id="code-2-6" class="sampleCode">Code automatically inserted here...</pre>
-      <p>Now that you've learned how to add a player, why don't we move on to <a href="lesson_3.html">making the player move left in lesson 3</a>?!</p>
+      <p>Nu när du har lärt dig att lägga till en spelare, varför inte fortsätta till <a href="lesson_3.html">lektion 3 där vi får spelaren att röra sig åt vänster</a>?!</p>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <a href="#top">Back to top</a>
+  <a href="#top">Till toppen av sidan</a>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Ruby4Kids - Programming For The Fun Of It</title>
+  <title>Ruby4Kids - Programmering för skojs skull</title>
 
   <!-- Load styles -->
   <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
@@ -28,102 +28,102 @@
 </head>
 
 <body class="lesson-set">
-  <h1>Ruby4Kids - Game Programming - Lesson 5</h1>
+  <h1>Ruby4Kids - Spelprogrammering - Lektion 5</h1>
   <nav id="top">
-    <a href="#back" class="prev-lesson">&laquo; Back</a>
-    <a href="index.html">Back to Lessons</a>
-    <a href="#next" class="next-lesson">Next &raquo;</a>
+    <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till lektioner</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
   </nav>
 
-  <article class="lesson"><h1>Lesson 5 - Moving Right, Up, and Down</h1>
-    <section class="page"><h1>This is Ruby4Kids</h1>
+  <article class="lesson"><h1>Lektion 5 - Flytta åt höger, uppåt och nedåt</h1>
+    <section class="page"><h1>Det här är Ruby4Kids</h1>
 
-      <p>Now, we're going to learn how to move right, up, and down. To move right, we need to add another <code>if</code> statement to the <code>def update</code> under the class <code>MyGame</code>. So, let's add an <code>if</code> statement for the right key:</p>
+      <p>Nu ska vi lära oss hur man flyttar spelaren åt höger, uppåt och nedåt. För att kunna flytta åt höger behöver vi lägga till ytterligare en <code>if</code>-sats under <code>def update</code> i klassen <code>MyGame</code>. Så låt oss lägga till en <code>if</code>-sats för högerpilen:</p>
       <pre id="code-5-1" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>The part above is the same as the code for turning left, except that now we type <code>KbRight</code> instead of <code>KbLeft</code>.</p> 
+      <p>Koden ovan är likadan som den för rörelsen åt vänster, förutom att vi här skriver <code>KbRight</code> i stället för <code>KbLeft</code>.</p> 
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <article class="lesson"><h1>Lesson 5 - Moving Right, Up, and Down</h1>
+  <article class="lesson"><h1>Lektion 5 - Flytta åt höger, uppåt och nedåt</h1>
     <section class="page"><h1>Plus 10</h1>
 
-      <p> Now, we're going to be going to the <code>Player</code> class and adding: </p>
+      <p> Nu går vi till <code>Player</code>-klassen och lägger till: </p>
    
       <pre id="code-5-2" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p> So, this time the code is a bit less similar to what we did in the last lesson. You'll notice that we added <code>+ 10</code> instead of <code>- 10</code>, because we're going right instead of left. </p>
+      <p> Den här gången är koden lite mindre lik den som vi gjorde i förra lektionen. Du ser att vi skrev <code>+ 10</code> i stället för <code>- 10</code>, eftersom vi ska åt höger och inte åt vänster. </p>
 
-      <p> Another difference is that we limit the icon by the game window's width and then subtract a certain amount of pixels from that width. Now, we subtract those pixels, because the position x is actually on the left side of the icon. That means that we have to make up for that amount by subtracting from the pixel count. You can try putting in different numbers within: </p>
+      <p> En annan skillnad är att vi sätter gränsen för ikonen vid fönstrets bredd minus ett visst antal pixlar. Vi drar bort de här pixlarna eftersom x-positionen faktiskt motsvarar den vänstra sidan av ikonen. Vi måste kompensera för det genom att subtrahera från det totala antalet pixlar. Du kan prova att sätta in olika tal här: </p>
       <pre id="code-5-3" class="sampleCode">Code automatically inserted here...</pre>
-      <p> to see what I mean, as long as both the numbers match up. </p>
+      <p> så förstår du vad jag menar, se bara till att använda samma tal på båda ställen. </p>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <article class="lesson"><h1>Lesson 5 - Moving Right, Up, and Down</h1>
-    <section class="page"><h1>Moving Up</h1>
+  <article class="lesson"><h1>Lektion 5 - Flytta åt höger, uppåt och nedåt</h1>
+    <section class="page"><h1>Flytta uppåt</h1>
 
-      <p> OK, now that we've accomplished going left and right, we're going to try out how to go up. So, we'll first type the following code under the <code>def update</code> in the <code>MyGame</code> class
+      <p> OK, nu när vi lyckats flytta åt vänster och åt höger ska vi försöka ta oss uppåt. Så först skriver vi följande kod under <code>def update</code> i <code>MyGame</code>-klassen: </p>
       <pre id="code-5-4" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>So, that part was familiar. Now, we're going to go to the <code>Player</code> class and add: </p>
+      <p>Den delen kändes nog igen. Nu går vi till <code>Player</code>-klassen och lägger till: </p>
       <pre id="code-5-5" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p> Now, you'll notice that both the <code>if</code> and <code>else</code> statements are both different than what we did before. The first difference is that we're now using a y coordinate. The y coordinate is used, because we are going up and down (in this case, up), rather than left and right, just like on a grid!</p>
+      <p> Nu ser du att både <code>if</code>- och <code>else</code>-satserna är annorlunda jämfört med tidigare. Den första skillnaden är att vi nu använder en y-koordinat. Y-koordinaten används för att vi ska flytta uppåt och nedåt (i detta fall uppåt) i stället för åt vänster och höger, som i ett rutnät!</p>
 
-      <p> So, you might also be wondering, why is the formula <code>y < 0</code>? Isn't <code>y < 0</code> supposed to be for going down? That would have been the case, had the pixel count increased as you went up. Instead, it's the other way around. </p>
+      <p> Nu kanske du undrar varför vi i formeln skriver <code>y < 0</code>? Ska inte <code>y < 0</code> användas när spelaren ska flyttas nedåt? Så hade det varit om pixlarna hade räknats nedifrån och uppåt. I stället är det tvärtom. </p>
 
-      <p> Basically, it means that the very top of the screen is at 0.00 and increases as you go down the y-axis. So, as the icon moves up, it's actually decreasing the pixel count. This decrease in count is also the reason why we have a <code>- 10</code> instead of a <code>+ 10</code>.</p>. 
+      <p> Det här betyder att längst upp i fönstret är positionen 0.00 och talet ökar när vi följer y-axeln nedåt. Så när ikonen ska flyttas uppåt ska pixelantalet faktiskt minskas. Det här är skälet till att vi skriver <code>- 10</code> i stället för <code>+ 10</code>.</p>. 
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <article class="lesson"><h1>Lesson 5 - Moving Right, Up, and Down</h1>
-    <section class="page"><h1>Moving Down</h1>
-      <p> Now, let's finish up by adding the <code>move_down</code> code. These steps  should look really familiar to the steps where we learned how to move right. First, let's write the following under the class <code>MyGame</code>, right below <code>def update</code>:
+  <article class="lesson"><h1>Lektion 5 - Flytta åt höger, uppåt och nedåt</h1>
+    <section class="page"><h1>Flytta nedåt</h1>
+      <p> Låt oss nu avsluta genom att lägga till koden för <code>move_down</code>. De här stegen bör kännas igen från när vi lärde oss att flytta åt höger. Först ska vi skriva följande i klassen <code>MyGame</code>, precis under <code>def update</code>:
 
       <pre id="code-5-6" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Finally, we'll type the following under the <code>player</code> class </p>
+      <p>Till slut ska vi skriva så här i <code>player</code>-klassen: </p>
 
       <pre id="code-5-7" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p> So, the only difference that you'll see here is that the <code>- 10</code> is changed to <code>+ 10</code>, because the numbers increase as you go down :). That's it for moving around!</p> 
+      <p> Den enda skillnaden är som du ser att <code>- 10</code> har ändrats till <code>+ 10</code>, eftersom antalet ska öka på nedåtvägen. :) Det var allt som krävs för att flytta runt!</p> 
       
-      <p>Here is the entire program you should have written so far:</p>
+      <p>Här är hela det program du ska ha skrivit så här långt:</p>
       <pre id="code-5-8" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>You've accomplished so much already, so why stop?! How about we turn up the heat and add some <a href="lesson_6.html">dodgeballs in lesson 6</a>!</p>
+      <p>Du kar kommit så långt redan, så varför sluta nu?! Nu skruvar vi upp temperaturen och lägger till några <a href="lesson_6.html">bollar i lektion 6</a>!</p>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
 
     </section>
   </article>
 
    
-<a href="#top">Back to top</a>
+<a href="#top">Till toppen av sidan</a>
 
 </body>
 </html>
