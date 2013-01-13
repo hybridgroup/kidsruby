@@ -58,7 +58,7 @@ Take note that the native compilation of qt (the line `Installing qtbindings (4.
     sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev libxinerama-dev
     bundle install
     
-## Getting setup for development on a Mac using Homebrew
+## Getting setup for development on a Mac (pre Mountain Lion) using Homebrew
 I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
 
