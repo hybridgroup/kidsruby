@@ -1,77 +1,76 @@
 <!DOCTYPE html>
 <head>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Sphero Commands</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Spheroコマンド</title><!-- Load styles --><!-- Load js -->
 
-  <!-- Load styles -->
+  
   <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
   <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
 
-  <!-- Load js -->
+  
   <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
   <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
   <script type="text/javascript" src="../../../js/lessons.js"></script>
 </head>
 <body class="lesson-set">
-  <h1>Sphero Commands</h1>
+  <h1>Spheroコマンド</h1>
   <nav id="top">
-    <a href="index.html">Back to Robots</a>
-    <a href="sphero.html">Back to Sphero</a>
+    <a href="index.html">ロボットに戻る</a> <a href="sphero.html">Spheroに戻る</a>
   </nav>
-    <p>The following list of commands can be used with your Sphero:</p>
+    <p>この一覧にあるコマンドをSpheroに使うことができます：</p>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>Sphero.start(port) do...end</h3>
-      <p>Connects to Sphero and starts to execute the commands between 'do' and 'end'</p>
-      <p>port - how to connect to a particular Sphero</p>
+      <p>Spheroに接続して、'do'と'end'の間にあるコマンドを実行する</p>
+      <p>port - Spheroへの接続方法</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>roll speed, heading</h3>
-      <p>Makes Sphero start to roll in a particular direction</p>
-      <p>speed - a number between 0 and 255</p>
-      <p>heading - a number from 0 to 359 for which direction to go in</p>
+      <p>指定した方向にSpheroをころがす</p>
+      <p>speed - 速度で0から255の数</p>
+      <p>heading - 方向で0から359の数</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>stop</h3>
-      <p>Makes Sphero stop</p>
+      <p>Spheroを止める</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>heading= h</h3>
-      <p>Makes Sphero change direction when already rolling</p>
-      <p>h - a number from 0 to 359 for which direction to go in</p>
+      <p>ころがっているときにSpheroの向きをかえる</p>
+      <p>h - 方向で0から359の数</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>rgb r, g, b</h3>
-      <p>Changes Sphero LED color</p>
-      <p>r - a number between 0 and 255</p>
-      <p>g - a number between 0 and 255</p>
-      <p>b - a number between 0 and 255</p>
+      <p>SpheroのLEDの色を変える</p>
+      <p>r - 赤の明るさで0から255の数</p>
+      <p>g - 緑の明るさで0から255の数</p>
+      <p>b - 青の明るさで0から255の数</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>keep_going duration</h3>
-      <p>Tells Sphero to keep doing what it is already doing for a certain amount of time</p>
-      <p>duration - a number for how many seconds to continue</p>
+      <p>Spheroがしていることを、指定した時間続ける</p>
+      <p>duration - 続ける時間（秒）</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>ping</h3>
-      <p>Pings Sphero to see if it is responding</p>
+      <p>Spheroが応答するかを確認する</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>FORWARD</h3>
-      <p>A constant value, same as 0</p>
+      <p>「前」を表す定数で0と同じ</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>BACKWARD</h3>
-      <p>A constant value, same as 180</p>
+      <p>「後ろ」を表す定数で180と同じ</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>RIGHT</h3>
-      <p>A constant value, same as 90</p>
+      <p>「右」を表す定数で90と同じ</p>
     </div>
     <div style="background: rgb(240, 248, 255); color: black" class="color">
       <h3>LEFT</h3>
-      <p>A constant value, same as 270</p>
+      <p>「左」を表す定数で270と同じ</p>
     </div>
-  <p>There are more commands, but these are the most important. For more information, take a look at the Sphero gem documentation on Github.</p>
-  <a href="../index.html">Back to Main</a>
+  <p>他にもコマンドがありますが、これらは最も重要なコマンドです。詳細は、GithubのSphero gemのドキュメントを参照してください。</p>
+  <a href="../index.html">戻る</a>
 </body>
 </html>
