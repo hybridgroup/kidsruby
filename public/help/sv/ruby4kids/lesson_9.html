@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Ruby4Kids - Programming For The Fun Of It</title>
+  <title>Ruby4Kids - Programmering för skojs skull</title>
 
   <!-- Load styles -->
   <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
@@ -28,86 +28,86 @@
 </head>
 
 <body class="lesson-set">
-  <h1>Ruby4Kids - Game Programming - Lesson 9</h1>
+  <h1>Ruby4Kids - Spelprogrammering - Lektion 9</h1>
   <nav id="top">
-    <a href="#back" class="prev-lesson">&laquo; Back</a>
-    <a href="index.html">Back to Lessons</a>
-    <a href="#next" class="next-lesson">Next &raquo;</a>
+    <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till lektioner</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
   </nav>
 
-  <article class="lesson"><h1>Lesson 9 - Creating Multiple Balls</h1>
-    <section class="page"><h1>I Can Barely Fit in this Window</h1>
+  <article class="lesson"><h1>Lektion 9 - Skapa fler bollar</h1>
+    <section class="page"><h1>Jag får knappt plats i det här fönstret</h1>
 
-      <p>Now that we are going to add more balls to dodge, we should create a larger window to work in.</p>
+      <p>Eftersom vi ska lägga till fler bollar att undvika, så borde vi också göra spelfönstret större.</p>
 
-      <p> So, in order to do that, let's go to the <code>MyGame</code> class and under <code>def initialize</code>, let's change the numbers to <code>(600, 400, false)</code>. The result should look like this:</p>
+      <p>För att göra det behöver vi gå till <code>MyGame</code>-klassen. Under <code>def initialize</code> ändrar vi siffrorna till <code>(600, 400, false)</code>. Resultatet bör se ut så här:</p>
 
       <pre id="code-9-1" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Then, we'll just adjust the player to start off at the bottom of the screen. First, we need to go to the <code>player</code> class. Now, let's change the x coordinate of the player to 150 and the y coordinate to 330. Your result should look like this:</p>
+      <p>Sedan ska vi ändra så att spelarens startposition är i botten av fönstret. Först behöver vi gå till <code>player</code>-klassen. Där ändrar vi spelarens x- och y-koordinater till 150 respektive 330, på det här viset:</p>
 
       <pre id="code-9-2" class="sampleCode">Code automatically inserted here...</pre>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <article class="lesson"><h1>Lesson 9 - Creating Multiple Balls</h1>
-    <section class="page"><h1>Pluralize!</h1>
+  <article class="lesson"><h1>Lesson 9 - Skapa fler bollar</h1>
+    <section class="page"><h1>Pluralisera!</h1>
 
-      <p>Now, let's try adding 3 more balls! So, we'll go to the <code>MyGame</code> class and change some things under <code>def initialize</code>:</p>
+      <p>Låt oss nu lägga till ytterligare två bollar! Vi går till <code>MyGame</code>-klassen och gör lite ändringar under <code>def initialize</code>:</p>
 
       <pre id="code-9-3" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>All we did above was pluralize <code>ball</code> and then changed the code to create 3 balls, instead of one.</p>
-      <p>Next, let's update each ball, instead of just updating one of them. We'll also pluralize the <code>@ball</code>. So,under the class, <code>MyGame</code>, we'll go ahead and change the code to:</p>
+      <p>Allt vi gjorde ovan var att pluralisera <code>ball</code> och sedan ändra koden så att tre bollar skapas, i stället för bara en.</p>
+      <p>Nu måste vi se till så att alla tre bollarna uppdateras. Alltså ska vi även pluralisera <code>@ball</code>. Så i <code>MyGame</code>-klassen ändrar vi koden till:</p>
 
       <pre id="code-9-4" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p> Next, we're going to do some more of the same stuff. So, we'll go to <code>def draw</code> to pluralize <code>@ball</code> and to change the code so that it draws each ball, instead of just one. You should end up with the following:</p>
+      <p>Därefter ska vi göra lite mer av samma sak. Vi går till <code>def draw</code>, pluraliserar <code>@ball</code> och ändrar koden så att den ritar tre bollar, i stället för bara en. Så här ska det se ut:</p>
 
       <pre id="code-9-5" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Since we're already pluralizing, why don't we go ahead and do some more! So, we'll go to the class, <code>Player</code>, and change it to the following: </p>
+      <p>Eftersom vi ändå håller på så pluraliserar vi lite till! Vi går till <code>Player</code>-klassen och gör följande ändringar: </p>
 
       <pre id="code-9-6" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p> Again, we're just adjusting the methods, so that they will work with multiple balls. For the code above, we have added the method, <code>any?</code>, which just means that being hit by any one of the balls will cause a hit. </p>
+      <p>Nu har vi justerat metoderna så att de fungerar med fler bollar. I koden ovan har vi också lagt till metoden <code>any?</code>, vilket innebär att om spelaren träffas av någon av bollarna så är det en träff. </p>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Föregående/a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
 
     </section>
   </article>
 
 
 
-  <article class="lesson"><h1>Lesson 9 - Creating Multiple Balls</h1>
-    <section class="page"><h1>No More Pluralizing...Maybe</h1>
+  <article class="lesson"><h1>Lektion 9 - Skapa fler bollar</h1>
+    <section class="page"><h1>Ingen mer pluralisering... eller?</h1>
 
-      <p>Now, you must hate pluralizing by now, so we'll stop....right after this next pluralization! So, we'll go to the class, <code>MyGame</code>, and change the restart game definition to the following:</p>
+      <p>Du måste vara trött på pluralisering vid det här laget. Så nu slutar vi... direkt efter nästa pluralisering! Vi går till klassen <code>MyGame</code> och ändrar definitionen för omstart av spelet på följande vis:</p>
 
       <pre id="code-9-7" class="sampleCode">Code automatically inserted here...</pre>
-      <p>You're done capitalizing (promise)! Now, let's just look over what all of your code should look like:</p>
+      <p>Nu är du klar med pluraliseringen (jag lovar)! Låt oss nu bara kika på hur ditt program bör se ut i sin helhet:</p>
 
       <pre id="code-9-8" class="sampleCode">Code automatically inserted here...</pre>
 
-      <p>Can it be? Is this the end? Have you really gone through the entire tutorial? The answer is, YES! CONGRATULATIONS, YOU MADE IT! You developed a program that you can play on and show off! We hope you'll continue your interest into programming, because if you've made it this far, you've got what it takes :).</p>
+      <p>Är det sant? Är det här slutet? Har du verkligen klarat av alla lektioner? Svaret är: JA! GRATTIS, DU KLARADE DET! Du har utvecklat ett program som du både kan ha kul med och visa upp för andra. Vi hoppas att du fortsätter med programmeringen, för om du har kommit så här långt så har du vad som krävs. :)</p>
 
-      <a href="#prev" class="prev-lesson">&laquo; Back</a>
-      <a href="index.html">Back to Lessons</a>
-      <a href="#next" class="next-lesson">Next &raquo;</a>
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
 
     </section>
   </article>
 
-      <a href="#top">Back to top</a>
+      <a href="#top">Till toppen av sidan</a>
 
 </body>
 </html>
