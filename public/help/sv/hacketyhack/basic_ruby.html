@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Basic Ruby</title>
+  <title>Grundläggande Ruby</title>
 
   <!-- Load styles -->
   <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
@@ -39,172 +39,172 @@
   </script>  
 </head>
 <body class="lesson-set">
-  <h1>Basic Ruby</h1>
+  <h1>Grundläggande Ruby</h1>
   <nav id="top">
-    <a href="#back" class="prev-lesson">&laquo; Back</a>
-    <a href="index.html">Back to Lessons</a>
-    <a href="#next" class="next-lesson">Next &raquo;</a>
+    <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till hjälpmenyn</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
   </nav>
 
 
-  <article class="lesson"><h1>Hello there!</h1>
-    <section class="page"><h1>Let's get started</h1>
-      <p>Welcome to your first lesson in Ruby! You're going to have a blast.</p>
-      <p>Ruby is a great programming language that you can use to make all kinds of things with. Let's get going!</p>
+  <article class="lesson"><h1>Hallå där!</h1>
+    <section class="page"><h1>Då börjar vi</h1>
+      <p>Välkommen till den första lektionen i Ruby! Du kommer ha skitkul.</p>
+      <p>Ruby är ett fantastiskt programmeringsspråk som du kan göra alla möjliga skaer med. Låt oss börja!</p>
     </section>
   </article>
 
 
-  <article class="lesson"><h1>A bit more about Ruby</h1>
+  <article class="lesson"><h1>Lite mer om Ruby</h1>
     <section class="page"><h1>Konnichiwa, Ruby!</h1>
-      <p><em>Ruby</em> was created by</p>
+      <p><em>Ruby</em> skapades av</p>
       <p>まつもと ゆきひろ</p>
-      <p>(you can just call him Matz) in 1995. If you couldn't guess, Matz is from Japan. Here he is:</p>
+      <p>(du kan kall honom Matz) 1995. Om du inte kunde gissa det, Matz är från Japan. Han är:</p>
     </section>
-    <section class="page"><h1>Ruby is enjoyable</h1>
-      <p>Matz has this to say about Ruby:</p>
-      <p><em>I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language.</em></p>
-      <p>One more thing about Ruby: Rubyists (that's what people who like Ruby call themselves) have a saying: <strong>MINSWAN</strong>. This stands for <strong>M</strong>atz <strong>I</strong>s <strong>N</strong>ice <strong>S</strong>o <strong>W</strong>e <strong>A</strong>re <strong>N</strong>ice. Which is a pretty nice saying, itself. Be nice to everyone, and give them a hand when they need it!"</p>
+    <section class="page"><h1>Ruby är roligt</h1>
+      <p>Matz har detta att säga om Ruby:</p>
+      <p><em>Jag hoppas att Ruby hjälper alla programmerare i världen att vara produktiva, njuta av programmering, och vara glada. Det är det primära målet med programmeringsspråket Ruby.</em></p>
+      <p>En till sak om Ruby: Rubyists (det är det folk som gillar Ruby kallar sig) har talesätt: <strong>MINSWAN</strong>. Det står för <em>Matz är snäll så vi är snälla</em> (<strong>M</strong>atz <strong>I</strong>s <strong>N</strong>ice <strong>S</strong>o <strong>W</strong>e <strong>A</strong>re <strong>N</strong>ice). Vilket är ett ganska snällt talesätt, i sig själv. Var snäll mot alla, och hjälp dem när dom behöver det!</p>
     </section>
   </article>
 
 
-  <article class="lesson"><h1>Displaying Things</h1>
-    <section class="page"><h1>Let's do this!</h1>
-      <p>Okay! The very first thing that you need to know is how to show something on the screen. Otherwise, you won't know what's going on!</p>
+  <article class="lesson"><h1>Visa saker</h1>
+    <section class="page"><h1>Nu kör vi!</h1>
+      <p>Okay! Det första som du behöver kunna är hur man skriver ut något på skärmen. Annars kommer du inte veta vad som händer!</p>
     </section>
-    <section class="page"><h1>Hello, World!</h1>
-      <p>There are two ways of doing this. Here's the first: alert</p>
-      <pre id="code-2-1" class="sampleCode">Code automatically inserted here...</pre>
-      <p>Type this in and press the 'Run' button.</p>
+    <section class="page"><h1>Hej världen! (eng. Hello World)</h1>
+      <p>Det finns två sätt att göra det. Den första är: alert</p>
+      <pre id="code-2-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Skriv in det och klicka på 'Run'-knappen.</p>
     </section>
     <section class="page"><h1>alert</h1>
-      <p>Okay, let's break this down: There's two main parts to this little program: you have an <code>alert</code> and a <code>"Hello, world!"</code>. These two parts work just like an English sentence: The <code>alert</code> is a verb and the stuff in the ""s is an object. In Ruby, we call verbs <strong>methods</strong>. The <code>alert</code> verb says 'Put an alert box on the screen, and the content of the box is whatever thing you give me.'</p>
-      <p>We'll talk about the <code>"Hello, world!"</code> in just a second. Here's the other way of making this happen:</p>
-      <pre id="code-2-2" class="sampleCode">Code automatically inserted here...</pre>
-      <p>If you try that here, it will work! The <code>puts</code> method doesn't display a dialog box, it puts text out to the output instead. We'll be using <code>alert</code>s throughout these tutorials, but if you look at other Ruby tutorials, you may see <code>puts</code>.</p>
+      <p>Låt oss bryta ned det: Det lilla programmet består av två delar: du har en <code>alert</code> och ett <code>"Hello World!"</code>. Dessa två delar fungerar som en mening på svenska: <code>alert</code> är ett verb och texten inom "" är ett objekt. I Ruby, kallas verb för <strong>methods</strong> (sv. metoder). <code>alert</code>(sv. varning) verbet betyder 'Visa en varnings-ruta på skärmen och innehållet i rutan är det som ges till mig.'</p>
+      <p>Vi återkommet till <code>"Hello World!"</code> strax. Här är ett annat sätt att åstakomma detta:</p>
+      <pre id="code-2-2" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Om du provar det där så kommer det funka! <code>puts</code>-metoden visar inte en varningsruta utan skriver bara ut texten. Vi komemr använda <code>alert</code> i dom här övningarna, men om du läser andra Ruby-guider så kanske dom använder <code>puts</code> istället.</p>
     </section>
   </article>
 
 
-  <article class="lesson"><h1>Letters, words, and sentences</h1>
-    <section class="page"><h1> Strings </h1>
-      <p>Okay! Now that you've got that verb bit down, it's time to learn about <em>String</em>s. Strings are what we call a bunch of words between a pair of " characters. The "s are used to tell the computer what words you actually want to say. Let's think about our example:</p>
-      <pre id="code-2-1-1" class="sampleCode">Code automatically inserted here...</pre>
-      <p>If you didn't have the "s, the computer wouldn't know which words were methods and which ones were part of the string! And consider this:</p>
-      <pre id="code-2-3" class="sampleCode">Code automatically inserted here...</pre>
-      <p>Without making all of those words a string, how would Ruby know that the second alert was some text you wanted to say, rather than another alert box?</p>
+  <article class="lesson"><h1>Bokstäver, ord och meningar</h1>
+    <section class="page"><h1> Strängar </h1>
+      <p>Okay! Nu när du har förstått objekt så är det dags att lära dig lite om <em>String</em>s (sv. strängar). Strängar är vad vi kallar ett antal ord mellan ett par av " (citat-tecken). Citat-tecknet används för att berätta för datorn vilka ord du vill att den ska säga. Låt oss titta på vårt exempel:</p>
+      <pre id="code-2-1-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Om du inte hade " så skulle inte datorn veta vilka ord som är metoder och vilka som är del av en sträng! Fundera på detta:</p>
+      <pre id="code-2-3" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Om man inte gör dom orden till en sträng hur skulle Ruby kunna veta att den andra alert är text som du vill att den ska säga och inte en till varningsruta?</p>
     </section>
-    <section class="page"><h1>Adding Strings </h1>
-      <p>Now, if you want to put two bits of strings together, you can use the <code>+</code> character to do it. Try typing this:</p>
-      <pre id="code-2-4" class="sampleCode">Code automatically inserted here...</pre>
-      <p>Same thing! The <code>+</code> sticks the two strings together. This will end up being super useful later!</p>
-    </section>
-  </article>
-
-
-  <article class="lesson"><h1>Numbers and Math</h1>
-    <section class="page"><h1> Numbers </h1>
-      <p>You can just use numbers, and Ruby understands them:</p>
-      <pre id="code-2-5" class="sampleCode">Code automatically inserted here...</pre>
-      <p>You can even use numbers that have a decimal point in them:</p>
-      <pre id="code-2-6" class="sampleCode">Code automatically inserted here...</pre>
-    </section>
-    <section class="page"><h1> Basic Math </h1>
-      <p>You can also do math with numbers, and it'll work out pretty well:</p>
-      <pre id="code-2-7" class="sampleCode">Code automatically inserted here...</pre>
-      <p>But if you try this, nothing happens:</p>
-      <pre id="code-2-8" class="sampleCode">Code automatically inserted here...</pre>
-      <p>This is kind of fun and silly, though:</p>
-      <pre id="code-2-9" class="sampleCode">Code automatically inserted here...</pre>
-    </section>
-    <section class="page"><h1>Errors </h1>
-      <p>You know how nothing happened when you hit the Run button earlier? That was because there was an error. You can see any errors in the 'Output' tab.</p>
-      <p>The error that results from <code>alert "hey" + 2</code> is:</p>
-      <code>can't convert Fixnum into String</code>
-      <p>What is that?</p>
+    <section class="page"><h1>Lägga ihop strängar</h1>
+      <p>Så om du vill sätt ihop två strängar tillsammans så kan du använda <code>+</code>-tecknet för att göra det. Prova det här:</p>
+      <pre id="code-2-4" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Samma sak! <code>+</code> sätter ihop de två strängarna. Det här kommer visa sig super-användbart senare!</p>
     </section>
   </article>
 
 
-  <article class="lesson"><h1>A few words about types</h1>
-    <section class="page"><h1> Why's it do that? </h1>
-      <p>Each part of a Ruby program is an <code>Object</code>. Right now, all you need to know about <code>Object</code>s is that it's sort of like saying a thing. Your program is made up of a bunch of <code>Object</code>s working together.</p>
-      <p>We'll learn more about <code>Object</code>s in a future lesson, but there is one thing I'll tell you: <code>Object</code>s have a 'type.' This lets Ruby know what kind of <code>Object</code> it is. </p>
+  <article class="lesson"><h1>Siffror och mattematik</h1>
+    <section class="page"><h1> Siffror </h1>
+      <p>Du kan använda siffror och Ruby förstår dom:</p>
+      <pre id="code-2-5" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Du kan också använda tal med decimal-punkt i:</p>
+      <pre id="code-2-6" class="sampleCode">Koden sätts automatiskt in här...</pre>
     </section>
-    <section class="page"><h1>Adding numbers to words</h1>
-      <p>That's why</p>
-      <pre id="code-2-10" class="sampleCode">Code automatically inserted here...</pre>
-      <p>doesn't really work: "hey" is a <code>String</code> object, and 2 is a <code>Fixnum</code> object. And adding <code>String</code>s and <code>Fixnum</code>s doesn't make any sense. We can make this code work, though!</p>
-      <p>All we need to do is turn the <code>Fixnum</code> into a <code>String</code>. We can do this by using the <code>to_s</code> method.</p>
-      <pre id="code-2-11" class="sampleCode">Code automatically inserted here...</pre>
+    <section class="page"><h1> Grundläggnade mattematik </h1>
+      <p>Du kan göra enkla uträkningar och det fungerar ganska bra:</p>
+      <pre id="code-2-7" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Men om du provar det här, så kommer inget hända:</p>
+      <pre id="code-2-8" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Det här är lite roligt och fånigt:</p>
+      <pre id="code-2-9" class="sampleCode">Koden sätts automatiskt in här...</pre>
     </section>
-    <section class="page"><h1>Let's look at that again</h1>
-      <pre id="code-2-11-1" class="sampleCode">Code automatically inserted here...</pre>
-      <p>Okay, this isn't bad. We have our <code>alert</code> method. We're giving it <code>"hey" + 2.to_s</code>. The <code>2.to_s</code> turns a <code>Fixnum</code> 2, which is like the mathematical idea of a 2, into the <code>String</code> 2, which is like when you write a 2 down on a piece of paper.</p>
-    </section>
-  </article>
-
-
-  <article class="lesson"><h1>Variables</h1>
-    <section class="page"><h1> They're like boxes </h1>
-      <p>What happens if we want to keep something around? Most programs are not one line, I assure you. You can use a <em>variable</em> to hold a value and use it later. It's like a box that you put things in.</p>
-      <p>Let's try one out:</p>
-      <pre id="code-2-12" class="sampleCode">Code automatically inserted here...</pre>
-      <p>Give that a run.</p>
-    </section>
-    <section class="page"><h1> Assignment </h1>
-      <p>Cool stuff! We used an <code>=</code> to <em>assign</em> the <code>String</code> "Hello, world!" into the variable <code>message</code>. We then passed that <code>message</code> to the <code>alert</code> method.</p>
-      <p>As you can see, we can use variables in place of another value. Try this:</p>
-      <pre id="code-2-13" class="sampleCode">Code automatically inserted here...</pre>
-      <p>Make a guess before you run this program.</p>
+    <section class="page"><h1>Fel (Error) </h1>
+      <p>Du såg hur inget hände innan när du tryckte på kör-knappen. Det berodde på att det uppstod ett fel. Du kan se eventuella fel i 'Utskrift'-fliken.</p>
+      <p>Felet som är resultatet av <code>alert "hey" + 2</code> är:</p>
+      <code>can't convert Fixnum into String</code> (sv. kan inte konvertera fix-tal till sträng)
+      <p>Vad betyder det?</p>
     </section>
   </article>
 
 
-  <article class="lesson"><h1>User Input</h1>
-    <section class="page"><h1>ask-ing for it.</h1>
-      <p>We can ask the user of our program for some input, and then put their answer into a variable. It's easy! Check this program out:</p>
-      <pre id="code-2-14" class="sampleCode">Code automatically inserted here...</pre>
-      <p>The <code>ask</code> method brings up a box and lets our users type something in. Fun! We put their answer into the <code>name</code> variable and then showed it with <code>alert</code> Sweet!</p>
+  <article class="lesson"><h1>Några ord om typer</h1>
+    <section class="page"><h1> Vad betyder det? </h1>
+      <p>Varje del av ett Ruby-program är ett <code>Objekt</code>. Just nu behöver vi bara veta om <code>Objekt</code> är att det är ungefär som att säga en sak. Ditt program består av en mängd av <code>Objekt</code> som fungerar tillsammans.</p>
+      <p>Vi kommer lära oss mer om <code>Objekt</code> i senare lektioner, men det är en sak som vi förklarar nu: <code>Objekt</code> har en 'typ'. Det låter Ruby vet vilken typ av <code>Objekt</code> det är. </p>
+    </section>
+    <section class="page"><h1>Addera tal med ord</h1>
+      <p>Det är varför</p>
+      <pre id="code-2-10" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>fungerar inte riktigt: "hey" är ett <code>Sträng</code>-objekt, och 2 är ett <code>Fix-tal</code>-objekt (en. Fixnum). Och addera en <code>Sträng</code> och ett <code>Fix-tal</code> är inte meningsfullt. Vi kan dock få denna kod att funka!</p>
+      <p>Allt vi behöver göra är att göra om <code>Fix-talet</code> till en <code>Sträng</code>. Vi kan göra det genom att använda <code>to_s</code>-metoden.</p>
+      <pre id="code-2-11" class="sampleCode">Koden sätts automatiskt in här...</pre>
+    </section>
+    <section class="page"><h1>Låt oss kolla på det igen</h1>
+      <pre id="code-2-11-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Ok, det är inte dåligt. Vi har vår <code>alert</code>-metod. Vi ger den <code>"hey" + 2.to_s</code>. <code>2.to_s</code> gör om ett <code>Fix-tal</code> 2, som är som den mattematiska ideén av 2, till en <code>Sträng</code> 2, vilket är som när du skriver en tvåa på ett papper.</p>
     </section>
   </article>
 
 
-  <article class="lesson"><h1>Basic flow control</h1>
-    <section class="page"><h1> if... </h1>
-      <p>Remember back to that Beginning Programming lesson... we talked about how programs are one big list, that the computer follows in order.</p>
-      <p>Well, guess what? We can actually change this order by using certain bits of code. Compare these two programs:</p>
-      <pre id="code-2-15" class="sampleCode">Code automatically inserted here...</pre>
-      <pre id="code-2-16" class="sampleCode">Code automatically inserted here...</pre>
-      <p>There are a few new things here.</p>
+  <article class="lesson"><h1>Variabler</h1>
+    <section class="page"><h1> Dom är som lådor </h1>
+      <p>Vad händer om vi vill ha hålla reda på något? De flesta program är inte en rad långa, det kan vi garantera dig. Du kan använda en <em>variabel</em> för att hålla ett värde och använda det senare. Det är som en låda som du kan stoppa saker i.</p>
+      <p>Låt oss prova en:</p>
+      <pre id="code-2-12" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Kör det.</p>
+    </section>
+    <section class="page"><h1> Tilldelning </h1>
+      <p>Häftigt! Vi använder ett <code>=</code> för <em>tilldela</em> (en. assign) <code>String</code> "Hello, world!" till variabeln <code>message</code>. Vi kan då skicka <code>message</code> till <code>alert</code>-metoden.</p>
+      <p>Som du ser kan vi använda variabler i stället för ett värde. Prova det här:</p>
+      <pre id="code-2-13" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Gissa vad som händer innan du kör det här programmet.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Användar-inmatning</h1>
+    <section class="page"><h1> be om (en. ask) det.</h1>
+      <p>Vi kan fråga användaren av programmet om inmatning och spara den i en variabel. Det är enkelt! Kolla på det här programmet:</p>
+      <pre id="code-2-14" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p><code>ask</code>-metoden visar en ruta och låter användaren skriva något i den. Kul! Vi sparar inmatningen i <code>name</code>-variabeln och visar sen upp den med <code>alert</code> Häftigt!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Grundläggande flödeskontroll</h1>
+    <section class="page"><h1> Om... (en. if) </h1>
+      <p>Kommer du ihåg lektionen om grundläggande programmering då vi beskrev att programm är en stor lista som datorerna förljer i ordning.</p>
+      <p>Gissa vad? Vi kan faktiskt ändra ordningen genom viss kod. Jämför de här två programmen:</p>
+      <pre id="code-2-15" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <pre id="code-2-16" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Det finns några nya saker där.</p>
     </section>
     <section class="page"><h1>"=="</h1>
-      <p>Here it is again:</p>
-      <pre id="code-2-15-1" class="sampleCode">Code automatically inserted here...</pre>
-      <p>The == command is just a bit different than the = command. == tests the <code>Object</code> on its right against the <code>Object</code> on its left. If the two are equal, then the code after the <code>if</code> will run. If they're not equal, you get the code after the <code>else</code>. The <code>("end")</code> lets us know we're done with our <code>if</code>.</p>
+      <p>Här är den igen:</p>
+      <pre id="code-2-15-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>==-kommandot är lite annorlunda än =-kommandot. == testar <code>Objektet</code> till höger  jämfört med <code>Objektet</code> till vänster. Om dom är lika, så komemr koden efter <code>if</code> att köras. Om de inte är lika kommer koden efter <code>else</code> att köras i stället. <code>("end")</code> (sv. slut) visar var vår <code>if</code>-kod tar slut.</p>
     </section>
   </article>
 
 
-  <article class="lesson"><h1>Example: a guessing game</h1>
-    <section class="page"><h1> Guess! </h1>
-      <p>Let's put this all together:</p>
-      <pre id="code-2-17" class="sampleCode">Code automatically inserted here...</pre>
+  <article class="lesson"><h1>Exempel: en gissningslek</h1>
+    <section class="page"><h1> Gissa! </h1>
+      <p>Låt oss använda allt tillsammans:</p>
+      <pre id="code-2-17" class="sampleCode">Koden sätts automatiskt in här...</pre>
     </section>
   </article>
 
-  <article class="lesson"><h1>Example: a guessing game</h1>
-    <section class="page"><h1> Guess! </h1>
-      <p>Congrats! You've picked up all of the basics of Ruby. There's a lot more you still have to learn, though!</p>
-      <p>Here's what you've learned so far:</p>
-      <p>* <code>alert</code> and <code>ask</code></p>
-      <p>* <code>=</code> variables, and <code>==</code></p>
-      <p>* <code>if</code> and <code>else</code></p>
-      <p>Awesome! You'll want to go back to "Lessons" and then check out Ruby Warrior next!</p>
+  <article class="lesson"><h1>Exempel: en gissningslek</h1>
+    <section class="page"><h1> Gissa! </h1>
+      <p>Grattis! Du har lärt dig grunderna i Ruby. Det finns dock massor mer att lära!</p>
+      <p>Det här har du lärt dig så här långt:</p>
+      <p>* <code>alert</code> och <code>ask</code></p>
+      <p>* <code>=</code> variabler och <code>==</code></p>
+      <p>* <code>if</code> och <code>else</code></p>
+      <p>Grymmt! Gå till baka till listan med lektionerna och gå vidare med Ruby Warrior!</p>
     </section>
   </article>
 
-  <a href="../index.html">Back to Lessons</a>
+  <a href="../index.html">Åter till lektionerna</a>
 </body>
 </html>
