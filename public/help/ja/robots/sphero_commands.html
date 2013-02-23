@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Spheroコマンド</title><!-- Load styles --><!-- Load js -->
+
+  
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+</head>
+<body class="lesson-set">
+  <h1>Spheroコマンド</h1>
+  <nav id="top">
+    <a href="index.html">ロボットに戻る</a> <a href="sphero.html">Spheroに戻る</a>
+  </nav>
+    <p>この一覧にあるコマンドをSpheroに使うことができます：</p>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>Sphero.start(port) do...end</h3>
+      <p>Spheroに接続して、'do'と'end'の間にあるコマンドを実行する</p>
+      <p>port - Spheroへの接続方法</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>roll speed, heading</h3>
+      <p>指定した方向にSpheroをころがす</p>
+      <p>speed - 速度で0から255の数</p>
+      <p>heading - 方向で0から359の数</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>stop</h3>
+      <p>Spheroを止める</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>heading= h</h3>
+      <p>ころがっているときにSpheroの向きをかえる</p>
+      <p>h - 方向で0から359の数</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>rgb r, g, b</h3>
+      <p>SpheroのLEDの色を変える</p>
+      <p>r - 赤の明るさで0から255の数</p>
+      <p>g - 緑の明るさで0から255の数</p>
+      <p>b - 青の明るさで0から255の数</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>keep_going duration</h3>
+      <p>Spheroがしていることを、指定した時間続ける</p>
+      <p>duration - 続ける時間（秒）</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>ping</h3>
+      <p>Spheroが応答するかを確認する</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>FORWARD</h3>
+      <p>「前」を表す定数で0と同じ</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>BACKWARD</h3>
+      <p>「後ろ」を表す定数で180と同じ</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>RIGHT</h3>
+      <p>「右」を表す定数で90と同じ</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>LEFT</h3>
+      <p>「左」を表す定数で270と同じ</p>
+    </div>
+  <p>他にもコマンドがありますが、これらは最も重要なコマンドです。詳細は、GithubのSphero gemのドキュメントを参照してください。</p>
+  <a href="../index.html">戻る</a>
+</body>
+</html>

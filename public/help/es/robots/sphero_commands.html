@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Órdenes de Sphero</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+</head>
+<body class="lesson-set">
+  <h1>Órdenes de Sphero</h1>
+  <nav id="top">
+    <a href="index.html">Regresar a Robots</a>
+    <a href="sphero.html">Regresar a Sphero</a>
+  </nav>
+    <p>La siguiente lista de órdenes pueden ser usadas para controlar tu Sphero</p>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>Sphero.start(port) do...end</h3>
+      <p>Conecta a Sphero y ejecuta las órdenes que se encuentren entre 'do' y 'end'</p>
+      <p>port(puerto) - cómo conectar a un Sphero en particular.</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>roll speed, heading</h3>
+      <p>Hace que tu Sphero ruede en una dirección en particular</p>
+      <p>speed(velocidad) - un número entre 0 y 255</p>
+      <p>heading(dirección) - un número entre 0 y 359 que especifica en qué dirección ir</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>stop</h3>
+      <p>Hace que Sphero se detenga</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>heading= h</h3>
+      <p>Hace que Sphero cambie su dirección cuando ya está rodando</p>
+      <p>h - un número entre 0 y 359 que especifica en qué dirección ir</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>rgb r, g, b</h3>
+      <p>Cambia el color del LED de Sphero</p>
+      <p>r - un número entre 0 y 255</p>
+      <p>g - un número entre 0 y 255</p>
+      <p>b - un número entre 0 y 255</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>keep_going duration</h3>
+      <p>Le dice a Sphero que se mantenga haciendo lo que sea que ya esté haciendo por cierta cantidad de tiempo</p>
+      <p>duration(duración) - un número que especifica por cuántos segundos mantener la acción</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>ping</h3>
+      <p>Hace ping a Sphero para ver si responde</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>FORWARD</h3>
+      <p>ADELANTE - Un valor constante de 0</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>BACKWARD</h3>
+      <p>ATRÁS - Un valor constante de 180</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>RIGHT</h3>
+      <p>DERECHA - Un valor constante de 90</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>LEFT</h3>
+      <p>IZQUIERDA - Un valor constante de 270</p>
+    </div>
+  <p>Hay más órdenes, pero estas son las más importantes. Para más información, echa un vistazo a la documentación de la gema Sphero en Github</p>
+  <a href="../index.html">Ir a las lecciones</a>
+</body>
+</html>
