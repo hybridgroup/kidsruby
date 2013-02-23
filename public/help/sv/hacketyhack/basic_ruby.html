@@ -73,13 +73,13 @@
     <section class="page"><h1>Nu kör vi!</h1>
       <p>Okay! Det första som du behöver kunna är hur man skriver ut något på skärmen. Annars kommer du inte veta vad som händer!</p>
     </section>
-    <section class="page"><h1>Hej världen! (eng. Hello World)</h1>
+    <section class="page"><h1>Hej världen! (Hello World på engelska)</h1>
       <p>Det finns två sätt att göra det. Den första är: alert</p>
       <pre id="code-2-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
       <p>Skriv in det och klicka på 'Kör'-knappen.</p>
     </section>
     <section class="page"><h1>alert</h1>
-      <p>Låt oss bryta ned det: Det lilla programmet består av två delar: du har en <code>alert</code> och ett <code>"Hello World!"</code>. Dessa två delar fungerar som en mening på svenska: <code>alert</code> är ett verb och texten inom "" är ett objekt. I Ruby, kallas verb för <strong>methods</strong> (sv. metoder). <code>alert</code>(sv. varning) verbet betyder 'Visa en varnings-ruta på skärmen och innehållet i rutan är det som ges till mig.'</p>
+      <p>Låt oss bryta ned det: Det lilla programmet består av två delar: du har en <code>alert</code> och ett <code>"Hello World!"</code>. Dessa två delar fungerar som en mening på svenska: <code>alert</code> är ett verb och texten inom "" är ett objekt. I Ruby, kallas verb för <strong>methods</strong> (metoder på svenska). <code>alert</code>(varning på svenska) verbet betyder 'Visa en varnings-ruta på skärmen och innehållet i rutan är det som ges till mig.'</p>
       <p>Vi återkommer till <code>"Hello World!"</code> strax. Här är ett annat sätt att åstadkomma detta:</p>
       <pre id="code-2-2" class="sampleCode">Koden sätts automatiskt in här...</pre>
       <p>Om du provar det där så kommer det funka! <code>puts</code>-metoden visar inte en varningsruta utan skriver bara ut texten. Vi kommer använda <code>alert</code> i dom här övningarna, men om du läser andra Ruby-guider så kanske dom använder <code>puts</code> istället.</p>
@@ -89,7 +89,7 @@
 
   <article class="lesson"><h1>Bokstäver, ord och meningar</h1>
     <section class="page"><h1> Strängar </h1>
-      <p>Okay! Nu när du har förstått objekt så är det dags att lära dig lite om <em>String</em>s (sv. strängar). Strängar är vad vi kallar ett antal ord mellan ett par av " (citat-tecken). Citat-tecknet används för att berätta för datorn vilka ord du vill att den ska säga. Låt oss titta på vårt exempel:</p>
+      <p>Okay! Nu när du har förstått objekt så är det dags att lära dig lite om <em>String</em>s (strängar på svenska). Strängar är vad vi kallar ett antal ord mellan ett par av " (citat-tecken). Citat-tecknet används för att berätta för datorn vilka ord du vill att den ska säga. Låt oss titta på vårt exempel:</p>
       <pre id="code-2-1-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
       <p>Om du inte hade " så skulle inte datorn veta vilka ord som är metoder och vilka som är del av en sträng! Fundera på detta:</p>
       <pre id="code-2-3" class="sampleCode">Koden sätts automatiskt in här...</pre>
@@ -121,7 +121,7 @@
     <section class="page"><h1>Fel (Error) </h1>
       <p>Du såg hur inget hände innan när du tryckte på kör-knappen. Det berodde på att det uppstod ett fel. Du kan se eventuella fel i 'Utskrift'-fliken.</p>
       <p>Felet som är resultatet av <code>alert "hey" + 2</code> är:</p>
-      <code>can't convert Fixnum into String</code> (sv. kan inte konvertera fix-tal till sträng)
+      <code>can't convert Fixnum into String</code> (kan inte konvertera fix-tal till sträng på svenska)
       <p>Vad betyder det?</p>
     </section>
   </article>
@@ -135,7 +135,7 @@
     <section class="page"><h1>Addera tal med ord</h1>
       <p>Det är varför</p>
       <pre id="code-2-10" class="sampleCode">Koden sätts automatiskt in här...</pre>
-      <p>fungerar inte riktigt: "hey" är ett <code>Sträng</code>-objekt, och 2 är ett <code>Fix-tal</code>-objekt (en. Fixnum). Och addera en <code>Sträng</code> och ett <code>Fix-tal</code> är inte meningsfullt. Vi kan dock få denna kod att funka!</p>
+      <p>fungerar inte riktigt: "hey" är ett <code>Sträng</code>-objekt, och 2 är ett <code>Fix-tal</code>-objekt (Fixnum på engelska). Och addera en <code>Sträng</code> och ett <code>Fix-tal</code> är inte meningsfullt. Vi kan dock få denna kod att funka!</p>
       <p>Allt vi behöver göra är att göra om <code>Fix-talet</code> till en <code>Sträng</code>. Vi kan göra det genom att använda <code>to_s</code>-metoden.</p>
       <pre id="code-2-11" class="sampleCode">Koden sätts automatiskt in här...</pre>
     </section>
@@ -154,7 +154,7 @@
       <p>Kör det.</p>
     </section>
     <section class="page"><h1> Tilldelning </h1>
-      <p>Häftigt! Vi använder ett <code>=</code> för att <em>tilldela</em> (en. assign) <code>String</code> "Hello, world!" till variabeln <code>message</code>. Vi kan då skicka <code>message</code> till <code>alert</code>-metoden.</p>
+      <p>Häftigt! Vi använder ett <code>=</code> för att <em>tilldela</em> (assign på engelska) <code>String</code> "Hello, world!" till variabeln <code>message</code>. Vi kan då skicka <code>message</code> till <code>alert</code>-metoden.</p>
       <p>Som du ser kan vi använda variabler i stället för ett värde. Prova det här:</p>
       <pre id="code-2-13" class="sampleCode">Koden sätts automatiskt in här...</pre>
       <p>Gissa vad som händer innan du kör det här programmet.</p>
@@ -163,7 +163,7 @@
 
 
   <article class="lesson"><h1>Användar-inmatning</h1>
-    <section class="page"><h1> be om (en. ask) det.</h1>
+    <section class="page"><h1> be om (ask på engelska) det.</h1>
       <p>Vi kan fråga användaren av programmet om inmatning och spara den i en variabel. Det är enkelt! Kolla på det här programmet:</p>
       <pre id="code-2-14" class="sampleCode">Koden sätts automatiskt in här...</pre>
       <p><code>ask</code>-metoden visar en ruta och låter användaren skriva något i den. Kul! Vi sparar inmatningen i <code>name</code>-variabeln och visar sen upp den med <code>alert</code> Häftigt!</p>
@@ -172,7 +172,7 @@
 
 
   <article class="lesson"><h1>Grundläggande flödeskontroll</h1>
-    <section class="page"><h1> Om... (en. if) </h1>
+    <section class="page"><h1> Om... (if på engelska) </h1>
       <p>Kommer du ihåg lektionen om grundläggande programmering då vi beskrev att program är en stor lista som datorerna följer i ordning.</p>
       <p>Gissa vad? Vi kan faktiskt ändra ordningen genom viss kod. Jämför de här två programmen:</p>
       <pre id="code-2-15" class="sampleCode">Koden sätts automatiskt in här...</pre>
@@ -182,7 +182,7 @@
     <section class="page"><h1>"=="</h1>
       <p>Här är den igen:</p>
       <pre id="code-2-15-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
-      <p>==-kommandot är lite annorlunda än =-kommandot. == testar <code>Objektet</code> till höger  jämfört med <code>Objektet</code> till vänster. Om dom är lika, så kommer koden efter <code>if</code> att köras. Om de inte är lika kommer koden efter <code>else</code> att köras i stället. <code>("end")</code> (sv. slut) visar var vår <code>if</code>-kod tar slut.</p>
+      <p>==-kommandot är lite annorlunda än =-kommandot. == testar <code>Objektet</code> till höger  jämfört med <code>Objektet</code> till vänster. Om dom är lika, så kommer koden efter <code>if</code> att köras. Om de inte är lika kommer koden efter <code>else</code> att köras i stället. <code>("end")</code> (slut på svenska) visar var vår <code>if</code>-kod tar slut.</p>
     </section>
   </article>
 
