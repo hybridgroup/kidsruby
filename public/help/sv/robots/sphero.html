@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Sphero</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-1-1", "../../shared/robots/code1_1.rb");
+    });
+  </script>
+</head>
+<body class="lesson-set">
+  <h1>Sphero</h1>
+  <nav id="top">
+      <a href="../index.html">Tillbaka till huvudsidan</a>
+  </nav>
+  <article class="resource">
+    <p>KidsRuby kan användas för att programmera robotbollen Sphero (http://gosphero.com).</p>
+    <p>Om du använder OSX eller Linux, så måste du veta trebokstavs ID:t (device ID) som är "namnet" på din Sphero, till exempel, "GBY".</p>
+    <p>Om du använder Windows, så måste du veta wilken kommunikationsport (COM port) som har blivigt tilldelad till Blåtands-uppkoplingen (Bluetooth connection) till din Sphero, till exempel, "COM6".</p>
+    <p>Du behöver den inforamtionen för att programmera din Sphero, för att säga till den vad den ska göra. Du kan börja genom att skriva in den här Rubykoden i editorn till vänster:</p>
+    <pre id="code-1-1" class="sampleCode">Code automatically inserted here...</pre>
+    <p>Se till att ändra parametern till <code>Sphero.start</code>-metoden till det som du behöver för att koppla up dig till din egen Sphero.</p>
+    <p>För att starta din Sphero robot, när du har korrekt uppkopplingsinformation, och har skrivigt in ditt program, klicka bara bara på "Kör"-knappen. Det kan ta en liten stund att bli uppkopplad.</p>
+
+    <p>
+    Här är en lista på alla kommandon du kan använda för att kontrollera din Sphero:
+    <a href="sphero_commands.html">Sphero-kommandon</a></p>
+    <p>
+    <a href="../index.html">Tillbaka till huvudsidan</a>
+    </p>
+  </article>
+</body>
+</html>
+
+
