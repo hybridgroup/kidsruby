@@ -110,6 +110,32 @@ describe Turtle do
       @turtle.draw
     end
 
+    it "must be able to pen up" do
+      @turtle.expects(:add_command)
+      @turtle.expects(:send_commands)
+      @turtle.penup
+    end
+
+    it "must be able to pen down" do
+      @turtle.expects(:add_command)
+      @turtle.expects(:send_commands)
+      @turtle.pendown
+    end
+
+    it "must be able to add text" do
+      @value = "Some text"
+      @reply.stubs(:value).returns(@value)
+      @turtle.expects(:add_command)
+      @turtle.text(@value)
+    end
+
+    it "must be able to change font" do
+      @value = "Arial"
+      @reply.stubs(:value).returns(@value)
+      @turtle.expects(:add_command)
+      @turtle.font(@value)
+    end
+
     it "must have a width" do
       @value = 3
       @reply.stubs(:value).returns(@value)
