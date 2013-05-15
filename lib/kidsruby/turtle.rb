@@ -96,6 +96,22 @@ class Turtle
     send_commands
   end
 
+  def penup
+    add_command "penup()"
+  end
+
+  def pendown
+    add_command "pendown()"
+  end
+
+  def text(string)
+    add_command "text('#{string}')"
+  end
+
+  def font(string)
+    add_command "font('#{string}')"
+  end
+
   def width
     if @interface.valid?
       reply = @interface.call("width")
