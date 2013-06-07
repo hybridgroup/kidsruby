@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-9-1", "../../shared/ruby4kids/code9_1.rb");
+      loadCode("#code-9-2", "../../shared/ruby4kids/code9_2.rb");
+      loadCode("#code-9-3", "../../shared/ruby4kids/code9_3.rb");
+      loadCode("#code-9-4", "../../shared/ruby4kids/code9_4.rb");
+      loadCode("#code-9-5", "../../shared/ruby4kids/code9_5.rb");
+      loadCode("#code-9-6", "../../shared/ruby4kids/code9_6.rb");
+      loadCode("#code-9-7", "../../shared/ruby4kids/code9_7.rb");
+      loadCode("#code-9-8", "../../shared/ruby4kids/code9_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Game Programming - Lesson 9</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Back</a>
+    <a href="index.html">Back to Lessons</a>
+    <a href="#next" class="next-lesson">Next &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lesson 9 - Creating Multiple Balls</h1>
+    <section class="page"><h1>I Can Barely Fit in this Window</h1>
+
+      <p>Now that we are going to add more balls to dodge, we should create a larger window to work in.</p>
+
+      <p> So, in order to do that, let's go to the <code>MyGame</code> class and under <code>def initialize</code>, let's change the numbers to <code>(600, 400, false)</code>. The result should look like this:</p>
+
+      <pre id="code-9-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Then, we'll just adjust the player to start off at the bottom of the screen. First, we need to go to the <code>player</code> class. Now, let's change the x coordinate of the player to 150 and the y coordinate to 330. Your result should look like this:</p>
+
+      <pre id="code-9-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 9 - Creating Multiple Balls</h1>
+    <section class="page"><h1>Pluralize!</h1>
+
+      <p>Now, let's try adding 3 more balls! So, we'll go to the <code>MyGame</code> class and change some things under <code>def initialize</code>:</p>
+
+      <pre id="code-9-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>All we did above was pluralize <code>ball</code> and then changed the code to create 3 balls, instead of one.</p>
+      <p>Next, let's update each ball, instead of just updating one of them. We'll also pluralize the <code>@ball</code>. So,under the class, <code>MyGame</code>, we'll go ahead and change the code to:</p>
+
+      <pre id="code-9-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> Next, we're going to do some more of the same stuff. So, we'll go to <code>def draw</code> to pluralize <code>@ball</code> and to change the code so that it draws each ball, instead of just one. You should end up with the following:</p>
+
+      <pre id="code-9-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Since we're already pluralizing, why don't we go ahead and do some more! So, we'll go to the class, <code>Player</code>, and change it to the following: </p>
+
+      <pre id="code-9-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> Again, we're just adjusting the methods, so that they will work with multiple balls. For the code above, we have added the method, <code>any?</code>, which just means that being hit by any one of the balls will cause a hit. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 9 - Creating Multiple Balls</h1>
+    <section class="page"><h1>No More Pluralizing...Maybe</h1>
+
+      <p>Now, you must hate pluralizing by now, so we'll stop....right after this next pluralization! So, we'll go to the class, <code>MyGame</code>, and change the restart game definition to the following:</p>
+
+      <pre id="code-9-7" class="sampleCode">Code automatically inserted here...</pre>
+      <p>You're done capitalizing (promise)! Now, let's just look over what all of your code should look like:</p>
+
+      <pre id="code-9-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Can it be? Is this the end? Have you really gone through the entire tutorial? The answer is, YES! CONGRATULATIONS, YOU MADE IT! You developed a program that you can play on and show off! We hope you'll continue your interest into programming, because if you've made it this far, you've got what it takes :).</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+      <a href="#top">Back to top</a>
+
+</body>
+</html>
+

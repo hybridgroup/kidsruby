@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/ruby4kids/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/ruby4kids/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/ruby4kids/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/ruby4kids/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/ruby4kids/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/ruby4kids/code2_6.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Game Programming - Lesson 2</h1>
+  <nav id="top">
+    <a href="#prev" class="prev-lesson">&laquo; Back</a>
+    <a href="index.html">Back to Lessons</a>
+    <a href="#next" class="next-lesson">Next &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lesson 2 - Add A Player</h1>
+    <section class="page"><h1>Create A Player</h1>
+      <p>It will be good to have a player in the game, so let's create one.</p>
+      <p>We do this by adding a new class. I will call it <code>Player</code>.
+      <p>Now, we will define what our player will do. Do this by typing:</p>
+      <pre id="code-2-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Next, we will add an icon to this player so that we can see it on the screen.</p>
+      <p>We do this by finding a .png picture. KidsRuby happens to have a picture already that you can use.</p>
+      <p>Go to your player class and add an icon to it, by typing the following:</p>
+      <pre id="code-2-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Then, we add a draw method to the player. We do this by typing:</p>
+      <pre id="code-2-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 2 - Add A Player</h1>
+    <section class="page"><h1>Add Player To Game</h1>
+      <p>Now, we're almost ready to try this again. I need to go back to the <code>MyGame</code> class first, and I need to instantiate this player.</p>
+      <p>Do this by adding this code to the initialize method of the MyGame class:</p>
+      <pre id="code-2-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>This tells the player which window to draw itself on.</p>
+      <p>Last, we need to add the following in the draw method of the game window:</p>
+      <pre id="code-2-5" class="sampleCode">Code automatically inserted here...</pre>
+      <p>This will draw the player when the game is running.</p>
+      <p>Now, let's try it! Click on the "Run" button. Did it work?</p>
+      <p>Here is the entire program you should have written so far:</p>
+      <pre id="code-2-6" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Now that you've learned how to add a player, why don't we move on to <a href="lesson_3.html">making the player move left in lesson 3</a>?!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <a href="#top">Back to top</a>
+
+</body>
+</html>
