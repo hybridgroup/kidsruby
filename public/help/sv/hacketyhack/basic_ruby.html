@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Grundläggande Ruby</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-1-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/hacketyhack/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/hacketyhack/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/hacketyhack/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/hacketyhack/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/hacketyhack/code2_6.rb");
+      loadCode("#code-2-7", "../../shared/hacketyhack/code2_7.rb");
+      loadCode("#code-2-8", "../../shared/hacketyhack/code2_8.rb");
+      loadCode("#code-2-9", "../../shared/hacketyhack/code2_9.rb");
+      loadCode("#code-2-10", "../../shared/hacketyhack/code2_10.rb");
+      loadCode("#code-2-11", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-11-1", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-12", "../../shared/hacketyhack/code2_12.rb");
+      loadCode("#code-2-13", "../../shared/hacketyhack/code2_13.rb");
+      loadCode("#code-2-14", "../../shared/hacketyhack/code2_14.rb");
+      loadCode("#code-2-15", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-15-1", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-16", "../../shared/hacketyhack/code2_16.rb");
+      loadCode("#code-2-17", "../../shared/hacketyhack/code2_17.rb");
+    });
+  </script>  
+</head>
+<body class="lesson-set">
+  <h1>Grundläggande Ruby</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till hjälpmenyn</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
+  </nav>
+
+
+  <article class="lesson"><h1>Hallå där!</h1>
+    <section class="page"><h1>Då börjar vi</h1>
+      <p>Välkommen till den första lektionen i Ruby! Du kommer ha skitkul.</p>
+      <p>Ruby är ett fantastiskt programmeringsspråk som du kan göra alla möjliga saker med. Låt oss börja!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lite mer om Ruby</h1>
+    <section class="page"><h1>Konnichiwa, Ruby!</h1>
+      <p><em>Ruby</em> skapades av</p>
+      <p>まつもと ゆきひろ</p>
+      <p>(du kan kalla honom Matz) 1995. Om du inte kunde gissa det, Matz är från Japan. Han är:</p>
+    </section>
+    <section class="page"><h1>Ruby är roligt</h1>
+      <p>Matz har detta att säga om Ruby:</p>
+      <p><em>Jag hoppas att Ruby hjälper alla programmerare i världen att vara produktiva, njuta av programmering, och vara glada. Det är det primära målet med programmeringsspråket Ruby.</em></p>
+      <p>En till sak om Ruby: Rubyists (det är det folk som gillar Ruby kallar sig) har ett talesätt: <strong>MINSWAN</strong>. Det står för <em>Matz är snäll så vi är snälla</em> (<strong>M</strong>atz <strong>I</strong>s <strong>N</strong>ice <strong>S</strong>o <strong>W</strong>e <strong>A</strong>re <strong>N</strong>ice). Vilket är ett ganska snällt talesätt, i sig själv. Var snäll mot alla, och hjälp dem när dom behöver det!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Visa saker</h1>
+    <section class="page"><h1>Nu kör vi!</h1>
+      <p>Okay! Det första som du behöver kunna är hur man skriver ut något på skärmen. Annars kommer du inte veta vad som händer!</p>
+    </section>
+    <section class="page"><h1>Hej världen! (Hello World på engelska)</h1>
+      <p>Det finns två sätt att göra det. Den första är: alert</p>
+      <pre id="code-2-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Skriv in det och klicka på 'Kör'-knappen.</p>
+    </section>
+    <section class="page"><h1>alert</h1>
+      <p>Låt oss bryta ned det: Det lilla programmet består av två delar: du har en <code>alert</code> och ett <code>"Hello World!"</code>. Dessa två delar fungerar som en mening på svenska: <code>alert</code> är ett verb och texten inom "" är ett objekt. I Ruby, kallas verb för <strong>methods</strong> (metoder på svenska). <code>alert</code>(varning på svenska) verbet betyder 'Visa en varnings-ruta på skärmen och innehållet i rutan är det som ges till mig.'</p>
+      <p>Vi återkommer till <code>"Hello World!"</code> strax. Här är ett annat sätt att åstadkomma detta:</p>
+      <pre id="code-2-2" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Om du provar det där så kommer det funka! <code>puts</code>-metoden visar inte en varningsruta utan skriver bara ut texten. Vi kommer använda <code>alert</code> i dom här övningarna, men om du läser andra Ruby-guider så kanske dom använder <code>puts</code> istället.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Bokstäver, ord och meningar</h1>
+    <section class="page"><h1> Strängar </h1>
+      <p>Okay! Nu när du har förstått objekt så är det dags att lära dig lite om <em>String</em>s (strängar på svenska). Strängar är vad vi kallar ett antal ord mellan ett par av " (citat-tecken). Citat-tecknet används för att berätta för datorn vilka ord du vill att den ska säga. Låt oss titta på vårt exempel:</p>
+      <pre id="code-2-1-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Om du inte hade " så skulle inte datorn veta vilka ord som är metoder och vilka som är del av en sträng! Fundera på detta:</p>
+      <pre id="code-2-3" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Om man inte gör dom orden till en sträng hur skulle Ruby kunna veta att den andra alert är text som du vill att den ska säga och inte en till varningsruta?</p>
+    </section>
+    <section class="page"><h1>Lägga ihop strängar</h1>
+      <p>Så om du vill sätta ihop två strängar tillsammans så kan du använda <code>+</code>-tecknet för att göra det. Prova det här:</p>
+      <pre id="code-2-4" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Samma sak! <code>+</code> sätter ihop de två strängarna. Det här kommer visa sig super-användbart senare!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Siffror och matematik</h1>
+    <section class="page"><h1> Siffror </h1>
+      <p>Du kan använda siffror och Ruby förstår dom:</p>
+      <pre id="code-2-5" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Du kan också använda tal med decimal-punkt i:</p>
+      <pre id="code-2-6" class="sampleCode">Koden sätts automatiskt in här...</pre>
+    </section>
+    <section class="page"><h1> Grundläggande matematik </h1>
+      <p>Du kan göra enkla uträkningar och det fungerar ganska bra:</p>
+      <pre id="code-2-7" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Men om du provar det här, så kommer inget hända:</p>
+      <pre id="code-2-8" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Det här är lite roligt och fånigt:</p>
+      <pre id="code-2-9" class="sampleCode">Koden sätts automatiskt in här...</pre>
+    </section>
+    <section class="page"><h1>Fel (Error) </h1>
+      <p>Du såg hur inget hände innan när du tryckte på kör-knappen. Det berodde på att det uppstod ett fel. Du kan se eventuella fel i 'Utskrift'-fliken.</p>
+      <p>Felet som är resultatet av <code>alert "hey" + 2</code> är:</p>
+      <code>can't convert Fixnum into String</code> (kan inte konvertera fix-tal till sträng på svenska)
+      <p>Vad betyder det?</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Några ord om typer</h1>
+    <section class="page"><h1> Vad betyder det? </h1>
+      <p>Varje del av ett Ruby-program är ett <code>Objekt</code>. Just nu behöver vi bara veta om <code>Objekt</code> att det är ungefär som att säga en sak. Ditt program består av en mängd av <code>Objekt</code> som fungerar tillsammans.</p>
+      <p>Vi kommer lära oss mer om <code>Objekt</code> i senare lektioner, men det är en sak som vi förklarar nu: <code>Objekt</code> har en 'typ'. Det låter Ruby veta vilken typ av <code>Objekt</code> det är. </p>
+    </section>
+    <section class="page"><h1>Addera tal med ord</h1>
+      <p>Det är varför</p>
+      <pre id="code-2-10" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>fungerar inte riktigt: "hey" är ett <code>Sträng</code>-objekt, och 2 är ett <code>Fix-tal</code>-objekt (Fixnum på engelska). Och addera en <code>Sträng</code> och ett <code>Fix-tal</code> är inte meningsfullt. Vi kan dock få denna kod att funka!</p>
+      <p>Allt vi behöver göra är att göra om <code>Fix-talet</code> till en <code>Sträng</code>. Vi kan göra det genom att använda <code>to_s</code>-metoden.</p>
+      <pre id="code-2-11" class="sampleCode">Koden sätts automatiskt in här...</pre>
+    </section>
+    <section class="page"><h1>Låt oss kolla på det igen</h1>
+      <pre id="code-2-11-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Ok, det är inte dåligt. Vi har vår <code>alert</code>-metod. Vi ger den <code>"hey" + 2.to_s</code>. <code>2.to_s</code> gör om ett <code>Fix-tal</code> 2, som är som den matematiska ideén av 2, till en <code>Sträng</code> 2, vilket är som när du skriver en tvåa på ett papper.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Variabler</h1>
+    <section class="page"><h1> Dom är som lådor </h1>
+      <p>Vad händer om vi vill ha hålla reda på något? De flesta program är inte en rad långa, det kan vi garantera dig. Du kan använda en <em>variabel</em> för att hålla ett värde och använda det senare. Det är som en låda som du kan stoppa saker i.</p>
+      <p>Låt oss prova en:</p>
+      <pre id="code-2-12" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Kör det.</p>
+    </section>
+    <section class="page"><h1> Tilldelning </h1>
+      <p>Häftigt! Vi använder ett <code>=</code> för att <em>tilldela</em> (assign på engelska) <code>String</code> "Hello, world!" till variabeln <code>message</code>. Vi kan då skicka <code>message</code> till <code>alert</code>-metoden.</p>
+      <p>Som du ser kan vi använda variabler i stället för ett värde. Prova det här:</p>
+      <pre id="code-2-13" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Gissa vad som händer innan du kör det här programmet.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Användar-inmatning</h1>
+    <section class="page"><h1> be om (ask på engelska) det.</h1>
+      <p>Vi kan fråga användaren av programmet om inmatning och spara den i en variabel. Det är enkelt! Kolla på det här programmet:</p>
+      <pre id="code-2-14" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p><code>ask</code>-metoden visar en ruta och låter användaren skriva något i den. Kul! Vi sparar inmatningen i <code>name</code>-variabeln och visar sen upp den med <code>alert</code> Häftigt!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Grundläggande flödeskontroll</h1>
+    <section class="page"><h1> Om... (if på engelska) </h1>
+      <p>Kommer du ihåg lektionen om grundläggande programmering då vi beskrev att program är en stor lista som datorerna följer i ordning.</p>
+      <p>Gissa vad? Vi kan faktiskt ändra ordningen genom viss kod. Jämför de här två programmen:</p>
+      <pre id="code-2-15" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <pre id="code-2-16" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>Det finns några nya saker där.</p>
+    </section>
+    <section class="page"><h1>"=="</h1>
+      <p>Här är den igen:</p>
+      <pre id="code-2-15-1" class="sampleCode">Koden sätts automatiskt in här...</pre>
+      <p>==-kommandot är lite annorlunda än =-kommandot. == testar <code>Objektet</code> till höger  jämfört med <code>Objektet</code> till vänster. Om dom är lika, så kommer koden efter <code>if</code> att köras. Om de inte är lika kommer koden efter <code>else</code> att köras i stället. <code>("end")</code> (slut på svenska) visar var vår <code>if</code>-kod tar slut.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Exempel: en gissningslek</h1>
+    <section class="page"><h1> Gissa! </h1>
+      <p>Låt oss använda allt tillsammans:</p>
+      <pre id="code-2-17" class="sampleCode">Koden sätts automatiskt in här...</pre>
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Exempel: en gissningslek</h1>
+    <section class="page"><h1> Gissa! </h1>
+      <p>Grattis! Du har lärt dig grunderna i Ruby. Det finns dock massor mer att lära!</p>
+      <p>Det här har du lärt dig så här långt:</p>
+      <p>* <code>alert</code> och <code>ask</code></p>
+      <p>* <code>=</code> variabler och <code>==</code></p>
+      <p>* <code>if</code> och <code>else</code></p>
+      <p>Grymt! Gå tillbaka till listan med lektionerna och gå vidare med Ruby Warrior!</p>
+    </section>
+  </article>
+
+  <a href="../index.html">Åter till lektionerna</a>
+</body>
+</html>

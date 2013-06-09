@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmering för skojs skull</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-9-1", "../../shared/ruby4kids/code9_1.rb");
+      loadCode("#code-9-2", "../../shared/ruby4kids/code9_2.rb");
+      loadCode("#code-9-3", "../../shared/ruby4kids/code9_3.rb");
+      loadCode("#code-9-4", "../../shared/ruby4kids/code9_4.rb");
+      loadCode("#code-9-5", "../../shared/ruby4kids/code9_5.rb");
+      loadCode("#code-9-6", "../../shared/ruby4kids/code9_6.rb");
+      loadCode("#code-9-7", "../../shared/ruby4kids/code9_7.rb");
+      loadCode("#code-9-8", "../../shared/ruby4kids/code9_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Spelprogrammering - Lektion 9</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till lektioner</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lektion 9 - Skapa fler bollar</h1>
+    <section class="page"><h1>Jag får knappt plats i det här fönstret</h1>
+
+      <p>Eftersom vi ska lägga till fler bollar att undvika, så borde vi också göra spelfönstret större.</p>
+
+      <p>För att göra det behöver vi gå till <code>MyGame</code>-klassen. Under <code>def initialize</code> ändrar vi siffrorna till <code>(600, 400, false)</code>. Resultatet bör se ut så här:</p>
+
+      <pre id="code-9-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Sedan ska vi ändra så att spelarens startposition är i botten av fönstret. Först behöver vi gå till <code>player</code>-klassen. Där ändrar vi spelarens x- och y-koordinater till 150 respektive 330, på det här viset:</p>
+
+      <pre id="code-9-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 9 - Skapa fler bollar</h1>
+    <section class="page"><h1>Pluralisera!</h1>
+
+      <p>Låt oss nu lägga till ytterligare två bollar! Vi går till <code>MyGame</code>-klassen och gör lite ändringar under <code>def initialize</code>:</p>
+
+      <pre id="code-9-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Allt vi gjorde ovan var att pluralisera <code>ball</code> och sedan ändra koden så att tre bollar skapas, i stället för bara en.</p>
+      <p>Nu måste vi se till så att alla tre bollarna uppdateras. Alltså ska vi även pluralisera <code>@ball</code>. Så i <code>MyGame</code>-klassen ändrar vi koden till:</p>
+
+      <pre id="code-9-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Därefter ska vi göra lite mer av samma sak. Vi går till <code>def draw</code>, pluraliserar <code>@ball</code> och ändrar koden så att den ritar tre bollar, i stället för bara en. Så här ska det se ut:</p>
+
+      <pre id="code-9-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Eftersom vi ändå håller på så pluraliserar vi lite till! Vi går till <code>Player</code>-klassen och gör följande ändringar: </p>
+
+      <pre id="code-9-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Nu har vi justerat metoderna så att de fungerar med fler bollar. I koden ovan har vi också lagt till metoden <code>any?</code>, vilket innebär att om spelaren träffas av någon av bollarna så är det en träff. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående/a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lektion 9 - Skapa fler bollar</h1>
+    <section class="page"><h1>Ingen mer pluralisering... eller?</h1>
+
+      <p>Du måste vara trött på pluralisering vid det här laget. Så nu slutar vi... direkt efter nästa pluralisering! Vi går till klassen <code>MyGame</code> och ändrar definitionen för omstart av spelet på följande vis:</p>
+
+      <pre id="code-9-7" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Nu är du klar med pluraliseringen (jag lovar)! Låt oss nu bara kika på hur ditt program bör se ut i sin helhet:</p>
+
+      <pre id="code-9-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Är det sant? Är det här slutet? Har du verkligen klarat av alla lektioner? Svaret är: JA! GRATTIS, DU KLARADE DET! Du har utvecklat ett program som du både kan ha kul med och visa upp för andra. Vi hoppas att du fortsätter med programmeringen, för om du har kommit så här långt så har du vad som krävs. :)</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+      <a href="#top">Till toppen av sidan</a>
+
+</body>
+</html>
+

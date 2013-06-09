@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Sphero-kommandon</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+</head>
+<body class="lesson-set">
+  <h1>Sphero-kommandon</h1>
+  <nav id="top">
+    <a href="index.html">Till Robotar</a>
+    <a href="sphero.html">Till Sphero</a>
+  </nav>
+    <p>Följande lista på kommandon kan användas med din Sphero:</p>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>Sphero.start(port) do...end</h3>
+      <p>Koppla upp din Sphero och kör kommandona mellan 'do' och 'end'</p>
+      <p>port - vilken port ska användas för att koppla upp till en specifik Sphero</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>roll speed, heading</h3>
+      <p>Gör så att Sphero börjar rulla i en viss riktning</p>
+      <p>speed - (hastighet) en siffra mellan 0 och 255</p>
+      <p>heading - (riktning) en siffra mellan 0 och 359 för vilken riktning att rulla i</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>stop</h3>
+      <p>Stannar Sphero</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>heading= h</h3>
+      <p>Svänger Sphero när den håller på och rullar</p>
+      <p>h - en siffra mellan 0 och 359 för vilken riktning att rulla i</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>rgb r, g, b</h3>
+      <p>Ändra Sphero LED-färg</p>
+      <p>r - (röd) en siffra mellan 0 och 255</p>
+      <p>g - (grön) en siffra mellan 0 och 255</p>
+      <p>b - (blå) en siffra mellan 0 och 255</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>keep_going duration</h3>
+      <p>(Förtsätt göra) säg till Sphero att förtsätta göra det den håller på med under en viss tid</p>
+      <p>duration - en siffra för hur många sekunder att fortsätta</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>ping</h3>
+      <p>Pinga Sphero för att se om den svarar</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>FORWARD</h3>
+      <p>En konstant med värdet 0 grader</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>BACKWARD</h3>
+      <p>En konstant med värdet 180 grader</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>RIGHT</h3>
+      <p>En konstant med värdet 90 grader</p>
+    </div>
+    <div style="background: rgb(240, 248, 255); color: black" class="color">
+      <h3>LEFT</h3>
+      <p>En konstant med värdet 270 grader</p>
+    </div>
+  <p>Det finns mer kommandon, men det här är dom viktigaste. För mer kommandon kolla på Sphero-gem-dokumentationen på Github.</p>
+  <a href="../index.html">Till hjälpmenyn</a>
+</body>
+</html>
