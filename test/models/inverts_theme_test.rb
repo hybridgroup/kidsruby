@@ -1,4 +1,4 @@
-require_relative "../spec_helper"
+require_relative "../test_helper"
 require_relative "../../app/models/inverts_theme"
 
 class DummyWidget
