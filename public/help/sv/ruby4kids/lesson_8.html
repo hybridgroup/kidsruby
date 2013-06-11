@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmering för skojs skull</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-8-1", "../../shared/ruby4kids/code8_1.rb");
+      loadCode("#code-8-2", "../../shared/ruby4kids/code8_2.rb");
+      loadCode("#code-8-3", "../../shared/ruby4kids/code8_3.rb");
+      loadCode("#code-8-4", "../../shared/ruby4kids/code8_4.rb");
+      loadCode("#code-8-5", "../../shared/ruby4kids/code8_5.rb");
+      loadCode("#code-8-6", "../../shared/ruby4kids/code8_6.rb");
+      loadCode("#code-8-7", "../../shared/ruby4kids/code8_7.rb");
+      loadCode("#code-8-8", "../../shared/ruby4kids/code8_8.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Spelprogrammering - Lektion 8</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till lektioner</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lektion 8 - Starta om spelet med escape</h1>
+    <section class="page"><h1>Kommentarer och Else</h1>
+
+      <p>I den här lektionen vill vi få spelet att återställas när man trycker på escape-knappen, Låt oss gå till MyGame-klassen och hitta det ställe där vi skrev följande:</p>
+
+      <pre id="code-8-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Precis under den koden skriver vi nu:</p>
+
+      <pre id="code-8-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Vad vi gjorde ovan var att lägga till en <code>else</code>-sats, som utförs efter det att spelet har stoppats. </p>
+
+      <p>Vi lade också till en kommentar under <code>else</code>-satsen, som talar om att spelet för närvarande är stoppat. Därefter skrev vi en instruktion som bör kännas bekant. Koden säger helt enkelt att om escape-knappen är nedtryckt ska spelet starta om. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+   
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lektion 8 - Starta om spelet med escape</h1>
+    <section class="page"><h1>Skriv en fin definition</h1>
+
+      <p>Nu behöver vi bara gå längre ner i programmet där det står:</p>
+
+      <pre id="code-8-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Direkt under koden ovan skriver vi:</p>
+
+      <pre id="code-8-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Vad vi gjorde var att definiera hur spelet startas om. Vi sätter <code>@running</code> till "true" och sedan återställer vi bollen så att den går tillbaka till ursprungspositionen. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Lektion 8 - Starta om spelet med escape</h1>
+    <section class="page"><h1>Klara, färdiga, återställ!</h1>
+
+      <p>Vi behöver nu gå till slutet av vår <code>Ball</code>-klass och definiera vår reset-metod. Så vi skriver så här:</p>
+
+      <pre id="code-8-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>I koden ovan gjorde vi samma sak som när vi definierade <code>update</code> och <code>initialize</code>-metoderna. Vi satte y till noll, vilket placerar bollen i toppen av fönstret, och satte x till ett slumptal, så att vi inte vet var på x-axeln som den kommer att släppas. </p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lektion 8 - Starta om spelet med escape</h1>
+    <section class="page"><h1>Klara, färdiga, återställ!</h1>
+
+      <p>Till slut ska vi ta bort de två styckena där vi har upprepat:</p>
+
+      <pre id="code-8-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>och ersätta dem med <code>reset!</code>. Du hittar styckena under <code>def initialize</code> och <code>def update</code>. Ditt slutresultat bör se ut så här:</p>
+
+      <pre id="code-8-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Här är, ännu en gång, hela det program du ska ha skrivit så här långt:</p>
+      <pre id="code-8-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Det var allt för den här lektionen! Du börjar gilla det här, inte sant?! Låt oss nu göra spelet svårare genom att lägga till <a href="lesson_9.html">fler bollar i lektion 9</a>!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+    <a href="#top">Till toppen av sidan</a>
+
+</body>
+</html>
+

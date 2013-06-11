@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmering för skojs skull</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/ruby4kids/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/ruby4kids/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/ruby4kids/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/ruby4kids/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/ruby4kids/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/ruby4kids/code2_6.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Spelprogrammering - Lektion 2</h1>
+  <nav id="top">
+    <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till lektioner</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lektion 2 - Lägg till en spelare</h1>
+    <section class="page"><h1>Skapa en spelare</h1>
+      <p>Det skulle vara bra att ha en spelare i spelet, så låt oss skapa en.</p>
+      <p>Vi gör detta genom att lägga till en ny klass. Vi kallar den för <code>Player</code>.
+      <p>Nu ska vi definiera vad vår spelare ska göra. Det gör vi genom att skriva:</p>
+      <pre id="code-2-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Därefter ska vi lägga till en ikon så att vi kan se spelaren på skärmen.</p>
+      <p>Det gör vi genom att hitta en bildfil av typen .png. Kids Ruby råkar ha en färdig bild som du kan använda.</p>
+      <p>Gå till player-klassen och lägg till en ikon genom att skriva följande:</p>
+      <pre id="code-2-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Sedan lägger vi till en draw-metod till spelaren. Vi skriver så här:</p>
+      <pre id="code-2-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lektion 2 - Lägg till en spelare</h1>
+    <section class="page"><h1>Skapa en spelare</h1>
+      <p>Nu kan vi snart provköra programmet igen. Först behöver vi gå tillbaka till <code>MyGame</code>-klassen och instansiera, skapa en instans av, den här spelaren.</p>
+      <p>Det gör vi genom att lägga till den här koden till initialize-metoden i klassen MyGame:</p>
+      <pre id="code-2-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Det här talar om för spelaren i vilket fönster den ska rita sig själv.</p>
+      <p>Till sist behöver vi lägga till följande i draw-metoden i spelfönstret:</p>
+      <pre id="code-2-5" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Koden gör så att spelaren ritas när spelet körs.</p>
+      <p>Nu provar vi spelet! Klicka på "Kör"-knappen. Funkade det?</p>
+      <p>Här är hela det program du ska ha skrivit så här långt:</p>
+      <pre id="code-2-6" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Nu när du har lärt dig att lägga till en spelare, varför inte fortsätta till <a href="lesson_3.html">lektion 3 där vi får spelaren att röra sig åt vänster</a>?!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <a href="#top">Till toppen av sidan</a>
+
+</body>
+</html>

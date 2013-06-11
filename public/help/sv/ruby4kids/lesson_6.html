@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmering för skojs skull</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-6-1", "../../shared/ruby4kids/code6_1.rb");
+      loadCode("#code-6-2", "../../shared/ruby4kids/code6_2.rb");
+      loadCode("#code-6-3", "../../shared/ruby4kids/code6_3.rb");
+      loadCode("#code-6-4", "../../shared/ruby4kids/code6_4.rb");
+      loadCode("#code-6-5", "../../shared/ruby4kids/code6_5.rb");
+      loadCode("#code-6-6", "../../shared/ruby4kids/code6_6.rb");
+      loadCode("#code-6-7", "../../shared/ruby4kids/code6_7.rb");
+      loadCode("#code-6-8", "../../shared/ruby4kids/code6_8.rb");
+      loadCode("#code-6-9", "../../shared/ruby4kids/code6_9.rb");
+      loadCode("#code-6-10", "../../shared/ruby4kids/code6_10.rb");
+      loadCode("#code-6-11", "../../shared/ruby4kids/code6_11.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Spelprogrammering - Lektion 6</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till lektioner</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lektion 6 - Lägg till en boll</h1>
+    <section class="page"><h1>Skapa en ny klass och randomisera</h1>
+      <p>OK, i första lektionen lärde vi oss hur man öppnar ett fönster med Gosu. 
+         Sedan lärde vi oss att rita en spelare inuti spelfönstret.
+         Därefter lärde vi oss att flytta runt den här spelaren i fönstret.
+         Vi begränsade också rörelserna till spelfönstrets kanter.</p>
+      <p>Nu är det dags att lägga till ett spänningsmoment i spelet.</p>
+      <p>Vad sägs om att leka spökboll med vår spelare? Vi kan ha en boll som slängs in i spelfönstret och som vår spelare ska undvika genom att styra med piltangenterna.</p>
+      <p>Låt oss testa det här. Vi har redan en bild som ingår i Kids Ruby och som du kan använda.</p>
+      <p>Börja med att skapa en ny klass för vår boll: </p>
+
+      <pre id="code-6-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Nu ska vi få den här bollen att komma från toppen av fönstret och falla nedåt. Positionen i sidled ska slumpas fram.</p>
+      <p>Vi uppnår detta genom att sätta <code>@x</code>-positionen till ett slumptal mellan 0 och spelfönstrets bredd, mätt i pixlar. Bollens <code>@y</code>-position ska vara 0, eftersom den ska komma uppifrån. Så din kod ska se ut så här:</p>
+
+      <pre id="code-6-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Det här betyder att när spelet startar så ger oss rand-metoden en position någonstans mellan 0 och spelfönstrets bredd.</p>
+     
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lektion 6 - Lägg till en boll</h1>
+    <section class="page"><h1>Ändra positionen, definiera och uppdatera</h1>
+      <p>Vi behöver nu göra så att bollen rör sig nedåt varje gång update-metoden anropas. Säg att bollen ska röra sig med 1 pixel vid varje uppdatering. Vi ska se hur pass snabbt det är.</p>
+      <p>Vi gör detta i update, där vi ändrar <code>@y</code>-positionen med 1 pixel på det här viset:</p>
+      <pre id="code-6-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Sedan behöver vi definiera vår boll i <code>MyGame</code>-klassen, under <code>def initialize</code>. Det bör se ut så här:</p>
+
+      <pre id="code-6-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Därefter går vi till <code>def update</code> och säger till bollen att uppdatera sig själv. Vi skriver:</p>
+
+      <pre id="code-6-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lektion 6 - Lägg till en boll</h1>
+    <section class="page"><h1>Lägg till ikon och rita</h1>
+      <p>Precis som spelaren behöver bollen en ikon. Så vi kopierar bara <code>@icon</code>-koden från <code>Player</code>-klassen och klistrar in den precis under <code>@game_window = game_window</code> i <code>Ball</code>-klassen. Sedan ändrar vi <code>player1.png</code> till <code>asteroid.png</code>. Din kod ska se ut så här:</p>
+
+      <pre id="code-6-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Nu vill vi rita bollen, så vi lägger till följande i <code>Ball</code>-klassen:</p>
+
+      <pre id="code-6-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Den sista siffran inom parenteserna i koden ovan avgör om bollen ska släppas bakom eller framför spelaren. Här vill vi att bollen ska komma framför spelaren, och därför skriver vi <code>2</code> i stället för <code>1</code>.</p>
+
+      <p> OK, nu ska vi bara gå till <code>MyGame</code>-klassen och lägga till <code>@ball.draw</code> i <code>draw</code>-metoden. Så här ska det se ut:</p>
+
+      <pre id="code-6-8" class="sampleCode">Code automatically inserted here...</pre>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+ 
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Lektion 6 - Lägg till en boll</h1>
+    <section class="page"><h1>Saker börjar bli slumpartade</h1>
+
+      <p>Som vi har lärt oss behöver vi ha koll på när bollen försvinner från spelfönstret. Om bollen hamnar utanför fönstret vill vi börja om från början, hitta en slumpmässig position i toppen av fönstret och släppa bollen igen.</p>
+      <p>Vi kan göra detta genom att lägga till vår välbekanta <code>if</code>-sats så här:</p>
+
+      <pre id="code-6-9" class="sampleCode">Code automatically inserted here...</pre>
+
+
+      <p>Nu ska vi göra något annat. Vi vill att bollen ska börja falla från en annan position, inte samma x-position som tidigare. Så efter raden där vi återställer @y till 0 sätter vi @x till ett annat slumptal. Koden ska se ut så här:</p>
+
+      <pre id="code-6-10" class="sampleCode">Code automatically inserted here...</pre>
+  
+      <p>Nu bör bollen falla på det förväntade sättet.</p>
+      <p>Här är hela det program du ska ha skrivit så här långt:</p>
+      <pre id="code-6-11" class="sampleCode">Code automatically inserted here...</pre>
+      
+      <p>Du har klarat dig till slutet av den sjätte lektionen! Nu ska vi se om du kan hantera att bli <a href="lesson_7.html">träffad av bollar i lektion 7</a>!</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+ 
+    </section>
+  </article>
+
+
+
+      <a href="#top">Till toppen av sidan</a>
+
+</body>
+</html>
+

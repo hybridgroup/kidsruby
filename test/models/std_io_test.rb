@@ -1,5 +1,4 @@
-require_relative "../spec_helper"
-require_relative "../../lib/kidsruby"
+require_relative "../test_helper"
 
 describe KidsRubyStdIo do
   it "should default the interface to a new one from InterfaceHelper" do
