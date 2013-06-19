@@ -10,7 +10,7 @@ class KidsRubyServer < Qt::TcpServer
     @parent = parent
     @turtle = turtle
 
-    listen(Qt::HostAddress.new(Qt::HostAddress::LocalHost), 8080)
+    listen(Qt::HostAddress.new(Qt::HostAddress::LocalHost), 8086)
     connect(self, SIGNAL('newConnection()'), SLOT('connection()'));
   end
 
