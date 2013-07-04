@@ -134,14 +134,15 @@
       <p>ஒரு ரூபி நிரல் ஒவ்வொரு பகுதியாக ஒரு <code>பொருள்  ("ஆப்ஜெக்ட்")</code>.
 உங்கள் நிரல் ஒரு கொத்து<code>(ஆப்ஜெக்ட்)</code> கள் ஒன்றாக வேலை  உருவாக்கப்படுகிறது. </p>. ஒவ்வொரு பொருளின் ஒரு வகை உள்ளது. இதை ரூபி என்ன வகை என்று தெரிகிறது. </p>
     </section>
-    <section class="page"><h1>Adding numbers to words</h1>
-      <p>That's why</p>
+    <section class="page"><h1>எண்கள் மற்றும் சரங்களை சேர்க்கிறது</h1>
+      <p>அதனால் தான்</p>
       <pre id="code-2-10" class="sampleCode">Code automatically inserted here...</pre>
-      <p>doesn't really work: "hey" is a <code>String</code> object, and 2 is a <code>Fixnum</code> object. And adding <code>String</code>s and <code>Fixnum</code>s doesn't make any sense. We can make this code work, though!</p>
-      <p>All we need to do is turn the <code>Fixnum</code> into a <code>String</code>. We can do this by using the <code>to_s</code> method.</p>
+      <p>உண்மையில் வேலை செய்யவில்லை: "hey" ஒரு <code>சரம்</code> 
+பொருள் வகை, 2  ஒரு  <code>எண் (Fixnum)</code> பொருள் வகை. எண்கள் மற்றும் சரங்களை சேர்க்கிறது சரி அல்ல. என்றாலும், இந்த குறியீடு நாம் வேலை செய்ய முடியும்!</p>
+      <p>நாம் <code>எண் (Fixnum)</code> <code>சரம்</code> என்று மாற்றலாம் <code>to_s</code> என்ற செயலியை பயன்படுத்தலாம்.</p>
       <pre id="code-2-11" class="sampleCode">Code automatically inserted here...</pre>
     </section>
-    <section class="page"><h1>Let's look at that again</h1>
+    <section class="page"><h1>மீண்டும் இதை பார்க்கலாம்</h1>
       <pre id="code-2-11-1" class="sampleCode">Code automatically inserted here...</pre>
       <p>Okay, this isn't bad. We have our <code>alert</code> method. We're giving it <code>"hey" + 2.to_s</code>. The <code>2.to_s</code> turns a <code>Fixnum</code> 2, which is like the mathematical idea of a 2, into the <code>String</code> 2, which is like when you write a 2 down on a piece of paper.</p>
     </section>
