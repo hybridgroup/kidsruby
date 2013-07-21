@@ -23,7 +23,7 @@ class Interface
   end
 
   def call(method, param = nil)
-    loc = "http://127.0.0.1:8080#{path}#{method}"
+    loc = "http://127.0.0.1:8086#{path}#{method}"
     loc = loc + "?#{URI.escape(param)}" if param
     uri = URI.parse(loc)
     Reply.new(Net::HTTP.get_response(uri))

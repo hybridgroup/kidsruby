@@ -13,9 +13,10 @@ GEM
     guard-shell (0.1.1)
       guard (>= 0.2.0)
     htmlentities (4.2.3)
+    metaclass (0.0.1)
     minitest (2.11.1)
-    mocha (0.9.10)
-      rake
+    mocha (0.12.10)
+      metaclass (~> 0.0.1)
     qtbindings (4.6.3.4)
     r18n-core (1.0.0)
     r18n-desktop (1.0.0)
@@ -39,8 +40,8 @@ DEPENDENCIES
   guard
   guard-shell
   htmlentities
-  minitest
-  mocha
+  minitest (~> 2.0)
+  mocha (= 0.12.10)
   qtbindings
   rake (= 0.8.7)
   rb-fchange

@@ -183,10 +183,12 @@ class MainWidget < Qt::WebView
   end
 
   def alert(text)
+    text.force_encoding("utf-8")
     Qt::MessageBox::information(self, tr(version_description), URI.decode(text))
   end
 
   def ask(text)
+    text.force_encoding("utf-8")
     ok = Qt::Boolean.new
     val = Qt::InputDialog.getText(self, tr(version_description),
                                   URI.decode(text), Qt::LineEdit::Normal,

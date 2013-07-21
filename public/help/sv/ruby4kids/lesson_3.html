@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programmering för skojs skull</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-3-1", "../../shared/ruby4kids/code3_1.rb");
+      loadCode("#code-3-2", "../../shared/ruby4kids/code3_2.rb");
+      loadCode("#code-3-3", "../../shared/ruby4kids/code3_3.rb");
+      loadCode("#code-3-4", "../../shared/ruby4kids/code3_4.rb");
+      loadCode("#code-3-5", "../../shared/ruby4kids/code3_5.rb");
+      loadCode("#code-3-6", "../../shared/ruby4kids/code3_6.rb");
+      loadCode("#code-3-7", "../../shared/ruby4kids/code3_7.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Spelprogrammering - Lektion 3</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till lektioner</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lektion 3 - Flytta spelaren åt vänster</h1>
+    <section class="page"><h1>Det här är Ruby4Kids</h1>
+      <p> OK, nu ska vi försöka få spelaren att röra sig. I förra lektionen lade vi in en bild av spelaren, och vi ska nu klura ut hur man flyttar på den. </p>
+      <p> I Gosu kan vi använda piltangenterna för att flytta vår spelare uppåt, nedåt, åt vänster och åt höger. Spelfönstret har en update-metod, och det är i den metoden som vi behöver kolla om någon tangent har tryckts ned. I programmering gör man sådant med villkorssatser, så som <code>if</code>-satser.</p>
+      <p>Så under <code>def update</code> skriver vi:</p>
+      <pre id="code-3-1" class="sampleCode">Code automatically inserted here...</pre>
+ 
+      <p>Vad koden ovan säger är att om vänsterpilen trycks ned så ska spelaren röra sig åt vänster. Men innan vi kan definiera vad en rörelse åt vänster är måste vi göra så att spelaren kan flyttas från sin nuvarande, fasta position 50,50.</p> 
+
+      <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lektion 3 - Flytta spelaren åt vänster</h1>
+    <section class="page"><h1>Lägga till variabler</h1>
+      <p> Om vi vill kunna ändra positionen måste vi använda variabler. De här variablerna ska initieras i initialize-metoden. Under def initialize står det redan:
+      <pre id="code-3-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> Nu behöver vi bara lägga till: </p>
+      <pre id="code-3-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> Sedan ersätter vi <code>50,50</code> i koden <code>@icon.draw(50,50,1)</code> med <code>@x, @y</code>. Slutresultatet ska se ut så här:
+
+      <pre id="code-3-4" class="sampleCode">Code automatically inserted here...</pre>
+      <p> Med hjälp av variabler har vi nu gjort så att ikonen får en variabel position i stället för en fast position! De här variablerna initierades i player-klassens initialize-metod. Startpositionen för både x och y sattes till 50. </p>
+
+      <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lektion 3 - Flytta spelaren åt vänster</h1>
+    <section class="page"><h1>Definiera flytta åt vänster</h1>
+      <p> Nu behöver vi få x-positionen att ändras varje gång spelaren ska flyttas åt vänster. För att kunna göra det måste vi först definiera "flytta åt vänster" och sedan lägga till en enkel ekvation under den definitionen. Så vi skriver: </p>
+
+      <pre id="code-3-5" class="sampleCode">Code automatically inserted here...</pre> 
+      <p> Ekvationen som vi har skrivit flyttar ikonen 10 pixlar åt vänster varje gång vi trycker på piltangenten. Prova, så får du se! Coolt, eller hur?</p> 
+      
+      <p>Här är hela det program du ska ha skrivit så här långt:</p>
+      <pre id="code-3-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>OK, smartskalle, nu när du vet hur man flyttar spelaren åt vänster ska vi försöka <a href="lesson_4.html">begränsa spelarens rörelser i lektion 4</a>!</p>
+
+      <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+      <a href="index.html">Till lektioner</a>
+      <a href="#next" class="next-lesson">Nästa &raquo;</a>
+
+    </section>
+  </article>
+
+<a href="#top">Till toppen av sidan</a>
+
+</body>
+</html>
+
