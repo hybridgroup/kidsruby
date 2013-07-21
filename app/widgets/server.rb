@@ -4,13 +4,13 @@ require 'uri'
 class KidsRubyServer < Qt::TcpServer
   slots 'connection()'
 
-  # Initialize the server and put into listen mode (port is 8080)
+  # Initialize the server and put into listen mode (port is 8083)
   def initialize(parent = nil, turtle = nil)
     super(parent)
     @parent = parent
     @turtle = turtle
 
-    listen(Qt::HostAddress.new(Qt::HostAddress::LocalHost), 8086)
+    listen(Qt::HostAddress.new(Qt::HostAddress::LocalHost), 8083)
     connect(self, SIGNAL('newConnection()'), SLOT('connection()'));
   end
 
