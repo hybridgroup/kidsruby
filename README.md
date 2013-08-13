@@ -58,7 +58,38 @@ Take note that the native compilation of qt (the line `Installing qtbindings (4.
     sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev libxinerama-dev
     bundle install
     
-## Getting setup for development on a Mac (pre Mountain Lion) using Homebrew
+## Mac
+
+### Mountain Lion using homebrew
+This was testing on homebrew commit d02e16c4415e41c7510442a1d58b98077e5e0ae4
+
+You will most likely need to install ```Command Line Tools for XCode```. That should solve [this](http://stackoverflow.com/questions/10390186/install-name-tool-reporting-malformed-object) ```install_name_tool: object: Abacate malformed object``` For instructions go [here](http://stackoverflow.com/questions/11598082/install-name-tool-on-os-x-lion)
+
+Then run...
+
+```
+brew install qt
+```
+
+
+```
+for DIR in /usr/local/Cellar/qt/*/lib/*.framework; do ln -s $DIR/Headers ${DIR%%/lib/*}/include/$(basename $DIR .framework); done
+```
+
+Note: the above was done when I was trying the old instructions and I am not sure if this is needed.
+
+Clone the repo
+
+```
+bundle install
+```
+
+```
+NOTES: I had anaconda installed which was using the wrong qmake version make sure anaconda's qmake is not in the path
+```
+
+### Getting setup for development on a Mac (pre Mountain Lion) 
+using Homebrew
 I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
 
