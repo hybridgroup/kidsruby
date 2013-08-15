@@ -1,4 +1,5 @@
 @import 'compass';
+@import 'github_markdown';
 
 body {
   overflow: hidden;
@@ -21,6 +22,7 @@ body.lesson-set {
   &.intro {
     background: url("background.png") no-repeat top center;
     margin-top: 215px;
+    background-size: auto 50em;
 
     li {
       list-style-image: url("listicon.png");
@@ -32,6 +34,10 @@ body.lesson-set {
         font-size: 20px;
         font-weight: bold;
         text-decoration: none;
+      }
+
+      a:hover{
+        color: #B6B6B6;
       }
     }
   }
@@ -65,7 +71,7 @@ body.lesson-set nav a:last-child {
 }
 
 body.lesson-set nav a:hover {
-  color: #000;
+  color: blue;
   text-decoration: underline;
 }
 

@@ -1,10 +1,465 @@
-/* line 3, ../../sass/master.scss */
+/* line 1, ../../sass/_github_markdown.scss */
+body {
+  font-family: Helvetica, arial, sans-serif;
+  padding-top: 40px;
+  color: #333;
+}
+
+/* line 7, ../../sass/_github_markdown.scss */
+body > *:first-child {
+  margin-top: 0 !important;
+}
+
+/* line 11, ../../sass/_github_markdown.scss */
+body > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* line 15, ../../sass/_github_markdown.scss */
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+/* line 20, ../../sass/_github_markdown.scss */
+a.absent {
+  color: #cc0000;
+}
+
+/* line 24, ../../sass/_github_markdown.scss */
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* line 35, ../../sass/_github_markdown.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative;
+}
+
+/* line 44, ../../sass/_github_markdown.scss */
+h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* line 49, ../../sass/_github_markdown.scss */
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  text-decoration: none;
+}
+
+/* line 53, ../../sass/_github_markdown.scss */
+h1 tt, h1 code {
+  font-size: inherit;
+}
+
+/* line 57, ../../sass/_github_markdown.scss */
+h2 tt, h2 code {
+  font-size: inherit;
+}
+
+/* line 61, ../../sass/_github_markdown.scss */
+h3 tt, h3 code {
+  font-size: inherit;
+}
+
+/* line 65, ../../sass/_github_markdown.scss */
+h4 tt, h4 code {
+  font-size: inherit;
+}
+
+/* line 69, ../../sass/_github_markdown.scss */
+h5 tt, h5 code {
+  font-size: inherit;
+}
+
+/* line 73, ../../sass/_github_markdown.scss */
+h6 tt, h6 code {
+  font-size: inherit;
+}
+
+/* line 77, ../../sass/_github_markdown.scss */
+h1 {
+  font-size: 28px;
+  color: black;
+}
+
+/* line 82, ../../sass/_github_markdown.scss */
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black;
+}
+
+/* line 88, ../../sass/_github_markdown.scss */
+h3 {
+  font-size: 18px;
+}
+
+/* line 92, ../../sass/_github_markdown.scss */
+h4 {
+  font-size: 16px;
+}
+
+/* line 96, ../../sass/_github_markdown.scss */
+h5 {
+  font-size: 14px;
+}
+
+/* line 100, ../../sass/_github_markdown.scss */
+h6 {
+  color: #777777;
+  font-size: 14px;
+}
+
+/* line 105, ../../sass/_github_markdown.scss */
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0;
+}
+
+/* line 109, ../../sass/_github_markdown.scss */
+hr {
+  background: transparent url("http://tinyurl.com/bq5kskr") repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+/* line 117, ../../sass/_github_markdown.scss */
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* line 122, ../../sass/_github_markdown.scss */
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* line 127, ../../sass/_github_markdown.scss */
+body > h1:first-child + h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* line 132, ../../sass/_github_markdown.scss */
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* line 137, ../../sass/_github_markdown.scss */
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* line 142, ../../sass/_github_markdown.scss */
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0;
+}
+
+/* line 146, ../../sass/_github_markdown.scss */
+li p.first {
+  display: inline-block;
+}
+
+/* line 150, ../../sass/_github_markdown.scss */
+ul, ol {
+  padding-left: 30px;
+}
+
+/* line 154, ../../sass/_github_markdown.scss */
+ul :first-child, ol :first-child {
+  margin-top: 0;
+}
+
+/* line 158, ../../sass/_github_markdown.scss */
+ul :last-child, ol :last-child {
+  margin-bottom: 0;
+}
+
+/* line 162, ../../sass/_github_markdown.scss */
+dl {
+  padding: 0;
+}
+
+/* line 166, ../../sass/_github_markdown.scss */
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+/* line 174, ../../sass/_github_markdown.scss */
+dl dt:first-child {
+  padding: 0;
+}
+
+/* line 178, ../../sass/_github_markdown.scss */
+dl dt > :first-child {
+  margin-top: 0;
+}
+
+/* line 182, ../../sass/_github_markdown.scss */
+dl dt > :last-child {
+  margin-bottom: 0;
+}
+
+/* line 186, ../../sass/_github_markdown.scss */
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+/* line 191, ../../sass/_github_markdown.scss */
+dl dd > :first-child {
+  margin-top: 0;
+}
+
+/* line 195, ../../sass/_github_markdown.scss */
+dl dd > :last-child {
+  margin-bottom: 0;
+}
+
+/* line 199, ../../sass/_github_markdown.scss */
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777;
+}
+
+/* line 205, ../../sass/_github_markdown.scss */
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+/* line 209, ../../sass/_github_markdown.scss */
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+/* line 213, ../../sass/_github_markdown.scss */
+table {
+  padding: 0;
+}
+
+/* line 216, ../../sass/_github_markdown.scss */
+table tr {
+  border-top: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 223, ../../sass/_github_markdown.scss */
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* line 227, ../../sass/_github_markdown.scss */
+table tr th {
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+/* line 235, ../../sass/_github_markdown.scss */
+table tr td {
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+/* line 242, ../../sass/_github_markdown.scss */
+table tr th :first-child, table tr td :first-child {
+  margin-top: 0;
+}
+
+/* line 246, ../../sass/_github_markdown.scss */
+table tr th :last-child, table tr td :last-child {
+  margin-bottom: 0;
+}
+
+/* line 250, ../../sass/_github_markdown.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 254, ../../sass/_github_markdown.scss */
+span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+/* line 259, ../../sass/_github_markdown.scss */
+span.frame > span {
+  border: 1px solid #dddddd;
+  display: block;
+  float: left;
+  overflow: hidden;
+  margin: 13px 0 0;
+  padding: 7px;
+  width: auto;
+}
+
+/* line 269, ../../sass/_github_markdown.scss */
+span.frame span img {
+  display: block;
+  float: left;
+}
+
+/* line 274, ../../sass/_github_markdown.scss */
+span.frame span span {
+  clear: both;
+  color: #333333;
+  display: block;
+  padding: 5px 0 0;
+}
+
+/* line 281, ../../sass/_github_markdown.scss */
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+/* line 287, ../../sass/_github_markdown.scss */
+span.align-center > span {
+  display: block;
+  overflow: hidden;
+  margin: 13px auto 0;
+  text-align: center;
+}
+
+/* line 294, ../../sass/_github_markdown.scss */
+span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 299, ../../sass/_github_markdown.scss */
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+/* line 305, ../../sass/_github_markdown.scss */
+span.align-right > span {
+  display: block;
+  overflow: hidden;
+  margin: 13px 0 0;
+  text-align: right;
+}
+
+/* line 312, ../../sass/_github_markdown.scss */
+span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+/* line 317, ../../sass/_github_markdown.scss */
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left;
+}
+
+/* line 324, ../../sass/_github_markdown.scss */
+span.float-left span {
+  margin: 13px 0 0;
+}
+
+/* line 328, ../../sass/_github_markdown.scss */
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right;
+}
+
+/* line 335, ../../sass/_github_markdown.scss */
+span.float-right > span {
+  display: block;
+  overflow: hidden;
+  margin: 13px auto 0;
+  text-align: right;
+}
+
+/* line 342, ../../sass/_github_markdown.scss */
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+/* line 351, ../../sass/_github_markdown.scss */
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+/* line 359, ../../sass/_github_markdown.scss */
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+/* line 369, ../../sass/_github_markdown.scss */
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+/* line 379, ../../sass/_github_markdown.scss */
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+/* line 4, ../../sass/master.scss */
 body {
   overflow: hidden;
   background: transparent;
 }
 
-/* line 8, ../../sass/master.scss */
+/* line 9, ../../sass/master.scss */
 body:after {
   content: ".";
   display: block;
@@ -13,39 +468,43 @@ body:after {
   visibility: hidden;
 }
 
-/* line 16, ../../sass/master.scss */
+/* line 17, ../../sass/master.scss */
 body.lesson-set {
   background: transparent;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   margin: 0px 10px 0px 0px;
   overflow: auto;
 }
-/* line 21, ../../sass/master.scss */
+/* line 22, ../../sass/master.scss */
 body.lesson-set.intro {
   background: url("background.png") no-repeat top center;
-  background-size: cover;
   margin-top: 215px;
+  background-size: auto 50em;
 }
-/* line 25, ../../sass/master.scss */
+/* line 27, ../../sass/master.scss */
 body.lesson-set.intro li {
   list-style-image: url("listicon.png");
   margin-bottom: 20px;
   margin-left: 50px;
 }
-/* line 30, ../../sass/master.scss */
+/* line 32, ../../sass/master.scss */
 body.lesson-set.intro li a {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
 }
+/* line 39, ../../sass/master.scss */
+body.lesson-set.intro li a:hover {
+  color: #B6B6B6;
+}
 
-/* line 40, ../../sass/master.scss */
+/* line 46, ../../sass/master.scss */
 body.lesson-set > h1 {
   border-bottom: 1px solid #dfdfdf;
 }
 
-/* line 44, ../../sass/master.scss */
+/* line 50, ../../sass/master.scss */
 body.lesson-set article > h1 {
   border-bottom: 1px dotted #dfdfdf;
   border-left: 4px solid #ff0000;
@@ -53,32 +512,32 @@ body.lesson-set article > h1 {
   padding-left: 5px;
 }
 
-/* line 51, ../../sass/master.scss */
+/* line 57, ../../sass/master.scss */
 body.lesson-set nav {
   background-color: #e8e8e8;
   border: 1px dotted #ccc;
   margin-bottom: 30px;
   padding: 3px 5px;
-  width: 290px;
+  width: 245px;
 }
 
-/* line 59, ../../sass/master.scss */
+/* line 65, ../../sass/master.scss */
 body.lesson-set nav a {
   margin-right: 7px;
 }
 
-/* line 63, ../../sass/master.scss */
+/* line 69, ../../sass/master.scss */
 body.lesson-set nav a:last-child {
   margin-right: 0px;
 }
 
-/* line 67, ../../sass/master.scss */
+/* line 73, ../../sass/master.scss */
 body.lesson-set nav a:hover {
-  color: #000;
+  color: blue;
   text-decoration: underline;
 }
 
-/* line 73, ../../sass/master.scss */
+/* line 79, ../../sass/master.scss */
 body.lesson-set section code {
   background-color: #000;
   color: #fff;
@@ -86,7 +545,7 @@ body.lesson-set section code {
   padding: 0px 5px;
 }
 
-/* line 80, ../../sass/master.scss */
+/* line 86, ../../sass/master.scss */
 body.lesson-set section h1 {
   color: #555;
   font-size: 13px;
@@ -94,7 +553,7 @@ body.lesson-set section h1 {
   text-transform: uppercase;
 }
 
-/* line 87, ../../sass/master.scss */
+/* line 93, ../../sass/master.scss */
 #buttons {
   position: absolute;
   float: right;
@@ -102,13 +561,14 @@ body.lesson-set section h1 {
   width: 49%;
 }
 
-/* line 93, ../../sass/master.scss */
+/* line 99, ../../sass/master.scss */
 #buttons button {
   background-color: red;
-  -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
+  -webkit-border-radius: 4px;
   -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
   border-radius: 4px;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff3333), color-stop(100%, #ff0000));
   background: -webkit-linear-gradient(#ff3333, #ff0000);
@@ -125,56 +585,56 @@ body.lesson-set section h1 {
   margin-right: 5px;
 }
 
-/* line 107, ../../sass/master.scss */
+/* line 113, ../../sass/master.scss */
 #input {
   float: left;
   position: relative;
   width: 50%;
 }
 
-/* line 113, ../../sass/master.scss */
+/* line 119, ../../sass/master.scss */
 iframe {
   border: none;
   height: 100%;
   width: 100%;
 }
 
-/* line 119, ../../sass/master.scss */
+/* line 125, ../../sass/master.scss */
 iframe h1 {
   font-size: 14px;
 }
 
-/* line 123, ../../sass/master.scss */
+/* line 129, ../../sass/master.scss */
 #output {
   overflow-y: scroll;
   font-family: monospace;
   font-size: 18px;
 }
 
-/* line 129, ../../sass/master.scss */
+/* line 135, ../../sass/master.scss */
 #stdout {
   white-space: pre-wrap;
 }
 
-/* line 133, ../../sass/master.scss */
+/* line 139, ../../sass/master.scss */
 #stdin {
   padding: 0;
   margin: 0;
   white-space: normal;
 }
 
-/* line 138, ../../sass/master.scss */
+/* line 144, ../../sass/master.scss */
 #stderr {
   white-space: pre-wrap;
   color: #990000;
 }
 
-/* line 142, ../../sass/master.scss */
+/* line 148, ../../sass/master.scss */
 .cursor {
   display: inline-block;
 }
 
-/* line 150, ../../sass/master.scss */
+/* line 156, ../../sass/master.scss */
 #tabs {
   position: absolute;
   height: 92%;
@@ -182,25 +642,25 @@ iframe h1 {
   width: 50%;
 }
 
-/* line 156, ../../sass/master.scss */
+/* line 162, ../../sass/master.scss */
 .ui-tabs-panel {
   height: 85%;
   position: relative;
 }
 
-/* line 161, ../../sass/master.scss */
+/* line 167, ../../sass/master.scss */
 #turtle {
   height: 90%;
   width: 90%;
 }
 
-/* line 169, ../../sass/master.scss */
+/* line 175, ../../sass/master.scss */
 #container {
   width: 49%;
   float: left;
 }
 
-/* line 174, ../../sass/master.scss */
+/* line 180, ../../sass/master.scss */
 #rubycode {
   width: 49%;
   margin: 0;
