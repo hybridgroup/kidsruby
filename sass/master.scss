@@ -22,7 +22,7 @@ body.lesson-set {
   &.intro {
     background: url("background.png") no-repeat top center;
     margin-top: 215px;
-    background-size: auto 50em;
+    background-size: cover;
 
     li {
       list-style-image: url("listicon.png");
@@ -71,7 +71,7 @@ body.lesson-set nav a:last-child {
 }
 
 body.lesson-set nav a:hover {
-  color: blue;
+  color: #000;
   text-decoration: underline;
 }
 
