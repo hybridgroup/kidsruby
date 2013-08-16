@@ -1,32 +1,31 @@
-/* line 1, ../../sass/_github_markdown.scss */
+/* line 1, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 body {
   font-family: Helvetica, arial, sans-serif;
-  padding-top: 40px;
   color: #333;
 }
 
-/* line 7, ../../sass/_github_markdown.scss */
+/* line 7, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 body > *:first-child {
   margin-top: 0 !important;
 }
 
-/* line 11, ../../sass/_github_markdown.scss */
+/* line 11, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 body > *:last-child {
   margin-bottom: 0 !important;
 }
 
-/* line 15, ../../sass/_github_markdown.scss */
+/* line 15, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 a {
   color: #4183C4;
   text-decoration: none;
 }
 
-/* line 20, ../../sass/_github_markdown.scss */
+/* line 20, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 a.absent {
   color: #cc0000;
 }
 
-/* line 24, ../../sass/_github_markdown.scss */
+/* line 24, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 a.anchor {
   display: block;
   padding-left: 30px;
@@ -38,7 +37,7 @@ a.anchor {
   bottom: 0;
 }
 
-/* line 35, ../../sass/_github_markdown.scss */
+/* line 35, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 20px 0 10px;
   padding: 0;
@@ -48,87 +47,87 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-/* line 44, ../../sass/_github_markdown.scss */
+/* line 44, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 49, ../../sass/_github_markdown.scss */
+/* line 49, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
   text-decoration: none;
 }
 
-/* line 53, ../../sass/_github_markdown.scss */
+/* line 53, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h1 tt, h1 code {
   font-size: inherit;
 }
 
-/* line 57, ../../sass/_github_markdown.scss */
+/* line 57, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h2 tt, h2 code {
   font-size: inherit;
 }
 
-/* line 61, ../../sass/_github_markdown.scss */
+/* line 61, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h3 tt, h3 code {
   font-size: inherit;
 }
 
-/* line 65, ../../sass/_github_markdown.scss */
+/* line 65, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h4 tt, h4 code {
   font-size: inherit;
 }
 
-/* line 69, ../../sass/_github_markdown.scss */
+/* line 69, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h5 tt, h5 code {
   font-size: inherit;
 }
 
-/* line 73, ../../sass/_github_markdown.scss */
+/* line 73, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h6 tt, h6 code {
   font-size: inherit;
 }
 
-/* line 77, ../../sass/_github_markdown.scss */
+/* line 77, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h1 {
   font-size: 28px;
   color: black;
 }
 
-/* line 82, ../../sass/_github_markdown.scss */
+/* line 82, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h2 {
   font-size: 24px;
   border-bottom: 1px solid #cccccc;
   color: black;
 }
 
-/* line 88, ../../sass/_github_markdown.scss */
+/* line 88, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h3 {
   font-size: 18px;
 }
 
-/* line 92, ../../sass/_github_markdown.scss */
+/* line 92, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h4 {
   font-size: 16px;
 }
 
-/* line 96, ../../sass/_github_markdown.scss */
+/* line 96, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h5 {
   font-size: 14px;
 }
 
-/* line 100, ../../sass/_github_markdown.scss */
+/* line 100, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h6 {
   color: #777777;
   font-size: 14px;
 }
 
-/* line 105, ../../sass/_github_markdown.scss */
+/* line 105, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 p, blockquote, ul, ol, dl, li, table, pre {
   margin: 15px 0;
 }
 
-/* line 109, ../../sass/_github_markdown.scss */
+/* line 109, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 hr {
   background: transparent url("http://tinyurl.com/bq5kskr") repeat-x 0 0;
   border: 0 none;
@@ -137,67 +136,67 @@ hr {
   padding: 0;
 }
 
-/* line 117, ../../sass/_github_markdown.scss */
+/* line 117, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 body > h2:first-child {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 122, ../../sass/_github_markdown.scss */
+/* line 122, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 body > h1:first-child {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 127, ../../sass/_github_markdown.scss */
+/* line 127, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 body > h1:first-child + h2 {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 132, ../../sass/_github_markdown.scss */
+/* line 132, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 137, ../../sass/_github_markdown.scss */
+/* line 137, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 142, ../../sass/_github_markdown.scss */
+/* line 142, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
   margin-top: 0;
 }
 
-/* line 146, ../../sass/_github_markdown.scss */
+/* line 146, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 li p.first {
   display: inline-block;
 }
 
-/* line 150, ../../sass/_github_markdown.scss */
+/* line 150, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 ul, ol {
   padding-left: 30px;
 }
 
-/* line 154, ../../sass/_github_markdown.scss */
+/* line 154, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 ul :first-child, ol :first-child {
   margin-top: 0;
 }
 
-/* line 158, ../../sass/_github_markdown.scss */
+/* line 158, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 ul :last-child, ol :last-child {
   margin-bottom: 0;
 }
 
-/* line 162, ../../sass/_github_markdown.scss */
+/* line 162, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 dl {
   padding: 0;
 }
 
-/* line 166, ../../sass/_github_markdown.scss */
+/* line 166, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 dl dt {
   font-size: 14px;
   font-weight: bold;
@@ -206,60 +205,60 @@ dl dt {
   margin: 15px 0 5px;
 }
 
-/* line 174, ../../sass/_github_markdown.scss */
+/* line 174, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 dl dt:first-child {
   padding: 0;
 }
 
-/* line 178, ../../sass/_github_markdown.scss */
+/* line 178, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 dl dt > :first-child {
   margin-top: 0;
 }
 
-/* line 182, ../../sass/_github_markdown.scss */
+/* line 182, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 dl dt > :last-child {
   margin-bottom: 0;
 }
 
-/* line 186, ../../sass/_github_markdown.scss */
+/* line 186, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 dl dd {
   margin: 0 0 15px;
   padding: 0 15px;
 }
 
-/* line 191, ../../sass/_github_markdown.scss */
+/* line 191, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 dl dd > :first-child {
   margin-top: 0;
 }
 
-/* line 195, ../../sass/_github_markdown.scss */
+/* line 195, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 dl dd > :last-child {
   margin-bottom: 0;
 }
 
-/* line 199, ../../sass/_github_markdown.scss */
+/* line 199, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 blockquote {
   border-left: 4px solid #dddddd;
   padding: 0 15px;
   color: #777777;
 }
 
-/* line 205, ../../sass/_github_markdown.scss */
+/* line 205, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 blockquote > :first-child {
   margin-top: 0;
 }
 
-/* line 209, ../../sass/_github_markdown.scss */
+/* line 209, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 blockquote > :last-child {
   margin-bottom: 0;
 }
 
-/* line 213, ../../sass/_github_markdown.scss */
+/* line 213, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 table {
   padding: 0;
 }
 
-/* line 216, ../../sass/_github_markdown.scss */
+/* line 216, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 table tr {
   border-top: 1px solid #cccccc;
   background-color: white;
@@ -267,12 +266,12 @@ table tr {
   padding: 0;
 }
 
-/* line 223, ../../sass/_github_markdown.scss */
+/* line 223, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 table tr:nth-child(2n) {
   background-color: #f8f8f8;
 }
 
-/* line 227, ../../sass/_github_markdown.scss */
+/* line 227, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 table tr th {
   font-weight: bold;
   border: 1px solid #cccccc;
@@ -281,7 +280,7 @@ table tr th {
   padding: 6px 13px;
 }
 
-/* line 235, ../../sass/_github_markdown.scss */
+/* line 235, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 table tr td {
   border: 1px solid #cccccc;
   text-align: left;
@@ -289,28 +288,28 @@ table tr td {
   padding: 6px 13px;
 }
 
-/* line 242, ../../sass/_github_markdown.scss */
+/* line 242, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 table tr th :first-child, table tr td :first-child {
   margin-top: 0;
 }
 
-/* line 246, ../../sass/_github_markdown.scss */
+/* line 246, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 table tr th :last-child, table tr td :last-child {
   margin-bottom: 0;
 }
 
-/* line 250, ../../sass/_github_markdown.scss */
+/* line 250, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 img {
   max-width: 100%;
 }
 
-/* line 254, ../../sass/_github_markdown.scss */
+/* line 254, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.frame {
   display: block;
   overflow: hidden;
 }
 
-/* line 259, ../../sass/_github_markdown.scss */
+/* line 259, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.frame > span {
   border: 1px solid #dddddd;
   display: block;
@@ -321,13 +320,13 @@ span.frame > span {
   width: auto;
 }
 
-/* line 269, ../../sass/_github_markdown.scss */
+/* line 269, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.frame span img {
   display: block;
   float: left;
 }
 
-/* line 274, ../../sass/_github_markdown.scss */
+/* line 274, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.frame span span {
   clear: both;
   color: #333333;
@@ -335,14 +334,14 @@ span.frame span span {
   padding: 5px 0 0;
 }
 
-/* line 281, ../../sass/_github_markdown.scss */
+/* line 281, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.align-center {
   display: block;
   overflow: hidden;
   clear: both;
 }
 
-/* line 287, ../../sass/_github_markdown.scss */
+/* line 287, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.align-center > span {
   display: block;
   overflow: hidden;
@@ -350,20 +349,20 @@ span.align-center > span {
   text-align: center;
 }
 
-/* line 294, ../../sass/_github_markdown.scss */
+/* line 294, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.align-center span img {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 299, ../../sass/_github_markdown.scss */
+/* line 299, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.align-right {
   display: block;
   overflow: hidden;
   clear: both;
 }
 
-/* line 305, ../../sass/_github_markdown.scss */
+/* line 305, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.align-right > span {
   display: block;
   overflow: hidden;
@@ -371,13 +370,13 @@ span.align-right > span {
   text-align: right;
 }
 
-/* line 312, ../../sass/_github_markdown.scss */
+/* line 312, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.align-right span img {
   margin: 0;
   text-align: right;
 }
 
-/* line 317, ../../sass/_github_markdown.scss */
+/* line 317, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.float-left {
   display: block;
   margin-right: 13px;
@@ -385,12 +384,12 @@ span.float-left {
   float: left;
 }
 
-/* line 324, ../../sass/_github_markdown.scss */
+/* line 324, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.float-left span {
   margin: 13px 0 0;
 }
 
-/* line 328, ../../sass/_github_markdown.scss */
+/* line 328, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.float-right {
   display: block;
   margin-left: 13px;
@@ -398,7 +397,7 @@ span.float-right {
   float: right;
 }
 
-/* line 335, ../../sass/_github_markdown.scss */
+/* line 335, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 span.float-right > span {
   display: block;
   overflow: hidden;
@@ -406,7 +405,7 @@ span.float-right > span {
   text-align: right;
 }
 
-/* line 342, ../../sass/_github_markdown.scss */
+/* line 342, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 code, tt {
   margin: 0 2px;
   padding: 0 5px;
@@ -416,7 +415,7 @@ code, tt {
   border-radius: 3px;
 }
 
-/* line 351, ../../sass/_github_markdown.scss */
+/* line 351, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 pre code {
   margin: 0;
   padding: 0;
@@ -425,7 +424,7 @@ pre code {
   background: transparent;
 }
 
-/* line 359, ../../sass/_github_markdown.scss */
+/* line 359, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 .highlight pre {
   background-color: #f8f8f8;
   border: 1px solid #cccccc;
@@ -436,7 +435,7 @@ pre code {
   border-radius: 3px;
 }
 
-/* line 369, ../../sass/_github_markdown.scss */
+/* line 369, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 pre {
   background-color: #f8f8f8;
   border: 1px solid #cccccc;
@@ -447,7 +446,7 @@ pre {
   border-radius: 3px;
 }
 
-/* line 379, ../../sass/_github_markdown.scss */
+/* line 379, /Users/theron/Desktop/kidsruby/sass/_github_markdown.scss */
 pre code, pre tt {
   background-color: transparent;
   border: none;
