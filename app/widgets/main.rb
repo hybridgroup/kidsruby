@@ -131,7 +131,7 @@ class MainWidget < Qt::WebView
   end
 
   def saveRubyFile(code)
-    fileName = Qt::FileDialog.getSaveFileName(self, tr("Save Ruby Code"),Dir.home, tr(".rb"))
+    fileName = Qt::FileDialog.getSaveFileName(self, tr("Save Ruby Code"),Dir.home, tr("*.rb"))
 	  unless fileName.nil?
 	    file = Qt::File.new(fileName)
 	    unless file.open(Qt::File::WriteOnly | Qt::File::Text)
