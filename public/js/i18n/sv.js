@@ -4,7 +4,8 @@
     "clear": "Rensa",
     "open": "Öppna",
     "save": "Spara",
-    "stop": "Stoppa"
+    "stop": "Stoppa",
+    "invert-theme": "Invert theme"
   },
   "tabs": {
     "help-link": "Hjälp",

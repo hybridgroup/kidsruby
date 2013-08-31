@@ -4,7 +4,8 @@
     "clear": "Borrar",
     "open": "Abrir",
     "save": "Guardar",
-    "stop": "Detener"
+    "stop": "Detener",
+    "invert-theme": "Invert theme"
   },
   "tabs": {
     "help-link": "Ayuda",

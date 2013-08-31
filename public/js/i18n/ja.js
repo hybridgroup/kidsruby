@@ -4,7 +4,8 @@
     "clear": "消す",
     "open": "開く",
     "save": "ほぞん",
-    "stop": "止める"
+    "stop": "止める",
+    "invert-theme": "Invert theme"
   },
   "tabs": {
     "help-link": "ヘルプ",
