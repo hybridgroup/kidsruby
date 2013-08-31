@@ -288,9 +288,12 @@ $(document).ready(function() {
   $('#clear').click(function(e) {
     if (confirm(getLocalizedString('editor', 'confirm-clear')))
       clearCode();
-
     return false;
   });
+
+  $("#invert-theme").click(function() {
+    getAce().setTheme(getAce().getTheme() == "ace/theme/merbivore" ? "ace/theme/clouds" : "ace/theme/merbivore");
+  });  
 
   initUI();
 
