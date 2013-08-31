@@ -228,6 +228,7 @@ function localizeUI(data) {
   $("#clear").html(getLocalizedString('buttons', 'clear'));
   $("#open").html(getLocalizedString('buttons', 'open'));
   $("#save").html(getLocalizedString('buttons', 'save'));
+  $("#invert-theme").html(getLocalizedString('buttons', 'invert-theme'));
 
   $("#help-link").html(getLocalizedString('tabs', 'help-link'));
   $("#output-link").html(getLocalizedString('tabs', 'output-link'));
