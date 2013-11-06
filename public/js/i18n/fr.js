@@ -4,8 +4,7 @@
     "clear": "Effacer",
     "open": "Ouvrir",
     "save": "Enregistrer",
-    "stop": "Stop",
-    "invert-theme": "Invert theme"
+    "stop": "Stop"
   },
   "tabs": {
     "help-link": "Aide",
