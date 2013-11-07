@@ -228,6 +228,7 @@ function localizeUI(data) {
   $("#clear").html(getLocalizedString('buttons', 'clear'));
   $("#open").html(getLocalizedString('buttons', 'open'));
   $("#save").html(getLocalizedString('buttons', 'save'));
+  $("#invert-theme").html(getLocalizedString('buttons', 'invert-theme'));
 
   $("#help-link").html(getLocalizedString('tabs', 'help-link'));
   $("#output-link").html(getLocalizedString('tabs', 'output-link'));
@@ -288,9 +289,12 @@ $(document).ready(function() {
   $('#clear').click(function(e) {
     if (confirm(getLocalizedString('editor', 'confirm-clear')))
       clearCode();
-
     return false;
   });
+
+  $("#invert-theme").click(function() {
+    getAce().setTheme(getAce().getTheme() == "ace/theme/merbivore" ? "ace/theme/clouds" : "ace/theme/merbivore");
+  });  
 
   initUI();
 

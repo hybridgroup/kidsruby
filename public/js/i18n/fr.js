@@ -3,7 +3,8 @@
     "run": "Executer",
     "clear": "Effacer",
     "open": "Ouvrir",
-    "save": "Enregistrer"
+    "save": "Enregistrer",
+    "stop": "Stop"
   },
   "tabs": {
     "help-link": "Aide",
