@@ -117,6 +117,10 @@ Someone please describe this procedure here.
     bundle install
 
 
+## Credits and Attributions
+
+Light Icon for theme inversion: Creative Commons (Attribution-Share Alike 3.0 Unported)
+
 ## DONE
 * create hackety-hack compatible class with UI dialogs for ask/alert
 * get syntax highlighting correct for Ruby code
