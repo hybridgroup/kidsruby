@@ -60,6 +60,19 @@ Take note that the native compilation of qt (the line `Installing qtbindings (4.
     
 ## Mac
 
+### Mavericks Using homebrew
+First things first: Macs are getting weirder. Secondly you will most likely need to install ```Command Line Tools for XCode```. That should solve [this](http://stackoverflow.com/questions/10390186/install-name-tool-reporting-malformed-object) ```install_name_tool: object: Abacate malformed object``` For instructions go [here](http://stackoverflow.com/questions/11598082/install-name-tool-on-os-x-lion)
+
+You won't be able to use the normal Qt install from homebrew because of some changes with Mavericks. To fix that go [here](https://github.com/mxcl/homebrew/pull/23793). If you get any problems with cmake then run ``` brew install cmake```.
+
+Clone the repo
+
+```
+bundle install
+```
+
+That should be it. Get coding. *whip cracks*
+
 ### Mountain Lion using homebrew
 This was testing on homebrew commit d02e16c4415e41c7510442a1d58b98077e5e0ae4
 
