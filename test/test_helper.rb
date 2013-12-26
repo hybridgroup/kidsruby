@@ -1,8 +1,8 @@
-require 'rubygems'
-require 'minitest/spec'
+require 'Qt4'
 require 'minitest/autorun'
 require 'mocha'
-require 'Qt4'
+
+require_relative "../lib/kidsruby"
 
 module KeyPressEventsTestHelper
   def z_key_press_event

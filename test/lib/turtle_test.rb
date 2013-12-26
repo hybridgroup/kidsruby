@@ -1,6 +1,4 @@
-require_relative "../spec_helper"
-require_relative "../../lib/kidsruby/interface"
-require_relative "../../lib/kidsruby/turtle"
+require_relative "../test_helper"
 
 describe Turtle do
   before do

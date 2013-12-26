@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Grundläggande programmering</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-1-1", "../../shared/hacketyhack/code1_1.rb");
+      loadCode("#code-1-2", "../../shared/hacketyhack/code1_2.rb");
+      loadCode("#code-1-3", "../../shared/hacketyhack/code1_3.rb");
+      loadCode("#code-1-4", "../../shared/hacketyhack/code1_4.rb");
+      loadCode("#code-1-5", "../../shared/hacketyhack/code1_5.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Grundläggande programmering</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Föregående</a>
+    <a href="index.html">Till hjälpmenyn</a>
+    <a href="#next" class="next-lesson">Nästa &raquo;</a>
+  </nav>
+
+
+
+  <article class="lesson"><h1>Hej!</h1>
+    <section class="page"><h1>Första rundan</h1>
+      <p>Så du vill lära dig att "hacka" kod av dom bästa? Då har du kommit till rätt ställe. Det här är den allra första lektionen som jag har för dig. Allt börjar här.</p>
+      <p>Jag vill ge dig den allra bästa tänkbara starten med att skriva program, så vi börjar med att berätta lite om vad programmering är och sen skriver vi några enkla program som ritar kul saker på skärmen. Låter det bra? Låt oss börja!</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Låt oss prata om programmering</h1>
+    <section class="page"><h1>Det handlar bara om instruktioner </h1>
+      <p>Till syvene och sist så handlar programmering om <strong>algoritmer</strong>. Det är ett komplicerat ord för 'en lista på instruktioner'. Alla program är bara en stor 'att göra'-lista med instruktioner för datorn att följa.</p>
+      <p>Du kan göra nästan vad som helst till en lista med instruktioner om du funderar på det lite. För det mesta är du så van vid att göra saker att du inte ens tänker på varje individuellt steg. Du bara gör dom. Det kommer sig helt naturligt.</p>
+    </section>
+
+    <section class="page"><h1>Datorn är enkel</h1>
+      <p>Olyckligtvis är datorer väldigt enkla. Det kanske är motsatsen till allt du hört, men det är sanningen. Även om vi jämför datorer med saker som vår hjärna så är det en dålig jämförelse. Det som datorer verkligen är bra på är att utföra enkla och tråkiga saker om och om igen väldigt exakt. Dom kan inte tänka själva!</p>
+      <p>Det är därför datorer verkar komplicerade. Dom följer blint de order som dom får, utan någon tanke på om dom instruktionerna är bra eller dåliga. Det är svårt att tänka i så enkla termer!</p>
+    </section>
+
+    <section class="page"><h1>Förklara väl</h1>
+      <p>Det är viktigt att komma ihåg att förklara väl för datorn när du programmerar. Den kan inte tänka ut vad du försöker be den om, du måste säga exakt vad du menar!</p>
+      <p>Det kräver lite övning, så vi börjar med några övningar i att förklara oss i väldigt enkla termer. Det är nästan som att förklara matte för ett litet barn: du måste ta det sakta, dubbelkolla dina instruktioner, och ha tålamod när det inte riktigt förstår.</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Instruktionslista</h1>
+    <section class="page"><h1>En instruktionslista inte en inköpslista</h1>
+      <p>När jag säger att en dator följer en instruktionslista menar jag en instruktionslista inte en inköpslista. Det jag försöker säga är att listorna har en <strong>ordning</strong> som datorn följer. Den gör varje steg i ordning så snabbt som möjligt.</p>
+      <p>En inköpslista är en helt annan typ av lista. Man kan gå till vilken hylla man vill, så länge som man hämtar allt innan man går så är det OK. Så funkar inte datorer alls.</p>
+    </section>
+
+    <section class="page"><h1>Hur skulle du be en person att göra det?</h1>
+      <p>Till exempel: om du måste beskriva för någon i ord hur man ritar en fyrkant på ett papper, hur skulle du göra det?</p>
+      <p>Du får inte använda "så här" eller "på det här sättet", det är fusk! Du måste beskriva varje detalj.</p>
+    </section>
+
+    <section class="page"><h1>Än en gång: datorer är enkla</h1>
+      <p>Hur gick det? Jag vet inte vad du sa, men här är ett exempel på hur enkla datorer är jämfört med människor. Glömde du att beskriva hur lång varje sida är? Om du inte glömde gjorde du ett bra jobb!</p>
+      <p>Förresten, så här skulle jag göra det. Det är inte det enda rätta sättet, det är bara ett exempel:</p>
+      <p>1. Sätt ned pennan på pappret.</p>
+      <p>2. Rita höger 5 cm.</p>
+      <p>3. Rita nedåt 5 cm.</p>
+      <p>4. Rita vänster 5 cm.</p>
+      <p>5. Rita uppåt 5 cm.</p>
+      <p>6. Lyft pennan från pappret.</p>
+      <p>7. Klart!</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Sköldpaddor (turtle på engelska), hela vägen ned.</h1>
+    <section class="page"><h1>Rita... med sköldpaddor?</h1>
+      <p>OK! Nog med tankeexperiment. Nu är det dags att faktiskt göra något. Jag slår vad om att du har undrat när vi ska börja, eller hur? Det är viktigt att förstå grunderna först.</p>
+      <p>Vi ska beskriva för datorn hur den ska rita geometriska former... med sköldpaddor. Ja du läste rätt. Du kommer behöva instruera en sköldpadda.</p>
+      <p>Den här speciella sköldpaddan har en penna. Du har ett papper. Sköldpaddan kommer följa alla dina instruktioner. Men den är lite långsam och behöver noggranna instruktioner. Är du redo?</p>
+    </section>
+
+    <section class="page"><h1>Sköldpaddan och dess kommandon</h1>
+      <p>Vi måste beskriva för Ruby vad vi vill att den ska instruera sköldpaddan att göra. För att göra det så måste vi ha ett <code>Turtle</code>-kommando. Vi kan instruera <code>Turtle</code> två saker:</p>
+      <p><code>draw</code>: (rita på svenska) sköldpaddan utför instruktionerna blixtsnabbt och ritar vår hela bild på ett ögonblick.
+      <p><code>start</code>: ett interaktivt fönster visas där vi kan se hur sköldpaddan rör sig för varje steg i vårt program. Du kan flytta den i din egen takt. Det är användbart när sköldpaddan inte gör som du förväntat dig!
+    </section>
+
+    <section class="page"><h1>Skriv det!</h1>
+      <p>Häftigt. Skriv det här:</p>
+      <p><code>Turtle.draw</code></p>
+      <p>Punkten mellan <code>Turtle</code> och <code>draw</code> kopplar ihop dom. Programmeringsspråk har regler precis som att svenska har det. Du kan tänka på <code>Turtle</code> som ett subjekt och <code>draw</code> som ett verb. Tillsammans bildar dom en mening: Du sköldpadda, rita något åt mig!</p>
+      <p>När du har skrivit in det så klicka på 'kör'-knappen. Sköldpaddan förflyttar sig så snabbt i <code>draw</code>-läge  att du inte ens kommer hinna se den, men jag lovar, den är där!</p>
+    </section>
+
+    <section class="page"><h1>Gör... det som jag säger åt dig</h1>
+      <p>Grymt! Nu har vi fått igång sköldpaddan åtminstone. Nu behöver vi bara säga åt den vad den ska rita!</p>
+      <p>Kommer du ihåg att jag sa att ett program är som en instruktionslista? I det här fallet har vårt program bara en instruktion: <code>Turtle</code>.draw något! Men vi behöver kunna ge <code>Turtle</code> sin egen lista på instruktioner.</p>
+      <p>För att göra det använder vi två ord: <code>do</code> (gör på svenska) och <code>end</code> (slut på svenska). Dom här orden tillsammans gör en <em>underlista</em> av instruktioner bara för <code>Turtle</code>!</p>
+    </section>
+
+    <section class="page"><h1>Ändra färg på bakgrunden</h1>
+      <p>Låt oss testa det här: vi kan säga till vår <code>Turtle</code> att vi vill ha en annan bakgrundsfärg genom att använda <code>background</code>-kommandot. Kolla in det här:</p>
+      <pre id="code-1-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Skriv in detta och klicka på 'Kör'!</p>
+    </section>
+
+    <section class="page"><h1>Sköldpaddan får order</h1>
+      <p>Coolt! Bakgrunden är nu rödbrun (maroon på engelska). <a href="colors.html">Klicka här för att se hela listan på färger som stöds</a>.
+      <p>Det är också så här som du gör listor med instruktioner som vår <code>Turtle</code> ska följa. För att göra koden lite tydligare sätter programmerare två mellanslag före underlistor. Gör det till en vana redan nu, du kommer att tacka mig senare!</p>
+    </section>
+
+    <section class="page"><h1>Pennan</h1>
+      <p>Nu har vi en tjusig bakgrundsfärg, men hur gör vi för att rita några linjer? Det första du behöver känna till är pennan. Vår <code>Turtle</code> bär med sig en penna, och släpar den i marken efter sig. Du kan ändra färgen på pennan med <code>pencolor</code>-kommandot.</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Rita linjer</h1>
+    <section class="page"><h1>Full fart framåt!</h1>
+      <p>Okej, nog med velande. Låt oss säga åt sköldpaddan att rita en linje! Här är min linje. Ge det här en chans, och prova sedan med egna färger och siffror!</p>
+      <pre id="code-1-2" class="sampleCode">Code automatically inserted here...</pre>
+      <p>50 är förresten antalet pixlar som sköldpaddan ska förflytta sig framåt.</p>
+    </section>
+
+    <section class="page"><h1>Du får mig att snurra</h1>
+      <p>Härligt! Nu har vi en linje. Men om du inte vill att din <code>Turtle</code> ska röra sig framåt? Jo, du kan säga åt den att svänga genom att använda kommandona <code>turnleft</code> (sväng vänster) och <code>turnright</code> (sväng höger) på det här viset:</p>
+      <pre id="code-1-3" class="sampleCode">Code automatically inserted here...</pre>
+     <p>Testa det här och lek sedan lite grann!</p>
+     <p>Om du undrar vad 90 står för så är det antalet grader som sköldpaddan ska rotera.</p>
+    </section>
+
+    <section class="page"><h1>I like to move it, move it</h1>
+      <p>Okej, nu är vi på gång! Låt oss gå igenom det här igen:</p>
+      <p><code>Turtle.draw</code> säger till vår <code>Turtle</code> att vi vill rita saker. Punkten kopplar ihop orden.</p>
+      <p><code>do ... end</code> är en underlista. Det här är vad vi vill att vår <code>Turtle</code> ska rita. Listan berör inte resten av vårt program.
+      <p><code>pencolor</code> sätter färgen på pennan som vår <code>Turtle</code> släpar efter sig, och <code>background</code> sätter färgen på bakgrunden.</p>
+      <p><code>turnright</code> (eller dess kompis <code>turnleft</code>) säger till sköldpaddan att svänga till höger eller vänster.</p>
+      <p><code>forward</code> (eller dess kompis <code>backward</code>) säger åt sköldpaddan att förflytta sig.</p>
+    </section>
+
+    <section class="page"><h1>Låt oss rita en ruta</h1>
+      <p>Gå vidare och testa själv. Försök att få sköldpaddan att rita en ruta.</p>
+      <p>Jag väntar så länge. :)</p>
+    </section>
+
+    <section class="page"><h1>Här är min version</h1>
+      <p>Så här gjorde jag:</p>
+      <pre id="code-1-4" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Att upprepa sig</h1>
+    <section class="page"><h1>Igen och igen...</h1>
+      <p>Puh, det där var en massa repetition! Mina fingrar trillade nästan av när jag skrev alla de där <code>forward</code> och <code>turnright</code>-kommandona!</p>
+      <p>Men jag har en god nyhet: Jag nämnde en sak om datorer tidigare. Det här att göra tråkiga, repetitiva saker är något som de är riktigt bra på! De gör samma sak om och om igen - till och med för evigt - om du bara ber snällt.</p>
+    </section>
+
+    <section class="page"><h1>Upprepa upprepa sig sig</h1>
+      <p>Kolla in detta: vår <code>Turtle</code> kan faktiskt räkna. Till exempel:</p>
+      <pre id="code-1-5" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Provkör den här koden. Den ritar också en ruta! Wow!</p>
+    </section>
+
+    <section class="page"><h1>4.times</h1>
+      <p>Det är rätt enkelt: <code>4</code> kan också ta instruktioner, precis som vår <code>Turtle</code>. Det här kommandot upprepar en följd av instruktioner ett visst antal gånger. Kul! Fyra gånger (four times, på engelska). Och <code>do</code> och <code>end</code> visar vilken lista av instruktioner som hör till <code>4</code> snarare än till <code>Turtle</code>.</p>
+    </section>
+
+    <section class="page"><h1>Prova!</h1>
+      <p>Gör nu lite roliga former på egen hand. Ha så jättekul!</p>
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Sammanfattning</h1>
+    <section class="page"><h1>Grattis!</h1>
+      <p>Wow, du är grym. Dunka dig själv i ryggen. Gör en "high five" med någon. Du har nu lärt dig grunderna!</p>
+      <p>Kolla nu in lektionerna under <em>Grundläggande Ruby</em> för att lära dig några helt andra spännande saker!</p>
+    </section>
+  </article>
+
+  <a href="#top">Till toppen av sidan</a>
+
+</body>
+</html>
