@@ -110,13 +110,11 @@ describe Turtle do
 
     it "must be able to pen up" do
       @turtle.expects(:add_command)
-      @turtle.expects(:send_commands)
       @turtle.penup
     end
 
     it "must be able to pen down" do
       @turtle.expects(:add_command)
-      @turtle.expects(:send_commands)
       @turtle.pendown
     end
 
