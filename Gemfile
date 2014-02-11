@@ -1,9 +1,9 @@
 # A sample Gemfile
 source "http://rubygems.org"
 
-gem 'qtbindings'
 gem 'htmlentities'
 gem 'rubywarrior-i18n'
+gem "sinatra", "~> 1.4.4"
 
 group :development do
   gem 'guard'
