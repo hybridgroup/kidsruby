@@ -11,7 +11,7 @@ var Runner = (function () {
 
   my.run = function (code) {
     my.saveCode(runLocation(), code);
-    my.process = cp.spawn('ruby', [runLocation()], {detached: true});
+    my.process = cp.spawn('ruby', [runLocation()]);
     my.running = true;
     my.process.stderr.on('data', function (data) {
       console.log('stderr: ' + data);
