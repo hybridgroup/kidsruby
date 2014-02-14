@@ -93,6 +93,7 @@ function clearOutputs() {
 
 function submitRubyCode() {
   var ruby = getEditor().getValue();
+  Runner.run(ruby);
   //QTApi["evaluateRuby(QString)"](ruby);
 }
 
