@@ -45,18 +45,32 @@ end
 
     ruby main.rb
 
-## Getting setup for development on Ubuntu
-    sudo apt-get install libqt4-dev
-    sudo apt-get install cmake
-    bundle install
+## Getting setup for development on Linux
+
+# Ubuntu dependencies
+```
+sudo apt-get install libqt4-dev
+sudo apt-get install cmake
+bundle install
+```    
 Take note that the native compilation of qt (the line `Installing qtbindings (4.6.3.4) with native extensions`) can take several minutes without apparent progress ... You could run `top` to see `cmake` and `cc1plus` effectively in action.
 
 ## If you also want Gosu
-    echo "" >> Gemfile
-    echo "# needed for gosu" >> Gemfile
-    echo "gem 'gosu'" >> Gemfile
-    sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev libxinerama-dev
-    bundle install
+```
+echo "" >> Gemfile
+echo "# needed for gosu" >> Gemfile
+echo "gem 'gosu'" >> Gemfile
+sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev libxinerama-dev
+bundle install
+``` 
+## Fedora dependencies
+```
+sudo yum install gcc dkms kernel-devel patch libyaml-devel libffi-devel gcc-c++ \
+patch readline-devel zlib-devel openssl-devel autoconf automake libtool \
+bison git qt4 qt4-devel cmake qtwebkit qtwebkit-devel freeglut-devel \
+freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_ttf-devel \
+libsndfile-devel libXinerama-devel libvorbis-devel
+```
     
 ## Mac
 
