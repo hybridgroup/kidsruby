@@ -8,3 +8,4 @@ nbproject
 kidsruby.pid
 .sass-cache/*
 /rubywarrior/
+/node_modules/

@@ -1,0 +1,14 @@
+{
+  "name": "kr2",
+  "main": "views/index.html",
+  "version": "0.0.1",
+  "single-instance": true,
+  "window": {
+    "title": "kr2",
+    "width": 800,
+    "height": 600,
+    "min_width": 800,
+    "min_height": 600
+  },
+  "chromium-args": "--child-clean-exit"
+}
