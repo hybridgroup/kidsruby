@@ -15,6 +15,6 @@ end
 group :test do
   # only needed for testing
   gem 'rake'
-  gem 'minitest', '3.4.0'
-  gem 'mocha', '0.12.10', :require => false
+  gem 'minitest'
+  gem 'mocha'
 end
