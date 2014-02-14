@@ -1,14 +1,15 @@
 {
-  "name": "kr2",
-  "main": "views/index.html",
+  "name": "KidsRuby 2",
+  "main": "index.html",
   "version": "0.0.1",
   "single-instance": true,
   "window": {
-    "title": "kr2",
+    "title": "KidsRuby 2",
     "width": 800,
     "height": 600,
     "min_width": 800,
-    "min_height": 600
+    "min_height": 600,
+    "toolbar": false
   },
   "chromium-args": "--child-clean-exit"
 }

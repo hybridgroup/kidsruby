@@ -74,7 +74,7 @@ function startRun() {
 }
 
 function stopRun() {
-  QTApi["stopRuby()"]();
+  //QTApi["stopRuby()"]();
 }
 
 function setRunButtonToStop() {
@@ -93,16 +93,16 @@ function clearOutputs() {
 
 function submitRubyCode() {
   var ruby = getEditor().getValue();
-  QTApi["evaluateRuby(QString)"](ruby);
+  //QTApi["evaluateRuby(QString)"](ruby);
 }
 
 function openRubyCode() {
-  QTApi["openRubyFile(QString)"]("");
+  //QTApi["openRubyFile(QString)"]("");
 }
 
 function saveRubyCode() {
   var ruby = getEditor().getValue();
-  QTApi["saveRubyFile(QString)"](ruby);
+  //QTApi["saveRubyFile(QString)"](ruby);
 }
 
 function getAce() {
@@ -248,12 +248,12 @@ function getLocalizedString(t, i) {
 }
 
 function initUI() {
-  language = QTApi["language()"]()
+  language = "en" //QTApi["language()"]()
   loadLanguage(language);
 }
 
 function initHelp() {
-  language = QTApi["language()"]()
+  language = "en" //QTApi["language()"]()
   $("#help-iframe").attr("src", "help/" + language + "/index.html");
 }
 
