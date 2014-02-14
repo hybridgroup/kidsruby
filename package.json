@@ -16,7 +16,9 @@
       "url": "git://github.com/deadprogram/kr2.git"
     },
   
-  "dependencies": {},
+  "dependencies": {
+    "express": "3.x"
+  },
   "devDependencies": {
     "matchdep": "~0.1.1",
     "grunt": "~0.4.1",

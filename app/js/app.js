@@ -304,4 +304,16 @@ $(document).ready(function() {
   initTurtle();
 
   selectTab(0); // default to help tab
+
+  app.get('/append', function(req, res){
+    var i = req.url.indexOf('?');
+    var query = req.url.substr(i+1);
+    updateStdOut(query);
+    
+    var body = 'OK';
+    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Length', Buffer.byteLength(body));
+    res.end(body);
+  });
+  app.listen(8699);
 });
