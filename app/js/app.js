@@ -203,6 +203,12 @@ function scrollToOutputEnd() {
   $('#output').scrollTop(height);
 }
 
+function getLanguage() {
+  // TODO: make sure that the locale is one in our list, or default to en
+  var userLang = (navigator.language || navigator.userLanguage).substring(0,2);
+  return userLang;
+}
+
 function loadLanguage(lang){
   $.ajax({
     url: 'js/i18n/' + lang + '.js',
@@ -248,13 +254,11 @@ function getLocalizedString(t, i) {
 }
 
 function initUI() {
-  language = "en" //QTApi["language()"]()
-  loadLanguage(language);
+  loadLanguage(getLanguage());
 }
 
 function initHelp() {
-  language = "en" //QTApi["language()"]()
-  $("#help-iframe").attr("src", "help/" + language + "/index.html");
+  $("#help-iframe").attr("src", "help/" + getLanguage() + "/index.html");
 }
 
 $(document).ready(function() {
