@@ -25,17 +25,17 @@ var KidsRubyServer = (function () {
     });
 
     my.app.get('/appendError', function(req, res){
-      // TODO: implement
+      updateStdErr(getQuery(req));
       responseOK(res);
     });
 
     my.app.get('/alert', function(req, res){
-      // TODO: implement
+      alert(unescape(getQuery(req));
       responseOK(res);
     });
 
     my.app.get('/ask', function(req, res){
-      // TODO: implement
+      prompt(unescape(getQuery(req)));
       responseOK(res);
     });
 
