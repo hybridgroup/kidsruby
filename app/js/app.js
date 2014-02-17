@@ -97,7 +97,22 @@ function submitRubyCode() {
 }
 
 function openRubyCode() {
-  //QTApi["openRubyFile(QString)"]("");
+  var chooser = $('#fileDialog');
+  chooser.change(function(evt) {
+    loadRubyCode($(this).val());
+  });
+
+  chooser.trigger('click');
+}
+
+function loadRubyCode(fileName) {
+  fs.readFile(fileName, function (err, data) {
+    if (err) {
+      console.log("Read failed: " + err);
+    }
+
+    getEditor().setValue(String(data));
+  });
 }
 
 function saveRubyCode() {
