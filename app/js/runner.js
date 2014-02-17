@@ -1,17 +1,19 @@
-var Runner = (function () {
-  var my = {}
+var temp = require('temp');
 
-  function runLocation() {
-    // TODO: temp file location
-    return "\/home\/ron\/Development\/kidsruby\/kidsruby\/kidscode.rb";
+var Runner = (function () {
+  var my = {};
+  var filePath = '';
+
+  function runFile() {
+    return "kidscode.rb";
   }
 
   my.running = false;
   my.process = null;
 
   my.run = function (code) {
-    my.saveCode(runLocation(), code);
-    my.process = cp.spawn('ruby', [runLocation()]);
+    my.saveCode(runFile(), code);
+    my.process = cp.spawn('ruby', [filePath]);
     my.running = true;
     my.process.stderr.on('data', function (data) {
       console.log('stderr: ' + data);
@@ -29,14 +31,18 @@ var Runner = (function () {
     my.running = false;
   };
 
-  my.saveCode = function (fileLocation, code) {
-    fs.writeFile(fileLocation, my.addRequiresToCode(code), function (err) {
+  my.saveCode = function (fileName, code) {
+    temp.open(fileName, function(err, info) {
+      filePath = info.path;
+
+      fs.write(info.fd, my.addRequiresToCode(code));
       if (err) {
         console.log("Write failed: " + err);
-        return;
-      }
-      console.log("Write completed.");
+      } else {
+        console.log ("Write completed.");
+      };
     });
+
   };
 
   my.addRequiresToCode = function (code) {
