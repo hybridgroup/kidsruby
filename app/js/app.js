@@ -97,7 +97,7 @@ function submitRubyCode() {
 }
 
 function openRubyCode() {
-  var chooser = $('#fileDialog');
+  var chooser = $('#fileOpenDialog');
   chooser.change(function(evt) {
     loadRubyCode($(this).val());
   });
@@ -116,8 +116,23 @@ function loadRubyCode(fileName) {
 }
 
 function saveRubyCode() {
-  var ruby = getEditor().getValue();
-  //QTApi["saveRubyFile(QString)"](ruby);
+  var chooser = $('#fileSaveDialog');
+  chooser.change(function(evt) {
+    // TODO: detect cancel
+    writeRubyCode($(this).val());
+  });
+
+  chooser.trigger('click');
+}
+
+function writeRubyCode(fileName) {
+  fs.writeFile(fileName, getEditor().getValue(), function (err) {
+    if (err) {
+      console.log("Write failed: " + err);
+      return;
+    }
+    console.log("Write completed.");
+  });
 }
 
 function getAce() {
