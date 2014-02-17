@@ -8,11 +8,7 @@ var Runner = (function () {
     return "kidscode.rb";
   }
 
-  my.running = false;
-  my.process = null;
-
-  my.run = function (code) {
-    my.saveCode(runFile(), code);
+  function runRuby() {
     my.process = cp.spawn('ruby', [filePath]);
     my.running = true;
     my.process.stderr.on('data', function (data) {
@@ -22,6 +18,13 @@ var Runner = (function () {
       my.running = false;
       console.log('child process exited with code ' + res);
     });
+  }
+
+  my.running = false;
+  my.process = null;
+
+  my.run = function (code) {
+    my.saveCode(runFile(), code);
   };
 
   my.stop = function () {
@@ -35,14 +38,16 @@ var Runner = (function () {
     temp.open(fileName, function(err, info) {
       filePath = info.path;
 
-      fs.write(info.fd, my.addRequiresToCode(code));
+      fs.writeFile(info.path, my.addRequiresToCode(code), null, function() {
+        runRuby();
+      });
+
       if (err) {
         console.log("Write failed: " + err);
       } else {
         console.log ("Write completed.");
       };
     });
-
   };
 
   my.addRequiresToCode = function (code) {
