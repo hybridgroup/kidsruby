@@ -30,7 +30,7 @@ var KidsRubyServer = (function () {
     });
 
     my.app.get('/alert', function(req, res){
-      alert(unescape(getQuery(req));
+      alert(unescape(getQuery(req)));
       responseOK(res);
     });
 
