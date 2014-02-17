@@ -1,25 +1,32 @@
-var Runner = (function () {
-  var my = {}
+var temp = require('temp');
+temp.track();
 
-  function runLocation() {
-    // TODO: temp file location
-    return "\/home\/ron\/Development\/kidsruby\/kidsruby\/kidscode.rb";
+var Runner = (function () {
+  var my = {};
+  var filePath = '';
+
+  function runFile() {
+    return "kidscode.rb";
   }
 
-  my.running = false;
-  my.process = null;
-
-  my.run = function (code) {
-    my.saveCode(runLocation(), code);
-    my.process = cp.spawn('ruby', [runLocation()]);
+  function runRuby() {
+    my.process = cp.spawn('ruby', [filePath]);
     my.running = true;
     my.process.stderr.on('data', function (data) {
       console.log('stderr: ' + data);
     });
     my.process.on('close', function (res) {
       my.running = false;
+      temp.cleanup();
       console.log('child process exited with code ' + res);
     });
+  }
+
+  my.running = false;
+  my.process = null;
+
+  my.run = function (code) {
+    my.saveCode(runFile(), code);
   };
 
   my.stop = function () {
@@ -29,13 +36,19 @@ var Runner = (function () {
     my.running = false;
   };
 
-  my.saveCode = function (fileLocation, code) {
-    fs.writeFile(fileLocation, my.addRequiresToCode(code), function (err) {
+  my.saveCode = function (fileName, code) {
+    temp.open(fileName, function(err, info) {
+      filePath = info.path;
+
+      fs.writeFile(info.path, my.addRequiresToCode(code), null, function() {
+        runRuby();
+      });
+
       if (err) {
         console.log("Write failed: " + err);
-        return;
-      }
-      console.log("Write completed.");
+      } else {
+        console.log ("Write completed.");
+      };
     });
   };
 
