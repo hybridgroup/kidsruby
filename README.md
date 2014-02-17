@@ -37,7 +37,7 @@ end
 ## Implementation choices
 * Webkit-based editor - currently using Ace (http://ace.ajax.org/)
 * node-webkit app - hosts webkit and provide http server to communicate with running Ruby environment
-* Minitest/Minispec for testing. Yes, code must be tested
+* Minitest/Minispec for Ruby testing. Mocha-Chai-Sinon for JavaScript testing. Yes, code must be tested
 * Tutorial content is easy to create just drop HTML files on disk locally to the KidsRuby editor.
 * Using a modified version of the JS library Turtlewax for the Turtle implementation https://github.com/davebalmer/turtlewax
 
@@ -84,13 +84,10 @@ Light Icon for theme inversion: Creative Commons (Attribution-Share Alike 3.0 Un
 ### TURTLE
 * correct pencolor so it works when switching color while drawing
 
-### EDITOR
-* paste into editor (copy already works)
-
 ### HELP/TUTORIAL
 * update ruby4kids to include their latest lessons
 * add more good stuff!
 
-### POSSIBLE IDEAS:
-* make it easy to run pie (see what I did there? And it will only run on macs :P)
-* create Shoes compatible classes (slippers?) to run Shoes example code too
+## ROADMAP
+
+### Alpha 1 - KidsRuby 2 running in node-webkit using Ruby 2.1
