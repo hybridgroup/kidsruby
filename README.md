@@ -44,14 +44,13 @@ end
 ## How to Run KidsRuby:
     nodewebkit app
 
-## Getting setup for development on Ubuntu
-
-### Node dependencies
+## Node dependencies
   - Install Yeoman globally: `sudo npm install yeoman -g`
   - Install the Yeoman Node WebKit Generator globally: `sudo npm install generator-node-webkit -g`
   - Install Node WebKit globally: `sudo npm install nodewebkit -g`
   - Install the Grunt CLI globally: `sudo npm install grunt-cli -g`
 
+## Getting setup for development on Ubuntu
 ### Ruby dependencies
 ```
     bundle install
@@ -65,42 +64,11 @@ end
     bundle install
     
 ## Getting setup for development on Mac
-
-### Node dependencies
-  - Install Yeoman globally: `sudo npm install yeoman -g`
-  - Install the Yeoman Node WebKit Generator globally: `sudo npm install generator-node-webkit -g`
-  - Install Node WebKit globally: `sudo npm install nodewebkit -g`
-  - Install the Grunt CLI globally: `sudo npm install grunt-cli -g`
-
-### Mavericks Using homebrew
-First things first: Macs are getting weirder. Secondly you will most likely need to install ```Command Line Tools for XCode```. That should solve [this](http://stackoverflow.com/questions/10390186/install-name-tool-reporting-malformed-object) ```install_name_tool: object: Abacate malformed object``` For instructions go [here](http://stackoverflow.com/questions/11598082/install-name-tool-on-os-x-lion)
-
 Clone the repo
 
 ```
 bundle install
 ```
-
-That should be it. Get coding. *whip cracks*
-
-### Mountain Lion using homebrew
-
-You will most likely need to install ```Command Line Tools for XCode```. That should solve [this](http://stackoverflow.com/questions/10390186/install-name-tool-reporting-malformed-object) ```install_name_tool: object: Abacate malformed object``` For instructions go [here](http://stackoverflow.com/questions/11598082/install-name-tool-on-os-x-lion)
-
-Clone the repo
-
-```
-bundle install
-```
-
-### Getting setup for development on a Mac (pre Mountain Lion) using Homebrew
-
-```
-bundle install
-```
-
-## Getting setup on a Mac using Ports
-Someone please describe this procedure here.
 
 ## Getting setup on Windows
     Install git standalone
