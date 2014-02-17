@@ -195,6 +195,10 @@ function resizeCanvas() {
   canvas.height = pnl.height();
 }
 
+function say(text) {
+  speak.play(text, {noWorker: true}, function(){});
+}
+
 function setDefaultEditorContent() {
   // set initial value and position
   getEditor().setValue('# ' + getLocalizedString('editor', 'your-code') + '\n');

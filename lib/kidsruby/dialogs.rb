@@ -40,3 +40,16 @@ def alert(text)
   return nil
 end
 
+def say(text)
+  init_interface
+
+  if @iface.valid?
+    reply = @iface.call("say", text.to_s)
+    if reply.valid?
+      return true
+    end
+
+    $stderr.puts("say call failed: %s\n" % reply.error_message)
+  end
+  return nil
+end

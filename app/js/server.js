@@ -44,6 +44,11 @@ var KidsRubyServer = (function () {
       responseOK(res);
     });
 
+    my.app.get('/say', function(req, res){
+      say(unescape(getQuery(req)));
+      responseOK(res);
+    });
+
     // turtle routes
     my.app.get('/turtle/init', function(req, res){
       initTurtle();
