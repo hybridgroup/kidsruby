@@ -27,7 +27,9 @@ Turtle.start do
   end
 end
 ```
-## Looking for the KidsRuby 2.0 development branch? [https://github.com/hybridgroup/kidsruby/tree/kidsruby2](https://github.com/hybridgroup/kidsruby/tree/kidsruby2)
+### Looking for the KidsRuby 2.0 development branch? 
+
+[https://github.com/hybridgroup/kidsruby/tree/kidsruby2](https://github.com/hybridgroup/kidsruby/tree/kidsruby2)
 
 ## Design Goals
 * Simple single file editor
