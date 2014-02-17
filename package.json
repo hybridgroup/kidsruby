@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  
+
     "homepage": "https://github.com/deadprogram/kr2",
     "bugs": "https://github.com/deadprogram/kr2/issues",
     "author": {
@@ -15,7 +15,7 @@
       "type": "git",
       "url": "git://github.com/deadprogram/kr2.git"
     },
-  
+
   "dependencies": {
     "express": "3.x"
   },
