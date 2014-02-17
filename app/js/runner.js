@@ -1,4 +1,5 @@
 var temp = require('temp');
+temp.track();
 
 var Runner = (function () {
   var my = {};
@@ -16,6 +17,7 @@ var Runner = (function () {
     });
     my.process.on('close', function (res) {
       my.running = false;
+      temp.cleanup();
       console.log('child process exited with code ' + res);
     });
   }
