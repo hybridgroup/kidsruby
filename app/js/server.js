@@ -45,12 +45,12 @@ var KidsRubyServer = (function () {
     });
 
     // turtle routes
-    my.app.get('/turtle/init_turtle', function(req, res){
+    my.app.get('/turtle/init', function(req, res){
       initTurtle();
       responseOK(res);
     });
 
-    my.app.get('/turtle/command_turtle', function(req, res){
+    my.app.get('/turtle/command', function(req, res){
       code = "getTurtle()." + unescape(getQuery(req));
       eval(code);
       responseOK(res);

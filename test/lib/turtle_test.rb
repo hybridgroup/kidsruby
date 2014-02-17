@@ -15,7 +15,7 @@ describe Turtle do
     @value = true
     @reply.stubs(:value).returns(@value)
 
-    @iface.expects(:call).with('init_turtle').returns(@reply)
+    @iface.expects(:call).with('init').returns(@reply)
     @turtle = Turtle.new
   end
   
@@ -24,9 +24,9 @@ describe Turtle do
       @val = "#fff"
       @reply.stubs(:value).returns(@val)
 
-      @iface.expects(:call).with('init_turtle').returns(@reply)
+      @iface.expects(:call).with('init').returns(@reply)
       @iface.expects(:call).with("background", @value).returns(@reply)
-      @iface.expects(:call).with("command_turtle", 'draw();').returns(@reply)
+      @iface.expects(:call).with("command", 'draw();').returns(@reply)
       Turtle.draw do
         background(@val)
       end
@@ -35,7 +35,7 @@ describe Turtle do
 
   describe "when properly initialized" do
     before do
-      @iface.stubs(:call).with('init_turtle').returns(@reply)
+      @iface.stubs(:call).with('init').returns(@reply)
       @turtle = Turtle.new
     end
     

@@ -20,7 +20,7 @@ class Turtle
 
   def init_turtle
     if @interface.valid?
-      reply = @interface.call("init_turtle")
+      reply = @interface.call("init")
       $stderr.puts("init_turtle call failed: %s\n" % reply.error_message) unless reply.valid?
     end
   end
@@ -28,7 +28,7 @@ class Turtle
   def send_commands
     cmds = @commands.join(".")
     if @interface.valid?
-      reply = @interface.call("command_turtle", cmds)
+      reply = @interface.call("command", cmds)
       if reply.valid?
         @commands = []
         return true
