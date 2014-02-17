@@ -42,12 +42,6 @@ class StdIn
   end
 end
 
-$stdout.sync = true
-$stdout = StdOut.new
-
-$stderr.sync = true
-$stderr = StdErr.new
-
 alias :__gets__ :gets
 def gets
   init_interface
@@ -60,4 +54,12 @@ def gets
 
     $stderr.puts("gets call failed: %s\n" % reply.error_message)
   end
+end
+
+unless test_mode?
+  $stdout.sync = true
+  $stdout = StdOut.new
+
+  $stderr.sync = true
+  $stderr = StdErr.new
 end
