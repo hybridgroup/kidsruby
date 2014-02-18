@@ -10,7 +10,8 @@ var Runner = (function () {
   }
 
   function runRuby() {
-    my.process = cp.spawn('ruby', [filePath]);
+    setRunButtonToStop();
+    my.process = cp.spawn('ruby',  [filePath]);
     my.running = true;
     my.process.stderr.on('data', function (data) {
       console.log('stderr: ' + data);
@@ -19,8 +20,9 @@ var Runner = (function () {
       my.running = false;
       temp.cleanup();
       console.log('child process exited with code ' + res);
+      setStopButtonToRun();
     });
-  }
+  };
 
   my.running = false;
   my.process = null;
