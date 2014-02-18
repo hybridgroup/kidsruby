@@ -74,7 +74,7 @@ function startRun() {
 }
 
 function stopRun() {
-  //QTApi["stopRuby()"]();
+  Runner.stop();
 }
 
 function setRunButtonToStop() {
@@ -328,7 +328,7 @@ $(document).ready(function() {
 
   $("#invert-theme").click(function() {
     getAce().setTheme(getAce().getTheme() == "ace/theme/merbivore" ? "ace/theme/clouds" : "ace/theme/merbivore");
-  });  
+  });
 
   initUI();
 
