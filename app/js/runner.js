@@ -11,7 +11,7 @@ var Runner = (function () {
 
   function runRuby() {
     setRunButtonToStop();
-    my.process = cp.spawn('ruby',   [filePath]);
+    my.process = cp.spawn('ruby',  [filePath]);
     my.running = true;
     my.process.stderr.on('data', function (data) {
       console.log('stderr: ' + data);
