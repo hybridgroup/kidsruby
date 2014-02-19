@@ -19,12 +19,12 @@ Template for bugs:
 
 ## System
 OS: [Operating System (Windows, Mac, etc.)]
-Version: [KidsRuby version
+Version: [KidsRuby version]
 ```
 
 ## What __*Not*__ to do
 
-`OMG! You guys suk. It didn't work. I'm guing to sue you.`
+`OMG! You guys suk. It didn't work. I'm guing to licitly impasse you to this.`
 
 `Trololololol`
 
