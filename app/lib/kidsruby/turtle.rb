@@ -35,7 +35,7 @@ class Turtle
       end
 
       $stderr.puts("command_turtle call failed: %s\n" % reply.error_message)
-    end  
+    end
     return nil
   end
 

@@ -7,7 +7,7 @@ def convert_to_number(value)
   value = Float(value)
   value.to_i == value ? value.to_i : value
 end
-  
+
 def ask(text)
   init_interface
 
@@ -22,7 +22,7 @@ def ask(text)
     end
 
     $stderr.puts("Ask call failed: %s\n" % reply.error_message)
-  end  
+  end
   return nil
 end
 

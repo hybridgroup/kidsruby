@@ -1,7 +1,7 @@
 require "rubygems"
 
 def test_mode?
-  ENV['KIDSRUBY_ENV'] == "test" 
+  ENV['KIDSRUBY_ENV'] == "test"
 end
 
 %w{ interface stdio dialogs turtle rubywarrior }.each do |f|
