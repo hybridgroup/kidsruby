@@ -1,3 +1,4 @@
+//var Keypress = require('keypress')
 var KidsRubyServer = (function () {
   var my = {}
 
@@ -30,13 +31,11 @@ var KidsRubyServer = (function () {
     });
 
     my.app.get('/alert', function(req, res){
-      alert(unescape(getQuery(req)));
-      responseOK(res);
+      res.send(alert(unescape(getQuery(req))));
     });
 
     my.app.get('/ask', function(req, res){
-      prompt(unescape(getQuery(req)));
-      responseOK(res);
+     res.send(prompt(unescape(getQuery(req))).toString());
     });
 
     my.app.get('/gets', function(req, res){
