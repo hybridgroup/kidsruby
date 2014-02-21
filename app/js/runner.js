@@ -56,7 +56,7 @@ var Runner = (function () {
 
   my.addRequiresToCode = function (code) {
     newCode = "# -*- coding: utf-8 -*-\n";
-    newRequire = "require '" + process.env.PWD + "/lib/kidsruby" + "'\n";
+    newRequire = "require '" + process.env.PWD + "/app/lib/kidsruby" + "'\n";
     newCode += newRequire;
     newCode += code;
     return newCode;
