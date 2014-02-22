@@ -9,8 +9,8 @@ var KidsRubyServer = (function () {
     return req.url.substr(i+1);
   }
 
-  function responseOK(res) {
-    var body = 'OK';
+  function responseOK(res, body) {
+    body = typeof body !== 'undefined' ? body : 'OK';
     res.setHeader('Content-Type', 'text/plain');
     res.setHeader('Content-Length', Buffer.byteLength(body));
     res.end(body);
@@ -62,13 +62,11 @@ var KidsRubyServer = (function () {
     });
 
     my.app.get('/turtle/width', function(req, res){
-      // TODO: implement
-      responseOK(res);
+      responseOK(res, callTurtle(['width']));
     });
 
     my.app.get('/turtle/height', function(req, res){
-      // TODO: implement
-      responseOK(res);
+      responseOK(res, callTurtle(['height']));
     });
 
     return my;
