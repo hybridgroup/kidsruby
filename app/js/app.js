@@ -83,6 +83,10 @@ function captureKeyboard() {
   document.onkeydown = function(event) {
     if (captureInput == true) {
       var key_press = String.fromCharCode(event.keyCode);
+      if (event.shiftKey != true) {
+        key_press = key_press.toLowerCase();
+      }
+
       var key_code = event.keyCode;
       if (key_code == 13) {
         cutStdInToStdOut();
