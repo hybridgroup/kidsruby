@@ -39,7 +39,8 @@ var KidsRubyServer = (function () {
     });
 
     my.app.get('/gets', function(req, res){
-      // TODO: implement
+      startCaptureKeyboard();
+      acceptStdIn();
       responseOK(res);
     });
 

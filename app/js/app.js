@@ -1,3 +1,6 @@
+var userInput = "";
+var captureInput = false;
+
 function selectTab(id) {
   $("#tabs").data("mytabs").tabs("select", id);
 }
@@ -64,6 +67,34 @@ function updateStdOut(newHtml) {
 function updateStdErr(newHtml) {
   $("#stderr").append(unescape(newHtml));
   scrollToOutputEnd()
+}
+
+function startCaptureKeyboard() {
+  userInput = "";
+  captureInput = true;
+}
+
+function endCaptureKeyboard() {
+  userInput = "";
+  captureInput = false;
+}
+
+function captureKeyboard() {
+  document.onkeydown = function(event) {
+    if (captureInput == true) {
+      var key_press = String.fromCharCode(event.keyCode);
+      var key_code = event.keyCode;
+      if (key_code == 13) {
+        cutStdInToStdOut();
+        updateStdOut('<br/>');
+        Runner.write(userInput + "\n");
+        endCaptureKeyboard();
+      } else {
+        userInput += key_press;
+        updateStdIn(key_press);
+      }
+    }
+  }
 }
 
 function startRun() {
@@ -337,6 +368,8 @@ $(document).ready(function() {
   initTurtle();
 
   selectTab(0); // default to help tab
+
+  captureKeyboard();
 
   KidsRubyServer.setup(app).listen(8699);
 });

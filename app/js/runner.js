@@ -62,5 +62,9 @@ var Runner = (function () {
     return newCode;
   };
 
+  my.write = function (data) {
+    my.process.stdin.write(data);
+  }
+
   return my;
 }());
