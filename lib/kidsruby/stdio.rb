@@ -5,7 +5,7 @@ class KidsRubyStdIo
     @interface = interface
   end
 
-  def puts(data)
+  def puts(data="")
     write(data.to_s + "\n")
   end
 
