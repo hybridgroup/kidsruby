@@ -1,6 +1,6 @@
 # KidsRuby
 
-KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. If what you want is just to download/install KidsRuby, please go to http://kidsruby.com/download 
+KidsRuby (http://kidsruby.com) is a Ruby programming environment meant for kids. If what you want is just to download/install KidsRuby, please go to http://kidsruby.com/download
 
 KidsRuby is heavily influenced by Hackety Hack (http://hackety-hack.com). In fact, you can run many of the same code samples from Hackety Hack in KidsRuby. For example:
 
@@ -27,7 +27,7 @@ Turtle.start do
   end
 end
 ```
-### Looking for the KidsRuby 2.0 development branch? 
+### Looking for the KidsRuby 2.0 development branch?
 
 [https://github.com/hybridgroup/kidsruby/tree/kidsruby2](https://github.com/hybridgroup/kidsruby/tree/kidsruby2)
 
@@ -54,8 +54,9 @@ end
 ```
 sudo apt-get install libqt4-dev
 sudo apt-get install cmake
+apt-get install m4 libalut-dev
 bundle install
-```    
+```
 Take note that the native compilation of qt (the line `Installing qtbindings (4.6.3.4) with native extensions`) can take several minutes without apparent progress ... You could run `top` to see `cmake` and `cc1plus` effectively in action.
 
 ## If you also want Gosu
@@ -65,7 +66,7 @@ echo "# needed for gosu" >> Gemfile
 echo "gem 'gosu'" >> Gemfile
 sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev libxinerama-dev
 bundle install
-``` 
+```
 ## Fedora dependencies
 ```
 sudo yum install gcc dkms kernel-devel patch libyaml-devel libffi-devel gcc-c++ \
@@ -74,7 +75,7 @@ bison git qt4 qt4-devel cmake qtwebkit qtwebkit-devel freeglut-devel \
 freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_ttf-devel \
 libsndfile-devel libXinerama-devel libvorbis-devel
 ```
-    
+
 ## Mac
 
 ### Mavericks Using homebrew
@@ -118,7 +119,7 @@ bundle install
 NOTES: I had anaconda installed which was using the wrong qmake version make sure anaconda's qmake is not in the path
 ```
 
-### Getting setup for development on a Mac (pre Mountain Lion) 
+### Getting setup for development on a Mac (pre Mountain Lion)
 using Homebrew
 I used the qtbindings gem: https://github.com/ryanmelt/qtbindings
 Since I also run homebrew, I discovered that the homebrew install for Qt4 needed a little symlinking before I could run the gem install for qtbindings as described here: https://github.com/ryanmelt/qtbindings/issues#issue/14
