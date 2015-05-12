@@ -20,7 +20,7 @@ class Runner < Qt::Process
   def save_kid_code(code, code_file_name)
     codeFile = Qt::File.new(code_file_name)
     if !codeFile.open(Qt::File::WriteOnly | Qt::File::Text)
-        Qt::MessageBox::warning(self, tr("KidsRuby Problem"),
+        Qt::MessageBox::warning(nil, tr("KidsRuby Problem"),
                                tr("Oh, uh! Cannot write file %s:\n%s" %
                                [ codeFile.fileName(), codeFile.errorString() ] ) )
         return
@@ -47,6 +47,6 @@ class Runner < Qt::Process
   end
 
   def tmp_dir
-    Qt::Dir::tempPath
+    Qt::Dir::tempPath.force_encoding "utf-8"
   end
 end
