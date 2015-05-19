@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-1-1", "../../shared/ruby4kids/code1_1.rb");
+      loadCode("#code-1-2", "../../shared/ruby4kids/code1_2.rb");
+      loadCode("#code-1-3", "../../shared/ruby4kids/code1_3.rb");
+      loadCode("#code-1-4", "../../shared/ruby4kids/code1_4.rb");
+      loadCode("#code-1-5", "../../shared/ruby4kids/code1_5.rb");
+      loadCode("#code-1-6", "../../shared/ruby4kids/code1_6.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Game Programming</h1>
+  <nav id="top">
+      <a href="#back" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+  </nav>
+
+
+  <article class="lesson"><h1>Lesson 1 - Getting Started</h1>
+    <section class="page">
+      <p>Since you are using KidsRuby, you are ready to get started making your first game using Gosu.</p>
+      <p>This is the file that will contain our first program.</p>
+      <p>We will use the gosu library. We will do this by typing:</p>
+      <pre id="code-1-1" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>We will then start our game by inheriting from the <code>Gosu</code> class.</p>
+      <p>We will call our game <code>MyGame</code> like this:</p>
+      <pre id="code-1-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Now, inside of this class, <code>Gosu</code> needs us to define three methods:</p>
+      <p>We define our methods like so:</p>
+      <pre id="code-1-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>What happens here is that when the game starts, the <code>initialize</code> method is called. Then the game stays running and it goes in a loop, calling the methods: <code>update</code> and <code>draw</code>.</p>
+      <p>Update, then draw. Update, then draw. Update, then draw. This cycle repeats several times a second.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lesson 1 - Create A Window</h1>
+    <section class="page"><h1>Create A Window</h1>
+      <p>OK, so we are almost ready to run this code. The next step that we need to do now is tell <code>Gosu</code> how big a window we want for the game.</p>
+      <p>We do this in the <code>initialize</code> method, by passing it three parameters like this:</p>
+      <pre id="code-1-4" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>What this does, is make the window 300 pixels wide by 400 pixels high. A pixel is a single dot in your screen. If you put your face right next to the display, you can almost see the dots. Those are called pixels.</p>
+      <p>The third parameter you pass to the initialize method is false. This tells gosu not to take over the whole sreen. So we will say false for this.</p>
+      <p>OK, we are almost ready to see if this works.</p>
+      <p>To show what we have so far, we have to use the class we just defined in our program.</p>
+      <p>We do this by adding the following after the class definition:</p>
+      <pre id="code-1-5" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>The first line creates an instance of the new game. Then, calling the <code>show</code> method, tells the game to show the game window.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Lesson 1 - Run It!</h1>
+    <section class="page"><h1>Run Your Program</h1>
+      <p>We are now ready to run the program.</p>
+      <p>Now, just click on the "Run" button</p>
+      <p>If everything worked correctly, you will have seen your screen show up. You have written your first game program!</p>
+      <p>Here is the entire program you should have written so far:</p>
+      <pre id="code-1-6" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>Granted, this does not do anything exciting, but at least you now know how to open a window in a computer game.</p>
+      <p>Now you are ready to go on to <a href="lesson_2.html">Lesson 2</a>.</p>
+
+      <a href="#prev" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+  <a href="#top">Back to top</a>
+</body>
+</html>
+

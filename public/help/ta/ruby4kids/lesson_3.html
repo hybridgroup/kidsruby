@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Ruby4Kids - Programming For The Fun Of It</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-3-1", "../../shared/ruby4kids/code3_1.rb");
+      loadCode("#code-3-2", "../../shared/ruby4kids/code3_2.rb");
+      loadCode("#code-3-3", "../../shared/ruby4kids/code3_3.rb");
+      loadCode("#code-3-4", "../../shared/ruby4kids/code3_4.rb");
+      loadCode("#code-3-5", "../../shared/ruby4kids/code3_5.rb");
+      loadCode("#code-3-6", "../../shared/ruby4kids/code3_6.rb");
+      loadCode("#code-3-7", "../../shared/ruby4kids/code3_7.rb");
+    });
+  </script>
+</head>
+
+<body class="lesson-set">
+  <h1>Ruby4Kids - Game Programming - Lesson 3</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; Back</a>
+    <a href="index.html">Back to Lessons</a>
+    <a href="#next" class="next-lesson">Next &raquo;</a>
+  </nav>
+
+  <article class="lesson"><h1>Lesson 3 - Move the Player Left</h1>
+    <section class="page"><h1>This is Ruby4Kids</h1>
+      <p> OK, now let's try to make the player move. In the last lesson, we had the image of the player, and now we're going to figure out how to make that player move. </p>
+      <p> In Gosu, we can use the arrow keys as a way to move our player up, down, left, and right. The game window has an update method, which is where we need to check to see if any key was pressed. In programming, we do this via conditional statements, such as <code>if</code> statements. </p>
+      <p>So, under <code>def update</code> we write:</p>
+      <pre id="code-3-1" class="sampleCode">Code automatically inserted here...</pre>
+ 
+      <p> So, what the segment above is saying, is that if the left key is pressed, the player will move to the left. However, before we can define what the left move is, we need to move the player away from a fixed variable of 50,50.</p> 
+
+      <a href="#back" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 3 - Move the Player Left</h1>
+    <section class="page"><h1>Adding Variables</h1>
+      <p> If we want the position to move, we have to give it some variables. the way to initialize these variables is in the initialize method. So, under the def initialize method, we already have:
+      <pre id="code-3-2" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> Now, we just need to add: </p>
+      <pre id="code-3-3" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p> Next, we are going to replace the <code>50,50</code> in the code <code>@icon.draw(50,50,1)</code> with <code>@x, @y</code>. So, your end result is going to look like this:
+
+      <pre id="code-3-4" class="sampleCode">Code automatically inserted here...</pre>
+      <p> Now, what we did was make the icon moveable by shifting the icon from a fixed position to a variable position, using variables! These variables were initialized in the initialize method of the player. So, the starting positions for x and y were each at 50. </p>
+
+      <a href="#back" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+
+
+  <article class="lesson"><h1>Lesson 3 - Move the Player Left</h1>
+    <section class="page"><h1>Define "Moving Left"</h1>
+      <p> Now we need to make the x position move left every time the player moves left. So, in order to do that, we have to first define "moving left" and then add a simple equation under that definition. So, we type: </p>
+
+      <pre id="code-3-5" class="sampleCode">Code automatically inserted here...</pre> 
+      <p> The equation that we typed moves the icon left by 10 pixels every time we press the arrow key. Go ahead, try it! Cool, huh?</p> 
+      
+      <p>Here is the entire program you should have written so far:</p>
+      <pre id="code-3-7" class="sampleCode">Code automatically inserted here...</pre>
+
+      <p>OK, smartie pants, now that you know how to move left, let's try <a href="lesson_4.html">limiting the movement of our player in lesson 4</a>!</p>
+
+      <a href="#back" class="prev-lesson">&laquo; Back</a>
+      <a href="index.html">Back to Lessons</a>
+      <a href="#next" class="next-lesson">Next &raquo;</a>
+
+    </section>
+  </article>
+
+<a href="#top">Back to top</a>
+
+</body>
+</html>
+

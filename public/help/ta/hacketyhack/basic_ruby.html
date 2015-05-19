@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>எளிமயான ரூபி நிரலாக்கம்</title>
+
+  <!-- Load styles -->
+  <link rel="stylesheet" href="../../../css/blitzer/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/master.css" type="text/css" media="screen" title="style" charset="utf-8">
+  <link rel="stylesheet" href="../../../css/jquery.snippet.min.css" type="text/css" media="screen" title="style" charset="utf-8">
+
+  <!-- Load js -->
+  <script type="text/javascript" src="../../../js/jquery/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery/jquery.snippet.min.js"></script>
+  <script type="text/javascript" src="../../../js/lessons.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      loadCode("#code-2-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-1-1", "../../shared/hacketyhack/code2_1.rb");
+      loadCode("#code-2-2", "../../shared/hacketyhack/code2_2.rb");
+      loadCode("#code-2-3", "../../shared/hacketyhack/code2_3.rb");
+      loadCode("#code-2-4", "../../shared/hacketyhack/code2_4.rb");
+      loadCode("#code-2-5", "../../shared/hacketyhack/code2_5.rb");
+      loadCode("#code-2-6", "../../shared/hacketyhack/code2_6.rb");
+      loadCode("#code-2-7", "../../shared/hacketyhack/code2_7.rb");
+      loadCode("#code-2-8", "../../shared/hacketyhack/code2_8.rb");
+      loadCode("#code-2-9", "../../shared/hacketyhack/code2_9.rb");
+      loadCode("#code-2-10", "../../shared/hacketyhack/code2_10.rb");
+      loadCode("#code-2-11", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-11-1", "../../shared/hacketyhack/code2_11.rb");
+      loadCode("#code-2-12", "../../shared/hacketyhack/code2_12.rb");
+      loadCode("#code-2-13", "../../shared/hacketyhack/code2_13.rb");
+      loadCode("#code-2-14", "../../shared/hacketyhack/code2_14.rb");
+      loadCode("#code-2-15", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-15-1", "../../shared/hacketyhack/code2_15.rb");
+      loadCode("#code-2-16", "../../shared/hacketyhack/code2_16.rb");
+      loadCode("#code-2-17", "../../shared/hacketyhack/code2_17.rb");
+    });
+  </script>  
+</head>
+<body class="lesson-set">
+  <h1>எளிமயான ரூபி நிரலாக்கம்</h1>
+  <nav id="top">
+    <a href="#back" class="prev-lesson">&laquo; திறும்ப செல்</a>
+    <a href="index.html">திறும்ப முதல் படங்களுக்கு செல்</a>
+    <a href="#next" class="next-lesson">அடுத்து  செல்&raquo;</a>
+  </nav>
+
+
+  <article class="lesson"><h1>குழந்தைகளே  வருக!!</h1>
+    <section class="page"><h1>வாங்க, நாம் தொடங்கலாம்</h1>
+      <p>உங்களுடைய முதல் ரூபி பாடத்திற்கு வரவேற்கிறோம்!</p>
+      <p>Ruby is a great programming language that you can use to make all kinds of things with. Let's get going!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>ரூபி பற்றி மேலும் நீங்கள் அறிந்து கொள்ளலாம்</h1>
+    <section class="page"><h1>Konnichiwa, Ruby!</h1>
+      <p><em>ரூபி</em> திரு Matz-இனால் 1995 இல் உருவாக்கப்பட்டது; (ஜப்பானிய மொழியில் -
+      まつもと ゆきひろ)
+      <p>(அனால் நீங்கள் இவரை Matz என்றே அழைக்கலாம்). </p>
+    </section>
+    <section class="page"><h1>ரூபி சுவாரஸ்யமாக உள்ளது</h1>
+      <p>Matz அவர்கள் ஏன் ரூபி மொழியை உருவாக்கினர் என்று கேட்டதிற்கு, இவ்வாறு பதில் அளி இத்தர் </p>
+      <p>"<em>I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language."</em></p>
+      <p>One more thing about Ruby: Rubyists (that's what people who like Ruby call themselves) have a saying: <strong>MINSWAN</strong>. This stands for <strong>M</strong>atz <strong>I</strong>s <strong>N</strong>ice <strong>S</strong>o <strong>W</strong>e <strong>A</strong>re <strong>N</strong>ice. Which is a pretty nice saying, itself. Be nice to everyone, and give them a hand when they need it!"</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>கணினி வழியாக வெளியிடல் மற்றும் காண்பிக்கிறது</h1>
+    <section class="page"><h1>இதை செய்ய வாங்கள்!</h1>
+      <p>சரி, நீங்கள் தெரிந்து கொள்ள வேண்டும் என்ற முதல் காரியம், திரையில் ஏதாவது காட்டுவதற்கு எப்படி என்று. இல்லையெனில், நீங்கள் என்ன நடக்கிறது என்று தெரியாது!</p>
+    </section>
+    <section class="page"><h1>வணக்கம், உலகம்! (Hello World!)</h1>
+      <p>இதனை இரண்டு வழிகளில் செய்யலாம்; முதல் வழி அலெர்ட்: alert</p>
+      <pre id="code-2-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Type this in and press the 'Run' button.</p>
+    </section>
+    <section class="page"><h1>alert</h1>
+      <p>இது எப்படி வேலை செய்யுது என்று நாம் பார்க்கலாம்; முதல் பகுதியில் <code>alert</code> மற்றும் <code>"Hello, world!"</code>. இவை இரண்டும் வாக்கியம் போல ஆகும்: The <code>alert</code>  வினை அகவும், மற்றும் குறிகளுக்குள் உள்ளது "" எச்சம். ரூபியில் வினை  <strong>methods</strong> என்று அழைக்கப்படும்.  <code>alert</code>  வினை  'திரையில் ஒரு எச்சரிக்கை பெட்டியில் வைத்து, மற்றும் பெட்டியில் உள்ளடக்கத்தை நீங்கள் என்னிடம் என்ன விஷயம் என்று கொடுக்கவும்.'</p>
+      <p>வணக்கம் உலகம்  <code>"Hello, world!"</code> என்ற தொடரை பற்றி சிறிது நேரத்தில் பார்க்கலாம் . இங்கே இதனை நடக்க செய்யும் மற்றொரு வழி</p>
+      <pre id="code-2-2" class="sampleCode">Code automatically inserted here...</pre>
+      <p>நீங்கள் இங்கே நிரலை உள்ளீடு பண்ணால் வேலை செய்யும் ! <code>puts</code> முறை ஒரு உரையாடல் பெட்டி காட்ட முடியாது, அதை பதிலாக திரையில் உரை அச்சிடுகிறது. நாம் எப்போதும் இந்த பயிற்சி <code>alert</code> பயன்படுத்துவோம். மற்ற ரூபி குறியீடு பயிற்சி<code>puts</code> பயன்படுத்துகிறது.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>எழுத்துக்கள், வார்த்தைகள், மற்றும் வாக்கியங்களை</h1>
+    <section class="page"><h1> சரங்கள் </h1>
+      <p>
+நீங்கள் வினைச்சொற்கள் பற்றி கற்றுகொண்டீர்கள். இப்போது நாம் சரங்களை அறிந்துகொள்வோம் <em>String</em>. ரூபி சரங்கள் எழுத்துக்கள் "என்ற இணை இடையே வார்த்தைகள் ஆகும். நீங்கள் உண்மையில் என்ன சொல்ல விரும்புகிறீர்கள் வார்த்தைகள் கணினி சொல்ல "என்ற சின்னம் பயன்படுத்தப்படுகின்றன. எடுத்துக்காட்டாக பார்க்கவும்:</p>
+      <pre id="code-2-1-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p> நீங்கள் சொல்ல விரும்புகிற சரம் வார்த்தைகள் கணினி "என்ற சின்னம் பயன்படுத்தப்படுகின்றன.</p>
+      <pre id="code-2-3" class="sampleCode">Code automatically inserted here...</pre>
+      <p>நீங்கள் அந்த வார்த்தைகளை ஒரு சரம் அனைத்து கொள்ளவில்லை என்றால், ரூபி இரண்டாவது எச்சரிக்கை மற்றொரு சரம் என்று தெரியாமல் இருக்கும். </p>
+    </section>
+    <section class="page"><h1>சொற்கள் சேர்த்தல்</h1>
+      <p>சொற்கள் சேர்க்க <code>+</code> கூட்டல் சின்னம் பயன்படுத்தவும். 
+இந்த தட்டச்சு செய்ய:</p>
+      <pre id="code-2-4" class="sampleCode">Code automatically inserted here...</pre>
+      <p>அதே விஷயம் தான்!  இரண்டு சரங்களை இணைவதற்கு <code>+</code> கூட்டல் சின்னம் இரண்டு சரங்களை இணைவதற்கு. இது பின்னர் பயன்படும்.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>எண்கள் மற்றும் கணிதம்</h1>
+    <section class="page"><h1> எண்கள்</h1>
+      <p>எண்கள் : நீங்கள் எண்களை பயன்படுத்தலாம், மற்றும் ரூபி அவர்கள் புரிந்து கொள்ளும்:</p>
+      <pre id="code-2-5" class="sampleCode">Code automatically inserted here...</pre>
+      <p>நீங்கள் தசம எண்களை(decimal numbers) பயன்படுத்தலாம்</p>
+      <pre id="code-2-6" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+    <section class="page"><h1>அடிப்படை கணிதம்</h1>
+      <p>நீங்கள் எண்களை பயன்படுத்தி கணிதம் செய்ய முடியும், மற்றும் ரூபி அழகான நன்றாக வேலை செய்யும்:</p>
+      <pre id="code-2-7" class="sampleCode">Code automatically inserted here...</pre>
+      <p>இந்த முயற்சி செய்தால் ஆனால், அது செயலிழக்கும்:</p>
+      <pre id="code-2-8" class="sampleCode">Code automatically inserted here...</pre>
+      <p>இந்த செய்ய. இது மாதிரியான முட்டாள்தனமான, வேடிக்கையாக உள்ளது:</p>
+      <pre id="code-2-9" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+    <section class="page"><h1>பிழைகள் (Errors) </h1>
+      <p>நீங்கள் முந்தைய ரன் என்ற பொத்தானை அழுத்தி போது எதுவும் நடக்கவில்லை? ஒரு பிழை இருந்தது என்பதால் தான். நீங்கள் 'வெளியீடு' தாவலில் எந்த பிழைகளை பார்க்க முடியும்.</p>
+      <p>பிழை ஏற்படுகிறது <code>alert "hey" + 2</code> is:</p>
+      <code>can't convert Fixnum into String</code>
+      <p>இதற்கு என்ன அர்த்தம்?</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>வகைகள் பற்றி ஒரு சில வார்த்தைகள்</h1>
+    <section class="page"><h1>அது ஏன் அப்படி?</h1>
+      <p>ஒரு ரூபி நிரல் ஒவ்வொரு பகுதியாக ஒரு <code>பொருள்  ("ஆப்ஜெக்ட்")</code>.
+உங்கள் நிரல் ஒரு கொத்து<code>(ஆப்ஜெக்ட்)</code> கள் ஒன்றாக வேலை  உருவாக்கப்படுகிறது. </p>. ஒவ்வொரு பொருளின் ஒரு வகை உள்ளது. இதை ரூபி என்ன வகை என்று தெரிகிறது. </p>
+    </section>
+    <section class="page"><h1>எண்கள் மற்றும் சரங்களை சேர்க்கிறது</h1>
+      <p>அதனால் தான்</p>
+      <pre id="code-2-10" class="sampleCode">Code automatically inserted here...</pre>
+      <p>உண்மையில் வேலை செய்யவில்லை: "hey" ஒரு <code>சரம்</code> 
+பொருள் வகை, 2  ஒரு  <code>எண் (Fixnum)</code> பொருள் வகை. எண்கள் மற்றும் சரங்களை சேர்க்கிறது சரி அல்ல. என்றாலும், இந்த குறியீடு நாம் வேலை செய்ய முடியும்!</p>
+      <p>நாம் <code>எண் (Fixnum)</code> <code>சரம்</code> என்று மாற்றலாம் <code>to_s</code> என்ற செயலியை பயன்படுத்தலாம்.</p>
+      <pre id="code-2-11" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+    <section class="page"><h1>மீண்டும் இதை பார்க்கலாம்</h1>
+      <pre id="code-2-11-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Okay, this isn't bad. We have our <code>alert</code> method. We're giving it <code>"hey" + 2.to_s</code>. The <code>2.to_s</code> turns a <code>Fixnum</code> 2, which is like the mathematical idea of a 2, into the <code>String</code> 2, which is like when you write a 2 down on a piece of paper.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Variables</h1>
+    <section class="page"><h1> They're like boxes </h1>
+      <p>What happens if we want to keep something around? Most programs are not one line, I assure you. You can use a <em>variable</em> to hold a value and use it later. It's like a box that you put things in.</p>
+      <p>Let's try one out:</p>
+      <pre id="code-2-12" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Give that a run.</p>
+    </section>
+    <section class="page"><h1> Assignment </h1>
+      <p>Cool stuff! We used an <code>=</code> to <em>assign</em> the <code>String</code> "Hello, world!" into the variable <code>message</code>. We then passed that <code>message</code> to the <code>alert</code> method.</p>
+      <p>As you can see, we can use variables in place of another value. Try this:</p>
+      <pre id="code-2-13" class="sampleCode">Code automatically inserted here...</pre>
+      <p>Make a guess before you run this program.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>User Input</h1>
+    <section class="page"><h1>ask-ing for it.</h1>
+      <p>We can ask the user of our program for some input, and then put their answer into a variable. It's easy! Check this program out:</p>
+      <pre id="code-2-14" class="sampleCode">Code automatically inserted here...</pre>
+      <p>The <code>ask</code> method brings up a box and lets our users type something in. Fun! We put their answer into the <code>name</code> variable and then showed it with <code>alert</code> Sweet!</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Basic flow control</h1>
+    <section class="page"><h1> if... </h1>
+      <p>Remember back to that Beginning Programming lesson... we talked about how programs are one big list, that the computer follows in order.</p>
+      <p>Well, guess what? We can actually change this order by using certain bits of code. Compare these two programs:</p>
+      <pre id="code-2-15" class="sampleCode">Code automatically inserted here...</pre>
+      <pre id="code-2-16" class="sampleCode">Code automatically inserted here...</pre>
+      <p>There are a few new things here.</p>
+    </section>
+    <section class="page"><h1>"=="</h1>
+      <p>Here it is again:</p>
+      <pre id="code-2-15-1" class="sampleCode">Code automatically inserted here...</pre>
+      <p>The == command is just a bit different than the = command. == tests the <code>Object</code> on its right against the <code>Object</code> on its left. If the two are equal, then the code after the <code>if</code> will run. If they're not equal, you get the code after the <code>else</code>. The <code>("end")</code> lets us know we're done with our <code>if</code>.</p>
+    </section>
+  </article>
+
+
+  <article class="lesson"><h1>Example: a guessing game</h1>
+    <section class="page"><h1> Guess! </h1>
+      <p>Let's put this all together:</p>
+      <pre id="code-2-17" class="sampleCode">Code automatically inserted here...</pre>
+    </section>
+  </article>
+
+  <article class="lesson"><h1>Example: a guessing game</h1>
+    <section class="page"><h1> Guess! </h1>
+      <p>Congrats! You've picked up all of the basics of Ruby. There's a lot more you still have to learn, though!</p>
+      <p>Here's what you've learned so far:</p>
+      <p>* <code>alert</code> and <code>ask</code></p>
+      <p>* <code>=</code> variables, and <code>==</code></p>
+      <p>* <code>if</code> and <code>else</code></p>
+      <p>Awesome! You'll want to go back to "Lessons" and then check out Ruby Warrior next!</p>
+    </section>
+  </article>
+
+  <a href="#top">பாடங்கள் - மேலே செல்ல</a>
+</body>
+</html>
